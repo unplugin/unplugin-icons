@@ -42,7 +42,7 @@ import IconAccountBox from '/@vite-icons/mdi/account-box.vue'
 
 ## Auto Importing
 
-Use with [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components) (`>= v0.5.4`)
+Use with [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components) (`>= v0.5.5`)
 
 ```js
 // vite.config.js

@@ -13,7 +13,7 @@ export function createRollupPlugin(options: Options): RollupPlugin {
     name: 'vite-plugin-icons',
     resolveId(source) {
       if (isIconPath(source))
-        return source
+        return source.replace(/.vue$/i, '')
       return null
     },
     async load(id) {

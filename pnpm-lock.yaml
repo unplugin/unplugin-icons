@@ -34,7 +34,7 @@ importers:
       cross-env: 7.0.3
       typescript: 4.1.3
       vite: 1.0.0-rc.13
-      vite-plugin-components: 0.5.4
+      vite-plugin-components: 0.5.5
       vite-plugin-icons: 'link:..'
     specifiers:
       '@iconify/json': ^1.1.276
@@ -42,7 +42,7 @@ importers:
       cross-env: ^7.0.3
       typescript: ^4.1.3
       vite: ^1.0.0-rc.13
-      vite-plugin-components: ^0.5.4
+      vite-plugin-components: ^0.5.5
       vite-plugin-icons: 'workspace:*'
       vue: ^3.0.4
 lockfileVersion: 5.2
@@ -5028,14 +5028,14 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
-  /vite-plugin-components/0.5.4:
+  /vite-plugin-components/0.5.5:
     dependencies:
       debug: 4.3.1
       fast-glob: 3.2.4
       minimatch: 3.0.4
     dev: true
     resolution:
-      integrity: sha512-QkFL6p4pR0YTPN93u3/f/nEzUH/dzdM/SVintC8Gow8KotaKOeOls7AtUoN5rVM0vqeqPO64/awZ/AmtlFx84A==
+      integrity: sha512-5yItxOvFCp9GFgX/NaN8r91W0IyG1rX1m2QPCsq4tnPy5PWpE83oz8ZyU8Q7twocffuBgpk93KxZ3r24Kx2lOg==
   /vite/1.0.0-rc.13:
     dependencies:
       '@babel/parser': 7.12.7

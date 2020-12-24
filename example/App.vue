@@ -6,6 +6,7 @@
       Icons
       <i-carbon-app-connectivity />
       <i-mdi-account />
+      <mdi-alarm-off />
       <i-fa-solid-dice-five />
       from <code>vite-plugin-icons</code>
     </p>
@@ -13,4 +14,5 @@
 </template>
 
 <script setup>
+import MdiAlarmOff from '/@vite-icons/mdi/alarm-off.vue'
 </script>

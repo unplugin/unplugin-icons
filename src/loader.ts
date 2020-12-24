@@ -74,7 +74,8 @@ export async function generateComponent({ collection: name, icon, query }: Resol
   })
 
   code = code.replace(/^export /g, '')
-  code += '\n\nexport default { render }\n'
+  code += '\n\nexport default { render }'
+  code += '\n/* vite-plugin-components disabled */'
 
   return code
 }
