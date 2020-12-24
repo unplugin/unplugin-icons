@@ -4,7 +4,10 @@ import { createServerPlugin } from './server'
 import { createRollupPlugin } from './build'
 
 function VitePluginIcons(options: Options = {}): Plugin {
-  const resolved: ResolvedOptions = Object.assign({}, options)
+  const resolved: ResolvedOptions = Object.assign({
+    scale: 1.2,
+    defaultStyle: 'vertical-align: middle; transform: translateY(-5%);',
+  }, options)
 
   return {
     configureServer: createServerPlugin(resolved),
