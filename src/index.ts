@@ -9,9 +9,12 @@ function VitePluginIcons(options: Options = {}): Plugin {
   return {
     configureServer: createServerPlugin(resolved),
     rollupInputOptions: {
-      plugins: [createRollupPlugin(resolved)],
+      pluginsPreBuild: [createRollupPlugin(resolved)],
     },
   }
 }
+
+export { VitePluginIcons as Plugin }
+export * from './resolver'
 
 export default VitePluginIcons

@@ -29,9 +29,11 @@
     "@iconify/json-tools": "^1.0.10"
   },
   "peerDependencies": {
-    "@vue/compiler-sfc": "^3.0.2"
+    "@vue/compiler-sfc": "^3.0.2",
+    "@iconify/json": "*"
   },
   "devDependencies": {
+    "vue": "^3.0.4",
     "@antfu/eslint-config": "^0.4.3",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@vue/compiler-sfc": "^3.0.4",

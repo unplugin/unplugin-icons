@@ -1,6 +1,6 @@
 import type { ServerPlugin } from 'vite'
 import { Options } from './types'
-import { generateComponentFromPath, isIconPath } from './resolver'
+import { generateComponentFromPath, isIconPath } from './loader'
 
 export function createServerPlugin(options: Options): ServerPlugin {
   return ({ app }) => {

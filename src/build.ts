@@ -1,5 +1,5 @@
 import type { Plugin } from 'vite'
-import { isIconPath, generateComponentFromPath } from './resolver'
+import { isIconPath, generateComponentFromPath } from './loader'
 import { Options } from './types'
 
 /** The type of the elements of an array. */
@@ -14,11 +14,10 @@ export function createRollupPlugin(options: Options): RollupPlugin {
     resolveId(source) {
       if (isIconPath(source))
         return source
-
       return null
     },
     async load(id) {
-      return await generateComponentFromPath(id)
+      return await generateComponentFromPath(id) || null
     },
   }
 }

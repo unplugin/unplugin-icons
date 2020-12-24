@@ -1,13 +1,16 @@
 <template>
   <div class="markdown-body" style="padding: 2em 3em">
+    <i-logos-vue style="font-size:2em" />
+    <br>
     <p>
-      This is a icon
-      <icon-carbon-app-connectivity />
+      Icons
+      <i-carbon-app-connectivity />
+      <i-mdi-account />
+      <i-fa-solid-dice-five />
       from <code>vite-plugin-icons</code>
     </p>
   </div>
 </template>
 
 <script setup>
-import IconCarbonAppConnectivity from '/@vite-icons/carbon/app-connectivity.vue'
 </script>
