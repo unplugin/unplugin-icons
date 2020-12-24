@@ -1,7 +1,5 @@
 # vite-plugin-icons
 
-**[WIP]**
-
 Access thousands of icons as Vue components in Vite
 
 - 90+ iconsets powered by [Iconify](https://github.com/iconify/iconify)
@@ -118,6 +116,16 @@ ViteIconsResolver({
 ## Comparsion with [Purge Icons](https://github.com/antfu/purge-icons)
 
 > TODO:
+
+## Sponsors
+
+This project is part of my <a href='https://github.com/antfu-sponsors'>Sponsor Program</a>
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
+  </a>
+</p>
 
 ## License
 
