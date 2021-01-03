@@ -7,6 +7,8 @@ Access thousands of icons as Vue components in Vite
 
 ## Install
 
+> ℹ️ **Vite 2 is supported from `v0.2.x`, Vite 1's support is discontinued.**
+
 Install
 
 ```bash
@@ -17,10 +19,12 @@ Add it to `vite.config.js`
 
 ```ts
 // vite.config.js
+import Vue from '@vitejs/plugin-vue'
 import Icons from 'vite-plugin-icons'
 
 export default {
   plugins: [
+    Vue(),
     Icons()
   ],
 }
@@ -44,11 +48,13 @@ Use with [`vite-plugin-components`](https://github.com/antfu/vite-plugin-compone
 
 ```js
 // vite.config.js
+import Vue from '@vitejs/plugin-vue'
 import Components from 'vite-plugin-components'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 
 export default {
   plugins: [
+    Vue(),
     Components({
       customComponentResolvers: ViteIconsResolver(),
     }),
@@ -81,6 +87,7 @@ By default, the prefix is set to `i` while you can customize via config
 ```ts
 export default {
   plugins: [
+    Vue(),
     Components({
       customComponentResolvers: ViteIconsResolver({
         componentPrefix: 'icon' // <--
@@ -115,7 +122,26 @@ ViteIconsResolver({
 
 ## Comparsion with [Purge Icons](https://github.com/antfu/purge-icons)
 
-> TODO:
+### `vite-plugin-icons`
+
+#### Pros
+- SSR/SSG friendly
+- On-demanded bunding
+
+#### Cons
+- No Iconify runtime, no web fetching
+- Updates are sync with other content
+
+### `purge-icons`
+
+#### Pros
+
+- Iconify runtime
+- On-demanded bundling combining with runtime web fetching
+
+#### Cons
+- Icons show up after the Iconify runtime loaded
+- Not SSR/SSG friendly
 
 ## Sponsors
 

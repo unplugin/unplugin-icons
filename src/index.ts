@@ -1,7 +1,6 @@
 import type { Plugin } from 'vite'
 import { Options, ResolvedOptions } from './types'
-import { createServerPlugin } from './server'
-import { createRollupPlugin } from './build'
+import { generateComponentFromPath, isIconPath } from './loader'
 
 function VitePluginIcons(options: Options = {}): Plugin {
   const resolved: ResolvedOptions = Object.assign({
@@ -10,9 +9,15 @@ function VitePluginIcons(options: Options = {}): Plugin {
   }, options)
 
   return {
-    configureServer: createServerPlugin(resolved),
-    rollupInputOptions: {
-      pluginsPreBuild: [createRollupPlugin(resolved)],
+    name: 'vite-plugin-icons',
+    enforce: 'pre',
+    resolveId(id) {
+      if (isIconPath(id))
+        return id.replace(/\.vue$/i, '')
+      return null
+    },
+    async load(id) {
+      return await generateComponentFromPath(id, resolved) || null
     },
   }
 }
