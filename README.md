@@ -125,11 +125,14 @@ ViteIconsResolver({
 ### `vite-plugin-icons`
 
 #### Pros
+
 - SSR/SSG friendly
 - On-demanded bunding
+- Works with Vue 3
 
 #### Cons
-- No Iconify runtime, no web fetching
+
+- No Iconify runtime, no web fetching (string icon IDs)
 - Updates are sync with other content
 
 ### `purge-icons`
@@ -138,6 +141,7 @@ ViteIconsResolver({
 
 - Iconify runtime
 - On-demanded bundling combining with runtime web fetching
+- Framework agnostic
 
 #### Cons
 - Icons show up after the Iconify runtime loaded
