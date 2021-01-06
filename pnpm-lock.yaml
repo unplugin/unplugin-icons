@@ -4,6 +4,7 @@ importers:
       '@iconify/json-tools': 1.0.10
     devDependencies:
       '@antfu/eslint-config': 0.4.3_eslint@7.17.0+typescript@4.1.3
+      '@types/node': 14.14.20
       '@typescript-eslint/eslint-plugin': 4.11.1_eslint@7.17.0+typescript@4.1.3
       '@vue/compiler-sfc': 3.0.5_vue@3.0.5
       eslint: 7.17.0
@@ -16,6 +17,7 @@ importers:
     specifiers:
       '@antfu/eslint-config': ^0.4.3
       '@iconify/json-tools': ^1.0.10
+      '@types/node': ^14.14.20
       '@typescript-eslint/eslint-plugin': ^4.11.1
       '@vue/compiler-sfc': ^3.0.5
       eslint: ^7.17.0
@@ -251,6 +253,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-fZQQafSREFyuZcdWFAExYjBiCL7AUCdgsk80iO0q4yihYYdcIiH28CcuPTGFgLOCC8RlW49GSQxdHwZP+I7CNg==
+  /@types/node/14.14.20:
+    dev: true
+    resolution:
+      integrity: sha512-Y93R97Ouif9JEOWPIUyU+eyIdyRqQR0I8Ez1dzku4hDx34NWh4HbtIc3WNzwB1Y9ULvNGeu5B8h8bVL5cAk4/A==
   /@types/normalize-package-data/2.4.0:
     dev: true
     resolution:
