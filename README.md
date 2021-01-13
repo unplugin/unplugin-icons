@@ -9,10 +9,10 @@ Access thousands of icons as Vue components in Vite
 
 > ℹ️ **Vite 2 is supported from `v0.2.x`, Vite 1's support is discontinued.**
 
-Install
+Install the plugin and peer dependency `@iconify/json`
 
 ```bash
-npm i -D vite-plugin-icons
+npm i -D vite-plugin-icons @iconify/json
 ```
 
 Add it to `vite.config.js`
