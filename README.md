@@ -15,6 +15,12 @@ Install
 npm i -D vite-plugin-icons
 ```
 
+And install `@iconify/json` as a dev dependency
+
+```bash
+npm i -D @iconify/json
+```
+
 Add it to `vite.config.js`
 
 ```ts
