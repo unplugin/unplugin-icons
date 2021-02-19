@@ -32,8 +32,8 @@ export default {
 
 ```vue
 <script setup>
-import IconAccessibility from '/@vite-icons/carbon/accessibility.vue'
-import IconAccountBox from '/@vite-icons/mdi/account-box.vue'
+import IconAccessibility from '/@vite-icons/carbon/accessibility'
+import IconAccountBox from '/@vite-icons/mdi/account-box'
 </script>
 
 <template>
