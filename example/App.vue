@@ -13,6 +13,6 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang='ts'>
 import MdiAlarmOff from '/@vite-icons/mdi/alarm-off.vue'
 </script>
