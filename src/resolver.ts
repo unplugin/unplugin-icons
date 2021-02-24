@@ -2,8 +2,10 @@
 import Data from '@iconify/json'
 
 function camelToKebab(key: string) {
-  const result = key.replace(/([A-Z])/g, ' $1').trim()
-  return result.split(' ').join('-').toLowerCase()
+  const result = key
+    .replace(/([A-Z])/g, ' $1')
+    .trim()
+  return result.split(/\s+/g).join('-').toLowerCase()
 }
 
 export interface ComponentResolverOption {

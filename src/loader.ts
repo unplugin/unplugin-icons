@@ -44,6 +44,12 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
 
 const _collections: Record<string, Collection> = {}
 
+const _idTransforms: ((str: string) => string)[] = [
+  str => str,
+  str => str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase(),
+  str => str.replace(/([a-z])(\d+)/g, '$1-$2'),
+]
+
 export async function generateComponent({ collection: name, icon }: ResolvedIconPath, options: ResolvedOptions) {
   let collection = _collections[name]
   if (!collection) {
@@ -54,7 +60,12 @@ export async function generateComponent({ collection: name, icon }: ResolvedIcon
   if (!collection)
     return null
 
-  const data = collection.getIconData(icon)
+  let data: any
+  for (const trans of _idTransforms) {
+    data = collection.getIconData(trans(icon))
+    if (data)
+      break
+  }
   if (!data)
     return null
 

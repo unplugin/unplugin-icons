@@ -8,6 +8,12 @@
       <i-mdi-account />
       <mdi-alarm-off />
       <i-fa-solid-dice-five />
+      <i-heroicons-outline-menu-alt-2 />
+      <i-ri-apps-2-line />
+      <i-mdi-dice-d12 />
+      <i-ic-twotone-24mp />
+      <IIcTwotone23mp />
+      <IMdiStore24Hour />
       from <code>vite-plugin-icons</code>
     </p>
   </div>
