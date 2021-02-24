@@ -3,6 +3,7 @@ import Data from '@iconify/json'
 
 function camelToKebab(key: string) {
   const result = key
+    .replace(/:/g, '-')
     .replace(/([A-Z])/g, ' $1')
     .trim()
   return result.split(/\s+/g).join('-').toLowerCase()

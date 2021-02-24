@@ -12,6 +12,7 @@
       <i-ri-apps-2-line />
       <i-mdi-dice-d12 />
       <i-ic-twotone-24mp />
+      <i-mdi:cactus />
       <IIcTwotone23mp />
       <IMdiStore24Hour />
       from <code>vite-plugin-icons</code>
