@@ -12,6 +12,13 @@ export interface Options {
    * @default 'vertical-align: middle; transform: translateY(-5%);'
    */
   defaultStyle?: string
+
+  /**
+   * Compiler
+   *
+   * @default 'vue3'
+   */
+  compiler?: 'vue2' | 'vue3'
 }
 
 export type ResolvedOptions = Required<Options>

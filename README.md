@@ -120,6 +120,27 @@ ViteIconsResolver({
 </template>
 ```
 
+## Vue 2 Support
+
+```bash
+npm i -D vite-plugin-vue2 vue-template-compiler
+```
+
+```ts
+// vite.config.js
+import { createVuePlugin } from 'vite-plugin-vue2'
+import ViteIcons from 'vite-plugin-icons'
+
+export default {
+  plugins: [
+    createVuePlugin(),
+    ViteIcons({
+      compiler: 'vue2'
+    }),
+  ],
+}
+```
+
 ## Comparsion with [Purge Icons](https://github.com/antfu/purge-icons)
 
 ### `vite-plugin-icons`

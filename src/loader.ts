@@ -1,6 +1,8 @@
 // @ts-ignore
 import { SVG, Collection } from '@iconify/json-tools'
 import { compileTemplate } from '@vue/compiler-sfc'
+import { Vue2Compiler } from './compiler/vue2'
+import { Vue3Compiler } from './compiler/vue3'
 import { URL_PREFIX } from './constants'
 import { ResolvedOptions } from './types'
 
@@ -80,17 +82,10 @@ export async function generateComponent({ collection: name, icon }: ResolvedIcon
   if (!svgText)
     return null
 
-  let { code } = compileTemplate({
-    source: svgText,
-    id: `${name}:${icon}`,
-    filename: `${name}-${icon}.vue`,
-  })
-
-  code = code.replace(/^export /g, '')
-  code += '\n\nexport default { render }'
-  code += '\n/* vite-plugin-components disabled */'
-
-  return code
+  if (options.compiler === 'vue2')
+    return Vue2Compiler(svgText, name, icon)
+  else
+    return Vue3Compiler(svgText, name, icon)
 }
 
 export async function generateComponentFromPath(path: string, options: ResolvedOptions) {
