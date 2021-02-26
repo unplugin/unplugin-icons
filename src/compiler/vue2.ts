@@ -1,9 +1,9 @@
-import { compile } from 'vue-template-compiler'
-// @ts-expect-error
-import transpile from 'vue-template-es2015-compiler'
+/* eslint-disable @typescript-eslint/no-var-requires */
 
 // refer to: https://github.com/underfin/vite-plugin-vue2/blob/master/src/template/compileTemplate.ts
 export function Vue2Compiler(svg: string, name: string, icon: string) {
+  const { compile } = require('vue-template-compiler')
+  const transpile = require('vue-template-es2015-compiler')
   const { render } = compile(svg)
 
   const toFunction = (code: string): string => {

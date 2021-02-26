@@ -1,6 +1,8 @@
-import { compileTemplate } from '@vue/compiler-sfc'
+/* eslint-disable @typescript-eslint/no-var-requires */
 
 export function Vue3Compiler(svg: string, name: string, icon: string) {
+  const { compileTemplate } = require('@vue/compiler-sfc')
+
   let { code } = compileTemplate({
     source: svg,
     id: `${name}:${icon}`,
