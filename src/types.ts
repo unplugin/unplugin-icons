@@ -16,7 +16,7 @@ export interface Options {
   /**
    * Compiler
    *
-   * @default 'vue3'
+   * @default [detect automatically]
    */
   compiler?: 'vue2' | 'vue3'
 }

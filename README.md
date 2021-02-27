@@ -123,8 +123,10 @@ ViteIconsResolver({
 ## Vue 2 Support
 
 ```bash
-npm i -D vite-plugin-vue2 vue-template-compiler
+npm i -D vue-template-compiler vite-plugin-vue2
 ```
+
+And it just works.
 
 ```ts
 // vite.config.js
@@ -134,9 +136,7 @@ import ViteIcons from 'vite-plugin-icons'
 export default {
   plugins: [
     createVuePlugin(),
-    ViteIcons({
-      compiler: 'vue2'
-    }),
+    ViteIcons(),
   ],
 }
 ```

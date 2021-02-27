@@ -9,10 +9,10 @@ importers:
       '@typescript-eslint/eslint-plugin': 4.15.2_eslint@7.20.0+typescript@4.2.2
       '@vue/compiler-sfc': 3.0.6_vue@3.0.6
       eslint: 7.20.0
-      rollup: 2.39.1
-      tsup: 4.3.1_typescript@4.2.2
+      rollup: 2.40.0
+      tsup: 4.5.1_typescript@4.2.2
       typescript: 4.2.2
-      vite: 2.0.3
+      vite: 2.0.4
       vue: 3.0.6
       vue-template-compiler: 2.6.12
     specifiers:
@@ -22,35 +22,35 @@ importers:
       '@typescript-eslint/eslint-plugin': ^4.15.2
       '@vue/compiler-sfc': ^3.0.6
       eslint: ^7.20.0
-      rollup: ^2.39.1
-      tsup: ^4.3.1
+      rollup: ^2.40.0
+      tsup: ^4.5.1
       typescript: ^4.2.2
-      vite: ^2.0.3
+      vite: ^2.0.4
       vue: ^3.0.6
       vue-template-compiler: ^2.6.12
       vue-template-es2015-compiler: ^1.9.1
   examples/vue2:
     dependencies:
-      vue: 2.6.12
+      vue: 3.0.6
     devDependencies:
       '@iconify/json': 1.1.309
       cross-env: 7.0.3
       typescript: 4.2.2
-      vite: 2.0.3
-      vite-plugin-components: 0.7.3_vite@2.0.3
+      vite: 2.0.4
+      vite-plugin-components: 0.7.5_vite@2.0.4
       vite-plugin-icons: link:../..
-      vite-plugin-vue2: 1.2.1_vite@2.0.3
+      vite-plugin-vue2: 1.2.2_vite@2.0.4
       vue-template-compiler: 2.6.12
       vue-template-es2015-compiler: 1.9.1
     specifiers:
       '@iconify/json': ^1.1.309
       cross-env: ^7.0.3
       typescript: ^4.2.2
-      vite: ^2.0.3
-      vite-plugin-components: ^0.7.3
+      vite: ^2.0.4
+      vite-plugin-components: ^0.7.5
       vite-plugin-icons: workspace:*
-      vite-plugin-vue2: ^1.2.1
-      vue: ^2.6.12
+      vite-plugin-vue2: ^1.2.2
+      vue: ^3.0.6
       vue-template-compiler: ^2.6.12
       vue-template-es2015-compiler: ^1.9.1
   examples/vue3:
@@ -58,21 +58,21 @@ importers:
       vue: 3.0.6
     devDependencies:
       '@iconify/json': 1.1.309
-      '@vitejs/plugin-vue': 1.1.4_@vue+compiler-sfc@3.0.6
+      '@vitejs/plugin-vue': 1.1.5_@vue+compiler-sfc@3.0.6
       '@vue/compiler-sfc': 3.0.6_vue@3.0.6
       cross-env: 7.0.3
       typescript: 4.2.2
-      vite: 2.0.3
-      vite-plugin-components: 0.7.3_vite@2.0.3
+      vite: 2.0.4
+      vite-plugin-components: 0.7.5_vite@2.0.4
       vite-plugin-icons: link:../..
     specifiers:
       '@iconify/json': ^1.1.309
-      '@vitejs/plugin-vue': ^1.1.4
+      '@vitejs/plugin-vue': ^1.1.5
       '@vue/compiler-sfc': ^3.0.6
       cross-env: ^7.0.3
       typescript: ^4.2.2
-      vite: ^2.0.3
-      vite-plugin-components: ^0.7.3
+      vite: ^2.0.4
+      vite-plugin-components: ^0.7.5
       vite-plugin-icons: workspace:*
       vue: ^3.0.6
 lockfileVersion: 5.2
@@ -480,15 +480,15 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-8Broas6vTtW4GIXTAHDoE32hnN2M5ykgCpWGbuXHQ15vEMqr23pB76e/GZcYsZCHALv50ktd24qhEyKr6wBtow==
-  /@rollup/plugin-node-resolve/11.2.0_rollup@2.39.1:
+  /@rollup/plugin-node-resolve/11.2.0_rollup@2.40.0:
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.39.1
+      '@rollup/pluginutils': 3.1.0_rollup@2.40.0
       '@types/resolve': 1.17.1
       builtin-modules: 3.2.0
       deepmerge: 4.2.2
       is-module: 1.0.0
       resolve: 1.20.0
-      rollup: 2.39.1
+      rollup: 2.40.0
     dev: true
     engines:
       node: '>= 10.0.0'
@@ -496,12 +496,12 @@ packages:
       rollup: ^1.20.0||^2.0.0
     resolution:
       integrity: sha512-qHjNIKYt5pCcn+5RUBQxK8krhRvf1HnyVgUCcFFcweDS7fhkOLZeYh0mhHK6Ery8/bb9tvN/ubPzmfF0qjDCTA==
-  /@rollup/pluginutils/3.1.0_rollup@2.39.1:
+  /@rollup/pluginutils/3.1.0_rollup@2.40.0:
     dependencies:
       '@types/estree': 0.0.39
       estree-walker: 1.0.1
       picomatch: 2.2.2
-      rollup: 2.39.1
+      rollup: 2.40.0
     dev: true
     engines:
       node: '>= 8.0.0'
@@ -741,16 +741,16 @@ packages:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
     resolution:
       integrity: sha512-sV45zfdRqQo1A97pOSx3fsjR+3blmwtdCt8LDrXgCX36v4Vmz4KHrhpV6Fo2cRdXmyumxx11AHw0pNJqCNpDyg==
-  /@vitejs/plugin-vue/1.1.4_@vue+compiler-sfc@3.0.6:
+  /@vitejs/plugin-vue/1.1.5_@vue+compiler-sfc@3.0.6:
     dependencies:
       '@vue/compiler-sfc': 3.0.6_vue@3.0.6
     dev: true
     engines:
       node: '>=12.0.0'
     peerDependencies:
-      '@vue/compiler-sfc': ^3.0.4
+      '@vue/compiler-sfc': ^3.0.6
     resolution:
-      integrity: sha512-cUDILd++9jdhdjpuhgJofQqOabOKe+kTWTE2HQY2PBHEUO2fgwTurLE0cJg9UcIo1x4lHfsp+59S9TBCHgTZkw==
+      integrity: sha512-4DV8VPYo8/OR1YsnK39QN16xhKENt2XvcmJxqfRtyz75kvbjBYh1zTSHLp7XsXqv4R2I+fOZlbEBvxosMYLcPA==
   /@vue/babel-helper-vue-jsx-merge-props/1.2.1:
     dev: true
     resolution:
@@ -1966,6 +1966,12 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-b5KzFweLLXoXQwdC/e2+Z80c8uo2M5MgP7yQEEebkFw6In4T9CvYcNoM2ElvJt8ByO04zAZUV0fZkXmXoi2s9A==
+  /esbuild/0.8.53:
+    dev: true
+    hasBin: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-GIaYGdMukH58hu+lf07XWAeESBYFAsz8fXnrylHDCbBXKOSNtFmoYA8PhSeSF+3/qzeJ0VjzV9AkLURo5yfu3g==
   /escalade/3.1.1:
     dev: true
     engines:
@@ -3578,10 +3584,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
-  /rollup-plugin-dts/2.0.1_rollup@2.39.1+typescript@4.2.2:
+  /rollup-plugin-dts/2.0.1_rollup@2.40.0+typescript@4.2.2:
     dependencies:
       magic-string: 0.25.7
-      rollup: 2.39.1
+      rollup: 2.40.0
       typescript: 4.2.2
     dev: true
     optionalDependencies:
@@ -3600,6 +3606,15 @@ packages:
       fsevents: 2.3.2
     resolution:
       integrity: sha512-9rfr0Z6j+vE+eayfNVFr1KZ+k+jiUl2+0e4quZafy1x6SFCjzFspfRSO2ZZQeWeX9noeDTUDgg6eCENiEPFvQg==
+  /rollup/2.40.0:
+    dev: true
+    engines:
+      node: '>=10.0.0'
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    resolution:
+      integrity: sha512-WiOGAPbXoHu+TOz6hyYUxIksOwsY/21TRWoO593jgYt8mvYafYqQl+axaA8y1z2HFazNUUrsMSjahV2A6/2R9A==
   /run-parallel/1.2.0:
     dependencies:
       queue-microtask: 1.2.2
@@ -3897,26 +3912,26 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
-  /tsup/4.3.1_typescript@4.2.2:
+  /tsup/4.5.1_typescript@4.2.2:
     dependencies:
-      '@rollup/plugin-node-resolve': 11.2.0_rollup@2.39.1
+      '@rollup/plugin-node-resolve': 11.2.0_rollup@2.40.0
       cac: 6.7.2
       chalk: 4.1.0
       chokidar: 3.5.1
-      esbuild: 0.8.52
+      esbuild: 0.8.53
       globby: 11.0.2
       joycon: 2.2.5
       postcss-load-config: 3.0.1
       resolve-from: 5.0.0
-      rollup: 2.39.1
-      rollup-plugin-dts: 2.0.1_rollup@2.39.1+typescript@4.2.2
+      rollup: 2.40.0
+      rollup-plugin-dts: 2.0.1_rollup@2.40.0+typescript@4.2.2
       sucrase: 3.17.1
     dev: true
     hasBin: true
     peerDependencies:
       typescript: '*'
     resolution:
-      integrity: sha512-mUV7dhUM6h0cxFHKcZWHZEipKhsUhhETAEPudxTGzNUTneCuflfFJbPoyMdCJ+UYRXuXuGrvlM5hs25kSjFfDg==
+      integrity: sha512-SEf9XrAwemGhQPtpSj4bYyGhants9pmYdEywTKsOmbD0hVZb+myLNnOFAmF77chLGgM/3g8fBFzWcqklk/cPFg==
   /tsutils/3.17.1_typescript@4.2.2:
     dependencies:
       tslib: 1.14.1
@@ -3986,19 +4001,19 @@ packages:
     dev: true
     resolution:
       integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==
-  /vite-plugin-components/0.7.3_vite@2.0.3:
+  /vite-plugin-components/0.7.5_vite@2.0.4:
     dependencies:
       chokidar: 3.5.1
       debug: 4.3.2
       fast-glob: /@knightly/fast-glob/3.2.5-knightly-master.202101180131
       minimatch: 3.0.4
-      vite: 2.0.3
+      vite: 2.0.4
     dev: true
     peerDependencies:
       vite: ^2.0.0-beta.69
     resolution:
-      integrity: sha512-OomlwTsyZn8M1xhth7gUxOE2FJZ1v/wn/TQhcJiFCxcsFnxvRiCMleRHzFrJUdRcN0QiM3lTCX3sKRthdOd+9w==
-  /vite-plugin-vue2/1.2.1_vite@2.0.3:
+      integrity: sha512-Sly+l1GMRqLeeOFXc9uT1wJUSZQ0LP/65h/c4NK9CWdw2HhHBuB/yyp3ocPLfaq2k+KUeIX2J/Vco/G4hGAy4w==
+  /vite-plugin-vue2/1.2.2_vite@2.0.4:
     dependencies:
       '@babel/core': 7.13.1
       '@rollup/pluginutils': 4.1.0_rollup@2.39.1
@@ -4016,20 +4031,20 @@ packages:
       querystring: 0.2.1
       rollup: 2.39.1
       slash: 3.0.0
-      vite: 2.0.3
+      vite: 2.0.4
       vue: 2.6.12
       vue-template-compiler: 2.6.12
     dev: true
     peerDependencies:
       vite: ^2.0.0-beta.23
     resolution:
-      integrity: sha512-j8p8O7kVXB8dvSr/sqHnmOFIi2EJWIxJ1b7VqF+5XNOX8OwRkZbgUKs2Q8UK5qgsmdd7LfJmD5ytfSqieYhKDg==
-  /vite/2.0.3:
+      integrity: sha512-3uLmmS+pM4nwHzaRWyfp030PBxTKFJWzrFjvFl9cKhULaZV4MQh8MW7YtShhyeCsjvwGmFGqVATuKroyHyYW9Q==
+  /vite/2.0.4:
     dependencies:
       esbuild: 0.8.52
       postcss: 8.2.6
       resolve: 1.20.0
-      rollup: 2.39.1
+      rollup: 2.40.0
     dev: true
     engines:
       node: '>=12.0.0'
@@ -4037,7 +4052,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     resolution:
-      integrity: sha512-4CUm3FVUHyTSSSK6vHWkj3SVkP+GGNNzwYcFsHOjjc8xQ3BPjJa1JDDmFlYxpxR29ANa+7RWptYPoyHyJ29Nhw==
+      integrity: sha512-+PP89D7AKXFE4gps8c5+4eP5yXTh5qCogjdYX7iSsIxbLZAa26JoGSq6OLk0qdb/fqDh7gtJqGiLbG2V6NvkKQ==
   /vue-eslint-parser/7.1.1_eslint@7.20.0:
     dependencies:
       debug: 4.3.1
@@ -4065,6 +4080,7 @@ packages:
     resolution:
       integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
   /vue/2.6.12:
+    dev: true
     resolution:
       integrity: sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==
   /vue/3.0.6:

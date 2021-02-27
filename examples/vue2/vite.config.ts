@@ -10,11 +10,8 @@ const config: UserConfig = {
       customComponentResolvers: [
         ViteIconsResolver(),
       ],
-      transformer: 'vue2',
     }),
-    Icons({
-      compiler: 'vue2',
-    }),
+    Icons(),
   ],
 }
 
