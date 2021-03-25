@@ -14,12 +14,14 @@
       <i-ic-twotone-24mp />
       <i-mdi:cactus />
       <IIcTwotone23mp />
-      <IMdiStore24Hour />
+      <MdiStore24Hour />
+      <MdiAlarmOff />
       from <code>vite-plugin-icons</code>
     </p>
   </div>
 </template>
 
 <script setup lang='ts'>
-import MdiAlarmOff from '/@vite-icons/mdi/alarm-off'
+import MdiStore24Hour from 'virtual:vite-icons/mdi/store-24-hour'
+import MdiAlarmOff from 'virtual:vite-icons/mdi/alarm-off.vue'
 </script>
