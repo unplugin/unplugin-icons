@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-icons",
   "description": "Access thousands of icons as Vue components in Vite",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "index.d.ts",
