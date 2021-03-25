@@ -18,14 +18,13 @@ function VitePluginIcons(userOptions: Options = {}): Plugin {
     resolveId(id) {
       if (isIconPath(id)) {
         // need to a relative path in for vite to resolve node_modules in build
-        return id.replace(/\.vue$/i, '').slice(1)
+        return id.replace(/\.vue$/i, '').replace(/^\//, '')
       }
       return null
     },
     async load(id) {
-      const path = `/${id}`
-      if (isIconPath(path))
-        return await generateComponentFromPath(path, options) || null
+      if (isIconPath(id))
+        return await generateComponentFromPath(id, options) || null
 
       return null
     },

@@ -1,9 +1,8 @@
 // @ts-ignore
 import { SVG, Collection } from '@iconify/json-tools'
-import { compileTemplate } from '@vue/compiler-sfc'
 import { Vue2Compiler } from './compiler/vue2'
 import { Vue3Compiler } from './compiler/vue3'
-import { URL_PREFIX } from './constants'
+import { URL_PREFIXES } from './constants'
 import { ResolvedOptions } from './types'
 
 export interface ResolvedIconPath {
@@ -12,15 +11,17 @@ export interface ResolvedIconPath {
   query: Record<string, string | undefined>
 }
 
+const iconPathRE = new RegExp(`${URL_PREFIXES.map(v => `^${v}`).join('|')}`)
+
 export function isIconPath(path: string) {
-  return path.startsWith(URL_PREFIX)
+  return iconPathRE.test(path)
 }
 
 export function resolveIconsPath(path: string): ResolvedIconPath | null {
   if (!isIconPath(path))
     return null
 
-  path = path.slice(URL_PREFIX.length)
+  path = path.replace(iconPathRE, '')
 
   const query: ResolvedIconPath['query'] = {}
   const queryIndex = path.indexOf('?')

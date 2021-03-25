@@ -1,13 +1,13 @@
-/* eslint-disable import/no-duplicates */
-
 declare module '*.vue' {
-  import { defineComponent } from 'vue'
-  const Component: ReturnType<typeof defineComponent>
+  // eslint-disable-next-line import/no-duplicates
+  import { ComponentOptions } from 'vue'
+  const Component: ComponentOptions
   export default Component
 }
 
 declare module '*.md' {
-  import { defineComponent } from 'vue'
-  const Component: ReturnType<typeof defineComponent>
+  // eslint-disable-next-line import/no-duplicates
+  import { ComponentOptions } from 'vue'
+  const Component: ComponentOptions
   export default Component
 }
