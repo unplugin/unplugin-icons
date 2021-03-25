@@ -21,5 +21,5 @@
 </template>
 
 <script setup lang='ts'>
-import MdiAlarmOff from '/@vite-icons/mdi/alarm-off.vue'
+import MdiAlarmOff from '/@vite-icons/mdi/alarm-off'
 </script>
