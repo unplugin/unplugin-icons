@@ -1,5 +1,5 @@
 declare module '/@vite-icons/*' {
-  import { ComponentOptions } from 'vue'
-  const component: ComponentOptions
+  import { FunctionalComponent, SVGAttributes } from 'vue'
+  const component: FunctionalComponent<SVGAttributes>
   export default component
 }
