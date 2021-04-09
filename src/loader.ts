@@ -72,12 +72,13 @@ export async function generateComponent({ collection: name, icon }: ResolvedIcon
   if (!data)
     return null
 
-  const { scale, defaultStyle } = options
+  const { scale, defaultStyle, defaultClass } = options
   const svg = new SVG(data)
   const svgText: string = svg.getSVG({
     height: `${scale}em`,
     width: `${scale}em`,
     style: defaultStyle,
+    class: defaultClass,
   })
 
   if (!svgText)

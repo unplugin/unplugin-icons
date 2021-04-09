@@ -9,9 +9,16 @@ export interface Options {
   /**
    * Style apply to icons by default
    *
-   * @default 'vertical-align: middle; transform: translateY(-5%);'
+   * @default ''
    */
   defaultStyle?: string
+
+  /**
+   * Class names apply to icons by default
+   *
+   * @default ''
+   */
+  defaultClass?: string
 
   /**
    * Compiler

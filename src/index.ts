@@ -11,7 +11,8 @@ function VitePluginIcons(userOptions: Options = {}): Plugin {
     configResolved(config) {
       options = Object.assign({
         scale: 1.2,
-        defaultStyle: 'vertical-align: middle; transform: translateY(-5%);',
+        defaultStyle: '',
+        defaultClass: '',
         compiler: config.plugins.find(i => i.name === 'vite-plugin-vue2') ? 'vue2' : 'vue3',
       }, userOptions)
     },
