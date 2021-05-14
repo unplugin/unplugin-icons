@@ -8,8 +8,8 @@
     "vue": "^3.0.11"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.327",
-    "@vitejs/plugin-vue": "^1.2.1",
+    "@iconify/json": "^1.1.343",
+    "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.11",
     "cross-env": "^7.0.3",
     "typescript": "^4.2.4",

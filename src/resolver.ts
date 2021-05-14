@@ -26,6 +26,8 @@ export function ViteIconsResolver(options: Partial<ComponentResolverOption> = {}
   } = options
 
   const prefix = componentPrefix ? `${camelToKebab(componentPrefix)}-` : ''
+  // match longer name first
+  enabledCollections.sort((a,b)=> b.length - a.length)
 
   return (name: string) => {
     const kebab = camelToKebab(name)

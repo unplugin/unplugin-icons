@@ -11,6 +11,8 @@
       <i-heroicons-outline-menu-alt-2 />
       <i-ri-apps-2-line />
       <i-mdi-dice-d12 />
+      <i-mdi-light-alarm />
+      <i-noto-v1-flag-for-flag-japan/>
       <i-ic-twotone-24mp />
       <i-mdi:cactus />
       <IIcTwotone23mp />

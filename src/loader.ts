@@ -17,6 +17,10 @@ export function isIconPath(path: string) {
   return iconPathRE.test(path)
 }
 
+export function normalizeIconPath(path: string) {
+  return path.replace(iconPathRE, URL_PREFIXES[0])
+}
+
 export function resolveIconsPath(path: string): ResolvedIconPath | null {
   if (!isIconPath(path))
     return null

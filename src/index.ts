@@ -1,6 +1,6 @@
 import type { Plugin } from 'vite'
 import { Options, ResolvedOptions } from './types'
-import { generateComponentFromPath, isIconPath } from './loader'
+import { generateComponentFromPath, isIconPath, normalizeIconPath } from './loader'
 
 function VitePluginIcons(userOptions: Options = {}): Plugin {
   let options: ResolvedOptions
@@ -19,7 +19,7 @@ function VitePluginIcons(userOptions: Options = {}): Plugin {
     resolveId(id) {
       if (isIconPath(id)) {
         // need to a relative path in for vite to resolve node_modules in build
-        return id.replace(/\.vue$/i, '').replace(/^\//, '')
+        return normalizeIconPath(id).replace(/\.vue$/i, '').replace(/^\//, '')
       }
       return null
     },
