@@ -1,24 +1,24 @@
 {
   "name": "vite-plugin-icons",
-  "description": "Access thousands of icons as Vue components in Vite",
   "version": "0.5.1",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "index.d.ts",
+  "description": "Access thousands of icons as Vue components in Vite",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/antfu/vite-plugin-icons"
   },
-  "homepage": "https://github.com/antfu/vite-plugin-icons",
-  "bugs": "https://github.com/antfu/vite-plugin-icons/issues",
+  "funding": "https://github.com/sponsors/antfu",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "files": [
     "dist",
     "index.d.ts",
     "client.d.ts"
   ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "index.d.ts",
+  "homepage": "https://github.com/antfu/vite-plugin-icons",
+  "bugs": "https://github.com/antfu/vite-plugin-icons/issues",
   "scripts": {
     "dev": "npm run build -- --watch",
     "example:dev": "npm -C examples/vue3 run dev",
@@ -27,14 +27,14 @@
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --commit --tag && npm publish && git push"
   },
-  "dependencies": {
-    "@iconify/json-tools": "^1.0.10",
-    "vue-template-es2015-compiler": "^1.9.1"
-  },
   "peerDependencies": {
     "@iconify/json": "*",
     "@vue/compiler-sfc": "^3.0.2",
     "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "@iconify/json-tools": "^1.0.10",
+    "vue-template-es2015-compiler": "^1.9.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.6.5",
