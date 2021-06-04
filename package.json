@@ -32,6 +32,14 @@
     "@vue/compiler-sfc": "^3.0.2",
     "vue-template-compiler": "^2.6.12"
   },
+  "peerDependenciesMeta": {
+    "@vue/compiler-sfc": {
+      "optional": true
+    },
+    "vue-template-compiler": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@iconify/json-tools": "^1.0.10",
     "vue-template-es2015-compiler": "^1.9.1"
