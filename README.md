@@ -42,6 +42,29 @@ import IconAccountBox from 'virtual:vite-icons/mdi/account-box'
 </template>
 ```
 
+## Options
+
+You can set default styling for all icons. 
+The following config shows the default values of each option:
+
+```ts
+// vite.config.js
+import Vue from '@vitejs/plugin-vue'
+import Icons from 'vite-plugin-icons'
+
+export default {
+  plugins: [
+    Vue(),
+    Icons({
+      scale: 1.2, // Scale of icons against 1em
+      defaultStyle: '', // Style apply to icons
+      defaultClass: '', // Class names apply to icons
+      compiler: null, // Compiler 'vue2' or 'vue3', by default detected automatically
+    })
+  ],
+}
+```
+
 ## Auto Importing
 
 Use with [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components) (`>= v0.5.5`)
