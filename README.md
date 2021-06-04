@@ -45,7 +45,7 @@ import IconAccountBox from 'virtual:vite-icons/mdi/account-box'
 ## Options
 
 You can set default styling for all icons. 
-Example of custom config:
+The following config shows the default values of each option:
 
 ```ts
 // vite.config.js
@@ -56,10 +56,10 @@ export default {
   plugins: [
     Vue(),
     Icons({
-      scale: 1.5, // Scale of icons against 1em; default 1.2
-      defaultStyle: 'color: #ff0000', // Style apply to icons; default empty
-      defaultClass: 'my-icon', // Class names apply to icons; default empty
-      compiler: 'vue3', // Compiler; default is detected automatically
+      scale: 1.2, // Scale of icons against 1em
+      defaultStyle: '', // Style apply to icons
+      defaultClass: '', // Class names apply to icons
+      compiler: null, // Compiler 'vue2' or 'vue3', by default detected automatically
     })
   ],
 }
