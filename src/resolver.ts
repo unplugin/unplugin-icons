@@ -27,7 +27,7 @@ export function ViteIconsResolver(options: Partial<ComponentResolverOption> = {}
 
   const prefix = componentPrefix ? `${camelToKebab(componentPrefix)}-` : ''
   // match longer name first
-  enabledCollections.sort((a,b)=> b.length - a.length)
+  enabledCollections.sort((a, b) => b.length - a.length)
 
   return (name: string) => {
     const kebab = camelToKebab(name)
@@ -43,6 +43,6 @@ export function ViteIconsResolver(options: Partial<ComponentResolverOption> = {}
     if (!icon)
       return
 
-    return `/@vite-icons/${collection}/${icon}.vue`
+    return `virtual:vite-icons/${collection}/${icon}`
   }
 }
