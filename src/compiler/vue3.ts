@@ -10,7 +10,7 @@ export function Vue3Compiler(svg: string, name: string, icon: string) {
   })
 
   code = code.replace(/^export /g, '')
-  code += '\n\nexport default { render }'
+  code += '\n\nexport default { name: ' + `'${name}-${icon}',` + ' render }'
   code += '\n/* vite-plugin-components disabled */'
 
   return code
