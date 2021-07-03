@@ -5,16 +5,16 @@
     "build": "cross-env DEBUG=vite-plugin-icons:* vite build"
   },
   "dependencies": {
-    "vue": "^3.0.11"
+    "vue": "^3.1.4"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.343",
-    "@vitejs/plugin-vue": "^1.2.2",
-    "@vue/compiler-sfc": "^3.0.11",
+    "@iconify/json": "^1.1.369",
+    "@vitejs/plugin-vue": "^1.2.4",
+    "@vue/compiler-sfc": "^3.1.4",
     "cross-env": "^7.0.3",
-    "typescript": "^4.2.4",
-    "vite": "^2.1.5",
-    "vite-plugin-components": "^0.8.3",
+    "typescript": "^4.3.5",
+    "vite": "^2.3.8",
+    "vite-plugin-components": "^0.12.0",
     "vite-plugin-icons": "workspace:*"
   }
 }

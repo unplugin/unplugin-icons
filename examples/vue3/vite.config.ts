@@ -7,6 +7,7 @@ const config: UserConfig = {
   plugins: [
     Vue(),
     Components({
+      globalComponentsDeclaration: true,
       customComponentResolvers: [
         ViteIconsResolver(),
       ],

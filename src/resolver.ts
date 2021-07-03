@@ -35,11 +35,14 @@ export function ViteIconsResolver(options: Partial<ComponentResolverOption> = {}
       return
 
     const slice = kebab.slice(prefix.length)
-    const collection = enabledCollections.find(i => slice.startsWith(`${i}-`))
+    const collection = enabledCollections.find(i => slice.startsWith(`${i}-`)) || enabledCollections.find(i => slice.startsWith(i))
     if (!collection)
       return
 
-    const icon = slice.slice(collection.length + 1)
+    let icon = slice.slice(collection.length)
+    if (icon[0] === '-')
+      icon = icon.slice(1)
+
     if (!icon)
       return
 
