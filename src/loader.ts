@@ -57,13 +57,17 @@ const _idTransforms: ((str: string) => string)[] = [
   str => str.replace(/([a-z])(\d+)/g, '$1-$2'),
 ]
 
-export async function generateComponent({ collection: name, icon }: ResolvedIconPath, options: ResolvedOptions) {
-  let collection = _collections[name]
-  if (!collection) {
-    collection = new Collection()
+export function getCollection(name: string) {
+  if (!_collections[name]) {
+    const collection = new Collection()
     collection.loadIconifyCollection(name)
     _collections[name] = collection
   }
+  return _collections[name]
+}
+
+export function getIcon(name: string, icon: string) {
+  const collection = getCollection(name)
   if (!collection)
     return null
 
@@ -71,11 +75,13 @@ export async function generateComponent({ collection: name, icon }: ResolvedIcon
   for (const trans of _idTransforms) {
     data = collection.getIconData(trans(icon))
     if (data)
-      break
+      return data
   }
-  if (!data)
-    return null
+  return null
+}
 
+export async function generateComponent({ collection: name, icon }: ResolvedIconPath, options: ResolvedOptions) {
+  const data = getIcon(name, icon)
   const { scale, defaultStyle, defaultClass } = options
   const svg = new SVG(data)
   const svgText: string = svg.getSVG({

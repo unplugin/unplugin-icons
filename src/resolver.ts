@@ -1,5 +1,6 @@
 // @ts-ignore
 import Data from '@iconify/json'
+import { getIcon } from './loader'
 
 function camelToKebab(key: string) {
   const result = key
@@ -44,6 +45,9 @@ export function ViteIconsResolver(options: Partial<ComponentResolverOption> = {}
       icon = icon.slice(1)
 
     if (!icon)
+      return
+
+    if (!getIcon(collection, icon))
       return
 
     return `virtual:vite-icons/${collection}/${icon}`
