@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-icons",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "Access thousands of icons as Vue components in Vite",
   "license": "MIT",
   "repository": {
