@@ -1,9 +1,9 @@
 // @ts-ignore
 import { SVG, Collection } from '@iconify/json-tools'
+import { ResolvedOptions } from '../types'
 import { Vue2Compiler } from './compiler/vue2'
 import { Vue3Compiler } from './compiler/vue3'
 import { URL_PREFIXES } from './constants'
-import { ResolvedOptions } from './types'
 
 export interface ResolvedIconPath {
   collection: string

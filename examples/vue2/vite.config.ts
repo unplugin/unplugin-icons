@@ -1,6 +1,7 @@
 import { UserConfig } from 'vite'
 import { createVuePlugin } from 'vite-plugin-vue2'
-import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'vite-plugin-components'
 
 const config: UserConfig = {
@@ -8,7 +9,7 @@ const config: UserConfig = {
     createVuePlugin(),
     Components({
       customComponentResolvers: [
-        ViteIconsResolver(),
+        IconsResolver(),
       ],
     }),
     Icons(),

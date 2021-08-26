@@ -1,6 +1,6 @@
 // @ts-ignore
 import Data from '@iconify/json'
-import { getIcon } from './loader'
+import { getIcon } from './core/loader'
 
 function camelToKebab(key: string) {
   const result = key
@@ -20,7 +20,7 @@ export interface ComponentResolverOption {
  *
  * @param options
  */
-export function ViteIconsResolver(options: Partial<ComponentResolverOption> = {}) {
+export default function ViteComponentsResolver(options: Partial<ComponentResolverOption> = {}) {
   const {
     componentPrefix = 'i',
     enabledCollections = Object.keys(Data.collections()),

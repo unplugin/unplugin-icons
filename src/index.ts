@@ -1,47 +1,32 @@
-import type { Plugin } from 'vite'
+import { createUnplugin } from 'unplugin'
+import { getVueVersion } from './core/utils'
 import { Options, ResolvedOptions } from './types'
-import { generateComponentFromPath, isIconPath, normalizeIconPath } from './loader'
+import { generateComponentFromPath, isIconPath, normalizeIconPath } from './core/loader'
 
-function getVueVersion() {
-  try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const vue = require('vue')
-    const version = vue?.default?.version || vue?.version || '3'
-    return version.startsWith('2.') ? 'vue2' : 'vue3'
-  }
-  catch {
-    return 'vue3'
-  }
-}
-
-function VitePluginIcons(userOptions: Options = {}): Plugin {
-  const options: ResolvedOptions = {
+const unplugin = createUnplugin<Options>((options = {}) => {
+  const resolved: ResolvedOptions = {
     scale: 1.2,
     defaultStyle: '',
     defaultClass: '',
-    compiler: userOptions.compiler || getVueVersion(),
-    ...userOptions,
+    compiler: options.compiler || getVueVersion(),
+    ...options,
   }
 
   return {
-    name: 'vite-plugin-icons',
+    name: 'unplugin-icons',
     resolveId(id) {
-      if (isIconPath(id)) {
-        // need to a relative path in for vite to resolve node_modules in build
+      if (isIconPath(id))
         return normalizeIconPath(id).replace(/\.vue$/i, '').replace(/^\//, '')
-      }
       return null
     },
     async load(id) {
-      if (isIconPath(id))
-        return await generateComponentFromPath(id, options) || null
-
+      if (id && isIconPath(id))
+        return await generateComponentFromPath(id, resolved) || null
       return null
     },
   }
-}
+})
 
-export { VitePluginIcons as Plugin }
-export * from './resolver'
+export * from './types'
 
-export default VitePluginIcons
+export default unplugin

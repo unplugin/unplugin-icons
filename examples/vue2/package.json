@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "cross-env DEBUG=vite-plugin-icons:* vite",
-    "build": "cross-env DEBUG=vite-plugin-icons:* vite build"
+    "dev": "cross-env DEBUG=unplugin-icons:* vite",
+    "build": "cross-env DEBUG=unplugin-icons:* vite build"
   },
   "dependencies": {
     "vue": "^2.6.14"
@@ -13,7 +13,7 @@
     "typescript": "^4.3.5",
     "vite": "^2.3.8",
     "vite-plugin-components": "^0.12.0",
-    "vite-plugin-icons": "workspace:*",
+    "unplugin-icons": "workspace:*",
     "vite-plugin-vue2": "^1.8.1",
     "vue-template-compiler": "^2.6.14",
     "vue-template-es2015-compiler": "^1.9.1"
