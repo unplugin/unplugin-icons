@@ -23,7 +23,7 @@
     "dev": "npm run build -- --watch",
     "example:dev": "npm -C examples/vue3 run dev",
     "example:build": "npm -C examples/vue3 run build",
-    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "build": "tsup src/index.ts --dts --format cjs,esm --external vue",
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --commit --tag && npm publish && git push"
   },
@@ -53,9 +53,6 @@
     "rollup": "^2.52.7",
     "tsup": "^4.12.0",
     "typescript": "^4.3.5",
-    "vite": "^2.3.8",
-    "vue": "^3.1.4",
-    "vue-template-compiler": "^2.6.14",
-    "vue-template-es2015-compiler": "^1.9.1"
+    "vite": "^2.3.8"
   }
 }
