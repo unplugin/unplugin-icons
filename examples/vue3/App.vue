@@ -25,6 +25,6 @@
 </template>
 
 <script setup lang='ts'>
-import MdiStore24Hour from 'virtual:vite-icons/mdi/store-24-hour'
-import MdiAlarmOff from 'virtual:vite-icons/mdi/alarm-off'
+import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
+import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
 </script>

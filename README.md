@@ -1,13 +1,13 @@
 # unplugin-icons
 
-Access thousands of icons as Vue components in Vite
+[![NPM version](https://img.shields.io/npm/v/unplugin-icons?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-icons)
+
+Access thousands of icons as components on-demand. Works for Vite, Webpack, Rollup, Nuxt, and more, powered by [unplugin](https://github.com/unjs/unplugin).
 
 - 90+ iconsets powered by [Iconify](https://github.com/iconify/iconify)
 - [Browser the icons](https://icones.js.org/)
 
 ## Install
-
-> ℹ️ **Vite 2 is supported from `v0.2.x`, Vite 1's support is discontinued.**
 
 Install the plugin and peer dependency `@iconify/json`
 
@@ -20,7 +20,7 @@ Add it to `vite.config.js`
 ```ts
 // vite.config.js
 import Vue from '@vitejs/plugin-vue'
-import Icons from 'unplugin-icons'
+import Icons from 'unplugin-icons/vite'
 
 export default {
   plugins: [
@@ -30,10 +30,10 @@ export default {
 }
 ```
 
-```vue
+```html
 <script setup>
-import IconAccessibility from 'virtual:vite-icons/carbon/accessibility'
-import IconAccountBox from 'virtual:vite-icons/mdi/account-box'
+import IconAccessibility from 'virtual:icons/carbon/accessibility'
+import IconAccountBox from 'virtual:icons/mdi/account-box'
 </script>
 
 <template>
@@ -50,7 +50,7 @@ The following config shows the default values of each option:
 ```ts
 // vite.config.js
 import Vue from '@vitejs/plugin-vue'
-import Icons from 'unplugin-icons'
+import Icons from 'unplugin-icons/vite'
 
 export default {
   plugins: [
@@ -73,22 +73,23 @@ Use with [`vite-plugin-components`](https://github.com/antfu/vite-plugin-compone
 // vite.config.js
 import Vue from '@vitejs/plugin-vue'
 import Components from 'vite-plugin-components'
-import ViteIcons, { ViteIconsResolver } from 'unplugin-icons'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 export default {
   plugins: [
     Vue(),
     Components({
-      customComponentResolvers: ViteIconsResolver(),
+      customComponentResolvers: IconsResolver(),
     }),
-    ViteIcons(),
+    Icons(),
   ],
 }
 ```
 
 Then you can use any icons as you want without explicit importing (only the used icons will be bundled)
 
-```vue
+```html
 <template>
   <i-carbon-accessibility/>
   <i-mdi-account-box style="font-size: 2em; color: red"/>
@@ -112,11 +113,11 @@ export default {
   plugins: [
     Vue(),
     Components({
-      customComponentResolvers: ViteIconsResolver({
+      customComponentResolvers: IconsResolver({
         componentPrefix: 'icon' // <--
       }),
     }),
-    ViteIcons(),
+    Icons(),
   ],
 }
 ```
@@ -130,7 +131,7 @@ export default {
 Non-prefix mode is also supported
 
 ```ts
-ViteIconsResolver({
+IconsResolver({
   componentPrefix: '', // <--
   // this is optional, default enabling all the collections supported by Iconify
   enabledCollections: ['mdi']
@@ -153,13 +154,13 @@ And it just works.
 
 ```ts
 // vite.config.js
-import { createVuePlugin } from 'vite-plugin-vue2'
-import ViteIcons from 'unplugin-icons'
+import { createVuePlugin as Vue2 } from 'vite-plugin-vue2'
+import Icons from 'unplugin-icons/vite'
 
 export default {
   plugins: [
-    createVuePlugin(),
-    ViteIcons(),
+    Vue2(),
+    Icons(),
   ],
 }
 ```
@@ -203,4 +204,4 @@ This project is part of my <a href='https://github.com/antfu-sponsors'>Sponsor P
 
 ## License
 
-MIT License © 2020 [Anthony Fu](https://github.com/antfu)
+MIT License © 2020-PRESENT [Anthony Fu](https://github.com/antfu)
