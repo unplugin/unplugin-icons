@@ -2,20 +2,29 @@ import type { Plugin } from 'vite'
 import { Options, ResolvedOptions } from './types'
 import { generateComponentFromPath, isIconPath, normalizeIconPath } from './loader'
 
+function getVueVersion() {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const vue = require('vue')
+    const version = vue?.default?.version || vue?.version || '3'
+    return version.startsWith('2.') ? 'vue2' : 'vue3'
+  }
+  catch {
+    return 'vue3'
+  }
+}
+
 function VitePluginIcons(userOptions: Options = {}): Plugin {
-  let options: ResolvedOptions
+  const options: ResolvedOptions = {
+    scale: 1.2,
+    defaultStyle: '',
+    defaultClass: '',
+    compiler: userOptions.compiler || getVueVersion(),
+    ...userOptions,
+  }
 
   return {
     name: 'vite-plugin-icons',
-    enforce: 'post',
-    configResolved(config) {
-      options = Object.assign({
-        scale: 1.2,
-        defaultStyle: '',
-        defaultClass: '',
-        compiler: config.plugins.find(i => i.name === 'vite-plugin-vue2') ? 'vue2' : 'vue3',
-      }, userOptions)
-    },
     resolveId(id) {
       if (isIconPath(id)) {
         // need to a relative path in for vite to resolve node_modules in build
