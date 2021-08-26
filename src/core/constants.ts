@@ -1,1 +1,1 @@
-export const URL_PREFIXES = ['/@vite-icons/', '@vite-icons/', 'virtual:vite-icons/']
+export const URL_PREFIXES = ['/~icons/', '~icons/', 'virtual:icons/', 'virtual/icons/']
