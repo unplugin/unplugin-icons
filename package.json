@@ -1,31 +1,81 @@
 {
-  "name": "vite-plugin-icons",
+  "name": "unplugin-icons",
   "version": "0.6.5",
-  "description": "Access thousands of icons as Vue components in Vite",
-  "license": "MIT",
+  "description": "Access thousands of icons as Vue components on-demand",
+  "homepage": "https://github.com/antfu/unplugin-icons",
+  "bugs": "https://github.com/antfu/unplugin-icons/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antfu/vite-plugin-icons"
+    "url": "https://github.com/antfu/unplugin-icons"
   },
   "funding": "https://github.com/sponsors/antfu",
+  "license": "MIT",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*",
+    "./jest": {
+      "require": "./jest.js"
+    },
+    "./nuxt": {
+      "require": "./dist/nuxt.js",
+      "import": "./dist/nuxt.mjs"
+    },
+    "./resolver": {
+      "require": "./dist/resolver.js",
+      "import": "./dist/resolver.mjs"
+    },
+    "./rollup": {
+      "require": "./dist/rollup.js",
+      "import": "./dist/rollup.mjs"
+    },
+    "./types": {
+      "require": "./dist/types.js",
+      "import": "./dist/types.mjs"
+    },
+    "./vite": {
+      "require": "./dist/vite.js",
+      "import": "./dist/vite.mjs"
+    },
+    "./webpack": {
+      "require": "./dist/webpack.js",
+      "import": "./dist/webpack.mjs"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "index.d.ts",
   "files": [
     "dist",
     "index.d.ts",
     "client.d.ts"
   ],
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "index.d.ts",
-  "homepage": "https://github.com/antfu/vite-plugin-icons",
-  "bugs": "https://github.com/antfu/vite-plugin-icons/issues",
   "scripts": {
-    "dev": "npm run build -- --watch",
-    "example:dev": "npm -C examples/vue3 run dev",
+    "build": "rimraf dist && tsup 'src/*.ts' --format cjs,esm --dts --external vue && esno scripts/postbuild.ts",
+    "dev": "tsup --format cjs,esm 'src/*.ts' --watch src --external vue",
     "example:build": "npm -C examples/vue3 run build",
-    "build": "tsup src/index.ts --dts --format cjs,esm --external vue",
+    "example:dev": "npm -C examples/vue3 run dev",
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --commit --tag && npm publish && git push"
+  },
+  "dependencies": {
+    "@iconify/json-tools": "^1.0.10",
+    "unplugin": "^0.2.0",
+    "vue-template-es2015-compiler": "^1.9.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.6.6",
+    "@types/node": "^15.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@vue/compiler-sfc": "^3.1.4",
+    "eslint": "^7.30.0",
+    "rollup": "^2.52.7",
+    "tsup": "^4.12.0",
+    "typescript": "^4.3.5",
+    "vite": "^2.3.8"
   },
   "peerDependencies": {
     "@iconify/json": "*",
@@ -39,20 +89,5 @@
     "vue-template-compiler": {
       "optional": true
     }
-  },
-  "dependencies": {
-    "@iconify/json-tools": "^1.0.10",
-    "vue-template-es2015-compiler": "^1.9.1"
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "^0.6.6",
-    "@types/node": "^15.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.28.1",
-    "@vue/compiler-sfc": "^3.1.4",
-    "eslint": "^7.30.0",
-    "rollup": "^2.52.7",
-    "tsup": "^4.12.0",
-    "typescript": "^4.3.5",
-    "vite": "^2.3.8"
   }
 }

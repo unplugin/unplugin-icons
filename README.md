@@ -1,4 +1,4 @@
-# vite-plugin-icons
+# unplugin-icons
 
 Access thousands of icons as Vue components in Vite
 
@@ -12,7 +12,7 @@ Access thousands of icons as Vue components in Vite
 Install the plugin and peer dependency `@iconify/json`
 
 ```bash
-npm i -D vite-plugin-icons @iconify/json
+npm i -D unplugin-icons @iconify/json
 ```
 
 Add it to `vite.config.js`
@@ -20,7 +20,7 @@ Add it to `vite.config.js`
 ```ts
 // vite.config.js
 import Vue from '@vitejs/plugin-vue'
-import Icons from 'vite-plugin-icons'
+import Icons from 'unplugin-icons'
 
 export default {
   plugins: [
@@ -50,7 +50,7 @@ The following config shows the default values of each option:
 ```ts
 // vite.config.js
 import Vue from '@vitejs/plugin-vue'
-import Icons from 'vite-plugin-icons'
+import Icons from 'unplugin-icons'
 
 export default {
   plugins: [
@@ -73,7 +73,7 @@ Use with [`vite-plugin-components`](https://github.com/antfu/vite-plugin-compone
 // vite.config.js
 import Vue from '@vitejs/plugin-vue'
 import Components from 'vite-plugin-components'
-import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
+import ViteIcons, { ViteIconsResolver } from 'unplugin-icons'
 
 export default {
   plugins: [
@@ -154,7 +154,7 @@ And it just works.
 ```ts
 // vite.config.js
 import { createVuePlugin } from 'vite-plugin-vue2'
-import ViteIcons from 'vite-plugin-icons'
+import ViteIcons from 'unplugin-icons'
 
 export default {
   plugins: [
@@ -166,7 +166,7 @@ export default {
 
 ## Comparsion with [Purge Icons](https://github.com/antfu/purge-icons)
 
-### `vite-plugin-icons`
+### `unplugin-icons`
 
 #### Pros
 

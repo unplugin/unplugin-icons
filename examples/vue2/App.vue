@@ -17,7 +17,7 @@
       <i-mdi:cactus />
       <IIcTwotone23mp />
       <IMdiStore24Hour />
-      from <code>vite-plugin-icons</code>
+      from <code>unplugin-icons</code>
     </p>
   </div>
 </template>

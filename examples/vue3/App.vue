@@ -19,7 +19,7 @@
       <IIcTwotone23mp />
       <MdiStore24Hour />
       <MdiAlarmOff />
-      from <code>vite-plugin-icons</code>
+      from <code>unplugin-icons</code>
     </p>
   </div>
 </template>

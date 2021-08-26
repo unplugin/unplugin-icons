@@ -1,4 +1,4 @@
-import './client'
+import './shim-vue'
 import _default from './dist'
 
 export default _default
