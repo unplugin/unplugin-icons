@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "@iconify/json-tools": "^1.0.10",
-    "unplugin": "^0.2.2"
+    "unplugin": "^0.2.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.7.0",
