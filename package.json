@@ -1,7 +1,7 @@
 {
   "name": "unplugin-icons",
-  "version": "0.6.5",
-  "description": "Access thousands of icons as Vue components on-demand",
+  "version": "0.0.0",
+  "description": "Access thousands of icons as components on-demand",
   "homepage": "https://github.com/antfu/unplugin-icons",
   "bugs": "https://github.com/antfu/unplugin-icons/issues",
   "repository": {
@@ -63,30 +63,33 @@
   },
   "dependencies": {
     "@iconify/json-tools": "^1.0.10",
-    "unplugin": "^0.2.0",
-    "vue-template-es2015-compiler": "^1.9.1"
+    "unplugin": "^0.2.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.6.6",
-    "@types/node": "^15.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.28.1",
-    "@vue/compiler-sfc": "^3.1.4",
-    "eslint": "^7.30.0",
-    "rollup": "^2.52.7",
-    "tsup": "^4.12.0",
-    "typescript": "^4.3.5",
-    "vite": "^2.3.8"
+    "@antfu/eslint-config": "^0.7.0",
+    "@types/node": "^16.7.4",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@vue/compiler-sfc": "^3.2.6",
+    "eslint": "^7.32.0",
+    "rollup": "^2.56.3",
+    "tsup": "^4.14.0",
+    "typescript": "^4.4.2",
+    "vite": "^2.5.1"
   },
   "peerDependencies": {
     "@iconify/json": "*",
     "@vue/compiler-sfc": "^3.0.2",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.12",
+    "vue-template-es2015-compiler": "^1.9.1"
   },
   "peerDependenciesMeta": {
     "@vue/compiler-sfc": {
       "optional": true
     },
     "vue-template-compiler": {
+      "optional": true
+    },
+    "vue-template-es2015-compiler": {
       "optional": true
     }
   }

@@ -15,12 +15,15 @@ const unplugin = createUnplugin<Options>((options = {}) => {
   return {
     name: 'unplugin-icons',
     resolveId(id) {
-      if (isIconPath(id))
-        return normalizeIconPath(id).replace(/\.vue$/i, '').replace(/^\//, '')
+      if (isIconPath(id)) {
+        return normalizeIconPath(id)
+          .replace(/\.\w+$/i, '')
+          .replace(/^\//, '')
+      }
       return null
     },
     async load(id) {
-      if (id && isIconPath(id))
+      if (isIconPath(id))
         return await generateComponentFromPath(id, resolved) || null
       return null
     },
