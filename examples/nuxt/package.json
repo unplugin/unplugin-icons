@@ -1,0 +1,19 @@
+{
+  "name": "nuxt-example",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "core-js": "^3.16.3",
+    "nuxt": "^2.15.8"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.8",
+    "unplugin-icons": "link:../..",
+    "@iconify/json-tools": "^1.0.10"
+  }
+}
