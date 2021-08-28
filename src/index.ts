@@ -9,6 +9,7 @@ const unplugin = createUnplugin<Options>((options = {}) => {
     defaultStyle: '',
     defaultClass: '',
     compiler: options.compiler || getVueVersion(),
+    jsx: 'react',
     ...options,
   }
 
@@ -16,15 +17,18 @@ const unplugin = createUnplugin<Options>((options = {}) => {
     name: 'unplugin-icons',
     resolveId(id) {
       if (isIconPath(id)) {
-        return normalizeIconPath(id)
+        const res = normalizeIconPath(id)
           .replace(/\.\w+$/i, '')
           .replace(/^\//, '')
+        const ext = '.jsx'
+        return res + ext
       }
       return null
     },
     async load(id) {
       if (isIconPath(id))
         return await generateComponentFromPath(id, resolved) || null
+
       return null
     },
   }

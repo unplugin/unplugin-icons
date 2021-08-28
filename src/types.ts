@@ -25,7 +25,14 @@ export interface Options {
    *
    * @default [detect automatically]
    */
-  compiler?: 'vue2' | 'vue3'
+  compiler?: 'vue2' | 'vue3' | 'jsx'
+
+  /**
+   * JSX style, works only when compiler set to `jsx`
+   *
+   * @default 'react'
+   */
+  jsx?: 'react' | 'preact'
 }
 
 export type ResolvedOptions = Required<Options>

@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "@iconify/json-tools": "^1.0.10",
+    "@svgr/core": "^5.5.0",
     "unplugin": "^0.2.3"
   },
   "devDependencies": {
