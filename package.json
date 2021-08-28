@@ -50,8 +50,8 @@
   "types": "index.d.ts",
   "files": [
     "dist",
-    "index.d.ts",
-    "client.d.ts"
+    "types",
+    "*.d.ts"
   ],
   "scripts": {
     "build": "rimraf dist && tsup 'src/*.ts' --format cjs,esm --dts --external vue && esno scripts/postbuild.ts",
@@ -63,11 +63,11 @@
   },
   "dependencies": {
     "@iconify/json-tools": "^1.0.10",
-    "@svgr/core": "^5.5.0",
     "unplugin": "^0.2.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.7.0",
+    "@svgr/core": "^5.5.0",
     "@types/node": "^16.7.4",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@vue/compiler-sfc": "^3.2.6",
@@ -79,9 +79,10 @@
   },
   "peerDependencies": {
     "@iconify/json": "*",
+    "@svgr/core": "^5.5.0",
     "@vue/compiler-sfc": "^3.0.2",
     "vue-template-compiler": "^2.6.12",
-    "vue-template-es2015-compiler": "^1.9.1"
+    "vue-template-es2015-compiler": "^1.9.0"
   },
   "peerDependenciesMeta": {
     "@vue/compiler-sfc": {
@@ -91,6 +92,9 @@
       "optional": true
     },
     "vue-template-es2015-compiler": {
+      "optional": true
+    },
+    "@svgr/core": {
       "optional": true
     }
   }
