@@ -5,7 +5,7 @@ import fg from 'fast-glob'
 async function run() {
   // fix cjs exports
   const files = await fg('*.js', {
-    ignore: ['index.js', 'chunk-*'],
+    ignore: ['index.js', 'chunk-*', 'types.js'],
     absolute: true,
     cwd: resolve(__dirname, '../dist'),
   })
@@ -17,7 +17,7 @@ async function run() {
     code = code.replace('exports.default =', 'module.exports =')
     code += 'exports.default = module.exports;'
     await fs.writeFile(file, code)
-    await fs.writeFile(`${name}.d.ts`, `import './shim-vue'\nexport { default } from './dist/${name}'\n`)
+    await fs.writeFile(`${name}.d.ts`, `export { default } from './dist/${name}'\n`)
   }
 }
 
