@@ -2,10 +2,51 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-icons?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-icons)
 
-Access thousands of icons as components on-demand. Works for Vite, Webpack, Rollup, Nuxt, and more, powered by [unplugin](https://github.com/unjs/unplugin).
+Universal **on-demand** icons solution. 
 
-- 90+ iconsets powered by [Iconify](https://github.com/iconify/iconify)
+Works for
+
+- **Any** icon sets - 90+ popular iconsets, powered by [Iconify](https://github.com/iconify/iconify)
+- **Any** build tools - Vite, Webpack, Rollup, Nuxt, etc. powered by [unplugin](https://github.com/unjs/unplugin)
+- **Any** frameworks - React, Vue 3, Vue 2, and [contribute more]()
+- **Any** combinations of them!
 - [Browser the icons](https://icones.js.org/)
+
+*For **Any** I mean (almost) any* 😅
+
+## Usage
+
+Import icons names with the prefix `~icons/` and use them directly as components. [Auto importing is also possible](#auto-importing).
+
+###### React
+
+```jsx
+import IconAccessibility from '~icons/carbon/accessibility'
+import IconAccountBox from '~icons/mdi/account-box'
+
+function App() {
+  return (
+    <div>
+      <IconAccessibility />
+      <IconAccountBox style={{ fontSize: '2em', color: 'red' }}/>
+    </div>
+  )
+}
+```
+
+###### Vue
+
+```html
+<script setup>
+import IconAccessibility from '~icons/carbon/accessibility'
+import IconAccountBox from '~icons/mdi/account-box'
+</script>
+
+<template>
+  <icon-accessibility/>
+  <icon-account-box style="font-size: 2em; color: red"/>
+</template>
+```
 
 ## Install
 
@@ -15,32 +56,176 @@ Install the plugin and peer dependency `@iconify/json`
 npm i -D unplugin-icons @iconify/json
 ```
 
-Add it to `vite.config.js`
+### Build Tools
+
+<details>
+<summary>Vite</summary><br>
 
 ```ts
-// vite.config.js
-import Vue from '@vitejs/plugin-vue'
+// vite.config.ts
 import Icons from 'unplugin-icons/vite'
+
+export default defineConfig({
+  plugins: [
+    Icons({ /* options */ }),
+  ],
+})
+```
+
+<br></details>
+
+<details>
+<summary>Rollup</summary><br>
+
+```ts
+// rollup.config.js
+import Icons from 'unplugin-icons/rollup'
 
 export default {
   plugins: [
-    Vue(),
-    Icons()
+    Icons({ /* options */ }),
   ],
 }
 ```
 
-```html
-<script setup>
-import IconAccessibility from 'virtual:icons/carbon/accessibility'
-import IconAccountBox from 'virtual:icons/mdi/account-box'
-</script>
+<br></details>
 
-<template>
-  <icon-accessibility/>
-  <icon-account-box style="font-size: 2em; color: red"/>
-</template>
+
+<details>
+<summary>Webpack</summary><br>
+
+```ts
+// webpack.config.js
+module.exports = {
+  /* ... */
+  plugins: [
+    require('unplugin-icons/webpack')({ /* options */ })
+  ]
+}
 ```
+
+<br></details>
+
+<details>
+<summary>Nuxt</summary><br>
+
+```ts
+// nuxt.config.js
+export default {
+  buildModules: [
+    ['unplugin-icons/nuxt', { /* options */ }],
+  ],
+}
+```
+
+> This module works for both Nuxt 2 and [Nuxt Vite](https://github.com/nuxt/vite)
+
+<br></details>
+
+<details>
+<summary>Vue CLI</summary><br>
+
+```ts
+// vue.config.js
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      require('unplugin-icons/webpack')({ /* options */ }),
+    ],
+  },
+}
+```
+
+<br></details>
+
+### Frameworks
+
+
+<details>
+<summary>Vue 3</summary><br>
+
+Vue 3 support requires peer dependency `@vue/compiler-sfc`:
+
+```bash
+npm i -D @vue/compiler-sfc
+```
+
+```ts
+Icons({ compiler: 'vue3' })
+```
+
+Type Declarations
+
+```jsonc
+// tsconfig.json
+{ 
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/vue",
+    ]
+  }
+}
+```
+
+<br></details>
+
+
+<details>
+<summary>Vue 2</summary><br>
+
+Vue 2 support requires peer dependency `vue-template-compiler`:
+
+```bash
+npm i -D vue-template-compiler
+```
+
+```ts
+Icons({ compiler: 'vue2' })
+```
+
+Type Declarations
+
+```jsonc
+// tsconfig.json
+{ 
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/vue",
+    ]
+  }
+}
+```
+
+<br></details>
+
+<details>
+<summary>React</summary><br>
+
+JSX support requires peer dependency `@svgr/core`:
+
+```bash
+npm i -D @svgr/core
+```
+
+```ts
+Icons({ compiler: 'jsx', jsx: 'react' })
+```
+
+Type Declarations
+
+```jsonc
+// tsconfig.json
+{ 
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/react",
+    ]
+  }
+}
+```
+
+<br></details>
+
 
 ## Options
 
@@ -143,54 +328,6 @@ IconsResolver({
   <mdi-account />
 </template>
 ```
-
-## Vue 2 Support
-
-```bash
-npm i -D vue-template-compiler vite-plugin-vue2
-```
-
-And it just works.
-
-```ts
-// vite.config.js
-import { createVuePlugin as Vue2 } from 'vite-plugin-vue2'
-import Icons from 'unplugin-icons/vite'
-
-export default {
-  plugins: [
-    Vue2(),
-    Icons(),
-  ],
-}
-```
-
-## Comparsion with [Purge Icons](https://github.com/antfu/purge-icons)
-
-### `unplugin-icons`
-
-#### Pros
-
-- SSR/SSG friendly
-- On-demanded bunding
-- Works with Vue 3
-
-#### Cons
-
-- No Iconify runtime, no web fetching (string icon IDs)
-- Updates are sync with other content
-
-### `purge-icons`
-
-#### Pros
-
-- Iconify runtime
-- On-demanded bundling combining with runtime web fetching
-- Framework agnostic
-
-#### Cons
-- Icons show up after the Iconify runtime loaded
-- Not SSR/SSG friendly
 
 ## Sponsors
 
