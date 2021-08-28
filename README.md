@@ -14,6 +14,8 @@ Works for
 
 *For **Any** I mean (almost) any* 😅
 
+> `vite-plugin-icons` has been renamed to `unplugin-icons`, see the [migration guide](#migrate-from-vite-plugin-icons).
+
 ## Usage
 
 Import icons names with the prefix `~icons/` and use them directly as components. [Auto importing is also possible](#auto-importing).
@@ -226,6 +228,44 @@ Type Declarations
 
 <br></details>
 
+## Migrate from `vite-plugin-icons`
+
+`package.json`
+
+```diff
+{
+  "devDependencies": {
+-   "vite-plugin-icons": "*",
++   "unplugin-icons": "^0.6.0",
+  }
+}
+```
+
+`vite.config.json`
+
+```diff
+import Components from 'vite-plugin-components'
+- import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
++ import Icons from 'unplugin-icons/vite'
++ import IconsResolver from 'unplugin-icons/resolver'
+
+export default {
+  plugins: [
+    Vue(),
+    Components({
+      customComponentResolvers: IconsResolver(),
+    }),
+    Icons(),
+  ],
+}
+```
+
+`*` - imports usage
+
+```diff
+- import IconComponent from 'virtual:vite-icons/collection/name'
++ import IconComponent from '~icons/collection/name'
+```
 
 ## Options
 
@@ -233,21 +273,13 @@ You can set default styling for all icons.
 The following config shows the default values of each option:
 
 ```ts
-// vite.config.js
-import Vue from '@vitejs/plugin-vue'
-import Icons from 'unplugin-icons/vite'
-
-export default {
-  plugins: [
-    Vue(),
-    Icons({
-      scale: 1.2, // Scale of icons against 1em
-      defaultStyle: '', // Style apply to icons
-      defaultClass: '', // Class names apply to icons
-      compiler: null, // Compiler 'vue2' or 'vue3', by default detected automatically
-    })
-  ],
-}
+Icons({
+  scale: 1.2, // Scale of icons against 1em
+  defaultStyle: '', // Style apply to icons
+  defaultClass: '', // Class names apply to icons
+  compiler: null, // 'vue2', 'vue3', 'jsx'
+  jsx: 'react' // 'react' or 'preact'
+})
 ```
 
 ## Auto Importing
