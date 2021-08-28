@@ -228,6 +228,35 @@ Type Declarations
 
 <br></details>
 
+
+<details>
+<summary>Preact</summary><br>
+
+JSX support requires peer dependency `@svgr/core`:
+
+```bash
+npm i -D @svgr/core
+```
+
+```ts
+Icons({ compiler: 'jsx', jsx: 'preact' })
+```
+
+Type Declarations
+
+```jsonc
+// tsconfig.json
+{ 
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/preact",
+    ]
+  }
+}
+```
+
+<br></details>
+
 ## Migrate from `vite-plugin-icons`
 
 `package.json`

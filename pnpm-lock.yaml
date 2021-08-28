@@ -54,6 +54,25 @@ importers:
       unplugin-icons: link:../..
       unplugin-vue2-script-setup: 0.5.4
 
+  examples/vite-preact:
+    specifiers:
+      '@preact/preset-vite': ^2.0.0
+      '@svgr/core': ^5.5.0
+      preact: ^10.5.13
+      typescript: ^4.3.2
+      unplugin-icons: workspace:*
+      vite: ^2.5.1
+      vite-plugin-inspect: ^0.2.2
+    dependencies:
+      preact: 10.5.14
+    devDependencies:
+      '@preact/preset-vite': 2.1.0_preact@10.5.14+vite@2.5.1
+      '@svgr/core': 5.5.0
+      typescript: 4.4.2
+      unplugin-icons: link:../..
+      vite: 2.5.1
+      vite-plugin-inspect: 0.2.2_vite@2.5.1
+
   examples/vite-react:
     specifiers:
       '@svgr/core': ^5.5.0
@@ -1916,6 +1935,55 @@ packages:
 
   /@polka/url/1.0.0-next.20:
     resolution: {integrity: sha512-88p7+M0QGxKpmnkfXjS4V26AnoC/eiqZutE8GLdaI5X12NY75bXSdTY9NkmYb2Xyk1O+MmkuO6Frmsj84V6I8Q==}
+
+  /@preact/preset-vite/2.1.0_preact@10.5.14+vite@2.5.1:
+    resolution: {integrity: sha512-4kJgbitw/ESjO21QwJNN8/DQ40cq4t8hsADKqAEUIXXVsvGecz0JRaMwrA+yy4S0AcUQz7rJvquEFTmsvotSGg==}
+    peerDependencies:
+      '@babel/core': 7.x
+      vite: 2.x
+    dependencies:
+      '@prefresh/vite': 2.2.3_preact@10.5.14+vite@2.5.1
+      babel-plugin-transform-hook-names: 1.0.2
+      debug: 4.3.2
+      kolorist: 1.5.0
+      vite: 2.5.1
+    transitivePeerDependencies:
+      - preact
+      - supports-color
+    dev: true
+
+  /@prefresh/babel-plugin/0.4.1:
+    resolution: {integrity: sha512-gj3ekiYtHlZNz0zFI1z6a9mcYX80Qacw84+2++7V1skvO7kQoV2ux56r8bJkTBbKMVxwAgaYrxxIdUCYlclE7Q==}
+    dev: true
+
+  /@prefresh/core/1.3.2_preact@10.5.14:
+    resolution: {integrity: sha512-Iv+uI698KDgWsrKpLvOgN3hmAMyvhVgn09mcnhZ98BUNdg/qrxE7tcUf5yFCImkgqED5/Dcn8G5hFy4IikEDvg==}
+    peerDependencies:
+      preact: ^10.0.0
+    dependencies:
+      preact: 10.5.14
+    dev: true
+
+  /@prefresh/utils/1.1.1:
+    resolution: {integrity: sha512-MUhT5m2XNN5NsZl4GnpuvlzLo6VSTa/+wBfBd3fiWUvHGhv0GF9hnA1pd//v0uJaKwUnVRQ1hYElxCV7DtYsCQ==}
+    dev: true
+
+  /@prefresh/vite/2.2.3_preact@10.5.14+vite@2.5.1:
+    resolution: {integrity: sha512-TlAzVRKAZ3kiUryLzCd3AoqZDK6K7qZDc7C3QPI7hNwDGyZmJaHY+SXNMCCDaBW5xn9YlYqz/5bl3P4tptAcOg==}
+    peerDependencies:
+      preact: ^10.4.0
+      vite: '>=2.0.0-beta.3'
+    dependencies:
+      '@babel/core': 7.15.0
+      '@prefresh/babel-plugin': 0.4.1
+      '@prefresh/core': 1.3.2_preact@10.5.14
+      '@prefresh/utils': 1.1.1
+      '@rollup/pluginutils': 4.1.1
+      preact: 10.5.14
+      vite: 2.5.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /@rollup/pluginutils/4.1.0_rollup@2.56.3:
     resolution: {integrity: sha512-TrBhfJkFxA+ER+ew2U2/fHbebhLT/l/2pRk0hfj9KusXUuRXd2v0R58AfaZK9VXDQ4TogOSEmICVrQAA3zFnHQ==}
@@ -4031,6 +4099,12 @@ packages:
       babel-helper-builder-binary-assignment-operator-visitor: 6.24.1
       babel-plugin-syntax-exponentiation-operator: 6.13.0
       babel-runtime: 6.26.0
+    dev: true
+
+  /babel-plugin-transform-hook-names/1.0.2:
+    resolution: {integrity: sha512-5gafyjyyBTTdX/tQQ0hRgu4AhNHG/hqWi0ZZmg2xvs2FgRkJXzDNKBZCyoYqgFkovfDrgM8OoKg8karoUvWeCw==}
+    peerDependencies:
+      '@babel/core': ^7.12.10
     dev: true
 
   /babel-plugin-transform-regenerator/6.26.0:
@@ -8191,6 +8265,10 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
+  /kolorist/1.5.0:
+    resolution: {integrity: sha512-pPobydIHK884YBtkS/tWSZXpSAEpcMbilyun3KL37ot935qL2HNKm/tI45i/Rd+MxdIWEhm7/LmUQzWZYK+Qhg==}
+    dev: true
+
   /last-call-webpack-plugin/3.0.0:
     resolution: {integrity: sha512-7KI2l2GIZa9p2spzPIVZBYyNKkN+e/SQPpnjlTiPhdbDW3F86tdKKELxKpzJ5sgU19wQWsACULZmpTPYHeWO5w==}
     dependencies:
@@ -10172,6 +10250,10 @@ packages:
       nanoid: 3.1.23
       source-map-js: 0.6.2
     dev: true
+
+  /preact/10.5.14:
+    resolution: {integrity: sha512-KojoltCrshZ099ksUZ2OQKfbH66uquFoxHSbnwKbTJHeQNvx42EmC7wQVWNuDt6vC5s3nudRHFtKbpY4ijKlaQ==}
+    dev: false
 
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
