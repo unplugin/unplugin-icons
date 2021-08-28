@@ -8,7 +8,7 @@ Works for
 
 - **Any** icon sets - 90+ popular iconsets, powered by [Iconify](https://github.com/iconify/iconify)
 - **Any** build tools - Vite, Webpack, Rollup, Nuxt, etc. powered by [unplugin](https://github.com/unjs/unplugin)
-- **Any** frameworks - React, Vue 3, Vue 2, and [contribute more]()
+- **Any** frameworks - React, Vue 3, Vue 2, and [contribute more](./src/core/compiles)
 - **Any** combinations of them!
 - [Browser the icons](https://icones.js.org/)
 
