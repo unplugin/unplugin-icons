@@ -1,3 +1,5 @@
+import { Options } from '../types'
+
 export function getVueVersion() {
   try {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -8,4 +10,8 @@ export function getVueVersion() {
   catch {
     return 'vue3'
   }
+}
+
+export function guessCompiler(): Options['compiler'] {
+  return 'vue3'
 }

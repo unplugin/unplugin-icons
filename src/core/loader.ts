@@ -1,6 +1,7 @@
 // @ts-ignore
 import { SVG, Collection } from '@iconify/json-tools'
 import { ResolvedOptions } from '../types'
+import { JSXCompiler } from './compiler/jsx'
 import { Vue2Compiler } from './compiler/vue2'
 import { Vue3Compiler } from './compiler/vue3'
 import { URL_PREFIXES } from './constants'
@@ -37,8 +38,8 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
     })
   }
 
-  if (path.endsWith('.vue'))
-    path = path.slice(0, -4)
+  // remove extension
+  path = path.replace(/\.\w+$/, '')
 
   const [collection, icon] = path.split('/')
 
@@ -80,8 +81,11 @@ export function getIcon(name: string, icon: string) {
   return null
 }
 
-export async function generateComponent({ collection: name, icon }: ResolvedIconPath, options: ResolvedOptions) {
-  const data = getIcon(name, icon)
+export async function generateComponent({ collection, icon }: ResolvedIconPath, options: ResolvedOptions) {
+  const data = getIcon(collection, icon)
+  if (!data)
+    throw new Error(`Icon \`${collection}:${icon}\` not found`)
+
   const { scale, defaultStyle, defaultClass } = options
   const svg = new SVG(data)
   const svgText: string = svg.getSVG({
@@ -94,10 +98,14 @@ export async function generateComponent({ collection: name, icon }: ResolvedIcon
   if (!svgText)
     return null
 
-  if (options.compiler === 'vue2')
-    return Vue2Compiler(svgText, name, icon)
+  if (options.compiler === 'jsx')
+    return JSXCompiler(svgText, collection, icon, options.jsx)
+  else if (options.compiler === 'vue2')
+    return Vue2Compiler(svgText, collection, icon)
+  else if (options.compiler === 'vue3')
+    return Vue3Compiler(svgText, collection, icon)
   else
-    return Vue3Compiler(svgText, name, icon)
+    throw new Error(`Unknown compiler: ${options.compiler}`)
 }
 
 export async function generateComponentFromPath(path: string, options: ResolvedOptions) {
