@@ -17,9 +17,6 @@
       "import": "./dist/index.mjs"
     },
     "./*": "./*",
-    "./jest": {
-      "require": "./jest.js"
-    },
     "./nuxt": {
       "require": "./dist/nuxt.js",
       "import": "./dist/nuxt.mjs"
