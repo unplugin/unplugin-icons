@@ -11,6 +11,7 @@ importers:
       '@typescript-eslint/eslint-plugin': ^4.29.3
       '@vue/compiler-sfc': ^3.2.6
       eslint: ^7.32.0
+      has-pkg: ^0.0.1
       rollup: ^2.56.3
       tsup: ^4.14.0
       typescript: ^4.4.2
@@ -18,6 +19,7 @@ importers:
       vite: ^2.5.1
     dependencies:
       '@iconify/json-tools': 1.0.10
+      has-pkg: 0.0.1
       unplugin: 0.2.3_rollup@2.56.3+vite@2.5.1
     devDependencies:
       '@antfu/eslint-config': 0.7.0_eslint@7.32.0+typescript@4.4.2
@@ -7215,6 +7217,10 @@ packages:
   /has-flag/4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
+
+  /has-pkg/0.0.1:
+    resolution: {integrity: sha512-UuzsNxcEOdEwRsz4HtaceT7jg71L2gopEq8OMOGKtPLYhHhF4RJZtkcZ4Xn0jmAmBSNhm0xPhrywgZkLu4aMYQ==}
+    dev: false
 
   /has-symbols/1.0.2:
     resolution: {integrity: sha512-chXa79rL/UC2KlX17jo3vRGz0azaWEx5tGqZg5pO3NUyEJVB17dMruQlzCCOfUvElghKcm5194+BCRvi2Rv/Gw==}
