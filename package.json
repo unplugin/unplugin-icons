@@ -1,6 +1,6 @@
 {
   "name": "unplugin-icons",
-  "version": "0.1.0",
+  "version": "0.6.0",
   "description": "Access thousands of icons as components on-demand",
   "homepage": "https://github.com/antfu/unplugin-icons",
   "bugs": "https://github.com/antfu/unplugin-icons/issues",
