@@ -2,19 +2,15 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-icons?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-icons)
 
-Universal **on-demand** icons solution. 
-
-Works for
+Access thousands of icons as components **on-demand** universally.
 
 - **Any** icon sets - 90+ popular iconsets, powered by [Iconify](https://github.com/iconify/iconify)
-- **Any** build tools - Vite, Webpack, Rollup, Nuxt, etc. powered by [unplugin](https://github.com/unjs/unplugin)
-- **Any** frameworks - React, Vue 3, Vue 2, and [contribute more](./src/core/compiles)
+- **Major** build tools - Vite, Webpack, Rollup, Nuxt, etc. powered by [unplugin](https://github.com/unjs/unplugin)
+- **Major** frameworks - React, Vue 3, Vue 2, and [contribute more](./src/core/compiles)
 - **Any** combinations of them!
 - [Browser the icons](https://icones.js.org/)
 
-*For **Any** I mean (almost) any* 😅
-
-> `vite-plugin-icons` has been renamed to `unplugin-icons`, see the [migration guide](#migrate-from-vite-plugin-icons).
+> **`vite-plugin-icons` has been renamed to `unplugin-icons`**, see the [migration guide](#migrate-from-vite-plugin-icons).
 
 ## Usage
 
@@ -265,7 +261,7 @@ Type Declarations
 {
   "devDependencies": {
 -   "vite-plugin-icons": "*",
-+   "unplugin-icons": "^0.6.0",
++   "unplugin-icons": "^0.7.0",
   }
 }
 ```
