@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "@iconify/json-tools": "^1.0.10",
+    "has-pkg": "^0.0.1",
     "unplugin": "^0.2.3"
   },
   "devDependencies": {

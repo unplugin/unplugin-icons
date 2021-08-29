@@ -23,14 +23,14 @@ export interface Options {
   /**
    * Compiler
    *
-   * @default [detect automatically]
+   * @default (detect automatically, fallback to 'vue3')
    */
   compiler?: 'vue2' | 'vue3' | 'jsx'
 
   /**
    * JSX style, works only when compiler set to `jsx`
    *
-   * @default 'react'
+   * @default (detect automatically, fallback to 'react')
    */
   jsx?: 'react' | 'preact'
 }

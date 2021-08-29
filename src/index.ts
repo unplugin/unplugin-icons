@@ -1,17 +1,10 @@
 import { createUnplugin } from 'unplugin'
-import { getVueVersion } from './core/utils'
-import { Options, ResolvedOptions } from './types'
+import { resolveOptions } from './core/options'
 import { generateComponentFromPath, isIconPath, normalizeIconPath } from './core/loader'
+import { Options } from './types'
 
 const unplugin = createUnplugin<Options>((options = {}) => {
-  const resolved: ResolvedOptions = {
-    scale: 1.2,
-    defaultStyle: '',
-    defaultClass: '',
-    compiler: options.compiler || getVueVersion(),
-    jsx: 'react',
-    ...options,
-  }
+  const resolved = resolveOptions(options)
 
   return {
     name: 'unplugin-icons',
