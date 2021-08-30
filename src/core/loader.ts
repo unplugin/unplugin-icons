@@ -4,7 +4,6 @@ import { ResolvedOptions } from '../types'
 import { JSXCompiler } from './compilers/jsx'
 import { Vue2Compiler } from './compilers/vue2'
 import { Vue3Compiler } from './compilers/vue3'
-import { URL_PREFIXES } from './constants'
 
 export interface ResolvedIconPath {
   collection: string
@@ -12,6 +11,7 @@ export interface ResolvedIconPath {
   query: Record<string, string | undefined>
 }
 
+const URL_PREFIXES = ['/~icons/', '~icons/', 'virtual:icons/', 'virtual/icons/']
 const iconPathRE = new RegExp(`${URL_PREFIXES.map(v => `^${v}`).join('|')}`)
 
 export function isIconPath(path: string) {

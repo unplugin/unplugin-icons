@@ -50,6 +50,6 @@ export default function ViteComponentsResolver(options: Partial<ComponentResolve
     if (!getIcon(collection, icon))
       return
 
-    return `virtual:icons/${collection}/${icon}`
+    return `~icons/${collection}/${icon}`
   }
 }
