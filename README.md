@@ -14,7 +14,7 @@ Access thousands of icons as components **on-demand** universally.
 
 ## Usage
 
-Import icons names with the prefix `~icons/` and use them directly as components. [Auto importing is also possible](#auto-importing).
+Import icons names with the convension `~icons/{collection}/{icon}` and use them directly as components. [Auto importing is also possible](#auto-importing).
 
 ###### React
 
@@ -309,20 +309,24 @@ Icons({
 
 ## Auto Importing
 
-Use with [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components) (`>= v0.5.5`)
+> Currently only support Vue 2 and Vue 3.
+
+Use with [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components)
+
+For example in Vite:
 
 ```js
 // vite.config.js
 import Vue from '@vitejs/plugin-vue'
-import Components from 'vite-plugin-components'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import Components from 'unplugin-vue-components/vite'
 
 export default {
   plugins: [
     Vue(),
     Components({
-      customComponentResolvers: IconsResolver(),
+      resolvers: IconsResolver(),
     }),
     Icons(),
   ],
@@ -355,7 +359,7 @@ export default {
   plugins: [
     Vue(),
     Components({
-      customComponentResolvers: IconsResolver({
+      resolvers: IconsResolver({
         componentPrefix: 'icon' // <--
       }),
     }),
