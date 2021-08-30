@@ -24,6 +24,6 @@ const App: Component = () => {
       </header>
     </div>
   )
-};
+}
 
 export default App

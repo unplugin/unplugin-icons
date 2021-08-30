@@ -1,4 +1,3 @@
-
 export async function SolidCompiler(svg: string) {
   return `
     import { template, spread } from "solid-js/web";
