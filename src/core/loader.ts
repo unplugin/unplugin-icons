@@ -88,15 +88,18 @@ export async function generateComponent({ collection, icon }: ResolvedIconPath, 
 
   const { scale, defaultStyle, defaultClass } = options
   const svg = new SVG(data)
-  const svgText: string = svg.getSVG({
+  let svgText: string = svg.getSVG({
     height: `${scale}em`,
     width: `${scale}em`,
-    style: defaultStyle,
-    class: defaultClass,
   })
 
   if (!svgText)
     return null
+
+  if (defaultClass)
+    svgText = svgText.replace('<svg ', `<svg class="${defaultClass}" `)
+  if (defaultStyle)
+    svgText = svgText.replace('<svg ', `<svg style="${defaultStyle}" `)
 
   if (options.compiler === 'jsx')
     return JSXCompiler(svgText, collection, icon, options.jsx)

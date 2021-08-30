@@ -14,6 +14,7 @@ const config: UserConfig = {
     }),
     Icons({
       defaultClass: 'text-red-100',
+      defaultStyle: 'color: green',
       compiler: 'vue2',
     }),
   ],
