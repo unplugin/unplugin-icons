@@ -12,12 +12,24 @@
       <i-ri-apps-2-line />
       <i-mdi-dice-d12 />
       <i-mdi-light-alarm />
-      <i-noto-v1-flag-for-flag-japan/>
+      <i-noto-v1-flag-for-flag-japan />
       <i-ic-twotone-24mp />
       <i-mdi:cactus />
       <IIcTwotone23mp />
-      <IMdiStore24Hour />
+      <MdiStore24Hour />
       from <code>unplugin-icons</code>
     </p>
   </div>
 </template>
+
+<script lang='ts'>
+import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
+import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
+
+export default {
+  components: {
+    MdiStore24Hour,
+    MdiAlarmOff,
+  },
+}
+</script>

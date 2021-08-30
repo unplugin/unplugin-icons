@@ -12,7 +12,10 @@ const config: UserConfig = {
         IconsResolver(),
       ],
     }),
-    Icons(),
+    Icons({
+      defaultClass: 'text-red-100',
+      compiler: 'vue2',
+    }),
   ],
 }
 

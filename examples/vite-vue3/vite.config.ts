@@ -13,7 +13,9 @@ const config: UserConfig = {
         IconsResolver(),
       ],
     }),
-    Icons(),
+    Icons({
+      compiler: 'vue3',
+    }),
   ],
 }
 

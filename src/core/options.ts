@@ -20,9 +20,7 @@ export function resolveOptions(options: Options): ResolvedOptions {
 }
 
 function guessCompiler(): ResolvedOptions['compiler'] {
-  if (hasPkg('@svgr/core'))
-    return 'jsx'
-  return getVueVersion() || 'vue3'
+  return getVueVersion() || (hasPkg('@svgr/core') ? 'jsx' : 'vue3')
 }
 
 function guessJSX(): ResolvedOptions['jsx'] {

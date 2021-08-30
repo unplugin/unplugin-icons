@@ -13,7 +13,7 @@ const unplugin = createUnplugin<Options>((options = {}) => {
         const res = normalizeIconPath(id)
           .replace(/\.\w+$/i, '')
           .replace(/^\//, '')
-        const ext = '.jsx'
+        const ext = options.compiler === 'jsx' ? '.jsx' : ''
         return res + ext
       }
       return null
