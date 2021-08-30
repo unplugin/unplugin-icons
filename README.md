@@ -261,6 +261,30 @@ Type Declarations
 
 <br></details>
 
+
+<details>
+<summary>Solid</summary><br>
+
+
+```ts
+Icons({ compiler: 'solid' })
+```
+
+Type Declarations
+
+```jsonc
+// tsconfig.json
+{
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/solid",
+    ]
+  }
+}
+```
+
+<br></details>
+
 ## Migrate from `vite-plugin-icons`
 
 `package.json`
