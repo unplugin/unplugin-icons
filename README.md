@@ -324,6 +324,8 @@ export default {
 + import IconComponent from '~icons/collection/name'
 ```
 
+> You can still use `virtual:icons` prefix in Vite if you prefer, but it's not yet supported in Webpack, we are unifying it as a workaround in the docs.
+
 ## Options
 
 You can set default styling for all icons. 
