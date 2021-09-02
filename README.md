@@ -377,7 +377,7 @@ Then you can use any icons as you want without explicit importing. Only the used
 </template>
 ```
 
-</summary>
+</details>
 
 <details>
 <summary>React & Solid</summary><br>
@@ -422,7 +422,7 @@ export function Component() {
 }
 ```
 
-</summary>
+</details>
 
 ### Name Conversion
 
