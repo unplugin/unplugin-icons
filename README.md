@@ -341,7 +341,8 @@ Icons({
 
 ## Auto Importing
 
-> Currently only support Vue 2 and Vue 3.
+<details>
+<summary>Vue 2 & 3</summary><br>
 
 Use with [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components)
 
@@ -365,7 +366,7 @@ export default {
 }
 ```
 
-Then you can use any icons as you want without explicit importing (only the used icons will be bundled)
+Then you can use any icons as you want without explicit importing. Only the used icons will be bundled.
 
 ```html
 <template>
@@ -373,6 +374,53 @@ Then you can use any icons as you want without explicit importing (only the used
   <i-mdi-account-box style="font-size: 2em; color: red"/>
 </template>
 ```
+
+</summary>
+
+<details>
+<summary>React & Solid</summary><br>
+
+Use with [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import)
+
+For example in Vite:
+
+```js
+// vite.config.js
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import AutoImport from 'unplugin-auto-import/vite'
+
+export default {
+  plugins: [
+    /* ... */
+    AutoImport({
+      resolvers: [
+        IconsResolver({
+          componentPrefix: 'Icon'
+        })
+      ],
+    }),
+    Icons({
+      compiler: 'jsx' // or 'solid'
+    }),
+  ],
+}
+```
+
+Then you can use any icons with the prefix `Icon` as you want without explicit importing. Type declarations will be generated on the fly.
+
+```js
+export function Component() {
+  return (
+    <div>
+      <IconCarbonApps />
+      <IconMdiAccountBox style="font-size: 2em; color: red"/>
+    </div>
+  )
+}
+```
+
+</summary>
 
 ### Name Conversion
 
@@ -387,20 +435,12 @@ The `collection` field follows [Iconify's collection IDs](https://iconify.design
 By default, the prefix is set to `i` while you can customize via config
 
 ```ts
-export default {
-  plugins: [
-    Vue(),
-    Components({
-      resolvers: IconsResolver({
-        componentPrefix: 'icon' // <--
-      }),
-    }),
-    Icons(),
-  ],
-}
+IconsResolver({
+  componentPrefix: 'icon' // <--
+})
 ```
 
-```vue
+```html
 <template>
   <icon-mdi-account />
 </template>
