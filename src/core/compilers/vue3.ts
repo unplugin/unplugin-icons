@@ -3,6 +3,9 @@
 export function Vue3Compiler(svg: string, collection: string, icon: string) {
   const { compileTemplate } = require('@vue/compiler-sfc')
 
+  // https://v3.vuejs.org/api/directives.html#v-pre
+  svg = svg.replace('<svg ', '<svg v-pre ')
+
   let { code } = compileTemplate({
     source: svg,
     id: `${collection}:${icon}`,

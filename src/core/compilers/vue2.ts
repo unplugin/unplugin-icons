@@ -4,8 +4,11 @@
 export function Vue2Compiler(svg: string, collection: string, icon: string) {
   const { compile } = require('vue-template-compiler')
   const transpile = require('vue-template-es2015-compiler')
-  const { render } = compile(svg)
 
+  // https://vuejs.org/v2/api/#v-pre
+  svg = svg.replace('<svg ', '<svg v-pre ')
+
+  const { render } = compile(svg)
   const toFunction = (code: string): string => {
     return `function () {${code}}`
   }
