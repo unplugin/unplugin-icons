@@ -7,7 +7,7 @@ Access thousands of icons as components **on-demand** universally.
 ###### Features
 
 - 🌏 Universal
-  - 🤹 **Any** icon sets - 100+ popular icon sets with over 10,000 icons, logos, emojis and more. Powered by [Iconify](https://github.com/iconify/iconify).
+  - 🤹 **Any** icon sets - 100+ popular sets with over 10,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
   - 📦 **Major** build tools - Vite, Webpack, Rollup, Nuxt, etc. Powered by [unplugin](https://github.com/unjs/unplugin).
   - 🪜 **Major** frameworks - React, Vue 3, Vue 2, Solid, and more. [Contribute](./src/core/compiles).
   - 🍱 **Any** combinations of them!
