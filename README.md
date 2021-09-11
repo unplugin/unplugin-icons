@@ -301,7 +301,7 @@ Type Declarations
 `vite.config.json`
 
 ```diff
-import Components from 'vite-plugin-components'
+import Components from 'unplugin-components/vite'
 - import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
 + import Icons from 'unplugin-icons/vite'
 + import IconsResolver from 'unplugin-icons/resolver'
@@ -310,7 +310,7 @@ export default {
   plugins: [
     Vue(),
     Components({
-      customComponentResolvers: IconsResolver(),
+      resolvers: IconsResolver(),
     }),
     Icons(),
   ],
@@ -398,7 +398,8 @@ export default {
     AutoImport({
       resolvers: [
         IconsResolver({
-          componentPrefix: 'Icon'
+          prefix: 'Icon',
+          extension: 'jsx'
         })
       ],
     }),
@@ -438,7 +439,7 @@ By default, the prefix is set to `i` while you can customize via config
 
 ```ts
 IconsResolver({
-  componentPrefix: 'icon' // <--
+  prefix: 'icon' // <--
 })
 ```
 
@@ -452,7 +453,7 @@ Non-prefix mode is also supported
 
 ```ts
 IconsResolver({
-  componentPrefix: '', // <--
+  prefix: false, // <--
   // this is optional, default enabling all the collections supported by Iconify
   enabledCollections: ['mdi']
 })
