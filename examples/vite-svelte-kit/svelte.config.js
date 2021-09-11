@@ -13,7 +13,7 @@ const config = {
 		vite: {
 			plugins: [
 				Icons({
-					compiler: 'svelte-kit'
+					compiler: 'svelte'
 				}),
 			]
 		}
