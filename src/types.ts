@@ -25,7 +25,7 @@ export interface Options {
    *
    * @default (detect automatically, fallback to 'vue3')
    */
-  compiler?: 'vue2' | 'vue3' | 'jsx' | 'solid' | 'svelte'
+  compiler?: 'vue2' | 'vue3' | 'jsx' | 'solid' | 'svelte' | 'svelte-kit'
 
   /**
    * JSX style, works only when compiler set to `jsx`
@@ -35,7 +35,7 @@ export interface Options {
   jsx?: 'react' | 'preact'
 
   /**
-   * Svelte options, works only when compiler set to `svelte`
+   * Svelte options, works only when compiler set to `svelte`.
    *
    * @see https://svelte.dev/docs#svelte_compile
    */
@@ -52,12 +52,6 @@ export interface Options {
      * @default false
      */
     legacy?: boolean
-    /**
-     * Mount on DOM?
-     *
-     * @default 'dom'
-     */
-    generate?: 'dom' | 'ssr'
     /**
      * Styles will be included in the JavaScript class and injected at runtime?
      *
