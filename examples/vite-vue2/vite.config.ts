@@ -9,7 +9,9 @@ const config: UserConfig = {
     createVuePlugin(),
     Components({
       customComponentResolvers: [
-        IconsResolver(),
+        IconsResolver({
+          prefix: 'i',
+        }),
       ],
     }),
     Icons({

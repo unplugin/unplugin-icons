@@ -11,7 +11,7 @@ const config: UserConfig = {
       globalComponentsDeclaration: true,
       customComponentResolvers: [
         IconsResolver({
-          prefix: '',
+          prefix: 'i',
         }),
       ],
     }),
