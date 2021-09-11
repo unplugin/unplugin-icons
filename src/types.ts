@@ -58,6 +58,12 @@ export interface Options {
      * @default 'dom'
      */
     generate?: 'dom' | 'ssr'
+    /**
+     * Styles will be included in the JavaScript class and injected at runtime?
+     *
+     * @default true
+     */
+    css?: true
   }
 }
 
