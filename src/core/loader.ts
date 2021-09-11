@@ -6,7 +6,6 @@ import { Vue2Compiler } from './compilers/vue2'
 import { Vue3Compiler } from './compilers/vue3'
 import { SolidCompiler } from './compilers/solid'
 import { SvelteCompiler } from './compilers/svelte'
-import { SvelteKitCompiler } from './compilers/svelteKit'
 
 const { SVG, Collection } = pkg
 
@@ -116,9 +115,7 @@ export async function generateComponent({ collection, icon }: ResolvedIconPath, 
   else if (options.compiler === 'solid')
     return SolidCompiler(svgText)
   else if (options.compiler === 'svelte')
-    return SvelteCompiler(svgText, collection, icon, options.svelte)
-  else if (options.compiler === 'svelte-kit')
-    return SvelteKitCompiler(svgText)
+    return SvelteCompiler(svgText)
   else
     throw new Error(`Unknown compiler: ${options.compiler}`)
 }
