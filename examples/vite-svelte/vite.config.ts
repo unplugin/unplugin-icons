@@ -9,7 +9,7 @@ const config: UserConfig = {
   plugins: [
     svelte(),
     Icons({
-      compiler: 'svelte',
+      compiler: 'svelte'
     }),
   ],
 }
