@@ -17,12 +17,12 @@ importers:
       svelte: ^3.42.5
       tsup: ^4.14.0
       typescript: ^4.4.2
-      unplugin: ^0.2.3
+      unplugin: ^0.2.8
       vite: ^2.5.1
     dependencies:
       '@iconify/json-tools': 1.0.10
       has-pkg: 0.0.1
-      unplugin: 0.2.3_rollup@2.56.3+vite@2.5.1
+      unplugin: 0.2.8_rollup@2.56.3+vite@2.5.1
     devDependencies:
       '@antfu/eslint-config': 0.7.0_eslint@7.32.0+typescript@4.4.2
       '@svgr/core': 5.5.0
@@ -12761,6 +12761,27 @@ packages:
       rollup: 2.56.3
       vite: 2.5.1
       webpack-virtual-modules: 0.4.3
+    dev: true
+
+  /unplugin/0.2.8_rollup@2.56.3+vite@2.5.1:
+    resolution: {integrity: sha512-6QsdpTNteT5lZO3tGcCwkXWzieXuM0uA0n5rpT8j+/K6BNRlHyQcQ2hpA6KLWR6hlzmXsas/ZCaGhOiiOMAGYg==}
+    peerDependencies:
+      rollup: ^2.50.0
+      vite: ^2.3.0
+      webpack: ^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
+    dependencies:
+      rollup: 2.56.3
+      upath: 2.0.1
+      vite: 2.5.1
+      webpack-virtual-modules: 0.4.3
+    dev: false
 
   /unquote/1.1.1:
     resolution: {integrity: sha1-j97XMk7G6IoP+LkF58CYzcCG1UQ=}
