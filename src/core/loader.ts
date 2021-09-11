@@ -1,11 +1,14 @@
 // @ts-ignore
-import { SVG, Collection } from '@iconify/json-tools'
+import pkg from '@iconify/json-tools'
 import { ResolvedOptions } from '../types'
 import { JSXCompiler } from './compilers/jsx'
 import { Vue2Compiler } from './compilers/vue2'
 import { Vue3Compiler } from './compilers/vue3'
 import { SolidCompiler } from './compilers/solid'
 import { SvelteCompiler } from './compilers/svelte'
+import { SvelteKitCompiler } from './compilers/svelteKit'
+
+const { SVG, Collection } = pkg
 
 export interface ResolvedIconPath {
   collection: string
@@ -52,6 +55,7 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
   }
 }
 
+// @ts-ignore
 const _collections: Record<string, Collection> = {}
 
 const _idTransforms: ((str: string) => string)[] = [
@@ -113,6 +117,8 @@ export async function generateComponent({ collection, icon }: ResolvedIconPath, 
     return SolidCompiler(svgText)
   else if (options.compiler === 'svelte')
     return SvelteCompiler(svgText, collection, icon, options.svelte)
+  else if (options.compiler === 'svelte-kit')
+    return SvelteKitCompiler(svgText)
   else
     throw new Error(`Unknown compiler: ${options.compiler}`)
 }
