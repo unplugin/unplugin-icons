@@ -73,6 +73,7 @@
     "eslint": "^7.32.0",
     "esno": "^0.9.1",
     "rollup": "^2.56.3",
+    "svelte": "^3.42.5",
     "tsup": "^4.14.0",
     "typescript": "^4.4.2",
     "vite": "^2.5.1"
@@ -81,6 +82,7 @@
     "@iconify/json": "*",
     "@svgr/core": "^5.5.0",
     "@vue/compiler-sfc": "^3.0.2",
+    "svelte": "^3.x",
     "vue-template-compiler": "^2.6.12",
     "vue-template-es2015-compiler": "^1.9.0"
   },
@@ -92,6 +94,9 @@
       "optional": true
     },
     "vue-template-es2015-compiler": {
+      "optional": true
+    },
+    "svelte": {
       "optional": true
     },
     "@svgr/core": {
