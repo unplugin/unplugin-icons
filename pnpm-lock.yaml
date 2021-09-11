@@ -145,6 +145,34 @@ importers:
       unplugin-icons: link:../..
       vite: 2.5.6
 
+  examples/vite-svelte-kit:
+    specifiers:
+      '@iconify/json': ^1.1.369
+      '@sveltejs/kit': next
+      '@typescript-eslint/eslint-plugin': ^4.19.0
+      '@typescript-eslint/parser': ^4.19.0
+      eslint: ^7.22.0
+      eslint-plugin-svelte3: ^3.2.0
+      svelte: ^3.34.0
+      svelte-check: ^2.0.0
+      svelte-preprocess: ^4.0.0
+      tslib: ^2.0.0
+      typescript: ^4.0.0
+      unplugin-icons: workspace:*
+    devDependencies:
+      '@iconify/json': 1.1.369
+      '@sveltejs/kit': 1.0.0-next.165_svelte@3.42.5
+      '@typescript-eslint/eslint-plugin': 4.29.3_5b13bab190e8051f191796d8c4619073
+      '@typescript-eslint/parser': 4.29.3_eslint@7.32.0+typescript@4.4.2
+      eslint: 7.32.0
+      eslint-plugin-svelte3: 3.2.1_eslint@7.32.0+svelte@3.42.5
+      svelte: 3.42.5
+      svelte-check: 2.2.5_svelte@3.42.5
+      svelte-preprocess: 4.9.4_svelte@3.42.5+typescript@4.4.2
+      tslib: 2.3.1
+      typescript: 4.4.2
+      unplugin-icons: link:../..
+
   examples/vite-vue2:
     specifiers:
       '@iconify/json': ^1.1.369
@@ -2104,6 +2132,23 @@ packages:
 
   /@soda/get-current-script/1.0.2:
     resolution: {integrity: sha512-T7VNNlYVM1SgQ+VsMYhnDkcGmWhQdL0bDyGm5TlQ3GBXnJscEClUUOKduWTmm2zCnvNLC1hc3JpuXjs/nFOc5w==}
+    dev: true
+
+  /@sveltejs/kit/1.0.0-next.165_svelte@3.42.5:
+    resolution: {integrity: sha512-yCNDj5C7pAWNFT7U194SlR44JBUjlfjgsDVTwQejRCEn0/+1yGhxr32Q6seBCuRNjJHYFzNSfMvxc/Ui0Y80KA==}
+    engines: {node: ^12.20 || >=14.13}
+    hasBin: true
+    peerDependencies:
+      svelte: ^3.39.0
+    dependencies:
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.23_svelte@3.42.5+vite@2.5.6
+      cheap-watch: 1.0.4
+      sade: 1.7.4
+      svelte: 3.42.5
+      vite: 2.5.6
+    transitivePeerDependencies:
+      - diff-match-patch
+      - supports-color
     dev: true
 
   /@sveltejs/vite-plugin-svelte/1.0.0-next.23_svelte@3.42.5+vite@2.5.6:
@@ -4788,6 +4833,11 @@ packages:
   /chardet/0.7.0:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: false
+
+  /cheap-watch/1.0.4:
+    resolution: {integrity: sha512-QR/9FrtRL5fjfUJBhAKCdi0lSRQ3rVRRum3GF9wDKp2TJbEIMGhUEr2yU8lORzm9Isdjx7/k9S0DFDx+z5VGtw==}
+    engines: {node: '>=8'}
+    dev: true
 
   /check-types/8.0.3:
     resolution: {integrity: sha512-YpeKZngUmG65rLudJ4taU7VLkOCTMhNl/u4ctNC56LQS/zJTyNH0Lrtwm1tfTsbLlwvlfsA2d1c8vCf/Kh2KwQ==}
