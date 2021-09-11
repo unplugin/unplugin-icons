@@ -41,11 +41,11 @@ export interface ComponentResolverOption {
 }
 
 /**
- * Resolver for vite-plugin-components
+ * Resolver for unplugin-vue-components and unplugin-auto-import
  *
  * @param options
  */
-export default function ViteComponentsResolver(options: ComponentResolverOption) {
+export default function ComponentsResolver(options: ComponentResolverOption = {}) {
   const {
     prefix: rawPrefix = options.componentPrefix ?? 'i',
     enabledCollections = Object.keys(Data.collections()),
