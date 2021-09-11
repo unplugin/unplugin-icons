@@ -33,6 +33,32 @@ export interface Options {
    * @default (detect automatically, fallback to 'react')
    */
   jsx?: 'react' | 'preact'
+
+  /**
+   * Svelte options, works only when compiler set to `svelte`
+   *
+   * @see https://svelte.dev/docs#svelte_compile
+   */
+  svelte?: {
+    /**
+     * Module format
+     *
+     * @default 'esm'
+     */
+    format?: 'esm' | 'cjs'
+    /**
+     * Legacy mode?
+     *
+     * @default false
+     */
+    legacy?: boolean
+    /**
+     * Mount on DOM?
+     *
+     * @default 'dom'
+     */
+    generate?: 'dom' | 'ssr'
+  }
 }
 
 export type ResolvedOptions = Required<Options>
