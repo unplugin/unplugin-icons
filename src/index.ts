@@ -6,9 +6,9 @@ import { Options } from './types'
 const unplugin = createUnplugin<Options>((options = {}) => {
   const resolved = resolveOptions(options)
 
-  const svelteKit = options.compiler === 'svelte-kit'
+  const svelte = options.compiler === 'svelte'
 
-  const enforce = svelteKit ? 'pre' : undefined
+  const enforce = svelte ? 'pre' : undefined
 
   return {
     name: 'unplugin-icons',
@@ -18,7 +18,7 @@ const unplugin = createUnplugin<Options>((options = {}) => {
         const res = normalizeIconPath(id)
           .replace(/\.\w+$/i, '')
           .replace(/^\//, '')
-        const ext = options.compiler === 'jsx' ? '.jsx' : (svelteKit ? '.svelte' : '')
+        const ext = options.compiler === 'jsx' ? '.jsx' : (svelte ? '.svelte' : '')
         return res + ext
       }
       return null
