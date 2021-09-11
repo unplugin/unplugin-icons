@@ -51,8 +51,8 @@
     "*.d.ts"
   ],
   "scripts": {
-    "build": "rimraf dist && tsup 'src/*.ts' --format cjs,esm --dts --external vue && esno scripts/postbuild.ts",
-    "dev": "tsup 'src/*.ts' --format cjs,esm --watch src --external vue",
+    "build": "rimraf dist && tsup src/*.ts --format cjs,esm --dts --external vue && esno scripts/postbuild.ts",
+    "dev": "tsup src/*.ts --format cjs,esm --watch src --external vue",
     "example:build": "npm -C examples/vue3 run build",
     "example:dev": "npm -C examples/vue3 run dev",
     "prepublishOnly": "npm run build",
