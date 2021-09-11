@@ -11,6 +11,7 @@ importers:
       '@typescript-eslint/eslint-plugin': ^4.29.3
       '@vue/compiler-sfc': ^3.2.6
       eslint: ^7.32.0
+      esno: ^0.9.1
       has-pkg: ^0.0.1
       rollup: ^2.56.3
       tsup: ^4.14.0
@@ -28,6 +29,7 @@ importers:
       '@typescript-eslint/eslint-plugin': 4.29.3_eslint@7.32.0+typescript@4.4.2
       '@vue/compiler-sfc': 3.2.6
       eslint: 7.32.0
+      esno: 0.9.1
       rollup: 2.56.3
       tsup: 4.14.0_typescript@4.4.2
       typescript: 4.4.2
@@ -6059,6 +6061,21 @@ packages:
       is-date-object: 1.0.2
       is-symbol: 1.0.3
 
+  /esbuild-node-loader/0.3.1:
+    resolution: {integrity: sha512-75xPOySulti9R5LwYOMmKiwHyXGr/f89I7UkHolLxRqeBiUNqcyCmNTjv+fO2WV9G3f7LDKVZJlbWoYh5LBpfQ==}
+    dependencies:
+      esbuild: 0.12.24
+    dev: true
+
+  /esbuild-register/3.0.0_esbuild@0.12.24:
+    resolution: {integrity: sha512-No7U3ZUd6gPrrC6gqdb3XFcf2lNqzn8nvQXcgcyOl8szMVuN6YUvOplnmakxWyogI9d8SiJMl0uzBzJck+Aoxw==}
+    peerDependencies:
+      esbuild: '>=0.12 <1'
+    dependencies:
+      esbuild: 0.12.24
+      jsonc-parser: 3.0.0
+    dev: true
+
   /esbuild/0.12.14:
     resolution: {integrity: sha512-z8p+6FGiplR7a3pPonXREbm+8IeXjBGvDpVidZmGB/AJMsJSfGCU+n7KOMCazA9AwvagadRWBhiKorC0w9WJvw==}
     hasBin: true
@@ -6389,6 +6406,16 @@ packages:
       v8-compile-cache: 2.2.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /esno/0.9.1:
+    resolution: {integrity: sha512-3pnZ7fI0+8R7kJSTwuOfzAvXNXun7eaZsTSE5avkNRrxTokq3Jm32gaah3Zgl5opHQ1K9SJasoQQySzmfN8alw==}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
+      esbuild: 0.12.24
+      esbuild-node-loader: 0.3.1
+      esbuild-register: 3.0.0_esbuild@0.12.24
     dev: true
 
   /espree/6.2.1:
