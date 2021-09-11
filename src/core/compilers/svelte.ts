@@ -1,14 +1,14 @@
-export async function SvelteCompiler(svg: string, collection: string, icon: string) {
-  return `
-    const svelte = require('svelte/compiler');
-    
-    const { js } = svelte.compile(svg, {
-      filename: '${collection}-${icon}.svelte',
-      generate: 'ssr',
-      css: false,
-      namespace: 'svg'
-    });
+/* eslint-disable @typescript-eslint/no-var-requires */
 
-    return js.code;
-  `
+export async function SvelteCompiler(svg: string, collection: string, icon: string) {
+  const svelte = require('svelte/compiler')
+
+  const { js } = svelte.compile(svg, {
+    filename: `${collection}-${icon}.svelte`,
+    generate: 'dom',
+    css: false,
+    namespace: 'svg',
+  })
+
+  return js.code
 }
