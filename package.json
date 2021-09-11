@@ -1,6 +1,6 @@
 {
   "name": "unplugin-icons",
-  "version": "0.7.6",
+  "version": "0.8.0",
   "description": "Access thousands of icons as components on-demand universally",
   "homepage": "https://github.com/antfu/unplugin-icons",
   "bugs": "https://github.com/antfu/unplugin-icons/issues",
@@ -51,12 +51,12 @@
     "*.d.ts"
   ],
   "scripts": {
-    "build": "rimraf dist && tsup src/*.ts --format cjs,esm --dts --external vue && esno scripts/postbuild.ts",
-    "dev": "tsup src/*.ts --format cjs,esm --watch src --external vue",
+    "build": "rimraf dist && tsup 'src/*.ts' --format cjs,esm --dts --external vue && esno scripts/postbuild.ts",
+    "dev": "tsup 'src/*.ts' --format cjs,esm --watch src --external vue",
     "example:build": "npm -C examples/vue3 run build",
     "example:dev": "npm -C examples/vue3 run dev",
-    "prepublishOnly": "npm run build",
     "lint": "eslint --ext .ts,.js,.vue",
+    "prepublishOnly": "npm run build",
     "release": "npx bumpp --commit --tag && npm publish && git push"
   },
   "dependencies": {
@@ -65,28 +65,29 @@
     "unplugin": "^0.2.8"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.7.0",
+    "@antfu/eslint-config": "^0.8.1",
     "@svgr/core": "^5.5.0",
-    "@types/node": "^16.7.4",
-    "@typescript-eslint/eslint-plugin": "^4.29.3",
-    "@vue/compiler-sfc": "^3.2.6",
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@vue/compiler-sfc": "^3.2.11",
+    "bumpp": "^7.1.1",
     "eslint": "^7.32.0",
-    "esno": "^0.9.1",
     "rollup": "^2.56.3",
-    "svelte": "^3.42.5",
     "tsup": "^4.14.0",
-    "typescript": "^4.4.2",
-    "vite": "^2.5.1"
+    "typescript": "^4.4.3",
+    "vite": "^2.5.6"
   },
   "peerDependencies": {
     "@iconify/json": "*",
     "@svgr/core": "^5.5.0",
     "@vue/compiler-sfc": "^3.0.2",
-    "svelte": "^3.x",
     "vue-template-compiler": "^2.6.12",
     "vue-template-es2015-compiler": "^1.9.0"
   },
   "peerDependenciesMeta": {
+    "@svgr/core": {
+      "optional": true
+    },
     "@vue/compiler-sfc": {
       "optional": true
     },
@@ -94,12 +95,6 @@
       "optional": true
     },
     "vue-template-es2015-compiler": {
-      "optional": true
-    },
-    "svelte": {
-      "optional": true
-    },
-    "@svgr/core": {
       "optional": true
     }
   }

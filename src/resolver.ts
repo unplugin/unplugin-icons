@@ -11,8 +11,33 @@ function camelToKebab(key: string) {
 }
 
 export interface ComponentResolverOption {
-  componentPrefix: string
-  enabledCollections: string[]
+  /**
+   * Prefix for resolving components name.
+   * Set '' to disable prefix.
+   *
+   * @default 'i'
+   */
+  prefix?: string | false
+
+  /**
+   * Iconify collection names to that enable for resolving.
+   *
+   * @default [all collections]
+   */
+  enabledCollections?: string[]
+
+  /**
+   * Extension for the resolved id
+   * Set `jsx` for JSX components
+   *
+   * @default ''
+   */
+  extension?: string
+
+  /**
+   * @deprecated renamed to `prefix`
+   */
+  componentPrefix?: string
 }
 
 /**
@@ -20,13 +45,20 @@ export interface ComponentResolverOption {
  *
  * @param options
  */
-export default function ViteComponentsResolver(options: Partial<ComponentResolverOption> = {}) {
+export default function ViteComponentsResolver(options: ComponentResolverOption) {
   const {
-    componentPrefix = 'i',
+    prefix: rawPrefix = options.componentPrefix ?? 'i',
     enabledCollections = Object.keys(Data.collections()),
+    extension,
   } = options
 
-  const prefix = componentPrefix ? `${camelToKebab(componentPrefix)}-` : ''
+  const prefix = rawPrefix ? `${camelToKebab(rawPrefix)}-` : ''
+  const ext = extension
+    ? extension.startsWith('.')
+      ? extension
+      : `.${extension}`
+    : ''
+
   // match longer name first
   enabledCollections.sort((a, b) => b.length - a.length)
 
@@ -50,6 +82,6 @@ export default function ViteComponentsResolver(options: Partial<ComponentResolve
     if (!getIcon(collection, icon))
       return
 
-    return `~icons/${collection}/${icon}`
+    return `~icons/${collection}/${icon}${ext}`
   }
 }
