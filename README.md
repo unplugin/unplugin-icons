@@ -9,7 +9,7 @@ Access thousands of icons as components **on-demand** universally.
 - 🌏 Universal
   - 🤹 **Any** icon sets - 100+ popular sets with over 10,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
   - 📦 **Major** build tools - Vite, Webpack, Rollup, Nuxt, etc. Powered by [unplugin](https://github.com/unjs/unplugin).
-  - 🪜 **Major** frameworks - React, Vue 3, Vue 2, Solid, and more. [Contribute](./src/core/compiles).
+  - 🪜 **Major** frameworks - React, Vue 3, Vue 2, Solid, Svelte, and more. [Contribute](./src/core/compiles).
   - 🍱 **Any** combinations of them!
 - ☁️ On-demand - Only bundle the icons you really uses, while having all the options.
 - 🖨 SSR / SSG friendly - Ship the icons with your page, no more FOUC.
@@ -336,7 +336,7 @@ Icons({
   scale: 1.2, // Scale of icons against 1em
   defaultStyle: '', // Style apply to icons
   defaultClass: '', // Class names apply to icons
-  compiler: null, // 'vue2', 'vue3', 'jsx'
+  compiler: null, // 'vue2', 'vue3', 'jsx', 'svelte'
   jsx: 'react' // 'react' or 'preact'
 })
 ```
