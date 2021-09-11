@@ -10,7 +10,7 @@ export async function SvelteCompiler(svg: string, collection: string, icon: stri
     format: options.format || 'esm',
     legacy: typeof options.legacy !== 'undefined' ? options.legacy : false,
     generate: options.generate || 'dom',
-    css: false,
+    css: typeof options.css !== 'undefined' ? options.css : true,
     namespace: 'svg',
   })
 
