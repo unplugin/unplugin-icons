@@ -51,8 +51,8 @@
     "*.d.ts"
   ],
   "scripts": {
-    "build": "rimraf dist && tsup 'src/*.ts' --format cjs,esm --dts --external vue && esno scripts/postbuild.ts",
-    "dev": "tsup 'src/*.ts' --format cjs,esm --watch src --external vue",
+    "build": "rimraf dist && tsup src/*.ts --format cjs,esm --dts --external vue && esno scripts/postbuild.ts",
+    "dev": "tsup src/*.ts --format cjs,esm --watch src --external vue",
     "example:build": "npm -C examples/vue3 run build",
     "example:dev": "npm -C examples/vue3 run dev",
     "lint": "eslint --ext .ts,.js,.vue",
@@ -72,6 +72,7 @@
     "@vue/compiler-sfc": "^3.2.11",
     "bumpp": "^7.1.1",
     "eslint": "^7.32.0",
+    "esno": "^0.9.1",
     "rollup": "^2.56.3",
     "tsup": "^4.14.0",
     "typescript": "^4.4.3",
