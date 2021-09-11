@@ -10,7 +10,9 @@ const config: UserConfig = {
     Components({
       globalComponentsDeclaration: true,
       customComponentResolvers: [
-        IconsResolver(),
+        IconsResolver({
+          prefix: '',
+        }),
       ],
     }),
     Icons({
