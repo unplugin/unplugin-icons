@@ -13,9 +13,6 @@
      */
     "allowJs": true,
     "checkJs": true,
-    "types": [
-      "vite-plugin-pwa/client"
-    ]
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
 }
