@@ -112,7 +112,7 @@ export async function generateComponent({ collection, icon }: ResolvedIconPath, 
   else if (options.compiler === 'solid')
     return SolidCompiler(svgText)
   else if (options.compiler === 'svelte')
-    return SvelteCompiler(svgText, collection, icon)
+    return SvelteCompiler(svgText, collection, icon, options.svelte)
   else
     throw new Error(`Unknown compiler: ${options.compiler}`)
 }
