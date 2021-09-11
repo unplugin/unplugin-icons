@@ -5,3 +5,4 @@ example/README.md
 .nuxt
 *.d.ts
 .idea/
+.svelte-kit/
