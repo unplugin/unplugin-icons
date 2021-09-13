@@ -3,4 +3,3 @@ node_modules
 dist
 example/README.md
 .nuxt
-*.d.ts

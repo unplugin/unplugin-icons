@@ -23,9 +23,12 @@ export interface Options {
   /**
    * Compiler
    *
+   * - none: plain SVG content
+   * - raw: an ESM module with a default exported string of the SVG HTML
+   *
    * @default (detect automatically, fallback to 'vue3')
    */
-  compiler?: 'vue2' | 'vue3' | 'jsx' | 'solid'
+  compiler?: 'vue2' | 'vue3' | 'jsx' | 'solid' | 'none' | 'raw'
 
   /**
    * JSX style, works only when compiler set to `jsx`

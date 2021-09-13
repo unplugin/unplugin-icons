@@ -5,6 +5,8 @@ import { JSXCompiler } from './compilers/jsx'
 import { Vue2Compiler } from './compilers/vue2'
 import { Vue3Compiler } from './compilers/vue3'
 import { SolidCompiler } from './compilers/solid'
+import { NoneCompiler } from './compilers/none'
+import { RawCompiler } from './compilers/raw'
 
 export interface ResolvedIconPath {
   collection: string
@@ -110,6 +112,10 @@ export async function generateComponent({ collection, icon }: ResolvedIconPath, 
     return Vue3Compiler(svgText, collection, icon)
   else if (options.compiler === 'solid')
     return SolidCompiler(svgText)
+  else if (options.compiler === 'none')
+    return NoneCompiler(svgText)
+  else if (options.compiler === 'raw')
+    return RawCompiler(svgText)
   else
     throw new Error(`Unknown compiler: ${options.compiler}`)
 }
