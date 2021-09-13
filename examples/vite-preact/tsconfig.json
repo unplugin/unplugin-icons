@@ -15,10 +15,7 @@
     "noEmit": true,
     "jsx": "preserve",
     "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment",
-    "types": [
-      "unplugin-icons/types/preact"
-    ]
+    "jsxFragmentFactory": "Fragment"
   },
   "include": ["src"]
 }
