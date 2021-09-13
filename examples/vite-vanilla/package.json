@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "cross-env DEBUG=unplugin-icons:* vite",
+    "build": "cross-env DEBUG=unplugin-icons:* vite build"
+  },
+  "devDependencies": {
+    "@iconify/json": "^1.1.369",
+    "cross-env": "^7.0.3",
+    "typescript": "^4.3.5",
+    "vite": "^2.3.8",
+    "unplugin-icons": "workspace:*"
+  }
+}

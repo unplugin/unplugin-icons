@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/raw"
+    ]
+  },
+  "include": [
+    "*.ts"
+  ]
+}
