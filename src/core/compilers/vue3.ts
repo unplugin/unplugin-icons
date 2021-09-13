@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+import { Compiler } from './types'
 
-export function Vue3Compiler(svg: string, collection: string, icon: string) {
-  const { compileTemplate } = require('@vue/compiler-sfc')
+export const Vue3Compiler = <Compiler>(async(svg: string, collection: string, icon: string) => {
+  const { compileTemplate } = await import('@vue/compiler-sfc')
 
   // https://v3.vuejs.org/api/directives.html#v-pre
   svg = svg.replace('<svg ', '<svg v-pre ')
@@ -17,4 +17,4 @@ export function Vue3Compiler(svg: string, collection: string, icon: string) {
   code += '\n/* vite-plugin-components disabled */'
 
   return code
-}
+})

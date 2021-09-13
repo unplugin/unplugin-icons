@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+import { Compiler } from './types'
 
 // refer to: https://github.com/underfin/vite-plugin-vue2/blob/master/src/template/compileTemplate.ts
-export function Vue2Compiler(svg: string, collection: string, icon: string) {
-  const { compile } = require('vue-template-compiler')
-  const transpile = require('vue-template-es2015-compiler')
+export const Vue2Compiler = <Compiler>(async(svg: string, collection: string, icon: string) => {
+  const { compile } = await import('vue-template-compiler')
+  // @ts-expect-error
+  const transpile = (await import('vue-template-es2015-compiler')).default
 
   // https://vuejs.org/v2/api/#v-pre
   svg = svg.replace('<svg ', '<svg v-pre ')
@@ -34,4 +35,4 @@ export default {
 `
 
   return code
-}
+})

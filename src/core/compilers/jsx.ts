@@ -1,16 +1,13 @@
-import { Options } from '../../types'
+import { camelize } from '../utils'
+import { Compiler } from './types'
 
-export async function JSXCompiler(svg: string, collection: string, icon: string, style: Options['jsx'] = 'react') {
+export const JSXCompiler = <Compiler>(async(svg, collection, icon, options) => {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const svgr = require('@svgr/core').default
-  let res = await svgr(svg, { icon: true }, { componentName: camel(`${collection}-${icon}`) })
+  let res = await svgr(svg, { icon: true }, { componentName: camelize(`${collection}-${icon}`) })
   // svgr does not provide an option to support preact (WHY?),
   // we manually remove the react import for preact
-  if (style === 'preact')
+  if (options.jsx === 'preact')
     res = res.replace('import * as React from "react";', '')
   return res
-}
-
-function camel(str: string) {
-  return str.replace(/-([a-z0-9])/g, g => g[1].toUpperCase())
-}
+})

@@ -1,3 +1,5 @@
-export async function NoneCompiler(svg: string) {
+import { Compiler } from './types'
+
+export const NoneCompiler = <Compiler>((svg: string) => {
   return svg
-}
+})
