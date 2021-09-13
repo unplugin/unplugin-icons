@@ -9,7 +9,7 @@ const config: UserConfig = {
     Vue(),
     Components({
       dts: true,
-      resolders: [
+      resolvers: [
         IconsResolver(),
       ],
     }),
