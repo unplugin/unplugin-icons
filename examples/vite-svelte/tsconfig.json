@@ -13,6 +13,9 @@
      */
     "allowJs": true,
     "checkJs": true,
+    "types": [
+      "unplugin-icons/types/svelte"
+    ]
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
 }
