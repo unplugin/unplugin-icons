@@ -12,5 +12,5 @@ export async function JSXCompiler(svg: string, collection: string, icon: string,
 }
 
 function camel(str: string) {
-  return str.replace(/-([a-z])/g, g => g[1].toUpperCase())
+  return str.replace(/-([a-z0-9])/g, g => g[1].toUpperCase())
 }
