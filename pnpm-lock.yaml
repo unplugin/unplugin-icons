@@ -64,10 +64,6 @@ importers:
     specifiers:
       '@iconify/json': ^1.1.369
       '@sveltejs/kit': next
-      '@typescript-eslint/eslint-plugin': ^4.19.0
-      '@typescript-eslint/parser': ^4.19.0
-      eslint: ^7.22.0
-      eslint-plugin-svelte3: ^3.2.0
       svelte: ^3.34.0
       svelte-check: ^2.0.0
       svelte-preprocess: ^4.0.0
@@ -77,10 +73,6 @@ importers:
     devDependencies:
       '@iconify/json': 1.1.401
       '@sveltejs/kit': 1.0.0-next.165_svelte@3.42.5
-      '@typescript-eslint/eslint-plugin': 4.31.0_d9c1bc16c4e2aea4e8e177a5961dd3bf
-      '@typescript-eslint/parser': 4.31.0_eslint@7.32.0+typescript@4.4.3
-      eslint: 7.32.0
-      eslint-plugin-svelte3: 3.2.1_eslint@7.32.0+svelte@3.42.5
       svelte: 3.42.5
       svelte-check: 2.2.6_svelte@3.42.5
       svelte-preprocess: 4.9.4_svelte@3.42.5+typescript@4.4.3
@@ -151,8 +143,6 @@ importers:
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.23
       '@tsconfig/svelte': ^2.0.1
       cross-env: ^7.0.3
-      eslint: ^7.32.0
-      eslint-plugin-svelte3: ^3.2.1
       svelte: ^3.42.4
       svelte-check: ^2.2.4
       svelte-preprocess: ^4.7.4
@@ -164,8 +154,6 @@ importers:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.23_svelte@3.42.5+vite@2.5.6
       '@tsconfig/svelte': 2.0.1
       cross-env: 7.0.3
-      eslint: 7.32.0
-      eslint-plugin-svelte3: 3.2.1_eslint@7.32.0+svelte@3.42.5
       svelte: 3.42.5
       svelte-check: 2.2.6_svelte@3.42.5
       svelte-preprocess: 4.9.4_svelte@3.42.5+typescript@4.4.3
@@ -6429,17 +6417,6 @@ packages:
       prop-types: 15.7.2
       resolve: 2.0.0-next.3
       string.prototype.matchall: 4.0.5
-    dev: true
-
-  /eslint-plugin-svelte3/3.2.1_eslint@7.32.0+svelte@3.42.5:
-    resolution: {integrity: sha512-YoBR9mLoKCjGghJ/gvpnFZKaMEu/VRcuxpSRS8KuozuEo7CdBH7bmBHa6FmMm0i4kJnOyx+PVsaptz96K6H/4Q==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      eslint: '>=6.0.0'
-      svelte: ^3.2.0
-    dependencies:
-      eslint: 7.32.0
-      svelte: 3.42.5
     dev: true
 
   /eslint-plugin-unicorn/35.0.0_eslint@7.32.0:
