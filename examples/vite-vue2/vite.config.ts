@@ -2,13 +2,13 @@ import { UserConfig } from 'vite'
 import { createVuePlugin } from 'vite-plugin-vue2'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-import Components from 'vite-plugin-components'
+import Components from 'unplugin-vue-components/vite'
 
 const config: UserConfig = {
   plugins: [
     createVuePlugin(),
     Components({
-      customComponentResolvers: [
+      resolvers: [
         IconsResolver(),
       ],
     }),

@@ -1,20 +1,19 @@
 {
   "private": true,
   "scripts": {
-    "dev": "cross-env DEBUG=unplugin-icons:* vite",
-    "build": "cross-env DEBUG=unplugin-icons:* vite build"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "vue": "^3.1.4"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.369",
-    "@vitejs/plugin-vue": "^1.2.4",
-    "@vue/compiler-sfc": "^3.1.4",
-    "cross-env": "^7.0.3",
-    "typescript": "^4.3.5",
-    "vite": "^2.3.8",
-    "vite-plugin-components": "^0.12.0",
-    "unplugin-icons": "workspace:*"
+    "@iconify/json": "^1.1.401",
+    "@vitejs/plugin-vue": "^1.6.2",
+    "@vue/compiler-sfc": "^3.2.11",
+    "typescript": "^4.4.3",
+    "unplugin-icons": "workspace:*",
+    "unplugin-vue-components": "^0.15.0",
+    "vite": "^2.5.6"
   }
 }
