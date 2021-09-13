@@ -10,12 +10,18 @@ export function resolveOptions(options: Options): ResolvedOptions {
     jsx = guessJSX(),
   } = options
 
+  const webComponents = Object.assign({
+    autoDefine: false,
+    iconPrefix: 'icon',
+  }, options.webComponents)
+
   return {
     scale,
     defaultStyle,
     defaultClass,
     compiler,
     jsx,
+    webComponents,
   }
 }
 

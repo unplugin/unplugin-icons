@@ -1,12 +1,6 @@
 // @ts-ignore
 import { SVG, Collection } from '@iconify/json-tools'
 import { ResolvedOptions } from '../types'
-import { JSXCompiler } from './compilers/jsx'
-import { Vue2Compiler } from './compilers/vue2'
-import { Vue3Compiler } from './compilers/vue3'
-import { SolidCompiler } from './compilers/solid'
-import { NoneCompiler } from './compilers/none'
-import { RawCompiler } from './compilers/raw'
 import { compilers } from './compilers'
 
 export interface ResolvedIconPath {

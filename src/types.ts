@@ -28,7 +28,7 @@ export interface Options {
    *
    * @default (detect automatically, fallback to 'vue3')
    */
-  compiler?: 'vue2' | 'vue3' | 'jsx' | 'solid' | 'none' | 'raw'
+  compiler?: 'vue2' | 'vue3' | 'jsx' | 'solid' | 'web-components' | 'none' | 'raw'
 
   /**
    * JSX style, works only when compiler set to `jsx`
@@ -36,6 +36,23 @@ export interface Options {
    * @default (detect automatically, fallback to 'react')
    */
   jsx?: 'react' | 'preact'
+
+  /**
+   * Config for Web Components compiler
+   */
+  webComponents?: {
+    /**
+     * Call `customElements.define` automatically on module importing
+     */
+    autoDefine?: boolean
+
+    /**
+     * Prefix for auto defining
+     *
+     * @default 'icon'
+     */
+    iconPrefix?: string
+  }
 }
 
 export type ResolvedOptions = Required<Options>
