@@ -1,5 +1,5 @@
 // @ts-ignore
-import jsonTools from '@iconify/json-tools'
+import IconifyTools from '@iconify/json-tools'
 import { ResolvedOptions } from '../types'
 import { compilers } from './compilers'
 
@@ -12,7 +12,7 @@ export interface ResolvedIconPath {
 const URL_PREFIXES = ['/~icons/', '~icons/', 'virtual:icons/', 'virtual/icons/']
 const iconPathRE = new RegExp(`${URL_PREFIXES.map(v => `^${v}`).join('|')}`)
 
-const { SVG, Collection } = jsonTools
+const { SVG, Collection } = IconifyTools
 
 export function isIconPath(path: string) {
   return iconPathRE.test(path)
