@@ -1,3 +1,8 @@
+import type { Awaitable } from '@antfu/utils'
+
+export type CustomIconLoader = (name: string) => Awaitable<string | undefined>
+export type InlineCollection = Record<string, string | (() => Awaitable<string | undefined>)>
+
 export interface Options {
   /**
    * Scale of icons against 1em
@@ -19,6 +24,11 @@ export interface Options {
    * @default ''
    */
   defaultClass?: string
+
+  /**
+   * Loader for custom loaders
+   */
+  customCollections?: Record<string, CustomIconLoader | InlineCollection>
 
   /**
    * Compiler
@@ -55,4 +65,4 @@ export interface Options {
   }
 }
 
-export type ResolvedOptions = Required<Options>
+export interface ResolvedOptions extends Required<Options> {}

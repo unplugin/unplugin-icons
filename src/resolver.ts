@@ -1,14 +1,8 @@
+import { toArray, uniq } from '@antfu/utils'
 // @ts-expect-error
 import Data from '@iconify/json'
-import { getIcon } from './core/loader'
-
-function camelToKebab(key: string) {
-  const result = key
-    .replace(/:/g, '-')
-    .replace(/([A-Z])/g, ' $1')
-    .trim()
-  return result.split(/\s+/g).join('-').toLowerCase()
-}
+import { getBuiltinIcon } from './core/loader'
+import { camelToKebab } from './core/utils'
 
 export interface ComponentResolverOption {
   /**
@@ -24,7 +18,12 @@ export interface ComponentResolverOption {
    *
    * @default [all collections]
    */
-  enabledCollections?: string[]
+  enabledCollections?: string | string[]
+
+  /**
+   * Name for custom collections provide by loaders.
+   */
+  customCollections?: string | string[]
 
   /**
    * Extension for the resolved id
@@ -49,6 +48,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
   const {
     prefix: rawPrefix = options.componentPrefix ?? 'i',
     enabledCollections = Object.keys(Data.collections()),
+    customCollections = [],
     extension,
   } = options
 
@@ -58,9 +58,13 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
       ? extension
       : `.${extension}`
     : ''
+  const collections = uniq([
+    ...toArray(enabledCollections),
+    ...toArray(customCollections),
+  ])
 
   // match longer name first
-  enabledCollections.sort((a, b) => b.length - a.length)
+  collections.sort((a, b) => b.length - a.length)
 
   return (name: string) => {
     const kebab = camelToKebab(name)
@@ -68,7 +72,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
       return
 
     const slice = kebab.slice(prefix.length)
-    const collection = enabledCollections.find(i => slice.startsWith(`${i}-`)) || enabledCollections.find(i => slice.startsWith(i))
+    const collection = collections.find(i => slice.startsWith(`${i}-`)) || collections.find(i => slice.startsWith(i))
     if (!collection)
       return
 
@@ -79,7 +83,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
     if (!icon)
       return
 
-    if (!getIcon(collection, icon))
+    if (!customCollections.includes(collection) && !getBuiltinIcon(collection, icon))
       return
 
     return `~icons/${collection}/${icon}${ext}`

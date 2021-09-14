@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@antfu/eslint-config': ^0.9.0
+      '@antfu/utils': ^0.3.0
       '@iconify/json-tools': ^1.0.10
       '@svgr/core': ^5.5.0
       '@types/node': ^16.9.1
@@ -20,6 +21,7 @@ importers:
       unplugin: ^0.2.9
       vite: ^2.5.7
     dependencies:
+      '@antfu/utils': 0.3.0
       '@iconify/json-tools': 1.0.10
       has-pkg: 0.0.1
       unplugin: 0.2.9_rollup@2.56.3+vite@2.5.7
@@ -361,6 +363,12 @@ packages:
       - supports-color
       - typescript
     dev: true
+
+  /@antfu/utils/0.3.0:
+    resolution: {integrity: sha512-UU8TLr/EoXdg7OjMp0h9oDoIAVr+Z/oW9cpOxQQyrsz6Qzd2ms/1CdWx8fl2OQdFpxGmq5Vc4TwfLHId6nAZjA==}
+    dependencies:
+      '@types/throttle-debounce': 2.1.0
+    dev: false
 
   /@babel/code-frame/7.12.11:
     resolution: {integrity: sha512-Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw==}
@@ -2555,6 +2563,10 @@ packages:
       '@types/webpack': 4.41.28
       terser: 4.8.0
     dev: true
+
+  /@types/throttle-debounce/2.1.0:
+    resolution: {integrity: sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==}
+    dev: false
 
   /@types/uglify-js/3.13.1:
     resolution: {integrity: sha512-O3MmRAk6ZuAKa9CHgg0Pr0+lUOqoMLpc9AS4R8ano2auvsg7IE8syF3Xh/NPr26TWklxYcqoEEFdzLLs1fV9PQ==}

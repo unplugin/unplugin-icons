@@ -8,6 +8,7 @@ export function resolveOptions(options: Options): ResolvedOptions {
     defaultClass = '',
     compiler = guessCompiler(),
     jsx = guessJSX(),
+    customCollections = {},
   } = options
 
   const webComponents = Object.assign({
@@ -19,6 +20,7 @@ export function resolveOptions(options: Options): ResolvedOptions {
     scale,
     defaultStyle,
     defaultClass,
+    customCollections,
     compiler,
     jsx,
     webComponents,

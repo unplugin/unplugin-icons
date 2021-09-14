@@ -68,45 +68,73 @@ export function getCollection(name: string) {
   return _collections[name]
 }
 
-export function getIcon(name: string, icon: string) {
-  const collection = getCollection(name)
-  if (!collection)
+export function getBuiltinIcon(collection: string, icon: string) {
+  const icons = getCollection(collection)
+  if (!icons)
     return null
 
   let data: any
   for (const trans of _idTransforms) {
-    data = collection.getIconData(trans(icon))
+    data = icons.getIconData(trans(icon))
     if (data)
       return data
   }
   return null
 }
 
-export async function generateComponent({ collection, icon }: ResolvedIconPath, options: ResolvedOptions) {
-  const data = getIcon(collection, icon)
-  if (!data)
-    throw new Error(`Icon \`${collection}:${icon}\` not found`)
+export async function getIcon(collection: string, icon: string, options: ResolvedOptions) {
+  const { scale } = options
 
-  const { scale, defaultStyle, defaultClass } = options
-  const svg = new SVG(data)
-  let svgText: string = svg.getSVG({
+  const custom = options.customCollections[collection]
+
+  if (custom) {
+    let result: string | undefined | null
+
+    if (typeof custom === 'function') {
+      result = await custom(icon)
+    }
+    else {
+      const inline = custom[icon]
+      result = typeof inline === 'function'
+        ? await inline()
+        : inline
+    }
+
+    if (result) {
+      if (!result.startsWith('<svg '))
+        console.warn(`Custom icon "${icon}" in "${collection}" is not a valid SVG`)
+      return result.replace('<svg ', `<svg height="${scale}em" width="${scale}em" `)
+    }
+  }
+
+  const iconData = getBuiltinIcon(collection, icon)
+
+  const svg = new SVG(iconData)
+  const svgText: string = svg.getSVG({
     height: `${scale}em`,
     width: `${scale}em`,
   })
 
-  if (!svgText)
-    return null
+  return svgText
+}
+
+export async function generateComponent({ collection, icon }: ResolvedIconPath, options: ResolvedOptions) {
+  let svg = await getIcon(collection, icon, options)
+  if (!svg)
+    throw new Error(`Icon \`${collection}:${icon}\` not found`)
+
+  const { defaultStyle, defaultClass } = options
 
   if (defaultClass)
-    svgText = svgText.replace('<svg ', `<svg class="${defaultClass}" `)
+    svg = svg.replace('<svg ', `<svg class="${defaultClass}" `)
   if (defaultStyle)
-    svgText = svgText.replace('<svg ', `<svg style="${defaultStyle}" `)
+    svg = svg.replace('<svg ', `<svg style="${defaultStyle}" `)
 
   const compiler = compilers[options.compiler]
   if (!compiler)
     throw new Error(`Unknown compiler: ${options.compiler}`)
 
-  return compiler(svgText, collection, icon, options)
+  return compiler(svg, collection, icon, options)
 }
 
 export async function generateComponentFromPath(path: string, options: ResolvedOptions) {
