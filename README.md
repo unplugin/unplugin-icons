@@ -14,6 +14,7 @@ Access thousands of icons as components **on-demand** universally.
 - ☁️ On-demand - Only bundle the icons you really uses, while having all the options.
 - 🖨 SSR / SSG friendly - Ship the icons with your page, no more FOUC.
 - 🌈 Stylable - Change size, color, or even add animations as you would with styles and classes.
+- 📥 [Custom icons](#custom-icons) - load your custom icons to get universal integrations at ease.
 - 📲 [Auto Importing](#auto-importing) - Use icons as components directly in your template.
 - 🦾 TypeScript support.
 - 🔍 [Browse Icons](https://icones.js.org/)
@@ -290,6 +291,64 @@ Type Declarations
 ```
 
 <br></details>
+
+## Custom Icons
+
+From v0.11, you can now load your own icons!
+
+```ts
+import { promises as fs } from 'fs'
+// loader helpers
+import { FileSystemIconLoader } from 'unplugin-icons/loaders' 
+
+Icons({ 
+  customCollections: {
+    // key as the collection name
+    'my-icons': {
+      'account': '<svg><!-- ... --></svg>',
+      // load your custom icon lazily
+      'settings': () => fs.readFile('./path/to/my-icon.svg', 'utf-8'),
+      /* ... */
+    },
+    'my-other-icons': async (iconName) => {
+      // your custom loader here. Do whatever you want.
+      // for example, fetch from a remote server: 
+      return await fetch(`https://example.com/icons/${iconName}.svg`).then(res => res.text())
+    },
+    // a helper to load icons from the file system
+    // files under `./assets/icons` with `.svg` extension will be loaded as it's file name
+    'my-yet-other-icons': FileSystemIconLoader('./assets/icons'),
+  }
+})
+```
+
+Then use as
+
+```ts
+import IconAccount from '~icons/my-icons/account'
+import IconFoo from '~icons/my-other-icons/foo'
+import IconBar from '~icons/my-yet-other-icons/bar'
+```
+
+> 💡 SVG Authoring Tips:
+> - To make your icons color adaptable, set `fill="currentColor"` for `stroke="currentColor"` in your SVG.
+> - Leave the `height` and `width` unspecified, we will set them for you.
+
+### Use with Resolver
+
+When using with resolvers for auto-importing, you will need to tell it your custom collection names:
+
+```ts
+IconResolver({
+  customCollections: [
+    'my-icons',
+    'my-other-icons',
+    'my-yet-other-icons',
+  ]
+})
+```
+
+See the [Vue 3 + Vite example](./examples/vite-vue3/vite.config.ts).
 
 ## Migrate from `vite-plugin-icons`
 
