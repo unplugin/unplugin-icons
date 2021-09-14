@@ -61,7 +61,7 @@
     "example:dev": "npm -C examples/vue3 run dev",
     "lint": "eslint --ext .ts,.js,.vue",
     "prepublishOnly": "npm run build",
-    "release": "npx bumpp --commit --tag && npm publish && git push"
+    "release": "npx bumpp --commit --tag --push && npm publish"
   },
   "dependencies": {
     "@antfu/utils": "^0.3.0",

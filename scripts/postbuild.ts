@@ -5,7 +5,7 @@ import fg from 'fast-glob'
 async function run() {
   // fix cjs exports
   const files = await fg('*.js', {
-    ignore: ['index.js', 'chunk-*', 'types.js'],
+    ignore: ['index.js', 'chunk-*', 'types.js', 'loaders.js'],
     absolute: true,
     cwd: resolve(__dirname, '../dist'),
   })
