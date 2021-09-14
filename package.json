@@ -57,8 +57,8 @@
   "scripts": {
     "build": "tsup src/*.ts --clean --format cjs,esm --dts --external vue && esno scripts/postbuild.ts",
     "dev": "tsup src/*.ts --clean --format cjs,esm --dts --watch src --external vue",
-    "example:build": "npm -C examples/vue3 run build",
-    "example:dev": "npm -C examples/vue3 run dev",
+    "example:build": "npm -C examples/vite-vue3 run build",
+    "example:dev": "npm -C examples/vite-vue3 run dev",
     "lint": "eslint --ext .ts,.js,.vue",
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --commit --tag --push && npm publish"
