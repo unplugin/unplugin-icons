@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-expect-error
 import IconifyTools from '@iconify/json-tools'
 import { ResolvedOptions } from '../types'
 import { compilers } from './compilers'
@@ -50,7 +50,7 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
   }
 }
 
-// @ts-ignore
+// @ts-expect-error
 const _collections: Record<string, Collection> = {}
 
 const _idTransforms: ((str: string) => string)[] = [

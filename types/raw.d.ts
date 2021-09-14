@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
 declare module 'virtual:icons/*' {
   const component: string
   export default string

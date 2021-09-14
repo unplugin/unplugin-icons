@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-expect-error
 import Data from '@iconify/json'
 import { getIcon } from './core/loader'
 

@@ -16,7 +16,9 @@ const unplugin = createUnplugin<Options>((options = {}) => {
           .replace(/^\//, '')
         const ext = options.compiler === 'jsx'
           ? '.jsx'
-          : (options.compiler === 'svelte' ? '.svelte' : '')
+          : options.compiler === 'svelte'
+            ? '.svelte'
+            : ''
         return res + ext
       }
       return null
@@ -25,7 +27,7 @@ const unplugin = createUnplugin<Options>((options = {}) => {
       if (isIconPath(id)) {
         const code = await generateComponentFromPath(id, resolved) || null
         if (code)
-          return { code, map: { mappings: '' } }
+          return { code, map: { mappings: '' } as any }
       }
 
       return null
