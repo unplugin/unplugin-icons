@@ -18,7 +18,13 @@ Access thousands of icons as components **on-demand** universally.
 - 🦾 TypeScript support.
 - 🔍 [Browse Icons](https://icones.js.org/)
 
-> **`vite-plugin-icons` has been renamed to `unplugin-icons`**, see the [migration guide](#migrate-from-vite-plugin-icons).
+<table><td><br>
+
+&nbsp;&nbsp;&nbsp;💡 **Story beind this tool**: [Journey with Icons Continues](https://antfu.me/posts/journey-with-icons-continues) - a blog post by Anthony&nbsp;&nbsp;&nbsp;
+
+</td></table>
+
+> **`vite-plugin-icons` has been renamed to `unplugin-icons`**, see the [migration guide](#migrate-from-vite-plugin-icons)
 
 ## Usage
 
