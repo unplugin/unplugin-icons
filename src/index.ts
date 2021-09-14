@@ -8,19 +8,25 @@ const unplugin = createUnplugin<Options>((options = {}) => {
 
   return {
     name: 'unplugin-icons',
+    enforce: 'pre',
     resolveId(id) {
       if (isIconPath(id)) {
         const res = normalizeIconPath(id)
           .replace(/\.\w+$/i, '')
           .replace(/^\//, '')
-        const ext = options.compiler === 'jsx' ? '.jsx' : ''
+        const ext = options.compiler === 'jsx'
+          ? '.jsx'
+          : (options.compiler === 'svelte' ? '.svelte' : '')
         return res + ext
       }
       return null
     },
     async load(id) {
-      if (isIconPath(id))
-        return await generateComponentFromPath(id, resolved) || null
+      if (isIconPath(id)) {
+        const code = await generateComponentFromPath(id, resolved) || null
+        if (code)
+          return { code, map: { mappings: '' } }
+      }
 
       return null
     },
