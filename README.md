@@ -180,6 +180,8 @@ const config = {
 export default config
 ```
 
+<br></details>
+
 <details>
 <summary>Svelte + Vite</summary><br>
 
