@@ -21,6 +21,16 @@ export interface ComponentResolverOption {
   enabledCollections?: string | string[]
 
   /**
+   * Icon collections aliases.
+   *
+   * The `aliases` keys are the `alias` and the values are the `name` for the collection.
+   *
+   * Instead using `<i-icon-park-user />` we can use `<i-park-user />` configuring:
+   * `aliases: { park: 'icon-park' }`
+   */
+  aliases?: Record<string, string>
+
+  /**
    * Name for custom collections provide by loaders.
    */
   customCollections?: string | string[]
@@ -48,6 +58,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
   const {
     prefix: rawPrefix = options.componentPrefix ?? 'i',
     enabledCollections = Object.keys(Data.collections()),
+    aliases = {},
     customCollections = [],
     extension,
   } = options
@@ -64,6 +75,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
   ])
 
   // match longer name first
+  Object.keys(aliases).forEach(c => collections.push(c))
   collections.sort((a, b) => b.length - a.length)
 
   return (name: string) => {
@@ -83,9 +95,11 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
     if (!icon)
       return
 
-    if (!customCollections.includes(collection) && !getBuiltinIcon(collection, icon))
+    const useCollection = aliases[collection] || collection
+
+    if (!customCollections.includes(useCollection) && !getBuiltinIcon(useCollection, icon))
       return
 
-    return `~icons/${collection}/${icon}${ext}`
+    return `~icons/${useCollection}/${icon}${ext}`
   }
 }

@@ -23,6 +23,9 @@ const config: UserConfig = {
       dts: true,
       resolvers: [
         IconsResolver({
+          aliases: {
+            park: 'icon-park',
+          },
           customCollections: ['custom', 'inline'],
         }),
       ],

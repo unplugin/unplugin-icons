@@ -28,6 +28,10 @@
       <i-inline-foo />
       <i-inline-async />
     </p>
+    <h2>Collection alias</h2>
+    <p>
+      <i-park-abnormal />
+    </p>
     from <code>unplugin-icons</code>
   </div>
 </template>
