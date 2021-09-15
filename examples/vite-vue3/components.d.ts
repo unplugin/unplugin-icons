@@ -9,6 +9,7 @@ declare module 'vue' {
     ICustomSteeringWheel: typeof import('~icons/custom/steering-wheel')['default']
     IFaSolidDiceFive: typeof import('~icons/fa-solid/dice-five')['default']
     IHeroiconsOutlineMenuAlt2: typeof import('~icons/heroicons-outline/menu-alt2')['default']
+    IIconParkAbnormal: typeof import('~icons/icon-park/abnormal')['default']
     IIcTwotone23mp: typeof import('~icons/ic/twotone23mp')['default']
     IIcTwotone24mp: typeof import('~icons/ic/twotone24mp')['default']
     IInlineAsync: typeof import('~icons/inline/async')['default']

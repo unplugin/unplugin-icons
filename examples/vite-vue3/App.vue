@@ -31,6 +31,7 @@
     <h2>Collection alias</h2>
     <p>
       <i-park-abnormal />
+      <i-icon-park-abnormal />
     </p>
     from <code>unplugin-icons</code>
   </div>
