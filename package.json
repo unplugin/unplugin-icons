@@ -66,6 +66,7 @@
   "dependencies": {
     "@antfu/utils": "^0.3.0",
     "@iconify/json-tools": "^1.0.10",
+    "fast-glob": "^3.2.7",
     "has-pkg": "^0.0.1",
     "unplugin": "^0.2.9"
   },

@@ -17,7 +17,6 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/composition-api": "^0.29.0",
     "css-loader": "^5.2.0",
-    "unplugin-icons": "workspace:*",
-    "unplugin-vue2-script-setup": "^0.6.1"
+    "unplugin-icons": "workspace:*"
   }
 }

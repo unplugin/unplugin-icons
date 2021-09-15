@@ -4,7 +4,7 @@ import Data from '@iconify/json'
 import { getBuiltinIcon } from './core/loader'
 import { camelToKebab } from './core/utils'
 
-export interface ComponentResolverOption {
+export interface ComponentResolverOptions {
   /**
    * Prefix for resolving components name.
    * Set '' to disable prefix.
@@ -44,7 +44,7 @@ export interface ComponentResolverOption {
  *
  * @param options
  */
-export default function ComponentsResolver(options: ComponentResolverOption = {}) {
+export default function ComponentsResolver(options: ComponentResolverOptions = {}) {
   const {
     prefix: rawPrefix = options.componentPrefix ?? 'i',
     enabledCollections = Object.keys(Data.collections()),
