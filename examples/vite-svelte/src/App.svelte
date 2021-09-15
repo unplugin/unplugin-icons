@@ -6,7 +6,7 @@
 </script>
 
 <main>
-  <SvelteLogo />
+  <SvelteLogo style="font-size:2em" />
   <br />
   <br />
   <MdiStore24Hour />

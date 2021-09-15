@@ -6,7 +6,7 @@ import IconParkAbnormal from 'virtual:icons/icon-park/abnormal'
 </script>
 
 <main>
-  <SvelteLogo />
+  <SvelteLogo style="font-size:2em" />
   <br />
   <br />
   <MdiStore24Hour />

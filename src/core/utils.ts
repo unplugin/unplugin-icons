@@ -14,3 +14,14 @@ export function camelToKebab(key: string) {
     .trim()
   return result.split(/\s+/g).join('-').toLowerCase()
 }
+
+// escape curlies, backtick, \t, \r, \n to avoid breaking output of {@html `here`} in .svelte
+export function escapeSvelte(str: string): string {
+  return str
+    .replace(
+      /[{}`]/g,
+      // @ts-ignore
+      c => ({ '{': '&#123;', '}': '&#125;', '`': '&#96;' }[c]),
+    )
+    .replace(/\\([trn])/g, '&#92;$1')
+}
