@@ -21,6 +21,16 @@ export interface ComponentResolverOption {
   enabledCollections?: string | string[]
 
   /**
+   * Icon collections aliases.
+   *
+   * The `aliases` keys are the `alias` and the values are the `name` for the collection.
+   *
+   * Instead using `<i-icon-park-abnormal />` we can use `<i-park-abnormal />` configuring:
+   * `alias: { park: 'icon-park' }`
+   */
+  alias?: Record<string, string>
+
+  /**
    * Name for custom collections provide by loaders.
    */
   customCollections?: string | string[]
@@ -48,6 +58,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
   const {
     prefix: rawPrefix = options.componentPrefix ?? 'i',
     enabledCollections = Object.keys(Data.collections()),
+    alias = {},
     customCollections = [],
     extension,
   } = options
@@ -61,6 +72,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
   const collections = uniq([
     ...toArray(enabledCollections),
     ...toArray(customCollections),
+    ...toArray(Object.keys(alias)),
   ])
 
   // match longer name first
@@ -83,9 +95,11 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
     if (!icon)
       return
 
-    if (!customCollections.includes(collection) && !getBuiltinIcon(collection, icon))
+    const resolvedCollection = alias[collection] || collection
+
+    if (!customCollections.includes(resolvedCollection) && !getBuiltinIcon(resolvedCollection, icon))
       return
 
-    return `~icons/${collection}/${icon}${ext}`
+    return `~icons/${resolvedCollection}/${icon}${ext}`
   }
 }

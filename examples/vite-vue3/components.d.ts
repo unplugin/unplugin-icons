@@ -9,6 +9,7 @@ declare module 'vue' {
     ICustomSteeringWheel: typeof import('~icons/custom/steering-wheel')['default']
     IFaSolidDiceFive: typeof import('~icons/fa-solid/dice-five')['default']
     IHeroiconsOutlineMenuAlt2: typeof import('~icons/heroicons-outline/menu-alt2')['default']
+    IIconParkAbnormal: typeof import('~icons/icon-park/abnormal')['default']
     IIcTwotone23mp: typeof import('~icons/ic/twotone23mp')['default']
     IIcTwotone24mp: typeof import('~icons/ic/twotone24mp')['default']
     IInlineAsync: typeof import('~icons/inline/async')['default']
@@ -19,6 +20,7 @@ declare module 'vue' {
     IMdiDiceD12: typeof import('~icons/mdi/dice-d12')['default']
     IMdiLightAlarm: typeof import('~icons/mdi-light/alarm')['default']
     INotoV1FlagForFlagJapan: typeof import('~icons/noto-v1/flag-for-flag-japan')['default']
+    IParkAbnormal: typeof import('~icons/icon-park/abnormal')['default']
     IRiApps2Line: typeof import('~icons/ri/apps2-line')['default']
     ITwemoji1stPlaceMedal: typeof import('~icons/twemoji/1st-place-medal')['default']
   }
