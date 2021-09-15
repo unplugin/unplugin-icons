@@ -25,7 +25,7 @@ export interface ComponentResolverOption {
    *
    * The `aliases` keys are the `alias` and the values are the `name` for the collection.
    *
-   * Instead using `<i-icon-park-user />` we can use `<i-park-user />` configuring:
+   * Instead using `<i-icon-park-abnormal />` we can use `<i-park-abnormal />` configuring:
    * `alias: { park: 'icon-park' }`
    */
   alias?: Record<string, string>
