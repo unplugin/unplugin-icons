@@ -26,9 +26,9 @@ export interface ComponentResolverOption {
    * The `aliases` keys are the `alias` and the values are the `name` for the collection.
    *
    * Instead using `<i-icon-park-user />` we can use `<i-park-user />` configuring:
-   * `aliases: { park: 'icon-park' }`
+   * `alias: { park: 'icon-park' }`
    */
-  aliases?: Record<string, string>
+  alias?: Record<string, string>
 
   /**
    * Name for custom collections provide by loaders.
@@ -58,7 +58,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
   const {
     prefix: rawPrefix = options.componentPrefix ?? 'i',
     enabledCollections = Object.keys(Data.collections()),
-    aliases = {},
+    alias = {},
     customCollections = [],
     extension,
   } = options
@@ -72,10 +72,8 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
   const collections = uniq([
     ...toArray(enabledCollections),
     ...toArray(customCollections),
+    ...toArray(Object.keys(alias)),
   ])
-
-  // add collection alias so user can use alias or full name
-  Object.keys(aliases).forEach(c => collections.push(c))
 
   // match longer name first
   collections.sort((a, b) => b.length - a.length)
@@ -97,11 +95,11 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
     if (!icon)
       return
 
-    const useCollection = aliases[collection] || collection
+    const resolvedCollection = alias[collection] || collection
 
-    if (!customCollections.includes(useCollection) && !getBuiltinIcon(useCollection, icon))
+    if (!customCollections.includes(resolvedCollection) && !getBuiltinIcon(resolvedCollection, icon))
       return
 
-    return `~icons/${useCollection}/${icon}${ext}`
+    return `~icons/${resolvedCollection}/${icon}${ext}`
   }
 }
