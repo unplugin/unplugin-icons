@@ -23,5 +23,5 @@ export function escapeSvelte(str: string): string {
       // @ts-ignore
       c => ({ '{': '&#123;', '}': '&#125;', '`': '&#96;' }[c]),
     )
-    .replace(/\\([trn])/g, '&#92;$1')
+    .replace(/\\([trn])/g, ' ')
 }
