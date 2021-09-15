@@ -619,20 +619,22 @@ IconsResolver({
 When using component resolver, you have to use the name of the collection that can be long or redundant: for example, 
 when using `icon-park` collection you need to use it like this `<icon-icon-park-abnormal />`.
 
-You can add an alias to the `IconResolver` plugin:
+You can add an alias for any collection to the `IconResolver` plugin:
 
 ```ts
 IconsResolver({
   alias: {
-    park: 'icon-park'
+    park: 'icon-park',
+    fas:  'fa-solid',
+    ...
   }
 })
 ```
 
-You can use the name using the alias or the collection name.
+You can use the alias or the collection name, the plugin will resolve both.
 
 Following with the example and configuring the plugin with previous `alias` entry, you can now use 
-`<icon-park-abnormal />` or `<icon-icon-park-abnormal />` 
+`<icon-park-abnormal />` or `<icon-icon-park-abnormal />`.
 
 ## Sponsors
 
