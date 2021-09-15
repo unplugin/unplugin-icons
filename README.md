@@ -362,7 +362,7 @@ Type Declarations
 For Svelte Kit, on `src/global.d.ts` file:
 ```ts
 /// <reference types="@sveltejs/kit" />
-/// <reference types="unplugin-icons/types/svelte" />```
+/// <reference types="unplugin-icons/types/svelte" />
 ```
 
 For Svelte + Vite, on `src/vite-env.d.ts` file:
