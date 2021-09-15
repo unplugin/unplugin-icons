@@ -74,8 +74,10 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
     ...toArray(customCollections),
   ])
 
-  // match longer name first
+  // add collection alias so user can use alias or full name
   Object.keys(aliases).forEach(c => collections.push(c))
+
+  // match longer name first
   collections.sort((a, b) => b.length - a.length)
 
   return (name: string) => {
