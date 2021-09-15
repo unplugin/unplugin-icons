@@ -360,13 +360,13 @@ Icons({ compiler: 'svelte' })
 Type Declarations
 
 For Svelte Kit, on `src/global.d.ts` file:
-```ts
+```html
 /// <reference types="@sveltejs/kit" />
 /// <reference types="unplugin-icons/types/svelte" />
 ```
 
 For Svelte + Vite, on `src/vite-env.d.ts` file:
-```ts
+```html
 /// <reference types="svelte" />
 /// <reference types="vite/client" />
 /// <reference types="unplugin-icons/types/svelte" />
