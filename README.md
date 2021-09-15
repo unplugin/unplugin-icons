@@ -151,6 +151,63 @@ module.exports = {
 
 <br></details>
 
+<details>
+<summary>Svelte Kit</summary><br>
+
+```ts
+// svelte.config.js
+import preprocess from 'svelte-preprocess'
+import Icons from 'unplugin-icons/vite'
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  // Consult https://github.com/sveltejs/svelte-preprocess
+  // for more information about preprocessors
+  preprocess: preprocess(),
+  kit: {
+    // hydrate the <div id="svelte"> element in src/app.html
+    target: '#svelte',
+    vite: {
+      plugins: [
+        Icons({
+          compiler: 'svelte',
+        }),
+      ],
+    },
+  },
+}
+
+export default config
+```
+
+<details>
+<summary>Svelte + Vite</summary><br>
+
+Svelte support requires plugin dependency `@sveltejs/vite-plugin-svelte`:
+```shell
+npm i -D @sveltejs/vite-plugin-svelte
+```
+
+The `unplugin-icons` plugin should be configured on `vite.config.js` configuration file:
+
+```ts
+// vite.config.js
+import { defineConfig } from 'vite'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
+import Icons from 'unplugin-icons/vite'
+
+export default defineConfig({
+  plugins: [
+    svelte(),
+    Icons({
+      compiler: 'svelte',
+    }),
+  ],
+})
+```
+
+<br></details>
+
 ### Frameworks
 
 
@@ -288,6 +345,31 @@ Type Declarations
     ]
   }
 }
+```
+
+<br></details>
+
+<details>
+<summary>Svelte</summary><br>
+
+
+```ts
+Icons({ compiler: 'svelte' })
+```
+
+Type Declarations
+
+For Svelte Kit, on `src/global.d.ts` file:
+```ts
+/// <reference types="@sveltejs/kit" />
+/// <reference types="unplugin-icons/types/svelte" />```
+```
+
+For Svelte + Vite, on `src/vite-env.d.ts` file:
+```ts
+/// <reference types="svelte" />
+/// <reference types="vite/client" />
+/// <reference types="unplugin-icons/types/svelte" />
 ```
 
 <br></details>
