@@ -7,7 +7,6 @@ export const Vue2Compiler = <Compiler>(async(svg: string, collection: string, ic
   const transpile = (await import('vue-template-es2015-compiler')).default
 
   const { render } = compile(svg)
-
   const toFunction = (code: string): string => {
     return `function () {${code}}`
   }
