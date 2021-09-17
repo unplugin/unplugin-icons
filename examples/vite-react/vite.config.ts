@@ -10,6 +10,7 @@ export default defineConfig({
     Inspect(),
     Icons({
       compiler: 'jsx',
+      jsx: 'react',
     }),
   ],
 })
