@@ -1,12 +1,12 @@
 import hasPkg from 'has-pkg'
 import { Options, ResolvedOptions } from '../types'
 
-export function resolveOptions(options: Options): ResolvedOptions {
+export async function resolveOptions(options: Options): Promise<ResolvedOptions> {
   const {
     scale = 1.2,
     defaultStyle = '',
     defaultClass = '',
-    compiler = guessCompiler(),
+    compiler = await guessCompiler(),
     jsx = guessJSX(),
     customCollections = {},
   } = options
@@ -27,8 +27,8 @@ export function resolveOptions(options: Options): ResolvedOptions {
   }
 }
 
-function guessCompiler(): ResolvedOptions['compiler'] {
-  return getVueVersion() || (hasPkg('@svgr/core') ? 'jsx' : 'vue3')
+async function guessCompiler(): Promise<ResolvedOptions['compiler']> {
+  return await getVueVersion() || (hasPkg('@svgr/core') ? 'jsx' : 'vue3')
 }
 
 function guessJSX(): ResolvedOptions['jsx'] {
@@ -37,10 +37,10 @@ function guessJSX(): ResolvedOptions['jsx'] {
   return 'react'
 }
 
-function getVueVersion() {
+async function getVueVersion() {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const vue = require('vue')
+    const vue = await import('vue')
+    // @ts-ignore
     const version = vue?.default?.version || vue?.version || '3'
     return version.startsWith('2.') ? 'vue2' : 'vue3'
   }

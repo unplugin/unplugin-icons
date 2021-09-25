@@ -24,8 +24,9 @@ const unplugin = createUnplugin<Options>((options = {}) => {
       return null
     },
     async load(id) {
+      const config = await resolved
       if (isIconPath(id)) {
-        const code = await generateComponentFromPath(id, resolved) || null
+        const code = await generateComponentFromPath(id, config) || null
         if (code)
           return { code, map: { mappings: '' } as any }
       }
