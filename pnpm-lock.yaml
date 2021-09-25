@@ -18,13 +18,13 @@ importers:
       rollup: ^2.56.3
       tsup: ^4.14.0
       typescript: ^4.4.3
-      unplugin: ^0.2.9
+      unplugin: ^0.2.11
       vite: ^2.5.7
     dependencies:
       '@antfu/utils': 0.3.0
       '@iconify/json-tools': 1.0.10
       has-pkg: 0.0.1
-      unplugin: 0.2.9_rollup@2.56.3+vite@2.5.7
+      unplugin: 0.2.11_rollup@2.56.3+vite@2.5.7
     devDependencies:
       '@antfu/eslint-config': 0.9.0_eslint@7.32.0+typescript@4.4.3
       '@svgr/core': 5.5.0
@@ -74,7 +74,7 @@ importers:
       unplugin-icons: workspace:*
     devDependencies:
       '@iconify/json': 1.1.401
-      '@sveltejs/kit': 1.0.0-next.166_svelte@3.42.5
+      '@sveltejs/kit': 1.0.0-next.168_svelte@3.42.5
       svelte: 3.42.5
       svelte-check: 2.2.6_svelte@3.42.5
       svelte-preprocess: 4.9.4_svelte@3.42.5+typescript@4.4.3
@@ -2144,8 +2144,8 @@ packages:
     resolution: {integrity: sha512-T7VNNlYVM1SgQ+VsMYhnDkcGmWhQdL0bDyGm5TlQ3GBXnJscEClUUOKduWTmm2zCnvNLC1hc3JpuXjs/nFOc5w==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.166_svelte@3.42.5:
-    resolution: {integrity: sha512-TQWtWbgyc5+eJY1/RZvCc4gHLssnW+PfKh0dGxbysR0r1vahBgLDUELNlc1dktg/jUJm4eEFl4cqDqKsvU84tQ==}
+  /@sveltejs/kit/1.0.0-next.168_svelte@3.42.5:
+    resolution: {integrity: sha512-BHVqLp3d8BCPD0kuNueoV5YxyfLfgAC9wU6PCbOGIhn1gw4mvpiVbeEn7NKeVkTkl88bu/QtAITLsIx1+4flTA==}
     engines: {node: ^12.20 || >=14.13}
     hasBin: true
     peerDependencies:
@@ -8493,7 +8493,7 @@ packages:
   /jsonfile/4.0.0:
     resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=}
     optionalDependencies:
-      graceful-fs: 4.2.4
+      graceful-fs: 4.2.8
 
   /jsonfile/6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
@@ -12869,6 +12869,26 @@ packages:
       - webpack
     dev: true
 
+  /unplugin/0.2.11_rollup@2.56.3+vite@2.5.7:
+    resolution: {integrity: sha512-PY8x+hG1smsF06chESP5BurwZN+tZK1tNjKsCXe4XFOfRCIOcrIPCrwBKwLSfeAdojVCtMjSpJ2e/l5QXNw16A==}
+    peerDependencies:
+      rollup: ^2.50.0
+      vite: ^2.3.0
+      webpack: 4 || 5
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
+    dependencies:
+      rollup: 2.56.3
+      upath: 2.0.1
+      vite: 2.5.7
+      webpack-virtual-modules: 0.4.3
+    dev: false
+
   /unplugin/0.2.9_511cb772154e9e745cb7aa145f48e215:
     resolution: {integrity: sha512-Hy14s+kkQZhQjkRcrkz5FYqbqYVDh5ck+XVe9SfQH71oTTmDoDTbpkJ4zdr7hJIkK9YqEIdbFH6nMxwj6ynBMA==}
     peerDependencies:
@@ -12908,6 +12928,7 @@ packages:
       upath: 2.0.1
       vite: 2.5.7
       webpack-virtual-modules: 0.4.3
+    dev: true
 
   /unquote/1.1.1:
     resolution: {integrity: sha1-j97XMk7G6IoP+LkF58CYzcCG1UQ=}

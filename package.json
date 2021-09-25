@@ -67,7 +67,7 @@
     "@antfu/utils": "^0.3.0",
     "@iconify/json-tools": "^1.0.10",
     "has-pkg": "^0.0.1",
-    "unplugin": "^0.2.9"
+    "unplugin": "^0.2.11"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.9.0",
