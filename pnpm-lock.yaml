@@ -28,13 +28,13 @@ importers:
     dependencies:
       '@antfu/utils': 0.3.0
       '@iconify/json-tools': 1.0.10
+      '@iconify/utils': 1.0.9
       debug: 4.3.2
       has-pkg: 0.0.1
       unplugin: 0.2.16_rollup@2.57.0+vite@2.5.10
     devDependencies:
       '@antfu/eslint-config': 0.9.0_eslint@7.32.0+typescript@4.4.3
       '@iconify/types': 1.0.8
-      '@iconify/utils': 1.0.9
       '@svgr/core': 5.5.0
       '@types/debug': 4.1.7
       '@types/node': 16.10.1
@@ -52,7 +52,6 @@ importers:
   examples/nuxt:
     specifiers:
       '@iconify/json': ^1.1.406
-      '@iconify/json-tools': ^1.0.10
       '@nuxt/types': ^2.15.8
       '@nuxt/typescript-build': ^2.1.0
       '@nuxtjs/composition-api': ^0.29.2
@@ -66,7 +65,6 @@ importers:
       nuxt: 2.15.8_typescript@4.4.3
     devDependencies:
       '@iconify/json': 1.1.406
-      '@iconify/json-tools': 1.0.10
       '@nuxt/types': 2.15.8
       '@nuxt/typescript-build': 2.1.0_@nuxt+types@2.15.8
       '@nuxtjs/composition-api': 0.29.2_3a30cb5012d73f7df9504b589caad82d
@@ -76,9 +74,9 @@ importers:
 
   examples/sveltekit:
     specifiers:
-      '@iconify-json/icon-park': ^1.0.0
-      '@iconify-json/logos': ^1.0.0
-      '@iconify-json/mdi': ^1.0.0
+      '@iconify-json/icon-park': ^1.0.1
+      '@iconify-json/logos': ^1.0.1
+      '@iconify-json/mdi': ^1.0.1
       '@sveltejs/kit': next
       svelte: ^3.43.0
       svelte-check: ^2.2.6
@@ -87,9 +85,9 @@ importers:
       typescript: ^4.4.3
       unplugin-icons: workspace:*
     devDependencies:
-      '@iconify-json/icon-park': 1.0.0
-      '@iconify-json/logos': 1.0.0
-      '@iconify-json/mdi': 1.0.0
+      '@iconify-json/icon-park': 1.0.1
+      '@iconify-json/logos': 1.0.1
+      '@iconify-json/mdi': 1.0.1
       '@sveltejs/kit': 1.0.0-next.174_svelte@3.43.0
       svelte: 3.43.0
       svelte-check: 2.2.6_svelte@3.43.0
@@ -100,7 +98,7 @@ importers:
 
   examples/vite-preact:
     specifiers:
-      '@iconify-json/logos': ^1.0.0
+      '@iconify-json/logos': ^1.0.1
       '@preact/preset-vite': ^2.1.0
       '@svgr/core': ^5.5.0
       preact: ^10.5.14
@@ -111,7 +109,7 @@ importers:
     dependencies:
       preact: 10.5.14
     devDependencies:
-      '@iconify-json/logos': 1.0.0
+      '@iconify-json/logos': 1.0.1
       '@preact/preset-vite': 2.1.0_preact@10.5.14+vite@2.5.10
       '@svgr/core': 5.5.0
       typescript: 4.4.3
@@ -121,7 +119,7 @@ importers:
 
   examples/vite-react:
     specifiers:
-      '@iconify-json/logos': ^1.0.0
+      '@iconify-json/logos': ^1.0.1
       '@svgr/core': ^5.5.0
       '@types/react': ^17.0.24
       '@types/react-dom': ^17.0.9
@@ -136,7 +134,7 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     devDependencies:
-      '@iconify-json/logos': 1.0.0
+      '@iconify-json/logos': 1.0.1
       '@svgr/core': 5.5.0
       '@types/react': 17.0.24
       '@types/react-dom': 17.0.9
@@ -148,7 +146,7 @@ importers:
 
   examples/vite-solid:
     specifiers:
-      '@iconify-json/mdi': ^1.0.0
+      '@iconify-json/mdi': ^1.0.1
       solid-js: ^1.1.5
       unplugin-icons: workspace:*
       vite: ^2.5.10
@@ -156,16 +154,16 @@ importers:
     dependencies:
       solid-js: 1.1.5
     devDependencies:
-      '@iconify-json/mdi': 1.0.0
+      '@iconify-json/mdi': 1.0.1
       unplugin-icons: link:../..
       vite: 2.5.10
       vite-plugin-solid: 2.0.3
 
   examples/vite-svelte:
     specifiers:
-      '@iconify-json/icon-park': ^1.0.0
-      '@iconify-json/logos': ^1.0.0
-      '@iconify-json/mdi': ^1.0.0
+      '@iconify-json/icon-park': ^1.0.1
+      '@iconify-json/logos': ^1.0.1
+      '@iconify-json/mdi': ^1.0.1
       '@sveltejs/vite-plugin-svelte': ^1.0.0-next.24
       '@tsconfig/svelte': ^2.0.1
       cross-env: ^7.0.3
@@ -176,9 +174,9 @@ importers:
       unplugin-icons: workspace:*
       vite: ^2.5.10
     devDependencies:
-      '@iconify-json/icon-park': 1.0.0
-      '@iconify-json/logos': 1.0.0
-      '@iconify-json/mdi': 1.0.0
+      '@iconify-json/icon-park': 1.0.1
+      '@iconify-json/logos': 1.0.1
+      '@iconify-json/mdi': 1.0.1
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.24_svelte@3.43.0+vite@2.5.10
       '@tsconfig/svelte': 2.0.1
       cross-env: 7.0.3
@@ -201,15 +199,15 @@ importers:
 
   examples/vite-vue2:
     specifiers:
-      '@iconify-json/carbon': ^1.0.1
-      '@iconify-json/fa-solid': ^1.0.0
-      '@iconify-json/heroicons-outline': ^1.0.0
-      '@iconify-json/ic': ^1.0.0
-      '@iconify-json/logos': ^1.0.0
-      '@iconify-json/mdi': ^1.0.0
-      '@iconify-json/mdi-light': ^1.0.0
-      '@iconify-json/noto-v1': ^1.0.0
-      '@iconify-json/ri': ^1.0.0
+      '@iconify-json/carbon': ^1.0.2
+      '@iconify-json/fa-solid': ^1.0.1
+      '@iconify-json/heroicons-outline': ^1.0.1
+      '@iconify-json/ic': ^1.0.1
+      '@iconify-json/logos': ^1.0.1
+      '@iconify-json/mdi': ^1.0.1
+      '@iconify-json/mdi-light': ^1.0.1
+      '@iconify-json/noto-v1': ^1.0.1
+      '@iconify-json/ri': ^1.0.1
       typescript: ^4.4.3
       unplugin-icons: workspace:*
       unplugin-vue-components: ^0.15.4
@@ -221,15 +219,15 @@ importers:
     dependencies:
       vue: 2.6.14
     devDependencies:
-      '@iconify-json/carbon': 1.0.1
-      '@iconify-json/fa-solid': 1.0.0
-      '@iconify-json/heroicons-outline': 1.0.0
-      '@iconify-json/ic': 1.0.0
-      '@iconify-json/logos': 1.0.0
-      '@iconify-json/mdi': 1.0.0
-      '@iconify-json/mdi-light': 1.0.0
-      '@iconify-json/noto-v1': 1.0.0
-      '@iconify-json/ri': 1.0.0
+      '@iconify-json/carbon': 1.0.2
+      '@iconify-json/fa-solid': 1.0.1
+      '@iconify-json/heroicons-outline': 1.0.1
+      '@iconify-json/ic': 1.0.1
+      '@iconify-json/logos': 1.0.1
+      '@iconify-json/mdi': 1.0.1
+      '@iconify-json/mdi-light': 1.0.1
+      '@iconify-json/noto-v1': 1.0.1
+      '@iconify-json/ri': 1.0.1
       typescript: 4.4.3
       unplugin-icons: link:../..
       unplugin-vue-components: 0.15.4_c930041c0694a0e2de504e6b9397dc94
@@ -240,17 +238,17 @@ importers:
 
   examples/vite-vue3:
     specifiers:
-      '@iconify-json/carbon': ^1.0.1
-      '@iconify-json/fa-solid': ^1.0.0
-      '@iconify-json/heroicons-outline': ^1.0.0
-      '@iconify-json/ic': ^1.0.0
-      '@iconify-json/icon-park': ^1.0.0
-      '@iconify-json/logos': ^1.0.0
-      '@iconify-json/mdi': ^1.0.0
-      '@iconify-json/mdi-light': ^1.0.0
-      '@iconify-json/noto-v1': ^1.0.0
-      '@iconify-json/ri': ^1.0.0
-      '@iconify-json/twemoji': ^1.0.0
+      '@iconify-json/carbon': ^1.0.2
+      '@iconify-json/fa-solid': ^1.0.1
+      '@iconify-json/heroicons-outline': ^1.0.1
+      '@iconify-json/ic': ^1.0.1
+      '@iconify-json/icon-park': ^1.0.1
+      '@iconify-json/logos': ^1.0.1
+      '@iconify-json/mdi': ^1.0.1
+      '@iconify-json/mdi-light': ^1.0.1
+      '@iconify-json/noto-v1': ^1.0.1
+      '@iconify-json/ri': ^1.0.1
+      '@iconify-json/twemoji': ^1.0.1
       '@vitejs/plugin-vue': ^1.9.2
       '@vue/compiler-sfc': ^3.2.19
       typescript: ^4.4.3
@@ -261,17 +259,17 @@ importers:
     dependencies:
       vue: 3.2.19
     devDependencies:
-      '@iconify-json/carbon': 1.0.1
-      '@iconify-json/fa-solid': 1.0.0
-      '@iconify-json/heroicons-outline': 1.0.0
-      '@iconify-json/ic': 1.0.0
-      '@iconify-json/icon-park': 1.0.0
-      '@iconify-json/logos': 1.0.0
-      '@iconify-json/mdi': 1.0.0
-      '@iconify-json/mdi-light': 1.0.0
-      '@iconify-json/noto-v1': 1.0.0
-      '@iconify-json/ri': 1.0.0
-      '@iconify-json/twemoji': 1.0.0
+      '@iconify-json/carbon': 1.0.2
+      '@iconify-json/fa-solid': 1.0.1
+      '@iconify-json/heroicons-outline': 1.0.1
+      '@iconify-json/ic': 1.0.1
+      '@iconify-json/icon-park': 1.0.1
+      '@iconify-json/logos': 1.0.1
+      '@iconify-json/mdi': 1.0.1
+      '@iconify-json/mdi-light': 1.0.1
+      '@iconify-json/noto-v1': 1.0.1
+      '@iconify-json/ri': 1.0.1
+      '@iconify-json/twemoji': 1.0.1
       '@vitejs/plugin-vue': 1.9.2_vite@2.5.10
       '@vue/compiler-sfc': 3.2.19
       typescript: 4.4.3
@@ -302,13 +300,13 @@ importers:
 
   examples/vite-web-components:
     specifiers:
-      '@iconify-json/ion': ^1.0.0
-      '@iconify-json/mono-icons': ^1.0.0
+      '@iconify-json/ion': ^1.0.1
+      '@iconify-json/mono-icons': ^1.0.1
       unplugin-icons: workspace:*
       vite: ^2.5.10
     devDependencies:
-      '@iconify-json/ion': 1.0.0
-      '@iconify-json/mono-icons': 1.0.0
+      '@iconify-json/ion': 1.0.1
+      '@iconify-json/mono-icons': 1.0.1
       unplugin-icons: link:../..
       vite: 2.5.10
 
@@ -826,7 +824,6 @@ packages:
   /@babel/helper-validator-identifier/7.15.7:
     resolution: {integrity: sha512-K4JvCtQqad9OY2+yTU8w+E82ywk/fe+ELNlt1G8z3bVGlZfn/hOcQQsUhGhW/N+tb3fxK800wLtKOE/aM0m72w==}
     engines: {node: '>=6.9.0'}
-    dev: true
 
   /@babel/helper-validator-option/7.14.5:
     resolution: {integrity: sha512-OX8D5eeX4XwcroVW45NMvoYaIuFI+GQpA2a8Gi+X/U/cDUIRsV37qQfF905F0htTRCREQIB4KqPeaveRJUl3Ow==}
@@ -868,7 +865,7 @@ packages:
     resolution: {integrity: sha512-qf9u2WFWVV0MppaL877j2dBtQIDgmidgjGk5VIMw3OadXvYaXn66U1BFlH2t4+t3i+8PhedppRv+i40ABzd+gg==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/helper-validator-identifier': 7.14.9
+      '@babel/helper-validator-identifier': 7.15.7
       chalk: 2.4.2
       js-tokens: 4.0.0
 
@@ -1866,56 +1863,56 @@ packages:
     resolution: {integrity: sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==}
     dev: true
 
-  /@iconify-json/carbon/1.0.1:
-    resolution: {integrity: sha512-dZDrH/9PDPPtiZsA2joASrA/6k4gUaqsAjQ5bkC575Xw7p6C+b4Y/BUnaM+1WOh/Jy50jlqsahMcN1A2zzzBHQ==}
+  /@iconify-json/carbon/1.0.2:
+    resolution: {integrity: sha512-qstKJIvPFRLaNozV3fB5GoRSrlrCUeYD4l7rcEsT2bLNPKOtGBMmPpvOLNgM8q673VxNUiItPbtSABW77UYnjg==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/fa-solid/1.0.0:
-    resolution: {integrity: sha512-uT9kVAEc7Q1LOUlX32Tp9kudt7BIE8OgU3tUrg/G9rYbYjFmaCRxV7K85Kd/hpn062SgGkuuaA/awZjxU8YF5A==}
+  /@iconify-json/fa-solid/1.0.1:
+    resolution: {integrity: sha512-N+5t8j5H7RKSvf3JBH7wPkmqGxXRung3UZWVfqZ4Pwsgffc7A1ApWCAvvMVrxsGJ8CvINv3V6vioOuk/55NTEg==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/heroicons-outline/1.0.0:
-    resolution: {integrity: sha512-lZsl4q+AuMASazmrnFLbVmvPAjo8ReUWJV//7oxGQPV1TxHadtVsZXDxy2WiXmO6cpuyRizKNc3VjUsFHn/ghA==}
+  /@iconify-json/heroicons-outline/1.0.1:
+    resolution: {integrity: sha512-55ufIlD+9MYjvMv81KgBJXthpeVT2Q8aR1fR7BEVbuFUFXa44wmmugzAkhN9psqc88e9rGOc+706qfiVaUgjPg==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/ic/1.0.0:
-    resolution: {integrity: sha512-nfiQGSrV4XSNaR8k0QUOikiFAg/X0quS7AmfpGQbVAb9AG5BgSe17A6kc+22lgaiQmzzGlSla8XZgFcXqKjCuA==}
+  /@iconify-json/ic/1.0.1:
+    resolution: {integrity: sha512-AK6cwDtjl4IGp6qtvX9XOWDVrKtwAsysOlhq/9FcRExIZMD1AvoN4xTyXjSQVPZJu8SEFIG8QCkKzttZysPDkQ==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/icon-park/1.0.0:
-    resolution: {integrity: sha512-rsMqRbXc0XWvnx0OTprOfemmzJWhgF6xnG0Jgk0Y81xYpToJw/0yv+tiGQZr+PXImIns/5rqKchupEAH4cX/gg==}
+  /@iconify-json/icon-park/1.0.1:
+    resolution: {integrity: sha512-wmeuBE2gLAKEDWgPYrvymb89q+TCImmT2oIL5DH8skH5Of91mVTp0I5YKR9LjL1d8V2gKSR9gkAHYo7JzkZihg==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/ion/1.0.0:
-    resolution: {integrity: sha512-gl8fFQOcTlN2QW6IvA7mCp7a3LXIh0qjcTvSAnjhBji0QvfafbEazphGoC1GUFvyCJuCSqAIohjaypwcQJHdbA==}
+  /@iconify-json/ion/1.0.1:
+    resolution: {integrity: sha512-RTRtRljmNhaB5FgoyJL6kpgy7e2QZId7yTlNMzJR5sNXix0Zhd2fWpVsy+vfoVMS2qbnjw07J99nKySpxHwIJw==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/logos/1.0.0:
-    resolution: {integrity: sha512-WHQxKmkFGKlYsLg/lIW94rt47bsytjzzk82ypEzORH/KcnHG0Vs+At2KBUMzYyAwGVfGEhvq3o7nJrV36kHnUg==}
+  /@iconify-json/logos/1.0.1:
+    resolution: {integrity: sha512-rb3IOhL2ilOdALOTg3vltsMhXpGcRVSryDRyCoZcsqCDGH27havNfdZO+VETk2+CPA7SF1nMmhkm7CDkd5sXRQ==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/mdi-light/1.0.0:
-    resolution: {integrity: sha512-jUi1j9kj1cv+fBZrkw4en4sPF0wtqEVNNBuFW6O9bwug7al4WB78DygagAzuquPRYuNlvfsk6etzZrG3WsTVwQ==}
+  /@iconify-json/mdi-light/1.0.1:
+    resolution: {integrity: sha512-lbucb1t36lRRxEHNnJcROt0SRRRQgI6gmzj1Pv2qadrw/5mjLN6+OzOOCAIwCLDu//hU7xMkXDCw47aWtbRHaA==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/mdi/1.0.0:
-    resolution: {integrity: sha512-oGNVY/YMVqPfPKfkInZWhV5N3h2y3yDM1KmYrVgf2pt+bwCpuFzi8wx93ffbJyokPT3OD+xrkReRMsqla2rz6A==}
+  /@iconify-json/mdi/1.0.1:
+    resolution: {integrity: sha512-lrv4f2R2iBDz72DunjH9AvBHPTZS0IdmmXDTYo7MDsScm98NM2YCJpiT+ersxYKhOduI4eO/GAasxypl2+4xDg==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
@@ -1926,26 +1923,33 @@ packages:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/noto-v1/1.0.0:
-    resolution: {integrity: sha512-O4+IDYxoRp+vR9RB2LiQHCgon/tr5jDUdCDEKTr3yrL2Svxv8Ip4DtLpboEt1L/2NHGTpwKEI09HSZ3wldNkTg==}
+  /@iconify-json/mono-icons/1.0.1:
+    resolution: {integrity: sha512-NKlUak8v7LTMtSvijlpXCtQ9+XXGGR/1AmRVf5ABnVRPLSi0kRZy/Yrpwl7Uj46zTF19vJE0J7TMYxmwSP5OIg==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/ri/1.0.0:
-    resolution: {integrity: sha512-zRXQrM0VZsO6ZjXbAHqUN3BNshusz1K68nJNn5FfcjrSdP5EZO5ZUzMgb4RLt/J6rqAhkFjbYbT0WHF6LaVwXw==}
+  /@iconify-json/noto-v1/1.0.1:
+    resolution: {integrity: sha512-/VwVtEWiG6TK1B2u9ZvDlt3+zh6OxEj0tSi3DvC1o0mpAIO5TWuF3/vf38j8ikcHGeihMT/T7dZwpw/1PtZs5g==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
-  /@iconify-json/twemoji/1.0.0:
-    resolution: {integrity: sha512-mPVJNf9D12dEtCyseAG2p7sVYSFAgu1VxA7gxWblKG6JoX+DS/fslY+3m+cYWfRTYb0SQ+UizKLCT65dDZObig==}
+  /@iconify-json/ri/1.0.1:
+    resolution: {integrity: sha512-e1zVwnD+Mn62J/zrF2jh80RrPHF5f2LI0/IAgPBK3inO327Z2HTfK5HAvqNBLxOkyU9vDO+RkOAEKGJ2j6Iybg==}
+    dependencies:
+      '@iconify/types': 1.0.8
+    dev: true
+
+  /@iconify-json/twemoji/1.0.1:
+    resolution: {integrity: sha512-viObtFZYDIHb2nXA1AWofyf3NEE4oO0NN6zpSOOgdV2r6WB/hHoPpV3P1T942vxH+OAVUPB7d08QAE5cIs7BEw==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true
 
   /@iconify/json-tools/1.0.10:
     resolution: {integrity: sha512-LFelJDOLZ6JHlmlAkgrvmcu4hpNPB91KYcr4f60D/exzU1eNOb4/KCVHIydGHIQFaOacIOD+Xy+B7P1z812cZg==}
+    dev: false
 
   /@iconify/json/1.1.406:
     resolution: {integrity: sha512-3mNuYfU1cQeaV0m2mSI5Lf+13Tr6xueOP30w3Du4xCIBFGQY4O0D8wJ8rOp9PXRik1oleu+aKfEVnned0b/tqw==}
@@ -1953,13 +1957,12 @@ packages:
 
   /@iconify/types/1.0.8:
     resolution: {integrity: sha512-g6SpMNyPuk5tWUyn7/EwKSu7kMgIOMdc9OrCAIfT8CbxReglLAOSVYH8egQ0G2R9/WuhOGFWhhKSUDVU+0vHRA==}
-    dev: true
 
   /@iconify/utils/1.0.9:
     resolution: {integrity: sha512-HgHho6s0hQ7hIgx27J6YBg/4Jse0OZxQGQqE8ZT1lELWDOqrvR4RB1AIR2O3JFIts8u0a7uBwDhbjZPBwzj4TQ==}
     dependencies:
       '@iconify/types': 1.0.8
-    dev: true
+    dev: false
 
   /@intervolga/optimize-cssnano-plugin/1.0.6_webpack@4.46.0:
     resolution: {integrity: sha512-zN69TnSr0viRSU6cEDIcuPcP67QcpQ6uHACg58FiN9PDrU6SLyGW3MR4tiISbYxy1kDWAVPwD+XwQTWE5cigAA==}
@@ -5006,6 +5009,7 @@ packages:
 
   /bindings/1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     optional: true
@@ -7445,6 +7449,7 @@ packages:
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     optional: true
 
   /filesize/3.6.1:
@@ -7592,6 +7597,7 @@ packages:
   /fork-ts-checker-webpack-plugin/5.2.1:
     resolution: {integrity: sha512-SVi+ZAQOGbtAsUWrZvGzz38ga2YqjWvca1pXQFUArIVXqli0lLoDQ8uS0wg0kSpcwpZmaW5jVCZXQebkyUQSsw==}
     engines: {node: '>=10', yarn: '>=1.0.0'}
+    requiresBuild: true
     dependencies:
       '@babel/code-frame': 7.14.5
       '@types/json-schema': 7.0.9
@@ -7723,6 +7729,7 @@ packages:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+    requiresBuild: true
     optional: true
 
   /function-bind/1.1.1:
@@ -9603,6 +9610,7 @@ packages:
 
   /nan/2.15.0:
     resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==}
+    requiresBuild: true
     optional: true
 
   /nanoid/3.1.23:
@@ -11059,6 +11067,7 @@ packages:
     resolution: {integrity: sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==}
     engines: {node: '>=4'}
     hasBin: true
+    requiresBuild: true
     optional: true
 
   /prettier/2.2.1:
@@ -13958,6 +13967,7 @@ packages:
 
   /watchpack-chokidar2/2.0.1:
     resolution: {integrity: sha512-nCFfBIPKr5Sh61s4LPpy1Wtfi0HE8isJ3d2Yb5/Ppw2P2B/3eVSEBjKfN0fmHJSK14+31KwMKmcrzs2GM4P0Ww==}
+    requiresBuild: true
     dependencies:
       chokidar: 2.1.8
     optional: true

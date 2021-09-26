@@ -6,9 +6,9 @@
     "dev": "cross-env DEBUG=unplugin-icons:* vite"
   },
   "devDependencies": {
-    "@iconify-json/icon-park": "^1.0.0",
-    "@iconify-json/logos": "^1.0.0",
-    "@iconify-json/mdi": "^1.0.0",
+    "@iconify-json/icon-park": "^1.0.1",
+    "@iconify-json/logos": "^1.0.1",
+    "@iconify-json/mdi": "^1.0.1",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.24",
     "@tsconfig/svelte": "^2.0.1",
     "cross-env": "^7.0.3",

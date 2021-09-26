@@ -12,7 +12,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.0.0",
+    "@iconify-json/logos": "^1.0.1",
     "@svgr/core": "^5.5.0",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
