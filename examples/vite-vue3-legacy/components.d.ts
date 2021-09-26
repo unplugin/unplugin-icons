@@ -5,6 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     ICarbonAppConnectivity: typeof import('~icons/carbon/app-connectivity')['default']
+    'ICodicon:diffIgnored': typeof import('~icons/codicon/diff-ignored')['default']
     ICustomCarA: typeof import('~icons/custom/car-a')['default']
     ICustomSteeringWheel: typeof import('~icons/custom/steering-wheel')['default']
     IFaSolidDiceFive: typeof import('~icons/fa-solid/dice-five')['default']

@@ -14,7 +14,7 @@
       <i-mdi-light-alarm />
       <i-noto-v1-flag-for-flag-japan />
       <i-ic-twotone-24mp />
-      <i-mdi:cactus />
+      <i-codicon:diff-ignored />
       <i-twemoji-1st-place-medal />
       <IIcTwotone23mp />
       <MdiStore24Hour />

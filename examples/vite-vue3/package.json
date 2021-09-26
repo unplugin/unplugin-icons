@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "cross-env DEBUG=unplugin-icons:* vite",
     "build": "vite build"
   },
   "dependencies": {

@@ -1,39 +1,15 @@
-// @ts-expect-error
-import IconifyTools from '@iconify/json-tools'
-import { IconifyJSON } from '@iconify/types'
-import { getIconData } from '@iconify/utils/lib/icon-set/get-icon'
-import { FullIconifyIcon } from '@iconify/utils/lib/icon'
-import { iconToSVG } from '@iconify/utils/lib/svg/build'
-import { defaults as DefaultIconCustomizations } from '@iconify/utils/lib/customisations'
+import createDebugger from 'debug'
 import { ResolvedOptions } from '../types'
+import { isIconifyJsonPresent, searchForLegacyIcon } from './legacy'
+import { loadCollection, ResolvedIconPath, searchForIcon } from './modern'
 import { compilers } from './compilers'
+import { warnOnce } from './utils'
+import { getCustomIcon } from './custom'
 
-export interface ResolvedIconPath {
-  collection: string
-  icon: string
-  query: Record<string, string | undefined>
-}
+export const debug = createDebugger('unplugin-icons:load')
 
 const URL_PREFIXES = ['/~icons/', '~icons/', 'virtual:icons/', 'virtual/icons/']
 const iconPathRE = new RegExp(`${URL_PREFIXES.map(v => `^${v}`).join('|')}`)
-
-const { SVG, Collection } = IconifyTools
-
-// @ts-expect-error
-const _collections: Record<string, Collection> = {}
-const _iconSets: Record<string, IconifyJSON> = {}
-
-function testIconifyJsonPresent() {
-  try {
-    Collection.findIconifyCollection('mdi')
-    return true
-  }
-  catch (_) {
-    return false
-  }
-}
-
-const isIconifyJsonPresent = testIconifyJsonPresent()
 
 export function isIconPath(path: string) {
   return iconPathRE.test(path)
@@ -71,111 +47,47 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
   }
 }
 
-const _idTransforms: ((str: string) => string)[] = [
-  str => str,
-  str => str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase(),
-  str => str.replace(/([a-z])(\d+)/g, '$1-$2'),
-]
-
-export function getCollection(name: string) {
-  if (!_collections[name]) {
-    const collection = new Collection()
-    collection.loadIconifyCollection(name)
-    _collections[name] = collection
-  }
-  return _collections[name]
-}
-
-async function lookupCollection(name: string): Promise<IconifyJSON> {
-  const { icons } = await import(`@iconify-json/${name}`)
-  return icons
-}
-
-export async function getIconSet(name: string) {
-  if (!_iconSets[name])
-    _iconSets[name] = await lookupCollection(name)
-
-  return _iconSets[name]
-}
-
-export async function getBuiltinIcon(collection: string, icon: string): Promise<{
-  iconData: any
-  iconSet: boolean
-} | null> {
-  // fallback to old `@iconify/json`
-  if (isIconifyJsonPresent) {
-    const icons = getCollection(collection)
-    if (!icons)
-      return null
-
-    let iconData: any
-    for (const trans of _idTransforms) {
-      iconData = icons.getIconData(trans(icon))
-      if (iconData)
-        return { iconData, iconSet: false }
-    }
-  }
-  try {
-    const iconSet = await getIconSet(collection)
-    let iconData: FullIconifyIcon | null
-    for (const trans of _idTransforms) {
-      iconData = getIconData(iconSet, trans(icon), true)
-      if (iconData)
-        return { iconData, iconSet: true }
-    }
-  }
-  catch (_) {}
-
-  return null
-}
-
 export async function getIcon(collection: string, icon: string, options: ResolvedOptions) {
-  const { scale } = options
-
   const custom = options.customCollections[collection]
 
   if (custom) {
-    let result: string | undefined | null
+    const result = await getCustomIcon(custom, collection, icon, options)
+    if (result)
+      return result
+  }
 
-    if (typeof custom === 'function') {
-      result = await custom(icon)
+  return await getBuiltinIcon(collection, icon, options)
+}
+
+export async function getBuiltinIcon(collection: string, icon: string, options?: ResolvedOptions, warn = true): Promise<string | null> {
+  // possible icon names
+  const ids = [
+    icon,
+    icon.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase(),
+    icon.replace(/([a-z])(\d+)/g, '$1-$2'),
+  ]
+
+  if (options?.iconSource !== 'legacy') {
+    const iconSet = await loadCollection(collection)
+    if (iconSet) {
+      return searchForIcon(iconSet, collection, ids, options)
     }
     else {
-      const inline = custom[icon]
-      result = typeof inline === 'function'
-        ? await inline()
-        : inline
-    }
-
-    if (result) {
-      if (!result.startsWith('<svg '))
-        console.warn(`Custom icon "${icon}" in "${collection}" is not a valid SVG`)
-      return result.replace('<svg ', `<svg height="${scale}em" width="${scale}em" `)
+      if (options?.iconSource === 'modern') {
+        if (warn)
+          warnOnce(`failed to load \`@iconify-json/${collection}\`, have you installed it?`)
+        return null
+      }
     }
   }
 
-  const data = await getBuiltinIcon(collection, icon)
+  if (options?.iconSource === 'legacy' || await isIconifyJsonPresent)
+    return await searchForLegacyIcon(collection, ids, options)
 
-  if (!data)
-    return null
+  if (warn)
+    warnOnce(`failed to load \`@iconify-json/${collection}\`, have you installed it?`)
 
-  const { iconData, iconSet } = data
-
-  if (iconSet) {
-    return iconToSVG(iconData, {
-      ...DefaultIconCustomizations,
-      height: `${scale}em`,
-      width: `${scale}em`,
-    }).body
-  }
-  else {
-    const svg = new SVG(iconData)
-    const svgText: string = svg.getSVG({
-      height: `${scale}em`,
-      width: `${scale}em`,
-    })
-    return svgText
-  }
+  return null
 }
 
 export async function generateComponent({ collection, icon }: ResolvedIconPath, options: ResolvedOptions) {

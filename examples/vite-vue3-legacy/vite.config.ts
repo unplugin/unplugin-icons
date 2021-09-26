@@ -11,6 +11,7 @@ const config: UserConfig = {
     Vue(),
     Icons({
       compiler: 'vue3',
+      iconSource: 'legacy',
       customCollections: {
         custom: FileSystemIconLoader('assets/custom-a'),
         inline: {

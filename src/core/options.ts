@@ -6,6 +6,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     scale = 1.2,
     defaultStyle = '',
     defaultClass = '',
+    iconSource = 'auto',
     compiler = await guessCompiler(),
     jsx = guessJSX(),
     customCollections = {},
@@ -18,6 +19,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
 
   return {
     scale,
+    iconSource,
     defaultStyle,
     defaultClass,
     customCollections,
@@ -39,6 +41,7 @@ function guessJSX(): ResolvedOptions['jsx'] {
 
 async function getVueVersion() {
   try {
+    // @ts-expect-error
     const vue = await import('vue')
     // @ts-ignore
     const version = vue?.default?.version || vue?.version || '3'

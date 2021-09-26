@@ -10,10 +10,13 @@ importers:
       '@iconify/types': ^1.0.8
       '@iconify/utils': ^1.0.9
       '@svgr/core': ^5.5.0
+      '@types/debug': ^4.1.7
       '@types/node': ^16.10.1
       '@typescript-eslint/eslint-plugin': ^4.31.2
       '@vue/compiler-sfc': ^3.2.19
       bumpp: ^7.1.1
+      cross-env: ^7.0.3
+      debug: ^4.3.2
       eslint: ^7.32.0
       esno: ^0.9.1
       has-pkg: ^0.0.1
@@ -25,6 +28,7 @@ importers:
     dependencies:
       '@antfu/utils': 0.3.0
       '@iconify/json-tools': 1.0.10
+      debug: 4.3.2
       has-pkg: 0.0.1
       unplugin: 0.2.16_rollup@2.57.0+vite@2.5.10
     devDependencies:
@@ -32,10 +36,12 @@ importers:
       '@iconify/types': 1.0.8
       '@iconify/utils': 1.0.9
       '@svgr/core': 5.5.0
+      '@types/debug': 4.1.7
       '@types/node': 16.10.1
       '@typescript-eslint/eslint-plugin': 4.31.2_eslint@7.32.0+typescript@4.4.3
       '@vue/compiler-sfc': 3.2.19
       bumpp: 7.1.1
+      cross-env: 7.0.3
       eslint: 7.32.0
       esno: 0.9.1
       rollup: 2.57.0
@@ -70,26 +76,6 @@ importers:
 
   examples/sveltekit:
     specifiers:
-      '@iconify/json': ^1.1.406
-      '@sveltejs/kit': next
-      svelte: ^3.43.0
-      svelte-check: ^2.2.6
-      svelte-preprocess: ^4.9.5
-      tslib: ^2.3.1
-      typescript: ^4.4.3
-      unplugin-icons: workspace:*
-    devDependencies:
-      '@iconify/json': 1.1.406
-      '@sveltejs/kit': 1.0.0-next.174_svelte@3.43.0
-      svelte: 3.43.0
-      svelte-check: 2.2.6_svelte@3.43.0
-      svelte-preprocess: 4.9.5_svelte@3.43.0+typescript@4.4.3
-      tslib: 2.3.1
-      typescript: 4.4.3
-      unplugin-icons: link:../..
-
-  examples/sveltekit-icon-set:
-    specifiers:
       '@iconify-json/icon-park': ^1.0.0
       '@iconify-json/logos': ^1.0.0
       '@iconify-json/mdi': ^1.0.0
@@ -114,27 +100,6 @@ importers:
 
   examples/vite-preact:
     specifiers:
-      '@iconify/json': ^1.1.406
-      '@preact/preset-vite': ^2.1.0
-      '@svgr/core': ^5.5.0
-      preact: ^10.5.14
-      typescript: ^4.4.3
-      unplugin-icons: workspace:*
-      vite: ^2.5.10
-      vite-plugin-inspect: ^0.3.7
-    dependencies:
-      preact: 10.5.14
-    devDependencies:
-      '@iconify/json': 1.1.406
-      '@preact/preset-vite': 2.1.0_preact@10.5.14+vite@2.5.10
-      '@svgr/core': 5.5.0
-      typescript: 4.4.3
-      unplugin-icons: link:../..
-      vite: 2.5.10
-      vite-plugin-inspect: 0.3.7_vite@2.5.10
-
-  examples/vite-preact-icon-set:
-    specifiers:
       '@iconify-json/logos': ^1.0.0
       '@preact/preset-vite': ^2.1.0
       '@svgr/core': ^5.5.0
@@ -155,33 +120,6 @@ importers:
       vite-plugin-inspect: 0.3.7_vite@2.5.10
 
   examples/vite-react:
-    specifiers:
-      '@iconify/json': ^1.1.406
-      '@svgr/core': ^5.5.0
-      '@types/react': ^17.0.24
-      '@types/react-dom': ^17.0.9
-      '@vitejs/plugin-react-refresh': ^1.3.6
-      react: ^17.0.2
-      react-dom: ^17.0.2
-      typescript: ^4.4.3
-      unplugin-icons: workspace:*
-      vite: ^2.5.10
-      vite-plugin-inspect: ^0.3.7
-    dependencies:
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-    devDependencies:
-      '@iconify/json': 1.1.406
-      '@svgr/core': 5.5.0
-      '@types/react': 17.0.24
-      '@types/react-dom': 17.0.9
-      '@vitejs/plugin-react-refresh': 1.3.6
-      typescript: 4.4.3
-      unplugin-icons: link:../..
-      vite: 2.5.10
-      vite-plugin-inspect: 0.3.7_vite@2.5.10
-
-  examples/vite-react-icon-set:
     specifiers:
       '@iconify-json/logos': ^1.0.0
       '@svgr/core': ^5.5.0
@@ -210,21 +148,6 @@ importers:
 
   examples/vite-solid:
     specifiers:
-      '@iconify/json': ^1.1.406
-      solid-js: ^1.1.5
-      unplugin-icons: workspace:*
-      vite: ^2.5.10
-      vite-plugin-solid: ^2.0.3
-    dependencies:
-      solid-js: 1.1.5
-    devDependencies:
-      '@iconify/json': 1.1.406
-      unplugin-icons: link:../..
-      vite: 2.5.10
-      vite-plugin-solid: 2.0.3
-
-  examples/vite-solid-icon-set:
-    specifiers:
       '@iconify-json/mdi': ^1.0.0
       solid-js: ^1.1.5
       unplugin-icons: workspace:*
@@ -239,30 +162,6 @@ importers:
       vite-plugin-solid: 2.0.3
 
   examples/vite-svelte:
-    specifiers:
-      '@iconify/json': ^1.1.406
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.24
-      '@tsconfig/svelte': ^2.0.1
-      cross-env: ^7.0.3
-      svelte: ^3.43.0
-      svelte-check: ^2.2.6
-      svelte-preprocess: ^4.9.5
-      typescript: ^4.4.3
-      unplugin-icons: workspace:*
-      vite: ^2.5.10
-    devDependencies:
-      '@iconify/json': 1.1.406
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.24_svelte@3.43.0+vite@2.5.10
-      '@tsconfig/svelte': 2.0.1
-      cross-env: 7.0.3
-      svelte: 3.43.0
-      svelte-check: 2.2.6_svelte@3.43.0
-      svelte-preprocess: 4.9.5_svelte@3.43.0+typescript@4.4.3
-      typescript: 4.4.3
-      unplugin-icons: link:../..
-      vite: 2.5.10
-
-  examples/vite-svelte-icon-set:
     specifiers:
       '@iconify-json/icon-park': ^1.0.0
       '@iconify-json/logos': ^1.0.0
@@ -292,16 +191,6 @@ importers:
 
   examples/vite-vanilla:
     specifiers:
-      '@iconify/json': ^1.1.406
-      unplugin-icons: workspace:*
-      vite: ^2.5.10
-    devDependencies:
-      '@iconify/json': 1.1.406
-      unplugin-icons: link:../..
-      vite: 2.5.10
-
-  examples/vite-vanilla-icon-set:
-    specifiers:
       '@iconify-json/mono-icons': ^1.0.0
       unplugin-icons: workspace:*
       vite: ^2.5.10
@@ -311,29 +200,6 @@ importers:
       vite: 2.5.10
 
   examples/vite-vue2:
-    specifiers:
-      '@iconify/json': ^1.1.406
-      typescript: ^4.4.3
-      unplugin-icons: workspace:*
-      unplugin-vue-components: ^0.15.4
-      vite: ^2.5.10
-      vite-plugin-vue2: ^1.8.2
-      vue: ^2.6.14
-      vue-template-compiler: ^2.6.14
-      vue-template-es2015-compiler: ^1.9.1
-    dependencies:
-      vue: 2.6.14
-    devDependencies:
-      '@iconify/json': 1.1.406
-      typescript: 4.4.3
-      unplugin-icons: link:../..
-      unplugin-vue-components: 0.15.4_c930041c0694a0e2de504e6b9397dc94
-      vite: 2.5.10
-      vite-plugin-vue2: 1.8.2_6dad47b67adb7159003ec3f38cde13e0
-      vue-template-compiler: 2.6.14
-      vue-template-es2015-compiler: 1.9.1
-
-  examples/vite-vue2-icon-set:
     specifiers:
       '@iconify-json/carbon': ^1.0.1
       '@iconify-json/fa-solid': ^1.0.0
@@ -374,27 +240,6 @@ importers:
 
   examples/vite-vue3:
     specifiers:
-      '@iconify/json': ^1.1.406
-      '@vitejs/plugin-vue': ^1.9.2
-      '@vue/compiler-sfc': ^3.2.19
-      typescript: ^4.4.3
-      unplugin-icons: workspace:*
-      unplugin-vue-components: ^0.15.4
-      vite: ^2.5.10
-      vue: ^3.2.19
-    dependencies:
-      vue: 3.2.19
-    devDependencies:
-      '@iconify/json': 1.1.406
-      '@vitejs/plugin-vue': 1.9.2_vite@2.5.10
-      '@vue/compiler-sfc': 3.2.19
-      typescript: 4.4.3
-      unplugin-icons: link:../..
-      unplugin-vue-components: 0.15.4_057dbd97024157757b80bc53d26836ca
-      vite: 2.5.10
-
-  examples/vite-vue3-icon-set:
-    specifiers:
       '@iconify-json/carbon': ^1.0.1
       '@iconify-json/fa-solid': ^1.0.0
       '@iconify-json/heroicons-outline': ^1.0.0
@@ -434,17 +279,28 @@ importers:
       unplugin-vue-components: 0.15.4_057dbd97024157757b80bc53d26836ca
       vite: 2.5.10
 
-  examples/vite-web-components:
+  examples/vite-vue3-legacy:
     specifiers:
       '@iconify/json': ^1.1.406
+      '@vitejs/plugin-vue': ^1.9.2
+      '@vue/compiler-sfc': ^3.2.19
+      typescript: ^4.4.3
       unplugin-icons: workspace:*
+      unplugin-vue-components: ^0.15.4
       vite: ^2.5.10
+      vue: ^3.2.19
+    dependencies:
+      vue: 3.2.19
     devDependencies:
       '@iconify/json': 1.1.406
+      '@vitejs/plugin-vue': 1.9.2_vite@2.5.10
+      '@vue/compiler-sfc': 3.2.19
+      typescript: 4.4.3
       unplugin-icons: link:../..
+      unplugin-vue-components: 0.15.4_057dbd97024157757b80bc53d26836ca
       vite: 2.5.10
 
-  examples/vite-web-components-icon-set:
+  examples/vite-web-components:
     specifiers:
       '@iconify-json/ion': ^1.0.0
       '@iconify-json/mono-icons': ^1.0.0
@@ -2861,6 +2717,12 @@ packages:
       '@types/node': 15.0.3
     dev: true
 
+  /@types/debug/4.1.7:
+    resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
+    dependencies:
+      '@types/ms': 0.7.31
+    dev: true
+
   /@types/eslint-scope/3.7.1:
     resolution: {integrity: sha512-SCFeogqiptms4Fg29WpOTk5nHIzfpKCemSN63ksBQYKTcXoJEmJagV+DhVmbapZzY4/5YaOV1nZwrsU79fFm1g==}
     dependencies:
@@ -2958,6 +2820,10 @@ packages:
 
   /@types/minimist/1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
+    dev: true
+
+  /@types/ms/0.7.31:
+    resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: true
 
   /@types/node-sass/4.11.2:

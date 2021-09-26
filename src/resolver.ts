@@ -1,7 +1,5 @@
 import { toArray, uniq } from '@antfu/utils'
-// @ts-expect-error
-import Data from '@iconify/json'
-import { getBuiltinIcon } from './core/loader'
+import { collections as allCollections } from './core/collections'
 import { camelToKebab } from './core/utils'
 
 export interface ComponentResolverOption {
@@ -57,7 +55,7 @@ export interface ComponentResolverOption {
 export default function ComponentsResolver(options: ComponentResolverOption = {}) {
   const {
     prefix: rawPrefix = options.componentPrefix ?? 'i',
-    enabledCollections = Object.keys(Data.collections()),
+    enabledCollections = allCollections,
     alias = {},
     customCollections = [],
     extension,
@@ -78,7 +76,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
   // match longer name first
   collections.sort((a, b) => b.length - a.length)
 
-  return async(name: string) => {
+  return (name: string) => {
     const kebab = camelToKebab(name)
     if (!kebab.startsWith(prefix))
       return
@@ -97,9 +95,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
 
     const resolvedCollection = alias[collection] || collection
 
-    if (!customCollections.includes(resolvedCollection) && !(await getBuiltinIcon(resolvedCollection, icon)))
-      return
-
-    return `~icons/${resolvedCollection}/${icon}${ext}`
+    if (collections.includes(resolvedCollection))
+      return `~icons/${resolvedCollection}/${icon}${ext}`
   }
 }
