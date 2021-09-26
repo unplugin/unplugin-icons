@@ -2,6 +2,16 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-icons?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-icons)
 
+> 🎩 **BREAKING CHANGES**: from version `0.12.0`, `unplugin-icons` has switched to load the icon sets with the new 
+modular `@iconify-json/*` packages and will not depend on `@iconify/json` package anymore (you will need to add each
+icon set you will use as `dev dependencies`, for example `npm i -D @iconify-json/mdi`). For backward compatibility, 
+this plugin will check if you have the `@iconify/json` package installed and then fallback to old behavior when 
+necessary. If you update `unplugin-icons` with the new behavior, and still wants to use `@iconify/json` package, you 
+will need to install it as `dev dependency` on your projects (`npm i -D @iconify/json`). If you are using also on your
+projects  `unplugin-vue-components` plugin, you will need also to update it to at least `0.14.5` version to allow it to
+work with  this new behavior.
+
+
 Access thousands of icons as components **on-demand** universally.
 
 ###### Features
@@ -11,6 +21,7 @@ Access thousands of icons as components **on-demand** universally.
   - 📦 **Major** build tools - Vite, Webpack, Rollup, Nuxt, etc. Powered by [unplugin](https://github.com/unjs/unplugin).
   - 🪜 **Major** frameworks - Vanilla, Web Components, React, Vue 3, Vue 2, Solid, Svelte, and more. [Contribute](./src/core/compiles).
   - 🍱 **Any** combinations of them!
+- ⚡ Fully tree shakable - Support for Iconify collection packages - You don't need to install all icon sets, just install only icon sets you will use.
 - ☁️ On-demand - Only bundle the icons you really uses, while having all the options.
 - 🖨 SSR / SSG friendly - Ship the icons with your page, no more FOUC.
 - 🌈 Stylable - Change size, color, or even add animations as you would with styles and classes.

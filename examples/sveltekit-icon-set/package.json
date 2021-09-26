@@ -1,0 +1,23 @@
+{
+  "private": "true",
+  "type": "module",
+  "scripts": {
+    "build": "svelte-kit build",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "dev": "svelte-kit dev",
+    "preview": "svelte-kit preview"
+  },
+  "devDependencies": {
+    "@iconify-json/icon-park": "^1.0.0",
+    "@iconify-json/logos": "^1.0.0",
+    "@iconify-json/mdi": "^1.0.0",
+    "@sveltejs/kit": "next",
+    "svelte": "^3.43.0",
+    "svelte-check": "^2.2.6",
+    "svelte-preprocess": "^4.9.5",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3",
+    "unplugin-icons": "workspace:*"
+  }
+}

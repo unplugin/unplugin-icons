@@ -78,7 +78,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
   // match longer name first
   collections.sort((a, b) => b.length - a.length)
 
-  return (name: string) => {
+  return async(name: string) => {
     const kebab = camelToKebab(name)
     if (!kebab.startsWith(prefix))
       return
@@ -97,7 +97,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
 
     const resolvedCollection = alias[collection] || collection
 
-    if (!customCollections.includes(resolvedCollection) && !getBuiltinIcon(resolvedCollection, icon))
+    if (!customCollections.includes(resolvedCollection) && !(await getBuiltinIcon(resolvedCollection, icon)))
       return
 
     return `~icons/${resolvedCollection}/${icon}${ext}`

@@ -5,14 +5,14 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.401",
+    "@iconify/json": "^1.1.406",
     "typescript": "^4.4.3",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^0.15.1",
-    "vite": "^2.5.7",
+    "unplugin-vue-components": "^0.15.4",
+    "vite": "^2.5.10",
     "vite-plugin-vue2": "^1.8.2",
     "vue-template-compiler": "^2.6.14",
     "vue-template-es2015-compiler": "^1.9.1"
