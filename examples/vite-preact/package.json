@@ -1,5 +1,5 @@
 {
-  "name": "vite-preact",
+  "name": "vite-preact-icon-set",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "preact": "^10.5.14"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.406",
+    "@iconify-json/logos": "^1.0.0",
     "@preact/preset-vite": "^2.1.0",
     "@svgr/core": "^5.5.0",
     "typescript": "^4.4.3",

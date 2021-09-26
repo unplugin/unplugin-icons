@@ -5,7 +5,7 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.406",
+    "@iconify-json/mono-icons": "^1.0.0",
     "unplugin-icons": "workspace:*",
     "vite": "^2.5.10"
   }

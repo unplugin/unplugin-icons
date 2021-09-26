@@ -9,7 +9,9 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.406",
+    "@iconify-json/icon-park": "^1.0.0",
+    "@iconify-json/logos": "^1.0.0",
+    "@iconify-json/mdi": "^1.0.0",
     "@sveltejs/kit": "next",
     "svelte": "^3.43.0",
     "svelte-check": "^2.2.6",

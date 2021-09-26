@@ -1,5 +1,5 @@
 {
-  "name": "vite-react",
+  "name": "vite-react-icon-set",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.406",
+    "@iconify-json/logos": "^1.0.0",
     "@svgr/core": "^5.5.0",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",

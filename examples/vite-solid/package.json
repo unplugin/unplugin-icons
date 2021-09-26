@@ -1,5 +1,5 @@
 {
-  "name": "vite-template-solid",
+  "name": "vite-template-solid-icon-set",
   "version": "0.0.0",
   "description": "",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@iconify/json": "^1.1.406",
+    "@iconify-json/mdi": "^1.0.0",
     "unplugin-icons": "workspace:*",
     "vite": "^2.5.10",
     "vite-plugin-solid": "^2.0.3"
