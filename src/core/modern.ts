@@ -44,7 +44,6 @@ export function searchForIcon(iconSet: IconifyJSON, collection: string, ids: str
     if (iconData) {
       debug(`${collection}:${id}`)
       const scale = options?.scale ?? 1
-      // FIXME: the view box is not correctly genreted
       const { attributes, body } = iconToSVG(iconData, {
         ...DefaultIconCustomizations,
         height: `${scale}em`,

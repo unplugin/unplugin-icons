@@ -21,7 +21,6 @@ export async function loadLegacyCollection(name: string) {
 
 export const isIconifyJsonPresent = (async() => {
   try {
-    // @ts-expect-error
     await import('@iconify/json/package.json')
     debugCollection('@iconify/json fond')
     return true
