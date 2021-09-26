@@ -189,11 +189,11 @@ importers:
 
   examples/vite-vanilla:
     specifiers:
-      '@iconify-json/mono-icons': ^1.0.0
+      '@iconify-json/mono-icons': ^1.0.1
       unplugin-icons: workspace:*
       vite: ^2.5.10
     devDependencies:
-      '@iconify-json/mono-icons': 1.0.0
+      '@iconify-json/mono-icons': 1.0.1
       unplugin-icons: link:../..
       vite: 2.5.10
 
@@ -1913,12 +1913,6 @@ packages:
 
   /@iconify-json/mdi/1.0.1:
     resolution: {integrity: sha512-lrv4f2R2iBDz72DunjH9AvBHPTZS0IdmmXDTYo7MDsScm98NM2YCJpiT+ersxYKhOduI4eO/GAasxypl2+4xDg==}
-    dependencies:
-      '@iconify/types': 1.0.8
-    dev: true
-
-  /@iconify-json/mono-icons/1.0.0:
-    resolution: {integrity: sha512-Xu7EC5v+gGyBFeZpWS1atnxwYuAdW8PZFt59+neJwYmO1ICzX6xlq9PnDs1DLyONe0eeshnp3dHT3+hCMsIWhQ==}
     dependencies:
       '@iconify/types': 1.0.8
     dev: true

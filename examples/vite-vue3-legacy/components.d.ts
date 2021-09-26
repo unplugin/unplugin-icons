@@ -16,7 +16,6 @@ declare module 'vue' {
     IInlineAsync: typeof import('~icons/inline/async')['default']
     IInlineFoo: typeof import('~icons/inline/foo')['default']
     ILogosVue: typeof import('~icons/logos/vue')['default']
-    'IMdi:cactus': typeof import('~icons/mdi/cactus')['default']
     IMdiAccount: typeof import('~icons/mdi/account')['default']
     IMdiDiceD12: typeof import('~icons/mdi/dice-d12')['default']
     IMdiLightAlarm: typeof import('~icons/mdi-light/alarm')['default']
