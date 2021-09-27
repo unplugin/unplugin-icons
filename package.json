@@ -68,7 +68,7 @@
     "@iconify/json-tools": "^1.0.10",
     "debug": "^4.3.2",
     "@iconify/utils": "^1.0.9",
-    "has-pkg": "^0.0.1",
+    "local-pkg": "^0.0.1",
     "unplugin": "^0.2.16"
   },
   "devDependencies": {
