@@ -1,6 +1,7 @@
 import createDebugger from 'debug'
+import { isPackageExists } from 'local-pkg'
 import { ResolvedOptions } from '../types'
-import { isIconifyJsonPresent, searchForLegacyIcon } from './legacy'
+import { searchForLegacyIcon } from './legacy'
 import { loadCollection, ResolvedIconPath, searchForIcon } from './modern'
 import { compilers } from './compilers'
 import { warnOnce } from './utils'
@@ -81,7 +82,7 @@ export async function getBuiltinIcon(collection: string, icon: string, options?:
     }
   }
 
-  if (options?.iconSource === 'legacy' || await isIconifyJsonPresent)
+  if (options?.iconSource === 'legacy' || isPackageExists('@iconify/json'))
     return await searchForLegacyIcon(collection, ids, options)
 
   if (warn)

@@ -1,9 +1,11 @@
+import { promises as fs } from 'fs'
 import { IconifyJSON } from '@iconify/types'
 import { iconToSVG } from '@iconify/utils/lib/svg/build'
 import { defaults as DefaultIconCustomizations } from '@iconify/utils/lib/customisations'
 import { getIconData } from '@iconify/utils/lib/icon-set/get-icon'
 import createDebugger from 'debug'
 import { FullIconifyIcon } from '@iconify/utils/lib/icon'
+import { resolve } from 'local-pkg'
 import { ResolvedOptions } from '../types'
 
 const debug = createDebugger('unplugin-icons:modern')
@@ -24,13 +26,14 @@ export async function loadCollection(name: string): Promise<IconifyJSON | undefi
   if (_collections[name])
     return _collections[name] as IconifyJSON
 
-  try {
-    debugCollection(`${name}`)
-    const { icons } = await import(`@iconify-json/${name}`)
+  debugCollection(name)
+  const jsonPath = resolve(`@iconify-json/${name}/icons.json`)
+  if (jsonPath) {
+    const icons = JSON.parse(await fs.readFile(jsonPath, 'utf8'))
     _collections[name] = icons
     return icons
   }
-  catch {
+  else {
     debugCollection(`failed to load ${name}`)
     _collections[name] = false
     return undefined

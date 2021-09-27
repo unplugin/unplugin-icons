@@ -1,3 +1,5 @@
+// @ts-expect-error
+import Tools from '@iconify/json-tools'
 import createDebugger from 'debug'
 import { ResolvedOptions } from '../..'
 
@@ -6,10 +8,9 @@ const debugCollection = createDebugger('unplugin-icons:legacy:collection')
 
 const _legacyCollections: Record<string, any> = {}
 
-export async function loadLegacyCollection(name: string) {
-  // @ts-expect-error
-  const { Collection } = (await import('@iconify/json-tools')).default
+const { SVG, Collection } = Tools
 
+export async function loadLegacyCollection(name: string) {
   if (!_legacyCollections[name]) {
     debugCollection(`${name}`)
     const collection = new Collection()
@@ -18,17 +19,6 @@ export async function loadLegacyCollection(name: string) {
   }
   return _legacyCollections[name]
 }
-
-export const isIconifyJsonPresent = (async() => {
-  try {
-    await import('@iconify/json/package.json')
-    debugCollection('@iconify/json fond')
-    return true
-  }
-  catch (e) {
-    return false
-  }
-})()
 
 export async function searchForLegacyIcon(
   collection: string,
@@ -45,8 +35,6 @@ export async function searchForLegacyIcon(
     if (iconData) {
       debug(`${collection}:${id}`)
       const scale = options?.scale ?? 1
-      // @ts-expect-error
-      const { SVG } = (await import('@iconify/json-tools')).default
       const svg = new SVG(iconData)
       const svgText: string = svg.getSVG({
         height: `${scale}em`,
