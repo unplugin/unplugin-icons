@@ -19,7 +19,7 @@ importers:
       debug: ^4.3.2
       eslint: ^7.32.0
       esno: ^0.9.1
-      local-pkg: ^0.0.1
+      local-pkg: ^0.1.0
       rollup: ^2.57.0
       tsup: ^4.14.0
       typescript: ^4.4.3
@@ -30,7 +30,7 @@ importers:
       '@iconify/json-tools': 1.0.10
       '@iconify/utils': 1.0.9
       debug: 4.3.2
-      local-pkg: 0.0.1
+      local-pkg: 0.1.0
       unplugin: 0.2.16_rollup@2.57.0+vite@2.5.10
     devDependencies:
       '@antfu/eslint-config': 0.9.0_eslint@7.32.0+typescript@4.4.3
@@ -9146,8 +9146,8 @@ packages:
       emojis-list: 3.0.0
       json5: 2.2.0
 
-  /local-pkg/0.0.1:
-    resolution: {integrity: sha512-0LbcrI8fUlGJEXjErIvDzFtwUA+hKa33iZouv+PrmjER0+6zjQAoUHMa5NRoOFy64TxqH/nFWeIebFGbVNoi9w==}
+  /local-pkg/0.1.0:
+    resolution: {integrity: sha512-WsR2tHvRGIxcC2clC30ECb5fjywzsjQagaHIy1+ykZaHz0ByoB0OL2riHqIYA5YYnensRXLszwbzHkhKzehZDg==}
     dependencies:
       mlly: 0.2.2
     dev: false

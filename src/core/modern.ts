@@ -5,7 +5,7 @@ import { defaults as DefaultIconCustomizations } from '@iconify/utils/lib/custom
 import { getIconData } from '@iconify/utils/lib/icon-set/get-icon'
 import createDebugger from 'debug'
 import { FullIconifyIcon } from '@iconify/utils/lib/icon'
-import { resolve } from 'local-pkg'
+import { resolveModule } from 'local-pkg'
 import { ResolvedOptions } from '../types'
 
 const debug = createDebugger('unplugin-icons:modern')
@@ -27,7 +27,7 @@ export async function loadCollection(name: string): Promise<IconifyJSON | undefi
     return _collections[name] as IconifyJSON
 
   debugCollection(name)
-  const jsonPath = resolve(`@iconify-json/${name}/icons.json`)
+  const jsonPath = resolveModule(`@iconify-json/${name}/icons.json`)
   if (jsonPath) {
     const icons = JSON.parse(await fs.readFile(jsonPath, 'utf8'))
     _collections[name] = icons
