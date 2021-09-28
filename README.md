@@ -2,26 +2,15 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-icons?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-icons)
 
-> 🎩 **BREAKING CHANGES**: from version `0.12.0`, `unplugin-icons` has switched to load the icon sets with the new 
-modular `@iconify-json/*` packages and will not depend on `@iconify/json` package anymore (you will need to add each
-icon set you will use as `dev dependencies`, for example `npm i -D @iconify-json/mdi`). For backward compatibility, 
-this plugin will check if you have the `@iconify/json` package installed and then fallback to old behavior when 
-necessary. If you update `unplugin-icons` with the new behavior, and still wants to use `@iconify/json` package, you 
-will need to install it as `dev dependency` on your projects (`npm i -D @iconify/json`). If you are using also on your
-projects  `unplugin-vue-components` plugin, you will need also to update it to at least `0.14.5` version to allow it to
-work with  this new behavior.
-
-
 Access thousands of icons as components **on-demand** universally.
 
-###### Features
+### Features
 
 - 🌏 Universal
   - 🤹 **Any** icon sets - 100+ popular sets with over 10,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
   - 📦 **Major** build tools - Vite, Webpack, Rollup, Nuxt, etc. Powered by [unplugin](https://github.com/unjs/unplugin).
   - 🪜 **Major** frameworks - Vanilla, Web Components, React, Vue 3, Vue 2, Solid, Svelte, and more. [Contribute](./src/core/compiles).
   - 🍱 **Any** combinations of them!
-- ⚡ Fully tree shakable - Support for Iconify collection packages - You don't need to install all icon sets, just install only icon sets you will use.
 - ☁️ On-demand - Only bundle the icons you really uses, while having all the options.
 - 🖨 SSR / SSG friendly - Ship the icons with your page, no more FOUC.
 - 🌈 Stylable - Change size, color, or even add animations as you would with styles and classes.
@@ -74,13 +63,48 @@ import IconAccountBox from '~icons/mdi/account-box'
 
 ## Install
 
-Install the plugin and peer dependency `@iconify/json`
+### Plugin
 
 ```bash
-npm i -D unplugin-icons @iconify/json
+npm i -D unplugin-icons
 ```
 
-### Build Tools
+### Icons Data
+
+We use [Iconify](https://iconify.design/) as the icons data source (supports 100+ iconsets).
+
+You have two ways to install them:
+
+###### Full Collection
+
+```bash
+npm i -D @iconify/json
+```
+
+`@iconify/json` (~120MB) includes all the iconsets from Iconify so you can install once and use any of them as you want (only the icons you actually use will be bundle into the production build).
+
+###### By Icon Set
+
+If you only want to use a few of the icon sets and don't want to download the entire collection, you can also install them individually with `@iconify-json/[collection-id]`.
+For example, to install [Material Design Icons](), you can do:
+
+```bash
+npm i -D @iconify-json/mdi
+```
+
+To boost your workflow, it's also possible to let `unplugin-icons` handle that installation by enabling the `autoInstall` option.
+
+```ts
+Icons({
+  autoInstall: true
+})
+```
+
+It will install the icon set when you import them. The right package manager will be auto detected (`npm`, `yarn` or `pnpm`).
+
+## Configuration
+
+###### Build Tools
 
 <details>
 <summary>Vite</summary><br>
@@ -221,7 +245,7 @@ export default defineConfig({
 
 <br></details>
 
-### Frameworks
+###### Frameworks
 
 
 <details>
