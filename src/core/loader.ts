@@ -1,5 +1,6 @@
 import createDebugger from 'debug'
 import { isPackageExists } from 'local-pkg'
+import { installPackage } from '@antfu/install-pkg'
 import { ResolvedOptions } from '../types'
 import { searchForLegacyIcon } from './legacy'
 import { loadCollection, ResolvedIconPath, searchForIcon } from './modern'
@@ -60,6 +61,8 @@ export async function getIcon(collection: string, icon: string, options: Resolve
   return await getBuiltinIcon(collection, icon, options)
 }
 
+let legacyExists = isPackageExists('@iconify/json')
+
 export async function getBuiltinIcon(collection: string, icon: string, options?: ResolvedOptions, warn = true): Promise<string | null> {
   // possible icon names
   const ids = [
@@ -69,21 +72,34 @@ export async function getBuiltinIcon(collection: string, icon: string, options?:
   ]
 
   if (options?.iconSource !== 'legacy') {
-    const iconSet = await loadCollection(collection)
-    if (iconSet) {
-      return searchForIcon(iconSet, collection, ids, options)
+    let iconSet = await loadCollection(collection)
+
+    if (!iconSet) {
+      if (options?.autoInstall && !legacyExists) {
+        await installPackage(`@iconify-json/${collection}`)
+        iconSet = await loadCollection(collection)
+      }
     }
-    else {
+
+    if (!iconSet) {
       if (options?.iconSource === 'modern') {
         if (warn)
           warnOnce(`failed to load \`@iconify-json/${collection}\`, have you installed it?`)
         return null
       }
     }
+
+    if (iconSet)
+      return searchForIcon(iconSet, collection, ids, options)
   }
 
-  if (options?.iconSource === 'legacy' || isPackageExists('@iconify/json'))
+  if (options?.iconSource === 'legacy') {
+    if (!legacyExists && options?.autoInstall) {
+      await installPackage('@iconify/json')
+      legacyExists = true
+    }
     return await searchForLegacyIcon(collection, ids, options)
+  }
 
   if (warn)
     warnOnce(`failed to load \`@iconify-json/${collection}\`, have you installed it?`)

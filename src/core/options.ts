@@ -13,6 +13,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     compiler = await guessCompiler(),
     jsx = guessJSX(),
     customCollections = {},
+    autoInstall = false,
   } = options
 
   const webComponents = Object.assign({
@@ -31,6 +32,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     compiler,
     jsx,
     webComponents,
+    autoInstall,
   }
 }
 

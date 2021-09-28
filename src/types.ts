@@ -42,6 +42,13 @@ export interface Options {
   iconSource?: 'legacy' | 'modern' | 'auto'
 
   /**
+   * Auto install icon sources package when the usages is detected
+   *
+   * @default false
+   */
+  autoInstall?: boolean
+
+  /**
    * Compiler
    *
    * - none: plain SVG content
