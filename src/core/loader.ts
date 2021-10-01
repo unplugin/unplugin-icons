@@ -1,6 +1,7 @@
 import createDebugger from 'debug'
 import { isPackageExists } from 'local-pkg'
 import { installPackage } from '@antfu/install-pkg'
+import { sleep } from '@antfu/utils'
 import { ResolvedOptions } from '../types'
 import { searchForLegacyIcon } from './legacy'
 import { loadCollection, ResolvedIconPath, searchForIcon } from './modern'
@@ -76,7 +77,8 @@ export async function getBuiltinIcon(collection: string, icon: string, options?:
 
     if (!iconSet) {
       if (options?.autoInstall && !legacyExists) {
-        await installPackage(`@iconify-json/${collection}`)
+        await installPackage(`@iconify-json/${collection}`, { dev: true })
+        await sleep(300)
         iconSet = await loadCollection(collection)
       }
     }
@@ -95,7 +97,8 @@ export async function getBuiltinIcon(collection: string, icon: string, options?:
 
   if (options?.iconSource === 'legacy') {
     if (!legacyExists && options?.autoInstall) {
-      await installPackage('@iconify/json')
+      await installPackage('@iconify/json', { dev: true })
+      await sleep(300)
       legacyExists = true
     }
     return await searchForLegacyIcon(collection, ids, options)
