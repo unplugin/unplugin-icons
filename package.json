@@ -70,7 +70,7 @@
     "@iconify/utils": "^1.0.10",
     "chalk": "^4.1.2",
     "debug": "^4.3.2",
-    "local-pkg": "^0.1.0",
+    "local-pkg": "^0.2.0",
     "unplugin": "^0.2.16"
   },
   "devDependencies": {

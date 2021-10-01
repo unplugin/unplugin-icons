@@ -21,7 +21,7 @@ importers:
       debug: ^4.3.2
       eslint: ^7.32.0
       esno: ^0.10.0
-      local-pkg: ^0.1.0
+      local-pkg: ^0.2.0
       rollup: ^2.58.0
       tsup: ^5.2.1
       typescript: ^4.4.3
@@ -34,7 +34,7 @@ importers:
       '@iconify/utils': 1.0.10
       chalk: 4.1.2
       debug: 4.3.2
-      local-pkg: 0.1.0
+      local-pkg: 0.2.0
       unplugin: 0.2.16_rollup@2.58.0+vite@2.6.2
     devDependencies:
       '@antfu/eslint-config': 0.9.0_eslint@7.32.0+typescript@4.4.3
@@ -8613,6 +8613,13 @@ packages:
     resolution: {integrity: sha512-WsR2tHvRGIxcC2clC30ECb5fjywzsjQagaHIy1+ykZaHz0ByoB0OL2riHqIYA5YYnensRXLszwbzHkhKzehZDg==}
     dependencies:
       mlly: 0.2.2
+    dev: true
+
+  /local-pkg/0.2.0:
+    resolution: {integrity: sha512-M5/pqEFIQcxI19YYwHvEh2mNYjmreUlaCMwfl/8qboqwWoPFhi2kEh1lVrJu03D6ROS2iiwi7g0Cdn7MSh4y9A==}
+    dependencies:
+      mlly: 0.2.2
+    dev: false
 
   /locate-path/2.0.0:
     resolution: {integrity: sha1-K1aLJl7slExtnA3pw9u7ygNUzY4=}
