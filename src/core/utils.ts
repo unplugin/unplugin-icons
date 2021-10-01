@@ -28,12 +28,18 @@ export function warnOnce(msg: string) {
   }
 }
 
-export async function tryInstallPkg(name: string) {
-  // eslint-disable-next-line no-console
-  console.log(cyan(`Installing ${name}...`))
-  try {
-    await installPackage(name, { dev: true })
-    await sleep(300)
+const tasks: Record<string, Promise<void> | undefined> = {}
+
+export function tryInstallPkg(name: string) {
+  if (!tasks[name]) {
+    // eslint-disable-next-line no-console
+    console.log(cyan(`Installing ${name}...`))
+    tasks[name] = installPackage(name, { dev: true })
+      .then(() => sleep(300))
+      .catch((e) => {
+        warnOnce(`Failed to install ${name}`)
+        console.error(e)
+      })
   }
-  catch (e) {}
+  return tasks[name]!
 }
