@@ -75,7 +75,7 @@ We use [Iconify](https://iconify.design/) as the icons data source (supports 100
 
 You have two ways to install them:
 
-###### Full Collection
+###### Install Full Collection
 
 ```bash
 npm i -D @iconify/json
@@ -83,7 +83,7 @@ npm i -D @iconify/json
 
 `@iconify/json` (~120MB) includes all the iconsets from Iconify so you can install once and use any of them as you want (only the icons you actually use will be bundle into the production build).
 
-###### By Icon Set
+###### Install by Icon Set
 
 If you only want to use a few of the icon sets and don't want to download the entire collection, you can also install them individually with `@iconify-json/[collection-id]`.
 For example, to install [Material Design Icons](), you can do:
