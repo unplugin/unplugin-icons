@@ -5,3 +5,4 @@ example/README.md
 .nuxt
 .idea
 .svelte-kit/
+examples/nuxt/yarn.lock
