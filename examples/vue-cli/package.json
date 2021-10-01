@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.2.2",
-    "core-js": "^3.18.0",
+    "core-js": "^3.18.1",
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.406",
+    "@iconify/json": "^1.1.409",
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-plugin-typescript": "^4.5.13",
     "@vue/cli-service": "^4.5.13",

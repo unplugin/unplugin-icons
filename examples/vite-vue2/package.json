@@ -8,7 +8,7 @@
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.0.2",
+    "@iconify-json/carbon": "^1.0.3",
     "@iconify-json/fa-solid": "^1.0.1",
     "@iconify-json/heroicons-outline": "^1.0.1",
     "@iconify-json/ic": "^1.0.1",
@@ -19,8 +19,8 @@
     "@iconify-json/ri": "^1.0.1",
     "typescript": "^4.4.3",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^0.15.4",
-    "vite": "^2.5.10",
+    "unplugin-vue-components": "^0.15.6",
+    "vite": "^2.6.2",
     "vite-plugin-vue2": "^1.8.2",
     "vue-template-compiler": "^2.6.14",
     "vue-template-es2015-compiler": "^1.9.1"
