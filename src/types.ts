@@ -45,6 +45,7 @@ export interface Options {
    * Auto install icon sources package when the usages is detected
    *
    * @default false
+   * @deprecated Experimentally, be careful
    */
   autoInstall?: boolean
 

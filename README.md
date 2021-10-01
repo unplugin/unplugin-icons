@@ -96,11 +96,12 @@ To boost your workflow, it's also possible to let `unplugin-icons` handle that i
 
 ```ts
 Icons({
+  // expiremental
   autoInstall: true
 })
 ```
 
-It will install the icon set when you import them. The right package manager will be auto detected (`npm`, `yarn` or `pnpm`).
+It will install the icon set when you import them. The right package manager will be auto-detected (`npm`, `yarn` or `pnpm`).
 
 ## Configuration
 
