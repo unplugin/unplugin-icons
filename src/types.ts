@@ -31,6 +31,25 @@ export interface Options {
   customCollections?: Record<string, CustomIconLoader | InlineCollection>
 
   /**
+   * Icon source for Iconify
+   *
+   * 'legacy' - @iconify/json package
+   * 'modern' - @iconify-json/* packages for each icon set
+   * 'auto'   - auto detect
+   *
+   * @default 'auto'
+   */
+  iconSource?: 'legacy' | 'modern' | 'auto'
+
+  /**
+   * Auto install icon sources package when the usages is detected
+   *
+   * @default false
+   * @deprecated Experimentally, be careful
+   */
+  autoInstall?: boolean
+
+  /**
    * Compiler
    *
    * - none: plain SVG content

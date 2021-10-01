@@ -14,3 +14,12 @@ export function camelToKebab(key: string) {
     .trim()
   return result.split(/\s+/g).join('-').toLowerCase()
 }
+
+const warnned = new Set<string>()
+
+export function warnOnce(msg: string) {
+  if (!warnned.has(msg)) {
+    warnned.add(msg)
+    console.warn(`[unplugin-icons] ${msg}`)
+  }
+}

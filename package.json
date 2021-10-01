@@ -55,8 +55,8 @@
     "*.d.ts"
   ],
   "scripts": {
-    "build": "tsup src/*.ts --clean --format cjs,esm --dts --external vue && esno scripts/postbuild.ts",
-    "dev": "tsup src/*.ts --clean --format cjs,esm --dts --watch src --external vue",
+    "build": "tsup && esno scripts/postbuild.ts",
+    "dev": "tsup --watch src",
     "example:build": "npm -C examples/vite-vue3 run build",
     "example:dev": "npm -C examples/vite-vue3 run dev",
     "lint": "eslint --ext .ts,.js,.vue",
@@ -64,24 +64,30 @@
     "release": "npx bumpp --commit --tag --push && npm publish"
   },
   "dependencies": {
+    "@antfu/install-pkg": "^0.0.0",
     "@antfu/utils": "^0.3.0",
     "@iconify/json-tools": "^1.0.10",
-    "has-pkg": "^0.0.1",
-    "unplugin": "^0.2.11"
+    "@iconify/utils": "^1.0.9",
+    "debug": "^4.3.2",
+    "local-pkg": "^0.1.0",
+    "unplugin": "^0.2.16"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.9.0",
+    "@iconify/types": "^1.0.8",
     "@svgr/core": "^5.5.0",
-    "@types/node": "^16.9.1",
-    "@typescript-eslint/eslint-plugin": "^4.31.1",
-    "@vue/compiler-sfc": "^3.2.11",
+    "@types/debug": "^4.1.7",
+    "@types/node": "^16.10.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@vue/compiler-sfc": "^3.2.19",
     "bumpp": "^7.1.1",
+    "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "esno": "^0.9.1",
-    "rollup": "^2.56.3",
+    "rollup": "^2.57.0",
     "tsup": "^4.14.0",
     "typescript": "^4.4.3",
-    "vite": "^2.5.7"
+    "vite": "^2.5.10"
   },
   "peerDependencies": {
     "@iconify/json": "*",
@@ -91,6 +97,9 @@
     "vue-template-es2015-compiler": "^1.9.0"
   },
   "peerDependenciesMeta": {
+    "@iconify/json": {
+      "optional": true
+    },
     "@svgr/core": {
       "optional": true
     },

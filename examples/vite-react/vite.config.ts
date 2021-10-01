@@ -7,10 +7,10 @@ import Icons from 'unplugin-icons/vite'
 export default defineConfig({
   plugins: [
     React(),
-    Inspect(),
     Icons({
       compiler: 'jsx',
       jsx: 'react',
     }),
+    Inspect(),
   ],
 })

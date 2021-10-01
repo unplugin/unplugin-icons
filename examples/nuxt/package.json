@@ -8,16 +8,16 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "core-js": "^3.17.3",
+    "core-js": "^3.18.0",
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "@iconify/json-tools": "^1.0.10",
+    "@iconify/json": "^1.1.406",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/composition-api": "^0.29.0",
-    "css-loader": "^5.2.0",
+    "@nuxtjs/composition-api": "^0.29.2",
+    "css-loader": "^5.2.7",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue2-script-setup": "^0.6.1"
+    "unplugin-vue2-script-setup": "^0.6.4"
   }
 }

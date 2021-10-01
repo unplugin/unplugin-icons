@@ -4,7 +4,7 @@
 
 Access thousands of icons as components **on-demand** universally.
 
-###### Features
+### Features
 
 - 🌏 Universal
   - 🤹 **Any** icon sets - 100+ popular sets with over 10,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
@@ -63,13 +63,49 @@ import IconAccountBox from '~icons/mdi/account-box'
 
 ## Install
 
-Install the plugin and peer dependency `@iconify/json`
+### Plugin
 
 ```bash
-npm i -D unplugin-icons @iconify/json
+npm i -D unplugin-icons
 ```
 
-### Build Tools
+### Icons Data
+
+We use [Iconify](https://iconify.design/) as the icons data source (supports 100+ iconsets).
+
+You have two ways to install them:
+
+###### Full Collection
+
+```bash
+npm i -D @iconify/json
+```
+
+`@iconify/json` (~120MB) includes all the iconsets from Iconify so you can install once and use any of them as you want (only the icons you actually use will be bundle into the production build).
+
+###### By Icon Set
+
+If you only want to use a few of the icon sets and don't want to download the entire collection, you can also install them individually with `@iconify-json/[collection-id]`.
+For example, to install [Material Design Icons](), you can do:
+
+```bash
+npm i -D @iconify-json/mdi
+```
+
+To boost your workflow, it's also possible to let `unplugin-icons` handle that installation by enabling the `autoInstall` option.
+
+```ts
+Icons({
+  // expiremental
+  autoInstall: true
+})
+```
+
+It will install the icon set when you import them. The right package manager will be auto-detected (`npm`, `yarn` or `pnpm`).
+
+## Configuration
+
+###### Build Tools
 
 <details>
 <summary>Vite</summary><br>
@@ -210,7 +246,7 @@ export default defineConfig({
 
 <br></details>
 
-### Frameworks
+###### Frameworks
 
 
 <details>
