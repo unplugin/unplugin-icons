@@ -38,7 +38,7 @@ export async function tryInstallPkg(name: string) {
   if (!tasks[name]) {
     // eslint-disable-next-line no-console
     console.log(cyan(`Installing ${name}...`))
-    tasks[name] = pending = installPackage(name, { dev: true })
+    tasks[name] = pending = installPackage(name, { dev: true, preferOffline: true })
       .then(() => sleep(300))
       .catch((e) => {
         warnOnce(`Failed to install ${name}`)

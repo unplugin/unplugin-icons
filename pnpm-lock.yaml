@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@antfu/eslint-config': ^0.9.0
-      '@antfu/install-pkg': ^0.0.0
+      '@antfu/install-pkg': ^0.1.0
       '@antfu/utils': ^0.3.0
       '@iconify/json-tools': ^1.0.10
       '@iconify/types': ^1.0.9
@@ -21,20 +21,20 @@ importers:
       debug: ^4.3.2
       eslint: ^7.32.0
       esno: ^0.10.0
-      local-pkg: ^0.2.0
+      local-pkg: ^0.3.0
       rollup: ^2.58.0
       tsup: ^5.2.1
       typescript: ^4.4.3
       unplugin: ^0.2.16
       vite: ^2.6.2
     dependencies:
-      '@antfu/install-pkg': 0.0.0
+      '@antfu/install-pkg': 0.1.0
       '@antfu/utils': 0.3.0
       '@iconify/json-tools': 1.0.10
       '@iconify/utils': 1.0.10
       chalk: 4.1.2
       debug: 4.3.2
-      local-pkg: 0.2.0
+      local-pkg: 0.3.0
       unplugin: 0.2.16_rollup@2.58.0+vite@2.6.2
     devDependencies:
       '@antfu/eslint-config': 0.9.0_eslint@7.32.0+typescript@4.4.3
@@ -432,8 +432,8 @@ packages:
       - typescript
     dev: true
 
-  /@antfu/install-pkg/0.0.0:
-    resolution: {integrity: sha512-TuN4jBCwjlxbvs5c/xkYTejguuysNVBDbWs1xL0c8eLn+Rkbwzt/yDeS6dt+zb5gGz1tuiuq7QNZXoJaT/vBtA==}
+  /@antfu/install-pkg/0.1.0:
+    resolution: {integrity: sha512-VaIJd3d1o7irZfK1U0nvBsHMyjkuyMP3HKYVV53z8DKyulkHKmjhhtccXO51WSPeeSHIeoJEoNOKavYpS7jkZw==}
     dependencies:
       execa: 5.1.1
       find-up: 5.0.0
@@ -8615,8 +8615,9 @@ packages:
       mlly: 0.2.2
     dev: true
 
-  /local-pkg/0.2.0:
-    resolution: {integrity: sha512-M5/pqEFIQcxI19YYwHvEh2mNYjmreUlaCMwfl/8qboqwWoPFhi2kEh1lVrJu03D6ROS2iiwi7g0Cdn7MSh4y9A==}
+  /local-pkg/0.3.0:
+    resolution: {integrity: sha512-JapWObmC38atpkIh2Y8M3223TP+GsdtR4s28Kut7Q98PT6MX7VwvAwPs2/rxpwi+hbDiHM4+dIvRCU67k+qHag==}
+    engines: {node: '>=14'}
     dependencies:
       mlly: 0.2.2
     dev: false
