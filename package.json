@@ -91,16 +91,12 @@
     "vite": "^2.6.2"
   },
   "peerDependencies": {
-    "@iconify/json": "*",
     "@svgr/core": "^5.5.0",
     "@vue/compiler-sfc": "^3.0.2",
     "vue-template-compiler": "^2.6.12",
     "vue-template-es2015-compiler": "^1.9.0"
   },
   "peerDependenciesMeta": {
-    "@iconify/json": {
-      "optional": true
-    },
     "@svgr/core": {
       "optional": true
     },

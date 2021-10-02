@@ -28,18 +28,26 @@ export function warnOnce(msg: string) {
   }
 }
 
+let pending: Promise<void> | undefined
 const tasks: Record<string, Promise<void> | undefined> = {}
 
-export function tryInstallPkg(name: string) {
+export async function tryInstallPkg(name: string) {
+  if (pending)
+    await pending
+
   if (!tasks[name]) {
     // eslint-disable-next-line no-console
     console.log(cyan(`Installing ${name}...`))
-    tasks[name] = installPackage(name, { dev: true })
+    tasks[name] = pending = installPackage(name, { dev: true })
       .then(() => sleep(300))
       .catch((e) => {
         warnOnce(`Failed to install ${name}`)
         console.error(e)
       })
+      .finally(() => {
+        pending = undefined
+      })
   }
+
   return tasks[name]!
 }
