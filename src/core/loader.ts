@@ -93,6 +93,9 @@ export async function getBuiltinIcon(collection: string, icon: string, options?:
     return await searchForLegacyIcon(collection, ids, options)
   }
 
+  if (options?.iconSource !== 'modern' && legacyExists)
+    return await searchForLegacyIcon(collection, ids, options)
+
   if (warn)
     warnOnce(`failed to load \`@iconify-json/${collection}\`, have you installed it?`)
 
