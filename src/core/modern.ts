@@ -5,8 +5,9 @@ import { defaults as DefaultIconCustomizations } from '@iconify/utils/lib/custom
 import { getIconData } from '@iconify/utils/lib/icon-set/get-icon'
 import createDebugger from 'debug'
 import { FullIconifyIcon } from '@iconify/utils/lib/icon'
-import { isPackageListed, resolveModule } from 'local-pkg'
+import { isPackageExists, resolveModule } from 'local-pkg'
 import { ResolvedOptions } from '../types'
+import { tryInstallPkg } from './utils'
 
 const debug = createDebugger('unplugin-icons:modern')
 const debugCollection = createDebugger('unplugin-icons:modern:collection')
@@ -19,15 +20,19 @@ export interface ResolvedIconPath {
 
 const _collections: Record<string, IconifyJSON | false> = {}
 
-export async function loadCollection(name: string): Promise<IconifyJSON | undefined> {
+export async function loadCollection(name: string, autoInstall = false): Promise<IconifyJSON | undefined> {
   if (_collections[name] === false)
     return undefined
 
   if (_collections[name])
     return _collections[name] as IconifyJSON
 
-  if (!await isPackageListed(`@iconify-json/${name}`))
-    return undefined
+  if (!isPackageExists(`@iconify-json/${name}`)) {
+    if (autoInstall)
+      await tryInstallPkg(`@iconify-json/${name}`)
+    else
+      return undefined
+  }
 
   debugCollection(name)
   const jsonPath = resolveModule(`@iconify-json/${name}/icons.json`)

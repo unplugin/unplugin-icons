@@ -71,14 +71,7 @@ export async function getBuiltinIcon(collection: string, icon: string, options?:
   ]
 
   if (options?.iconSource !== 'legacy') {
-    let iconSet = await loadCollection(collection)
-
-    if (!iconSet) {
-      if (options?.autoInstall && !legacyExists) {
-        await tryInstallPkg(`@iconify-json/${collection}`)
-        iconSet = await loadCollection(collection)
-      }
-    }
+    const iconSet = await loadCollection(collection, options?.autoInstall && !legacyExists)
 
     if (!iconSet) {
       if (options?.iconSource === 'modern') {
