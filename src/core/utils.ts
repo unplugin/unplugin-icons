@@ -1,6 +1,6 @@
 import { installPackage } from '@antfu/install-pkg'
 import { sleep } from '@antfu/utils'
-import { cyan, yellow } from 'chalk'
+import { cyan, yellow } from 'nanocolors'
 
 export function camelize(str: string) {
   return str.replace(/-([a-z0-9])/g, g => g[1].toUpperCase())

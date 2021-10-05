@@ -68,9 +68,9 @@
     "@antfu/utils": "^0.3.0",
     "@iconify/json-tools": "^1.0.10",
     "@iconify/utils": "^1.0.10",
-    "chalk": "^4.1.2",
     "debug": "^4.3.2",
     "local-pkg": "^0.3.0",
+    "nanocolors": "^0.2.12",
     "unplugin": "^0.2.16"
   },
   "devDependencies": {
