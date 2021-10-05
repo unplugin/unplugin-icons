@@ -71,7 +71,7 @@
     "@iconify/utils": "^1.0.10",
     "debug": "^4.3.2",
     "local-pkg": "^0.3.0",
-    "nanocolors": "^0.2.12",
+    "picocolors": "^0.2.1",
     "unplugin": "^0.2.16"
   },
   "devDependencies": {
