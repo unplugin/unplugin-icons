@@ -1,8 +1,8 @@
 import { installPackage } from '@antfu/install-pkg'
 import { sleep } from '@antfu/utils'
-import pc from 'picocolors'
+import picocolors from 'picocolors'
 
-const { cyan, yellow } = pc.createColors(true)
+const { cyan, yellow } = picocolors
 
 export function camelize(str: string) {
   return str.replace(/-([a-z0-9])/g, g => g[1].toUpperCase())
