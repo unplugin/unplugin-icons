@@ -30,7 +30,7 @@ const unplugin = createUnplugin<Options>((options = {}) => {
         if (code) {
           return {
             code,
-            map: { version: 3, mappings: '', sources: [] },
+            map: { version: 3, mappings: '', sources: [] } as any,
           }
         }
       }
