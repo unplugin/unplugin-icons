@@ -82,6 +82,30 @@ export interface Options {
      */
     iconPrefix?: string
   }
+
+  /**
+   * Config for CSS compiler
+   */
+  css?: {
+    /**
+     * How to inline the svg as background image.
+     *
+     * @default 'svg'
+     */
+    type?: 'svg' | 'base64'
+    /**
+     * Scale of icons against 1em
+     *
+     * @default 1.2
+     */
+    scale?: number
+    /**
+     * Style apply to CSS icons by default
+     *
+     * @default ''
+     */
+    defaultStyle?: string
+  }
 }
 
 export interface ResolvedOptions extends Required<Options> {}

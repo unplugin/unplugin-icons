@@ -1,20 +1,31 @@
-// import { ResolvedOptions } from '../../types'
+import { ResolvedOptions } from '../../types'
 import { Compiler } from './types'
 
 export const CssCompiler = <Compiler>((
   svg: string,
   collection: string,
   icon: string,
-  // options: ResolvedOptions,
+  options: ResolvedOptions,
 ) => {
+  // we need to add the cvg xml namespace
+  let inlineSvg = svg.includes('xmlns=')
+    ? svg
+    : svg.replace(/"/g, '\'').replace('<svg ', '<svg xmlns=\'http://www.w3.org/2000/svg\' ')
+
+  // we can use svg or base64 encoding
+  inlineSvg = options.css.type === 'base64'
+    ? `base64,${Buffer.from(inlineSvg, 'utf-8').toString('base64')}`
+    : `utf8,${inlineSvg}`
+
+  const scale = options?.css.scale ?? 1
+
   return `.${collection}-${icon} {
-background: url(data:image/svg+xml;base64,${Buffer.from(svg, 'utf-8').toString('base64')}) no-repeat center;
-background-size: 16px 16px;
-height: 16px;
-opacity: 0.87;
-width: 16px;
-max-width: 16px;
+background-image: url("data:image/svg+xml;${inlineSvg}");
+height: ${scale}em;
+width: ${scale}em;
+background-size: ${scale}em ${scale}em;
 display: inline-block;
+${options.css.defaultStyle || ''}
 }
 `
 })

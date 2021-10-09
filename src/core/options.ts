@@ -14,6 +14,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     jsx = guessJSX(),
     customCollections = {},
     autoInstall = false,
+    css = {},
   } = options
 
   const webComponents = Object.assign({
@@ -33,6 +34,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     jsx,
     webComponents,
     autoInstall,
+    css,
   }
 }
 
