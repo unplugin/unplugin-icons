@@ -8,8 +8,10 @@ import { Compiler } from './types'
 import { Vue2Compiler } from './vue2'
 import { Vue3Compiler } from './vue3'
 import { WebComponentsCompiler } from './web-components'
+import { CssCompiler } from './css'
 
 export const compilers: Record<ResolvedOptions['compiler'], Compiler> = {
+  'css': CssCompiler,
   'vue2': Vue2Compiler,
   'vue3': Vue3Compiler,
   'solid': SolidCompiler,

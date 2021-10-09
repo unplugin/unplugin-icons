@@ -11,6 +11,9 @@ const unplugin = createUnplugin<Options>((options = {}) => {
     enforce: 'pre',
     resolveId(id) {
       if (isIconPath(id)) {
+        if (id.endsWith('.css'))
+          return id
+
         const res = normalizeIconPath(id)
           .replace(/\.\w+$/i, '')
           .replace(/^\//, '')
@@ -26,7 +29,14 @@ const unplugin = createUnplugin<Options>((options = {}) => {
     async load(id) {
       const config = await resolved
       if (isIconPath(id)) {
-        const code = await generateComponentFromPath(id, config) || null
+        let code: string | null = null
+        const css = id.endsWith('.css')
+        if (css)
+          code = await generateComponentFromPath(id, { ...config, compiler: 'css' }) || null
+
+        else
+          code = await generateComponentFromPath(id, config) || null
+
         if (code) {
           return {
             code,

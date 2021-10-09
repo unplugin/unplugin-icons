@@ -28,6 +28,11 @@
       <i-inline-foo />
       <i-inline-async />
     </p>
+    <h2>CSS Icons</h2>
+    <p>
+      <span class="mdi-alarm-off"></span>
+      <span class="mdi-account"></span>
+    </p>
     <h2>Collection alias</h2>
     <p>
       <i-park-abnormal />
@@ -40,4 +45,6 @@
 <script setup lang='ts'>
 import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
 import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
+import 'virtual:icons/mdi/alarm-off.css'
+import '~icons/mdi/account.css'
 </script>
