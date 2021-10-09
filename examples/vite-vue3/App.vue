@@ -32,6 +32,9 @@
     <p>
       <span class="mdi-alarm-off"></span>
       <span class="mdi-account"></span>
+      <span class="custom-steering-wheel"></span>
+      <span class="icon-park-abnormal"></span>
+      <span class="inline-foo"></span>
     </p>
     <h2>Collection alias</h2>
     <p>
@@ -47,4 +50,7 @@ import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
 import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
 import 'virtual:icons/mdi/alarm-off.css'
 import '~icons/mdi/account.css'
+import '~icons/custom/steering-wheel.css'
+import '~icons/icon-park/abnormal.css'
+import '~icons/inline/foo.css'
 </script>
