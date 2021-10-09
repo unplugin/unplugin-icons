@@ -88,12 +88,6 @@ export interface Options {
    */
   css?: {
     /**
-     * How to inline the svg as background image.
-     *
-     * @default 'svg'
-     */
-    type?: 'svg' | 'base64'
-    /**
      * Scale of icons against 1em
      *
      * @default 1.2
