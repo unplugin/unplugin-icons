@@ -7,9 +7,9 @@ export const CssCompiler = <Compiler>((
   icon: string,
   options: ResolvedOptions,
 ) => {
-  // we need to add the cvg xml namespace
-  let inlineSvg = svg.includes('xmlns=')
-    ? svg
+  // we need to add the svg xml namespace
+  let inlineSvg = svg.includes('http://www.w3.org/2000/svg')
+    ? svg.replace(/"/g, '\'')
     : svg.replace(/"/g, '\'').replace('<svg ', '<svg xmlns=\'http://www.w3.org/2000/svg\' ')
 
   // we can use svg or base64 encoding
