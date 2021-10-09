@@ -31,11 +31,19 @@ const unplugin = createUnplugin<Options>((options = {}) => {
       if (isIconPath(id)) {
         let code: string | null = null
         const css = id.endsWith('.css')
-        if (css)
-          code = await generateComponentFromPath(id, { ...config, compiler: 'css' }) || null
-
-        else
+        if (css) {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          code = await generateComponentFromPath(id, {
+            ...config,
+            compiler: 'css',
+            scale: options.css?.scale ?? 1.2,
+            defaultStyle: options.css?.defaultStyles || '',
+            defaultClass: '',
+          }) || null
+        }
+        else {
           code = await generateComponentFromPath(id, config) || null
+        }
 
         if (code) {
           return {
