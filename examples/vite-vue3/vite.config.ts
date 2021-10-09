@@ -18,9 +18,6 @@ const config: UserConfig = {
           async: () => fs.readFile('assets/giftbox.svg', 'utf-8'),
         },
       },
-      // css: {
-      //   type: 'base64',
-      // },
     }),
     Components({
       dts: true,
