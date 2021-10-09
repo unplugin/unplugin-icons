@@ -51,10 +51,11 @@
 <script setup lang='ts'>
 import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
 import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
-import '~icons/logos/vue.css'
+// do not change to ~icons/logos/vue.css , for testing purposes
+import 'virtual:icons/logos/vue.css'
 import '~icons/carbon/app-connectivity.css'
 import '~icons/mdi/account.css'
-import 'virtual:icons/mdi/alarm-off.css'
+import '~icons/mdi/alarm-off.css'
 import '~icons/custom/steering-wheel.css'
 import '~icons/custom/car-a.css'
 import '~icons/inline/foo.css'
