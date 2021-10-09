@@ -17,7 +17,7 @@ export const CssCompiler = <Compiler>((
     ? `base64,${Buffer.from(inlineSvg, 'utf-8').toString('base64')}`
     : `utf8,${inlineSvg}`
 
-  const scale = options?.css.scale ?? 1
+  const scale = options?.css.scale ?? 1.2
 
   return `.${collection}-${icon} {
 background-image: url("data:image/svg+xml;${inlineSvg}");
