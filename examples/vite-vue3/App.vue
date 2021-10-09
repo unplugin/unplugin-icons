@@ -30,11 +30,14 @@
     </p>
     <h2>CSS Icons</h2>
     <p>
-      <span class="mdi-alarm-off"></span>
+      <span class="logos-vue"></span>
+      <span class="carbon-app-connectivity"></span>
       <span class="mdi-account"></span>
+      <span class="mdi-alarm-off"></span>
       <span class="custom-steering-wheel"></span>
-      <span class="icon-park-abnormal"></span>
+      <span class="custom-car-a"></span>
       <span class="inline-foo"></span>
+      <span class="inline-async"></span>
     </p>
     <h2>Collection alias</h2>
     <p>
@@ -48,9 +51,18 @@
 <script setup lang='ts'>
 import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
 import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
-import 'virtual:icons/mdi/alarm-off.css'
+import '~icons/logos/vue.css'
+import '~icons/carbon/app-connectivity.css'
 import '~icons/mdi/account.css'
+import 'virtual:icons/mdi/alarm-off.css'
 import '~icons/custom/steering-wheel.css'
-import '~icons/icon-park/abnormal.css'
+import '~icons/custom/car-a.css'
 import '~icons/inline/foo.css'
+import '~icons/inline/async.css'
 </script>
+
+<style>
+.logos-vue {
+  font-size: 2em;
+}
+</style>
