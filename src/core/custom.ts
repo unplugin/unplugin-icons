@@ -25,8 +25,22 @@ export async function getCustomIcon(
   const scale = options?.scale || 1
 
   if (result) {
-    if (!result.startsWith('<svg '))
+    if (result.startsWith('<svg ')) {
+      // prevent adding width and height twice on css
+      if (options?.compiler === 'css') {
+        const closeSvg = result.indexOf('>')
+        let idx = result.indexOf('width')
+        if (idx > -1 && closeSvg > idx)
+          return result
+        idx = result.indexOf('height')
+        if (idx > -1 && closeSvg > idx)
+          return result
+      }
+      return result.replace('<svg ', `<svg height="${scale}em" width="${scale}em" `)
+    }
+    else {
       console.warn(`Custom icon "${icon}" in "${collection}" is not a valid SVG`)
-    return result.replace('<svg ', `<svg height="${scale}em" width="${scale}em" `)
+      return result
+    }
   }
 }
