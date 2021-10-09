@@ -100,11 +100,11 @@ export interface Options {
      */
     scale?: number
     /**
-     * Style apply to CSS icons by default
+     * Styles to apply to CSS icons by default
      *
      * @default ''
      */
-    defaultStyle?: string
+    defaultStyles?: string
   }
 }
 

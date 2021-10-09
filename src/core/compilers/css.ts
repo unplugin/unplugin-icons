@@ -25,7 +25,7 @@ height: ${scale}em;
 width: ${scale}em;
 background-size: ${scale}em ${scale}em;
 display: inline-block;
-${options.css.defaultStyle || ''}
+${options.css.defaultStyles || ''}
 }
 `
 })
