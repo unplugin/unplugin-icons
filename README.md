@@ -10,6 +10,7 @@ Access thousands of icons as components **on-demand** universally.
   - 🤹 **Any** icon sets - 100+ popular sets with over 10,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
   - 📦 **Major** build tools - Vite, Webpack, Rollup, Nuxt, etc. Powered by [unplugin](https://github.com/unjs/unplugin).
   - 🪜 **Major** frameworks - Vanilla, Web Components, React, Vue 3, Vue 2, Solid, Svelte, and more. [Contribute](./src/core/compiles).
+  - 🗃️ **CSS** icons - Use icons as css stylesheets with or without any framework (experimental).
   - 🍱 **Any** combinations of them!
 - ☁️ On-demand - Only bundle the icons you really use, while having all the options.
 - 🖨 SSR / SSG friendly - Ship the icons with your page, no more FOUC.
@@ -648,6 +649,23 @@ IconsResolver({
 <template>
   <mdi-account />
 </template>
+```
+
+### CSS Icons
+
+You can use svg icons as a `css stylesheet` (no framework required):
+```ts
+import '~icons/{collection}/{icon}.css'
+```
+
+then add an `html` element with a `class` with a name following the convention: `{collection}-{icon}`.
+
+For example:
+```html
+<span class="mdi-store" style="font-size: 2em;"></span>
+<script type="module">
+import '~icons/mdi/account.css'
+</script>
 ```
 
 ### Collection Aliases
