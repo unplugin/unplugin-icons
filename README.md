@@ -662,7 +662,7 @@ then add an `html` element with a `class` with a name following the convention: 
 
 For example:
 ```html
-<span class="mdi-store" style="font-size: 2em;"></span>
+<span class="mdi-account" style="font-size: 2em;"></span>
 <script type="module">
 import '~icons/mdi/account.css'
 </script>
