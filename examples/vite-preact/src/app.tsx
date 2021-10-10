@@ -1,9 +1,11 @@
+import '~icons/logos/preact.css'
 import Logo from '~icons/logos/preact'
 
 export function App() {
   return (
     <>
       <Logo style={{ fontSize: '3em' }} />
+      <span className="logos-preact" />
       <p>Hello Vite + Preact!</p>
       <p>
         <a

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import 'virtual:icons/logos/svelte-icon.css'
   import SvelteLogo from 'virtual:icons/logos/svelte-icon'
   import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
   import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
@@ -7,6 +8,7 @@
 
 <main>
   <SvelteLogo style="font-size:2em" />
+  <span class="logos-svelte-icon"></span>
   <br />
   <br />
   <MdiStore24Hour />

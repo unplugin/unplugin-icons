@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
+import '~icons/logos/react.css'
 import ReactLogo from '~icons/logos/react'
 
 function a() {
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <ReactLogo style={{ fontSize: '3em' }} />
+        <span className="logos-react" />
         <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount(count => count + 1)}>
