@@ -9,8 +9,9 @@ import { isPackageExists, resolveModule } from 'local-pkg'
 import { ResolvedOptions } from '../types'
 import { tryInstallPkg } from './utils'
 
-const debug = createDebugger('unplugin-icons:modern')
-const debugCollection = createDebugger('unplugin-icons:modern:collection')
+const debug = createDebugger('unplugin-icons:icon')
+const debugModern = createDebugger('unplugin-icons:modern')
+const debugLegacy = createDebugger('unplugin-icons:legacy')
 
 export interface ResolvedIconPath {
   collection: string
@@ -18,33 +19,38 @@ export interface ResolvedIconPath {
   query: Record<string, string | undefined>
 }
 
-const _collections: Record<string, IconifyJSON | false> = {}
+const _collections: Record<string, Promise<IconifyJSON | undefined>> = {}
+const isLegacyExists = isPackageExists('@iconify/json')
 
-export async function loadCollection(name: string, autoInstall = false): Promise<IconifyJSON | undefined> {
-  if (_collections[name] === false)
-    return undefined
+export async function loadCollection(name: string, autoInstall = false) {
+  if (!_collections[name])
+    _collections[name] = task()
 
-  if (_collections[name])
-    return _collections[name] as IconifyJSON
+  return _collections[name]
 
-  if (!isPackageExists(`@iconify-json/${name}`)) {
-    if (autoInstall)
+  async function task() {
+    let jsonPath = resolveModule(`@iconify-json/${name}/icons.json`)
+    if (jsonPath)
+      debugModern(name)
+
+    if (!jsonPath && isLegacyExists) {
+      jsonPath = resolveModule(`@iconify/json/json/${name}.json`)
+      if (jsonPath)
+        debugLegacy(name)
+    }
+
+    if (!jsonPath && !isLegacyExists && autoInstall) {
       await tryInstallPkg(`@iconify-json/${name}`)
-    else
-      return undefined
-  }
+      jsonPath = resolveModule(`@iconify-json/${name}/icons.json`)
+    }
 
-  debugCollection(name)
-  const jsonPath = resolveModule(`@iconify-json/${name}/icons.json`)
-  if (jsonPath) {
-    const icons = JSON.parse(await fs.readFile(jsonPath, 'utf8'))
-    _collections[name] = icons
-    return icons
-  }
-  else {
-    debugCollection(`failed to load ${name}`)
-    _collections[name] = false
-    return undefined
+    if (jsonPath) {
+      return JSON.parse(await fs.readFile(jsonPath, 'utf8'))
+    }
+    else {
+      debugModern(`failed to load ${name}`)
+      return undefined
+    }
   }
 }
 

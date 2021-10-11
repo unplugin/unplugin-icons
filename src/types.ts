@@ -31,21 +31,9 @@ export interface Options {
   customCollections?: Record<string, CustomIconLoader | InlineCollection>
 
   /**
-   * Icon source for Iconify
-   *
-   * 'legacy' - @iconify/json package
-   * 'modern' - @iconify-json/* packages for each icon set
-   * 'auto'   - auto detect
-   *
-   * @default 'auto'
-   */
-  iconSource?: 'legacy' | 'modern' | 'auto'
-
-  /**
    * Auto install icon sources package when the usages is detected
    *
    * @default false
-   * @deprecated Experimentally, be careful
    */
   autoInstall?: boolean
 
@@ -82,6 +70,11 @@ export interface Options {
      */
     iconPrefix?: string
   }
+
+  /**
+   * @deprecated no longer needed
+   */
+  iconSource?: 'legacy' | 'modern' | 'auto'
 }
 
-export interface ResolvedOptions extends Required<Options> {}
+export interface ResolvedOptions extends Omit<Required<Options>, 'iconSource'> {}

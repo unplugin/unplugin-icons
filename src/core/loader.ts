@@ -1,10 +1,9 @@
 import createDebugger from 'debug'
 import { isPackageExists } from 'local-pkg'
 import { ResolvedOptions } from '../types'
-import { searchForLegacyIcon } from './legacy'
 import { loadCollection, ResolvedIconPath, searchForIcon } from './modern'
 import { compilers } from './compilers'
-import { tryInstallPkg, warnOnce } from './utils'
+import { warnOnce } from './utils'
 import { getCustomIcon } from './custom'
 
 export const debug = createDebugger('unplugin-icons:load')
@@ -60,7 +59,7 @@ export async function getIcon(collection: string, icon: string, options: Resolve
   return await getBuiltinIcon(collection, icon, options)
 }
 
-let legacyExists = isPackageExists('@iconify/json')
+const legacyExists = isPackageExists('@iconify/json')
 
 export async function getBuiltinIcon(collection: string, icon: string, options?: ResolvedOptions, warn = true): Promise<string | null> {
   // possible icon names
@@ -70,31 +69,9 @@ export async function getBuiltinIcon(collection: string, icon: string, options?:
     icon.replace(/([a-z])(\d+)/g, '$1-$2'),
   ]
 
-  if (options?.iconSource !== 'legacy') {
-    const iconSet = await loadCollection(collection, options?.autoInstall && !legacyExists)
-
-    if (!iconSet) {
-      if (options?.iconSource === 'modern') {
-        if (warn)
-          warnOnce(`failed to load \`@iconify-json/${collection}\`, have you installed it?`)
-        return null
-      }
-    }
-
-    if (iconSet)
-      return searchForIcon(iconSet, collection, ids, options)
-  }
-
-  if (options?.iconSource === 'legacy') {
-    if (!legacyExists && options?.autoInstall) {
-      await tryInstallPkg('@iconify/json')
-      legacyExists = true
-    }
-    return await searchForLegacyIcon(collection, ids, options)
-  }
-
-  if (options?.iconSource !== 'modern' && legacyExists)
-    return await searchForLegacyIcon(collection, ids, options)
+  const iconSet = await loadCollection(collection, options?.autoInstall && !legacyExists)
+  if (iconSet)
+    return searchForIcon(iconSet, collection, ids, options)
 
   if (warn)
     warnOnce(`failed to load \`@iconify-json/${collection}\`, have you installed it?`)
