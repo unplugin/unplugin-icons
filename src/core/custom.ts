@@ -30,6 +30,7 @@ export async function getCustomIcon(
       console.warn(`Custom icon "${icon}" in "${collection}" is not a valid SVG`)
     // prevent adding width and height twice on css
     if (options?.compiler === 'css' && startSvg > -1) {
+      // if width or height are set we assume both are set
       const closeSvg = result.indexOf('>', startSvg + 5)
       let idx = result.indexOf('width')
       if (idx > -1 && closeSvg > idx)

@@ -16,8 +16,7 @@ export function handleSVGId(svg: string) {
           return `:id="idMap['${id}']"`
         return full
       })
-    // eslint-disable-next-line prefer-template
-    injectScripts = randIdFn + `const idMap = {${Object.values(idMap).join(',')}};`
+    injectScripts = `${randIdFn}const idMap = {${Object.values(idMap).join(',')}};`
   }
 
   return {

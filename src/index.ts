@@ -21,7 +21,9 @@ const unplugin = createUnplugin<Options>((options = {}) => {
           ? '.jsx'
           : options.compiler === 'svelte'
             ? '.svelte'
-            : ''
+            : options.compiler === 'solid'
+              ? '.tsx'
+              : ''
         return res + ext
       }
       return null
