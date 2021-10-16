@@ -1,5 +1,6 @@
 import { ResolvedOptions } from '../../types'
 import { JSXCompiler } from './jsx'
+import { MarkoCompiler } from './marko'
 import { NoneCompiler } from './none'
 import { RawCompiler } from './raw'
 import { SolidCompiler } from './solid'
@@ -15,6 +16,7 @@ export const compilers: Record<ResolvedOptions['compiler'], Compiler> = {
   'solid': SolidCompiler,
   'svelte': SvelteCompiler,
   'jsx': JSXCompiler,
+  'marko': MarkoCompiler,
   'none': NoneCompiler,
   'raw': RawCompiler,
   'web-components': WebComponentsCompiler,
