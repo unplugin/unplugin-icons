@@ -1,6 +1,6 @@
 {
   "name": "unplugin-icons",
-  "version": "0.12.13",
+  "version": "0.12.16",
   "description": "Access thousands of icons as components on-demand universally",
   "homepage": "https://github.com/antfu/unplugin-icons",
   "bugs": "https://github.com/antfu/unplugin-icons/issues",
@@ -70,7 +70,7 @@
     "@iconify/utils": "^1.0.14",
     "debug": "^4.3.2",
     "kolorist": "^1.5.0",
-    "local-pkg": "^0.3.0",
+    "local-pkg": "^0.4.0",
     "unplugin": "^0.2.16"
   },
   "devDependencies": {

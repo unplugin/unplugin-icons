@@ -45,7 +45,7 @@ export interface Options {
    *
    * @default (detect automatically, fallback to 'vue3')
    */
-  compiler?: 'vue2' | 'vue3' | 'jsx' | 'solid' | 'svelte' | 'web-components' | 'none' | 'raw' | 'css'
+  compiler?: 'vue2' | 'vue3' | 'jsx' | 'solid' | 'svelte' | 'web-components' | 'marko' | 'css' | 'none' | 'raw'
 
   /**
    * JSX style, works only when compiler set to `jsx`
