@@ -4,7 +4,7 @@ export const MarkoCompiler = <Compiler>((svg: string) => {
   const openTagEnd = svg.indexOf('>', svg.indexOf('<svg '))
   const closeTagStart = svg.lastIndexOf('</svg')
   const openTag = `${svg.slice(0, openTagEnd)} ...input>`
-  const content = `$!{\`${escapeTemplateLiteral(svg.slice(openTagEnd, closeTagStart))}\`}`
+  const content = `$!{\`${escapeTemplateLiteral(svg.slice(openTagEnd + 1, closeTagStart))}\`}`
   const closeTag = svg.slice(closeTagStart)
   return `${openTag}${content}${closeTag}`
 })

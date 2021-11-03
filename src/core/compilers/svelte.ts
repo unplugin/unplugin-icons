@@ -4,7 +4,7 @@ export const SvelteCompiler = <Compiler>((svg: string) => {
   const openTagEnd = svg.indexOf('>', svg.indexOf('<svg '))
   const closeTagStart = svg.lastIndexOf('</svg')
   const openTag = `${svg.slice(0, openTagEnd)} {...$$props}>`
-  const content = `{@html \`${escapeSvelte(svg.slice(openTagEnd, closeTagStart))}\`}`
+  const content = `{@html \`${escapeSvelte(svg.slice(openTagEnd + 1, closeTagStart))}\`}`
   const closeTag = svg.slice(closeTagStart)
   return `${openTag}${content}${closeTag}`
 })
