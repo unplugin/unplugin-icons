@@ -97,7 +97,7 @@ export async function generateComponent({ collection, icon }: ResolvedIconPath, 
   if (_compiler) {
     const compiler = typeof _compiler === 'string'
       ? compilers[_compiler]
-      : (await _compiler).compiler as Compiler
+      : (await _compiler.compiler) as Compiler
 
     if (compiler)
       return compiler(svg, collection, icon, options)
