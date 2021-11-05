@@ -91,7 +91,7 @@ export async function generateComponent({ collection, icon }: ResolvedIconPath, 
   if (defaultStyle)
     svg = svg.replace('<svg ', `<svg style="${defaultStyle}" `)
 
-  const compiler = compilers[options.compiler]
+  const compiler = typeof options.compiler === 'string' ? compilers[options.compiler] : options.compiler
   if (!compiler)
     throw new Error(`Unknown compiler: ${options.compiler}`)
 
