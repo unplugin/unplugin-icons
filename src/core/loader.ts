@@ -99,7 +99,8 @@ export async function generateComponent({ collection, icon }: ResolvedIconPath, 
       ? compilers[_compiler]
       : (await _compiler).compiler as Compiler
 
-    return compiler(svg, collection, icon, options)
+    if (compiler)
+      return compiler(svg, collection, icon, options)
   }
 
   throw new Error(`Unknown compiler: ${options.compiler}`)
