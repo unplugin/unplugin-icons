@@ -3,6 +3,7 @@ import type { CustomCompiler } from './core/compilers/types'
 
 export type CustomIconLoader = (name: string) => Awaitable<string | undefined>
 export type InlineCollection = Record<string, string | (() => Awaitable<string | undefined>)>
+export { CustomCompiler }
 
 export interface Options {
   /**
