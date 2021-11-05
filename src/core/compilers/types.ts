@@ -6,3 +6,7 @@ export type Compiler = (
   icon: string,
   options: ResolvedOptions
 ) => string | Promise<string>
+
+export type CustomCompiler = Compiler & {
+  extension?: string
+}

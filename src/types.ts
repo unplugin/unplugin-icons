@@ -1,11 +1,8 @@
 import type { Awaitable } from '@antfu/utils'
-import type { Compiler } from './core/compilers/types'
+import type { CustomCompiler } from './core/compilers/types'
 
 export type CustomIconLoader = (name: string) => Awaitable<string | undefined>
 export type InlineCollection = Record<string, string | (() => Awaitable<string | undefined>)>
-export type CustomCompiler = Compiler & {
-  extension?: string
-}
 
 export interface Options {
   /**
