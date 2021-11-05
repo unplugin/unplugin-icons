@@ -26,8 +26,6 @@ const unplugin = createUnplugin<Options>((options = {}) => {
                 return `${res}.tsx`
               case 'marko':
                 return `${res}.marko`
-              default:
-                return res
             }
           }
           else {
@@ -35,8 +33,8 @@ const unplugin = createUnplugin<Options>((options = {}) => {
             if (ext)
               return `${res}.${ext.startsWith('.') ? ext.slice(1) : ext}`
 
-            return res
           }
+          return res
         }
       }
       return null
