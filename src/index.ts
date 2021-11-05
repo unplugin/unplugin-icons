@@ -34,6 +34,8 @@ const unplugin = createUnplugin<Options>((options = {}) => {
             const ext = compiler.extension
             if (ext)
               return `${res}.${ext.startsWith('.') ? ext.slice(1) : ext}`
+
+            return res
           }
         }
       }
