@@ -32,6 +32,7 @@ function customSvelteCompiler(svg) {
 `
 }
 
+// to show how to use async
 async function compilerFactory() {
   return Promise.resolve(customSvelteCompiler)
 }
