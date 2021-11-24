@@ -33,8 +33,8 @@ const unplugin = createUnplugin<Options>((options = {}) => {
             if (ext)
               return `${res}.${ext.startsWith('.') ? ext.slice(1) : ext}`
           }
-          return res
         }
+        return res
       }
       return null
     },
