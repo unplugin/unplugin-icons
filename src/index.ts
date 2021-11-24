@@ -14,17 +14,26 @@ const unplugin = createUnplugin<Options>((options = {}) => {
         const res = normalizeIconPath(id)
           .replace(/\.\w+$/i, '')
           .replace(/^\//, '')
-        switch (options.compiler || '') {
-          case 'jsx':
-            return `${res}.jsx`
-          case 'svelte':
-            return `${res}.svelte`
-          case 'solid':
-            return `${res}.tsx`
-          case 'marko':
-            return `${res}.marko`
-          default:
-            return res
+        const compiler = options.compiler
+        if (compiler) {
+          if (typeof compiler === 'string') {
+            switch (compiler) {
+              case 'jsx':
+                return `${res}.jsx`
+              case 'svelte':
+                return `${res}.svelte`
+              case 'solid':
+                return `${res}.tsx`
+              case 'marko':
+                return `${res}.marko`
+            }
+          }
+          else {
+            const ext = compiler.extension
+            if (ext)
+              return `${res}.${ext.startsWith('.') ? ext.slice(1) : ext}`
+          }
+          return res
         }
       }
       return null

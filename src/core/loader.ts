@@ -5,6 +5,7 @@ import { loadCollection, ResolvedIconPath, searchForIcon } from './modern'
 import { compilers } from './compilers'
 import { warnOnce } from './utils'
 import { getCustomIcon } from './custom'
+import { Compiler } from './compilers/types'
 
 export const debug = createDebugger('unplugin-icons:load')
 
@@ -91,11 +92,18 @@ export async function generateComponent({ collection, icon }: ResolvedIconPath, 
   if (defaultStyle)
     svg = svg.replace('<svg ', `<svg style="${defaultStyle}" `)
 
-  const compiler = compilers[options.compiler]
-  if (!compiler)
-    throw new Error(`Unknown compiler: ${options.compiler}`)
+  const _compiler = options.compiler
 
-  return compiler(svg, collection, icon, options)
+  if (_compiler) {
+    const compiler = typeof _compiler === 'string'
+      ? compilers[_compiler]
+      : (await _compiler.compiler) as Compiler
+
+    if (compiler)
+      return compiler(svg, collection, icon, options)
+  }
+
+  throw new Error(`Unknown compiler: ${_compiler}`)
 }
 
 export async function generateComponentFromPath(path: string, options: ResolvedOptions) {

@@ -1,7 +1,9 @@
 import type { Awaitable } from '@antfu/utils'
+import type { CustomCompiler } from './core/compilers/types'
 
 export type CustomIconLoader = (name: string) => Awaitable<string | undefined>
 export type InlineCollection = Record<string, string | (() => Awaitable<string | undefined>)>
+export type { CustomCompiler }
 
 export interface Options {
   /**
@@ -45,7 +47,7 @@ export interface Options {
    *
    * @default (detect automatically, fallback to 'vue3')
    */
-  compiler?: 'vue2' | 'vue3' | 'jsx' | 'solid' | 'svelte' | 'web-components' | 'marko' | 'none' | 'raw'
+  compiler?: 'vue2' | 'vue3' | 'jsx' | 'solid' | 'svelte' | 'web-components' | 'marko' | 'none' | 'raw' | CustomCompiler
 
   /**
    * JSX style, works only when compiler set to `jsx`

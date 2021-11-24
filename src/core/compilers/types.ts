@@ -1,3 +1,4 @@
+import { Awaitable } from '@antfu/utils'
 import { ResolvedOptions } from '../../types'
 
 export type Compiler = (
@@ -6,3 +7,8 @@ export type Compiler = (
   icon: string,
   options: ResolvedOptions
 ) => string | Promise<string>
+
+export type CustomCompiler = {
+  compiler: Awaitable<Compiler>
+  extension?: string
+}
