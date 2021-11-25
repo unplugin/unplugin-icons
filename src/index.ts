@@ -15,23 +15,21 @@ const unplugin = createUnplugin<Options>((options = {}) => {
           .replace(/\.\w+$/i, '')
           .replace(/^\//, '')
         const compiler = options.compiler
-        if (compiler) {
-          if (typeof compiler === 'string') {
-            switch (compiler) {
-              case 'jsx':
-                return `${res}.jsx`
-              case 'svelte':
-                return `${res}.svelte`
-              case 'solid':
-                return `${res}.tsx`
-              case 'marko':
-                return `${res}.marko`
-            }
-          }
-          else {
-            const ext = compiler.extension
-            if (ext)
-              return `${res}.${ext.startsWith('.') ? ext.slice(1) : ext}`
+        if (compiler && typeof compiler !== 'string') {
+          const ext = compiler.extension
+          if (ext)
+            return `${res}.${ext.startsWith('.') ? ext.slice(1) : ext}`
+        }
+        else {
+          switch (compiler) {
+            case 'jsx':
+              return `${res}.jsx`
+            case 'svelte':
+              return `${res}.svelte`
+            case 'solid':
+              return `${res}.tsx`
+            case 'marko':
+              return `${res}.marko`
           }
         }
         return res
