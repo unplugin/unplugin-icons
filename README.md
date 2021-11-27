@@ -190,6 +190,8 @@ module.exports = {
 <details>
 <summary>Svelte Kit</summary><br>
 
+Make sure you also follow the instructions in the `Frameworks -> Svelte` section below to get rid of module import errors.
+
 ```ts
 // svelte.config.js
 import preprocess from 'svelte-preprocess'
@@ -216,12 +218,12 @@ const config = {
 export default config
 ```
 
-Make sure you also follow the instructions in the `Frameworks -> Svelte` section below to get rid of module import errors.
-
 <br></details>
 
 <details>
 <summary>Svelte + Vite</summary><br>
+
+Make sure you also follow the instructions in the `Frameworks -> Svelte` section below to get rid of module import errors.
 
 Svelte support requires plugin dependency `@sveltejs/vite-plugin-svelte`:
 ```shell
