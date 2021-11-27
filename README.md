@@ -216,7 +216,7 @@ const config = {
 export default config
 ```
 
-Make sure you also follow the instructions in the `Frameworks -> Svelte` section below to get rid of module import errors.
+Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
 
 <br></details>
 
@@ -245,6 +245,8 @@ export default defineConfig({
   ],
 })
 ```
+
+Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
 
 <br></details>
 
