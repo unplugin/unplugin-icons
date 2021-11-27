@@ -21,7 +21,7 @@ Access thousands of icons as components **on-demand** universally.
 
 <table><td><br>
 
-&nbsp;&nbsp;&nbsp;💡 **Story beind this tool**: [Journey with Icons Continues](https://antfu.me/posts/journey-with-icons-continues) - a blog post by Anthony&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;💡 **Story behind this tool**: [Journey with Icons Continues](https://antfu.me/posts/journey-with-icons-continues) - a blog post by Anthony&nbsp;&nbsp;&nbsp;
 
 </td></table>
 
@@ -215,6 +215,8 @@ const config = {
 
 export default config
 ```
+
+Make sure you also follow the instructions in the `Frameworks -> Svelte` section below to get rid of module import errors.
 
 <br></details>
 
