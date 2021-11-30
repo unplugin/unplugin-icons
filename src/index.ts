@@ -50,6 +50,11 @@ const unplugin = createUnplugin<Options>((options = {}) => {
 
       return null
     },
+    rollup: {
+      api: {
+        config: options,
+      },
+    },
   }
 })
 
