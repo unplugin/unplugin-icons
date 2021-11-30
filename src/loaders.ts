@@ -12,9 +12,8 @@ export function FileSystemIconLoader(dir: string, transform?: (svg: string) => A
     ]
     for (const path of pathes) {
       if (existsSync(path)) {
-        return typeof transform === 'function'
-          ? transform(await fs.readFile(path, 'utf-8'))
-          : fs.readFile(path, 'utf-8')
+        const svg = await fs.readFile(path, 'utf-8')
+        return typeof transform === 'function' ? await transform(svg) : svg
       }
     }
   }
