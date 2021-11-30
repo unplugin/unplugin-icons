@@ -8,14 +8,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "core-js": "^3.18.1",
+    "core-js": "^3.19.2",
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.409",
+    "@iconify/json": "^2.0.3",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/composition-api": "^0.29.2",
+    "@nuxtjs/composition-api": "^0.30.0",
     "unplugin-icons": "link:../../dist"
   }
 }
