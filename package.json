@@ -37,6 +37,30 @@
       "require": "./dist/types.js",
       "import": "./dist/types.mjs"
     },
+    "./types/preact": {
+      "types": "./types/preact.d.ts"
+    },
+    "./types/raw": {
+      "types": "./types/raw.d.ts"
+    },
+    "./types/react": {
+      "types": "./types/react.d.ts"
+    },
+    "./types/solid": {
+      "types": "./types/solid.d.ts"
+    },
+    "./types/svelte": {
+      "types": "./types/svelte.d.ts"
+    },
+    "./types/vue": {
+      "types": "./types/vue.d.ts"
+    },
+    "./types/vue3": {
+      "types": "./types/vue3.d.ts"
+    },
+    "./types/web-components": {
+      "types": "./types/web-components.d.ts"
+    },
     "./vite": {
       "require": "./dist/vite.js",
       "import": "./dist/vite.mjs"
