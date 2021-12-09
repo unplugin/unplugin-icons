@@ -441,7 +441,11 @@ Icons({
     },
     // a helper to load icons from the file system
     // files under `./assets/icons` with `.svg` extension will be loaded as it's file name
-    'my-yet-other-icons': FileSystemIconLoader('./assets/icons'),
+    // you can also provide a transform callback to change each icon (optional)
+    'my-yet-other-icons': FileSystemIconLoader(
+      './assets/icons',
+      svg => svg.replace(/^<svg /, '<svg fill="currentColor" ')
+    ),
   }
 })
 ```
