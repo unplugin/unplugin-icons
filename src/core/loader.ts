@@ -87,8 +87,10 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
 
   const { defaultStyle, defaultClass } = options
 
+  // query params and iconCustomizer takes precedence
   if (defaultClass && !svg.includes(' class='))
     svg = svg.replace('<svg ', `<svg class="${defaultClass}" `)
+  // query params and iconCustomizer takes precedence
   if (defaultStyle && !svg.includes(' style='))
     svg = svg.replace('<svg ', `<svg style="${defaultStyle}" `)
 
