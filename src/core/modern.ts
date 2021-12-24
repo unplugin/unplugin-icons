@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs'
 import { IconifyJSON } from '@iconify/types'
 import { iconToSVG } from '@iconify/utils/lib/svg/build'
-import { defaults as DefaultIconCustomizations, FullIconCustomisations } from '@iconify/utils/lib/customisations'
+import { defaults as DefaultIconCustomizations } from '@iconify/utils/lib/customisations'
 import { getIconData } from '@iconify/utils/lib/icon-set/get-icon'
 import createDebugger from 'debug'
 import { FullIconifyIcon } from '@iconify/utils/lib/icon'
