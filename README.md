@@ -484,11 +484,12 @@ See the [Vue 3 + Vite example](./examples/vite-vue3/vite.config.ts).
 
 From version `v0.12.24` you can also customize each icon using `iconCustomizer` configuration option or using query params when importing them.
 
-The `query` param will take precedence `iconCustomizer` and `iconCustomizer`  over `configuration`.
+The `query` param will take precedence over `iconCustomizer` and `iconCustomizer`  over `configuration`.
 
 The `iconCustomizer` and `query` params will be applied to any collection, that is, for each icon from `custom` loader, `inlined` on `customCollections` or from `@iconify`. 
 
 For example, you can configure `iconCustomizer` to change all icons for a collection or individual icons on a collection:
+
 ```ts
 import { promises as fs } from 'fs'
 // loader helpers
