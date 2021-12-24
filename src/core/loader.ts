@@ -32,7 +32,7 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
     const queryRaw = path.slice(queryIndex + 1)
     path = path.slice(0, queryIndex)
     new URLSearchParams(queryRaw).forEach((value, key) => {
-      query[value] = key
+      query[key] = value
     })
   }
 
@@ -48,21 +48,21 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
   }
 }
 
-export async function getIcon(collection: string, icon: string, options: ResolvedOptions) {
+export async function getIcon(collection: string, icon: string, query: Record<string, string | undefined>, options: ResolvedOptions) {
   const custom = options.customCollections[collection]
 
   if (custom) {
-    const result = await getCustomIcon(custom, collection, icon, options)
+    const result = await getCustomIcon(custom, collection, icon, query, options)
     if (result)
       return result
   }
 
-  return await getBuiltinIcon(collection, icon, options)
+  return await getBuiltinIcon(collection, icon, query, options)
 }
 
 const legacyExists = isPackageExists('@iconify/json')
 
-export async function getBuiltinIcon(collection: string, icon: string, options?: ResolvedOptions, warn = true): Promise<string | null> {
+export async function getBuiltinIcon(collection: string, icon: string, query: Record<string, string | undefined>, options?: ResolvedOptions, warn = true): Promise<string | null> {
   // possible icon names
   const ids = [
     icon,
@@ -72,7 +72,7 @@ export async function getBuiltinIcon(collection: string, icon: string, options?:
 
   const iconSet = await loadCollection(collection, options?.autoInstall && !legacyExists)
   if (iconSet)
-    return searchForIcon(iconSet, collection, ids, options)
+    return await searchForIcon(iconSet, collection, ids, query, options)
 
   if (warn)
     warnOnce(`failed to load \`@iconify-json/${collection}\`, have you installed it?`)
@@ -80,16 +80,16 @@ export async function getBuiltinIcon(collection: string, icon: string, options?:
   return null
 }
 
-export async function generateComponent({ collection, icon }: ResolvedIconPath, options: ResolvedOptions) {
-  let svg = await getIcon(collection, icon, options)
+export async function generateComponent({ collection, icon, query }: ResolvedIconPath, options: ResolvedOptions) {
+  let svg = await getIcon(collection, icon, query, options)
   if (!svg)
     throw new Error(`Icon \`${collection}:${icon}\` not found`)
 
   const { defaultStyle, defaultClass } = options
 
-  if (defaultClass)
+  if (defaultClass && !svg.includes(' class='))
     svg = svg.replace('<svg ', `<svg class="${defaultClass}" `)
-  if (defaultStyle)
+  if (defaultStyle && !svg.includes(' style='))
     svg = svg.replace('<svg ', `<svg style="${defaultStyle}" `)
 
   const _compiler = options.compiler

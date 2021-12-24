@@ -418,7 +418,9 @@ For Svelte + Vite, on `src/vite-env.d.ts` file:
 
 ## Custom Icons
 
-From v0.11, you can now load your own icons!
+From `v0.11`, you can now load your own icons!
+
+From `v0.12.24` you can also provide a transform callback to `FileSystemIconLoader`.
 
 ```ts
 import { promises as fs } from 'fs'
@@ -477,6 +479,80 @@ IconResolver({
 ```
 
 See the [Vue 3 + Vite example](./examples/vite-vue3/vite.config.ts).
+
+## Icon customizer
+
+From version `v0.12.24` you can also customize each icon using `iconCustomizer` configuration option or using query params when importing them.
+
+The `query` param will take precedence `iconCustomizer` and `iconCustomizer`  over `configuration`.
+
+The `iconCustomizer` and `query` params will be applied to any collection, that is, for each icon from `custom` loader, `inlined` on `customCollections` or from `@iconify`. 
+
+For example, you can configure `iconCustomizer` to change all icons for a collection or individual icons on a collection:
+```ts
+import { promises as fs } from 'fs'
+// loader helpers
+import { FileSystemIconLoader } from 'unplugin-icons/loaders' 
+
+Icons({ 
+  customCollections: {
+    // key as the collection name
+    'my-icons': {
+      'account': '<svg><!-- ... --></svg>',
+      // load your custom icon lazily
+      'settings': () => fs.readFile('./path/to/my-icon.svg', 'utf-8'),
+      /* ... */
+    },
+    'my-other-icons': async (iconName) => {
+      // your custom loader here. Do whatever you want.
+      // for example, fetch from a remote server: 
+      return await fetch(`https://example.com/icons/${iconName}.svg`).then(res => res.text())
+    },
+    // a helper to load icons from the file system
+    // files under `./assets/icons` with `.svg` extension will be loaded as it's file name
+    // you can also provide a transform callback to change each icon (optional)
+    'my-yet-other-icons': FileSystemIconLoader(
+      './assets/icons',
+      svg => svg.replace(/^<svg /, '<svg fill="currentColor" ')
+    ),
+  },
+  iconCustomizer(collection, icon, props) {
+    // customize all icons in this collection  
+    if (collection === 'my-other-icons') {
+        props.width = '4em'
+        props.height = '4em'
+    }  
+    // customize this icon in this collection  
+    if (collection === 'my-icons' && icon === 'account') {
+        props.width = '6em'
+        props.height = '6em'
+    }  
+    // customize this @iconify icon in this collection  
+    if (collection === 'mdi' && icon === 'account') {
+        props.width = '2em'
+        props.height = '2em'
+    }  
+  }
+})
+```
+
+or you can use `query` params to apply to individual icons:
+```vue
+<script setup lang='ts'>
+import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4em&height=4em'
+import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
+</script>
+<template>
+  <!-- width=4em and width=4em -->
+  <mdi-alarm-off />
+  <!-- width=4em and width=4em -->
+  <MdiAlarmOff />
+  <!-- width=1em and width=1em -->
+  <MdiAlarmOff2 />
+</template>
+```
+
+See `src/App.vue` component and `vite-config-ts` Vite configuration on `vite-vue3` example project.
 
 ## Migrate from `vite-plugin-icons`
 
