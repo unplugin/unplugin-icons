@@ -553,7 +553,7 @@ import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
 </template>
 ```
 
-See `src/App.vue` component and `vite-config-ts` Vite configuration on `vite-vue3` example project.
+See `src/App.vue` component and `vite.config.ts` configuration on `vite-vue3` example project.
 
 ## Migrate from `vite-plugin-icons`
 
