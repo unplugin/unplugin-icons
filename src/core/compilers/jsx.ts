@@ -3,7 +3,7 @@ import { camelize } from '../utils'
 import { Compiler } from './types'
 
 export const JSXCompiler = <Compiler>(async(svg, collection, icon, options) => {
-    const svgrCore = await importModule('@svgr/core')
+  const svgrCore = await importModule('@svgr/core')
   // check for v6 transform, v5 default and previous versions
   const svgr = svgrCore.transform || svgrCore.default || svgrCore
   let res = await svgr(svg, {}, { componentName: camelize(`${collection}-${icon}`) })
