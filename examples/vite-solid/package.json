@@ -10,12 +10,12 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@iconify-json/mdi": "^1.0.11",
+    "@iconify-json/mdi": "^1.0.12",
     "unplugin-icons": "workspace:*",
-    "vite": "^2.6.14",
-    "vite-plugin-solid": "^2.1.2"
+    "vite": "^2.7.6",
+    "vite-plugin-solid": "^2.1.4"
   },
   "dependencies": {
-    "solid-js": "^1.2.5"
+    "solid-js": "^1.2.6"
   }
 }
