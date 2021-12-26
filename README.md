@@ -420,7 +420,7 @@ For Svelte + Vite, on `src/vite-env.d.ts` file:
 
 From `v0.11`, you can now load your own icons!
 
-From `v0.12.24` you can also provide a transform callback to `FileSystemIconLoader`.
+From `v0.13` you can also provide a transform callback to `FileSystemIconLoader`.
 
 ```ts
 import { promises as fs } from 'fs'
@@ -482,7 +482,7 @@ See the [Vue 3 + Vite example](./examples/vite-vue3/vite.config.ts).
 
 ## Icon customizer
 
-From version `v0.12.24` you can also customize each icon using `iconCustomizer` configuration option or using query params when importing them.
+From `v0.13` you can also customize each icon using `iconCustomizer` configuration option or using query params when importing them.
 
 The `query` param will take precedence over `iconCustomizer` and `iconCustomizer`  over `configuration`.
 
@@ -544,11 +544,11 @@ import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4em&height=4em'
 import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
 </script>
 <template>
-  <!-- width=4em and width=4em -->
+  <!-- width=4em and height=4em -->
   <mdi-alarm-off />
-  <!-- width=4em and width=4em -->
+  <!-- width=4em and height=4em -->
   <MdiAlarmOff />
-  <!-- width=1em and width=1em -->
+  <!-- width=1em and height=1em -->
   <MdiAlarmOff2 />
 </template>
 ```
