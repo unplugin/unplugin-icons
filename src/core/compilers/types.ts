@@ -1,5 +1,5 @@
-import { Awaitable } from '@antfu/utils'
-import { ResolvedOptions } from '../../types'
+import type { Awaitable } from '@antfu/utils'
+import type { ResolvedOptions } from '../../types'
 
 export type Compiler = (
   svg: string,

@@ -1,12 +1,12 @@
 import { promises as fs } from 'fs'
-import { IconifyJSON } from '@iconify/types'
+import type { IconifyJSON } from '@iconify/types'
 import { iconToSVG } from '@iconify/utils/lib/svg/build'
 import { defaults as DefaultIconCustomizations } from '@iconify/utils/lib/customisations'
 import { getIconData } from '@iconify/utils/lib/icon-set/get-icon'
 import createDebugger from 'debug'
-import { FullIconifyIcon } from '@iconify/utils/lib/icon'
+import type { FullIconifyIcon } from '@iconify/utils/lib/icon'
 import { isPackageExists, resolveModule } from 'local-pkg'
-import { ResolvedOptions } from '../types'
+import type { ResolvedOptions } from '../types'
 import { mergeIconProps, tryInstallPkg } from './utils'
 
 const debug = createDebugger('unplugin-icons:icon')

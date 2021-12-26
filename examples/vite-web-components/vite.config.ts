@@ -1,4 +1,4 @@
-import { UserConfig } from 'vite'
+import type { UserConfig } from 'vite'
 import Icons from 'unplugin-icons/vite'
 
 const config: UserConfig = {

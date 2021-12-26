@@ -1,11 +1,12 @@
 import createDebugger from 'debug'
 import { isPackageExists } from 'local-pkg'
-import { ResolvedOptions } from '../types'
-import { loadCollection, ResolvedIconPath, searchForIcon } from './modern'
+import type { ResolvedOptions } from '../types'
+import type { ResolvedIconPath } from './modern'
+import { loadCollection, searchForIcon } from './modern'
 import { compilers } from './compilers'
 import { warnOnce } from './utils'
 import { getCustomIcon } from './custom'
-import { Compiler } from './compilers/types'
+import type { Compiler } from './compilers/types'
 
 export const debug = createDebugger('unplugin-icons:load')
 

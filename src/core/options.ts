@@ -1,6 +1,6 @@
-import { isPackageExists, getPackageInfo } from 'local-pkg'
+import { getPackageInfo, isPackageExists } from 'local-pkg'
 import createDebugger from 'debug'
-import { Options, ResolvedOptions } from '../types'
+import type { Options, ResolvedOptions } from '../types'
 
 const debug = createDebugger('unplugin-icons:options')
 

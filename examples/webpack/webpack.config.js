@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { resolve } = require('path')
-const { fileURLToPath } = require('url')
 const Icons = require('unplugin-icons/webpack')
 
 module.exports = {

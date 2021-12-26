@@ -1,6 +1,6 @@
 import { importModule } from 'local-pkg'
 import { handleSVGId } from '../svgId'
-import { Compiler } from './types'
+import type { Compiler } from './types'
 
 export const Vue3Compiler = <Compiler>(async(svg: string, collection: string, icon: string) => {
   const { compileTemplate } = await importModule('@vue/compiler-sfc')

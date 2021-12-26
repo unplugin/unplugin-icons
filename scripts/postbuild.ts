@@ -1,4 +1,4 @@
-import { resolve, basename } from 'path'
+import { basename, resolve } from 'path'
 import { promises as fs } from 'fs'
 import fg from 'fast-glob'
 

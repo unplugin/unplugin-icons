@@ -1,4 +1,4 @@
-import { Options } from './types'
+import type { Options } from './types'
 import unplugin from '.'
 
 export default function(this: any, options: Options) {

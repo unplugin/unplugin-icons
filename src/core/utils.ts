@@ -1,5 +1,6 @@
 import { installPackage } from '@antfu/install-pkg'
-import { Awaitable, sleep } from '@antfu/utils'
+import type { Awaitable } from '@antfu/utils'
+import { sleep } from '@antfu/utils'
 import { cyan, yellow } from 'kolorist'
 import type { ResolvedOptions } from '../types'
 

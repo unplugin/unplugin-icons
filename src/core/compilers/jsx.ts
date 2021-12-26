@@ -1,6 +1,6 @@
 import { importModule } from 'local-pkg'
 import { camelize } from '../utils'
-import { Compiler } from './types'
+import type { Compiler } from './types'
 
 export const JSXCompiler = <Compiler>(async(svg, collection, icon, options) => {
   const svgrCore = await importModule('@svgr/core')

@@ -1,5 +1,5 @@
 import { camelize } from '../utils'
-import { Compiler } from './types'
+import type { Compiler } from './types'
 
 export const WebComponentsCompiler = <Compiler>((svg, collection, icon, { webComponents: options }) => {
   let id = `${collection}-${icon}`

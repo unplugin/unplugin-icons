@@ -1,5 +1,5 @@
 import createDebugger from 'debug'
-import { CustomIconLoader, InlineCollection, ResolvedOptions } from '../types'
+import type { CustomIconLoader, InlineCollection, ResolvedOptions } from '../types'
 import { mergeIconProps } from './utils'
 
 const debug = createDebugger('unplugin-icons:custom')

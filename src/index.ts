@@ -1,7 +1,7 @@
 import { createUnplugin } from 'unplugin'
 import { resolveOptions } from './core/options'
 import { generateComponentFromPath, isIconPath, normalizeIconPath } from './core/loader'
-import { Options } from './types'
+import type { Options } from './types'
 
 const unplugin = createUnplugin<Options>((options = {}) => {
   const resolved = resolveOptions(options)

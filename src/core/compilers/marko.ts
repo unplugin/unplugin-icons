@@ -1,4 +1,4 @@
-import { Compiler } from './types'
+import type { Compiler } from './types'
 
 export const MarkoCompiler = <Compiler>((svg: string) => {
   const openTagEnd = svg.indexOf('>', svg.indexOf('<svg '))

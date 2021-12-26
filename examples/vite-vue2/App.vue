@@ -5,7 +5,7 @@
     <p>
       Icons
       <i-carbon-app-connectivity />
-      <i-mdi-account class="inject"/>
+      <i-mdi-account class="inject" />
       <mdi-alarm-off />
       <i-fa-solid-dice-five />
       <i-heroicons-outline-menu-alt-2 />
