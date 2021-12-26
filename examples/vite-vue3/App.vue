@@ -19,6 +19,7 @@
       <IIcTwotone23mp />
       <MdiStore24Hour />
       <MdiAlarmOff />
+      <MdiAlarmOff2 />
       <br>
     </p>
     <h2>Custom Icons</h2>
@@ -39,5 +40,6 @@
 
 <script setup lang='ts'>
 import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
-import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
+import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4em&height=4em'
+import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
 </script>

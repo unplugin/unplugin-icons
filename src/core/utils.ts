@@ -1,6 +1,7 @@
 import { installPackage } from '@antfu/install-pkg'
-import { sleep } from '@antfu/utils'
+import { Awaitable, sleep } from '@antfu/utils'
 import { cyan, yellow } from 'kolorist'
+import type { ResolvedOptions } from '../types'
 
 export function camelize(str: string) {
   return str.replace(/-([a-z0-9])/g, g => g[1].toUpperCase())
@@ -26,6 +27,27 @@ export function warnOnce(msg: string) {
     warnned.add(msg)
     console.warn(yellow(`[unplugin-icons] ${msg}`))
   }
+}
+
+export async function mergeIconProps(
+  svg: string,
+  collection: string,
+  icon: string,
+  query: Record<string, string | undefined>,
+  propsProvider?: () => Awaitable<Record<string, string>>,
+  options?: ResolvedOptions,
+): Promise<string> {
+  const props: Record<string, string> = await propsProvider?.() ?? {
+    height: `${options?.scale ?? 1}em`,
+    width: `${options?.scale ?? 1}em`,
+  }
+  await options?.iconCustomizer?.(collection, icon, props)
+  Object.keys(query).forEach((p) => {
+    const v = query[p]
+    if (v !== undefined && v !== null)
+      props[p] = v
+  })
+  return svg.replace('<svg', `<svg ${Object.keys(props).map(p => `${p}="${props[p]}"`).join(' ')}`)
 }
 
 let pending: Promise<void> | undefined

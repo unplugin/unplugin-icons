@@ -18,6 +18,13 @@ const config: UserConfig = {
           async: () => fs.readFile('assets/giftbox.svg', 'utf-8'),
         },
       },
+      iconCustomizer(collection, icon, props) {
+        const name = `${collection}:${icon}`
+        if (name === 'inline:async' || name === 'carbon:app-connectivity' || name === 'custom:car-a') {
+          props.width = '4em'
+          props.height = '4em'
+        }
+      },
     }),
     Components({
       dts: true,

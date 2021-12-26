@@ -1,5 +1,6 @@
 import createDebugger from 'debug'
 import { CustomIconLoader, InlineCollection, ResolvedOptions } from '../types'
+import { mergeIconProps } from './utils'
 
 const debug = createDebugger('unplugin-icons:custom')
 
@@ -7,6 +8,7 @@ export async function getCustomIcon(
   custom: CustomIconLoader | InlineCollection,
   collection: string,
   icon: string,
+  query: Record<string, string | undefined>,
   options?: ResolvedOptions) {
   let result: string | undefined | null
 
@@ -22,11 +24,11 @@ export async function getCustomIcon(
       : inline
   }
 
-  const scale = options?.scale || 1
-
   if (result) {
-    if (!result.startsWith('<svg '))
+    if (!result.startsWith('<svg ')) {
       console.warn(`Custom icon "${icon}" in "${collection}" is not a valid SVG`)
-    return result.replace('<svg ', `<svg height="${scale}em" width="${scale}em" `)
+      return result
+    }
+    return await mergeIconProps(result, collection, icon, query, undefined, options)
   }
 }

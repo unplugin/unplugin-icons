@@ -2,6 +2,7 @@ import type { Awaitable } from '@antfu/utils'
 import type { CustomCompiler } from './core/compilers/types'
 
 export type CustomIconLoader = (name: string) => Awaitable<string | undefined>
+export type IconCustomizer = (collection: string, icon: string, props: Record<string, string>) => Awaitable<void>
 export type InlineCollection = Record<string, string | (() => Awaitable<string | undefined>)>
 export type { CustomCompiler }
 
@@ -31,6 +32,11 @@ export interface Options {
    * Loader for custom loaders
    */
   customCollections?: Record<string, CustomIconLoader | InlineCollection>
+
+  /**
+   * Icon customizer
+   */
+  iconCustomizer?: IconCustomizer
 
   /**
    * Auto install icon sources package when the usages is detected

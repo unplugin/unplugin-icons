@@ -7,7 +7,7 @@ import createDebugger from 'debug'
 import { FullIconifyIcon } from '@iconify/utils/lib/icon'
 import { isPackageExists, resolveModule } from 'local-pkg'
 import { ResolvedOptions } from '../types'
-import { tryInstallPkg } from './utils'
+import { mergeIconProps, tryInstallPkg } from './utils'
 
 const debug = createDebugger('unplugin-icons:icon')
 const debugModern = createDebugger('unplugin-icons:modern')
@@ -54,7 +54,7 @@ export async function loadCollection(name: string, autoInstall = false) {
   }
 }
 
-export function searchForIcon(iconSet: IconifyJSON, collection: string, ids: string[], options?: ResolvedOptions) {
+export async function searchForIcon(iconSet: IconifyJSON, collection: string, ids: string[], query: Record<string, string | undefined>, options?: ResolvedOptions) {
   let iconData: FullIconifyIcon | null
   for (const id of ids) {
     iconData = getIconData(iconSet, id, true)
@@ -66,7 +66,14 @@ export function searchForIcon(iconSet: IconifyJSON, collection: string, ids: str
         height: `${scale}em`,
         width: `${scale}em`,
       })
-      return `<svg ${Object.entries(attributes).map(i => `${i[0]}="${i[1]}"`).join(' ')}>${body}</svg>`
+      return await mergeIconProps(
+        `<svg>${body}</svg>`,
+        collection,
+        id,
+        query,
+        () => attributes,
+        options,
+      )
     }
   }
   return null
