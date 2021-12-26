@@ -1,9 +1,3 @@
 {
-  "extends": "@antfu",
-  "env": {
-    "jest": true
-  },
-  "plugins": [
-    "jest"
-  ]
+  "extends": "@antfu"
 }

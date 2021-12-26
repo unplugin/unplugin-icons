@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import { handleSVGId } from '../src/core/svgId'
 
 const fixture = `

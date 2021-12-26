@@ -86,7 +86,7 @@
     "lint": "eslint --ext .ts,.js,.vue .",
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --commit --tag --push && npm publish",
-    "test": "jest"
+    "test": "vitest"
   },
   "dependencies": {
     "@antfu/install-pkg": "^0.1.0",
@@ -103,21 +103,18 @@
     "@iconify/types": "^1.0.12",
     "@svgr/core": "^6.1.2",
     "@types/debug": "^4.1.7",
-    "@types/jest": "^27.0.3",
     "@types/node": "^17.0.4",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@vue/compiler-sfc": "^3.2.26",
     "bumpp": "^7.1.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.5.0",
-    "eslint-plugin-jest": "^25.3.0",
     "esno": "^0.13.0",
-    "jest": "^27.4.5",
     "rollup": "^2.62.0",
-    "ts-jest": "^27.1.2",
     "tsup": "^5.11.9",
     "typescript": "^4.5.4",
-    "vite": "^2.7.6"
+    "vite": "^2.7.6",
+    "vitest": "^0.0.113"
   },
   "peerDependencies": {
     "@svgr/core": "^5.5.0",

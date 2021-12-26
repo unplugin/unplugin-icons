@@ -1,7 +1,7 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
 exports[`handleSVGId 1`] = `
-Object {
+{
   "hasID": true,
   "injectScripts": "const __randId = () => Math.random().toString(36).substr(2, 10);const idMap = {'ssvg-id-vitejsa':'uicons-'+__randId(),'ssvg-id-vitejsb':'uicons-'+__randId()};",
   "svg": "
