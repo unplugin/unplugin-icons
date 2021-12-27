@@ -271,7 +271,10 @@ module.exports = {
   },
 };
 ```
-⚠️ **Important:** To import an icon is necessary to explicitly add the `.jsx` to the import path, so that webpack knows how to load it, by example:
+
+Check instructions in the `Frameworks -> React` section below if you faced module import errors.
+
+⚠️ **Extra:** To import an icon is necessary to explicitly add the `.jsx` to the import path, so that Next.js knows how to load it, by example:
 
 ```ts
 import IconArrowRight from '~icons/dashicons/arrow-right.jsx';
