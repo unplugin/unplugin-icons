@@ -274,7 +274,7 @@ module.exports = {
 
 Check instructions in the `Frameworks -> React` section below if you faced module import errors.
 
-⚠️ **Extra:** To import an icon is necessary to explicitly add the `.jsx` to the import path, so that Next.js knows how to load it, by example:
+⚠️ **Warning:** to import an icon is necessary to explicitly add the `.jsx` extension to the import path, so that Next.js knows how to load it, by example:
 
 ```ts
 import IconArrowRight from '~icons/dashicons/arrow-right.jsx';
