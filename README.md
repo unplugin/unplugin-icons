@@ -250,6 +250,41 @@ Check instructions in the `Frameworks -> Svelte` section below if you faced modu
 
 <br></details>
 
+<details>
+<summary>Next.js</summary><br>
+
+The `unplugin-icons` plugin should be configured on `next.config.js` configuration file:
+
+```js
+/** @type {import('next').NextConfig} */
+module.exports = {
+  reactStrictMode: true,
+  webpack(config) {
+    config.plugins.push(
+      require('unplugin-icons/webpack')({
+        compiler: 'jsx',
+        jsx: 'react',
+      }),
+    );
+
+    return config;
+  },
+};
+```
+⚠️ **Important:** To import an icon is necessary to explicitly add the `.jsx` to the import path, so that webpack knows how to load it, by example:
+
+```ts
+import IconArrowRight from '~icons/dashicons/arrow-right.jsx';
+                                                     // ^-- write `.jsx` to avoid
+                                                     // https://github.com/antfu/unplugin-icons/issues/103
+// ...some code later
+<IconArrowRight />
+```
+
+See inside of `examples/next` for a working example project.
+
+<br></details>
+
 ###### Frameworks
 
 
