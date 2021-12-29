@@ -461,7 +461,7 @@ import IconBar from '~icons/my-yet-other-icons/bar'
 ```
 
 > 💡 SVG Authoring Tips:
-> - To make your icons color adaptable, set `fill="currentColor"` for `stroke="currentColor"` in your SVG.
+> - To make your icons color adaptable, set `fill="currentColor"` or `stroke="currentColor"` in your SVG.
 > - Leave the `height` and `width` unspecified, we will set them for you.
 
 ### Use with Resolver
