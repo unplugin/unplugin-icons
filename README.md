@@ -580,7 +580,7 @@ export default {
   plugins: [
     Vue(),
     Components({
-      resolvers: IconsResolver(),
+      resolvers: [IconsResolver({ componentPrefix: '' })],
     }),
     Icons(),
   ],
