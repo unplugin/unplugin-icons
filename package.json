@@ -83,7 +83,7 @@
     "dev": "tsup --watch src",
     "example:build": "npm -C examples/vite-vue3 run build",
     "example:dev": "npm -C examples/vite-vue3 run dev",
-    "lint": "eslint --ext .ts,.js,.vue .",
+    "lint": "eslint --ext .ts,.js,.vue . --fix",
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --commit --tag --push && npm publish",
     "test": "vitest"
