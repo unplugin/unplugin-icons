@@ -117,7 +117,7 @@
     "vitest": "^0.2.7"
   },
   "peerDependencies": {
-    "@svgr/core": ">=^5.5.0",
+    "@svgr/core": ">=5.5.0",
     "@vue/compiler-sfc": "^3.0.2",
     "vue-template-compiler": "^2.6.12",
     "vue-template-es2015-compiler": "^1.9.0"
