@@ -466,12 +466,16 @@ For example, using `vue3`:
   import RawMdiAlarmOff2 from '~icons/mdi/alarm-off?raw&width=1em&height=1em'
 </script>
 <template>
+  <!-- raw example -->
   <pre>
     import RawMdiAlarmOff from '~icons/mdi/alarm-off?raw&width=4em&height=4em'
     {{ RawMdiAlarmOff }}
     import RawMdiAlarmOff2 from '~icons/mdi/alarm-off?raw&width=1em&height=1em'
     {{ RawMdiAlarmOff2 }}
   </pre>
+  <!-- svg example -->
+  <span v-html="RawMdiAlarmOff"></span>
+  <span v-html="RawMdiAlarmOff2"></span>
 </template>
 ```
 
