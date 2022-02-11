@@ -33,7 +33,11 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
     const queryRaw = path.slice(queryIndex + 1)
     path = path.slice(0, queryIndex)
     new URLSearchParams(queryRaw).forEach((value, key) => {
-      query[key] = value
+      // configure raw compiler for empty and true values only
+      if (key === 'raw')
+        query.raw = value === '' || value === 'true' ? 'true' : 'false'
+      else
+        query[key] = value
     })
   }
 
@@ -95,7 +99,8 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
   if (defaultStyle && !svg.includes(' style='))
     svg = svg.replace('<svg ', `<svg style="${defaultStyle}" `)
 
-  const _compiler = options.compiler
+  // accept raw compiler from query params
+  const _compiler = query.raw === 'true' ? 'raw' : options.compiler
 
   if (_compiler) {
     const compiler = typeof _compiler === 'string'

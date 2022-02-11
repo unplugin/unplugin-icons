@@ -1,6 +1,6 @@
 import { createUnplugin } from 'unplugin'
 import { resolveOptions } from './core/options'
-import { generateComponentFromPath, isIconPath, normalizeIconPath } from './core/loader'
+import { generateComponentFromPath, isIconPath, normalizeIconPath, resolveIconsPath } from './core/loader'
 import type { Options } from './types'
 
 const unplugin = createUnplugin<Options>((options = {}) => {
@@ -14,7 +14,9 @@ const unplugin = createUnplugin<Options>((options = {}) => {
         const res = normalizeIconPath(id)
           .replace(/\.\w+$/i, '')
           .replace(/^\//, '')
-        const compiler = options.compiler
+        const resolved = resolveIconsPath(res)
+        // accept raw compiler from query params
+        const compiler = resolved?.query?.raw === 'true' ? 'raw' : options.compiler
         if (compiler && typeof compiler !== 'string') {
           const ext = compiler.extension
           if (ext)

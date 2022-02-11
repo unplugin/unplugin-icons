@@ -34,6 +34,13 @@
       <i-park-abnormal />
       <i-icon-park-abnormal />
     </p>
+    <h2>Raw Icons from <strong>raw</strong> query param</h2>
+    <pre>
+      import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'
+      {{ RawMdiAlarmOff }}
+      import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
+      {{ RawMdiAlarmOff2 }}
+    </pre>
     from <code>unplugin-icons</code>
   </div>
 </template>
@@ -42,4 +49,12 @@
 import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
 import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4em&height=4em'
 import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
+import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'
+import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
 </script>
+
+<style scoped>
+pre {
+  overflow-x: auto;
+}
+</style>

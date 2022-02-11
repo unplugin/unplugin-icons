@@ -454,6 +454,27 @@ For Svelte + Vite, on `src/vite-env.d.ts` file:
 
 <br></details>
 
+## Use RAW compiler from query params
+
+From `v0.13.2` you can also use `raw` compiler to access the `svg` icon and use it on your html templates, just add `raw` to the icon query param.
+
+For example, using `vue3`:
+
+```vue
+<script setup lang='ts'>
+  import RawMdiAlarmOff from '~icons/mdi/alarm-off?raw&width=4em&height=4em'
+  import RawMdiAlarmOff2 from '~icons/mdi/alarm-off?raw&width=1em&height=1em'
+</script>
+<template>
+  <pre>
+    import RawMdiAlarmOff from '~icons/mdi/alarm-off?raw&width=4em&height=4em'
+    {{ RawMdiAlarmOff }}
+    import RawMdiAlarmOff2 from '~icons/mdi/alarm-off?raw&width=1em&height=1em'
+    {{ RawMdiAlarmOff2 }}
+  </pre>
+</template>
+```
+
 ## Custom Icons
 
 From `v0.11`, you can now load your own icons!
