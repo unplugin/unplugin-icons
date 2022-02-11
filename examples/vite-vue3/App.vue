@@ -38,9 +38,14 @@
     <pre>
       import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'
       {{ RawMdiAlarmOff }}
+    </pre>
+    <span v-html="RawMdiAlarmOff"></span>
+    <pre>
       import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
       {{ RawMdiAlarmOff2 }}
     </pre>
+    <span v-html="RawMdiAlarmOff2"></span>
+    <br/>
     from <code>unplugin-icons</code>
   </div>
 </template>
