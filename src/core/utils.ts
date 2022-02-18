@@ -21,6 +21,11 @@ export function camelToKebab(key: string) {
   return result.split(/\s+/g).join('-').toLowerCase()
 }
 
+export function snakelize(str: string) {
+  const kebab = camelToKebab(str)
+  return kebab.replace(/-/g, '_')
+}
+
 const warnned = new Set<string>()
 
 export function warnOnce(msg: string) {
