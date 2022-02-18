@@ -1,6 +1,6 @@
 import { existsSync, promises as fs } from 'fs'
 import type { Awaitable } from '@antfu/utils'
-import { camelize, pascalize, snakelize } from "./core/utils"
+import { camelize, pascalize, snakelize } from './core/utils'
 import type { CustomIconLoader } from '.'
 
 export function FileSystemIconLoader(dir: string, transform?: (svg: string) => Awaitable<string>): CustomIconLoader {
