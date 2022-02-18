@@ -50,7 +50,8 @@ export async function mergeIconProps(
   await options?.iconCustomizer?.(collection, icon, props)
   Object.keys(query).forEach((p) => {
     const v = query[p]
-    if (v !== undefined && v !== null)
+    // exclude raw compiler entry to be serialized as svg attr
+    if (p !== 'raw' && v !== undefined && v !== null)
       props[p] = v
   })
   return svg.replace('<svg', `<svg ${Object.keys(props).map(p => `${p}="${props[p]}"`).join(' ')}`)
