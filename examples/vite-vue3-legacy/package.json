@@ -8,12 +8,12 @@
     "vue": "^3.2.26"
   },
   "devDependencies": {
-    "@iconify/json": "^2.0.34",
-    "@vitejs/plugin-vue": "^2.1.0",
-    "@vue/compiler-sfc": "^3.2.30",
+    "@iconify/json": "^2.1.2",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "@vue/compiler-sfc": "^3.2.31",
     "typescript": "^4.5.5",
     "unplugin-icons": "workspace:*",
     "unplugin-vue-components": "^0.17.18",
-    "vite": "^2.7.13"
+    "vite": "^2.8.4"
   }
 }

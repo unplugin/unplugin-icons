@@ -8,23 +8,23 @@
     "vue": "^3.2.26"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.0.14",
-    "@iconify-json/fa-solid": "^1.0.3",
-    "@iconify-json/heroicons-outline": "^1.0.2",
-    "@iconify-json/ic": "^1.0.8",
-    "@iconify-json/icon-park": "^1.0.2",
-    "@iconify-json/logos": "^1.0.4",
-    "@iconify-json/mdi": "^1.0.16",
-    "@iconify-json/mdi-light": "^1.0.1",
-    "@iconify-json/noto-v1": "^1.0.1",
-    "@iconify-json/ri": "^1.0.2",
-    "@iconify-json/twemoji": "^1.0.2",
-    "@vitejs/plugin-vue": "^2.1.0",
-    "@vue/compiler-sfc": "^3.2.30",
+    "@iconify-json/carbon": "^1.1.1",
+    "@iconify-json/fa-solid": "^1.1.0",
+    "@iconify-json/heroicons-outline": "^1.1.0",
+    "@iconify-json/ic": "^1.1.0",
+    "@iconify-json/icon-park": "^1.1.0",
+    "@iconify-json/logos": "^1.1.0",
+    "@iconify-json/mdi": "^1.1.0",
+    "@iconify-json/mdi-light": "^1.1.0",
+    "@iconify-json/noto-v1": "^1.1.0",
+    "@iconify-json/ri": "^1.1.0",
+    "@iconify-json/twemoji": "^1.1.0",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "@vue/compiler-sfc": "^3.2.31",
     "typescript": "^4.5.5",
     "unconfig": "^0.3.1",
     "unplugin-icons": "workspace:*",
     "unplugin-vue-components": "^0.17.18",
-    "vite": "^2.7.13"
+    "vite": "^2.8.4"
   }
 }
