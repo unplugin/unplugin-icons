@@ -3,5 +3,6 @@ declare module 'virtual:icons/*' {
 }
 
 declare module '~icons/*' {
-  export { SvelteComponentDev as default } from 'svelte/internal'
+  import { SvelteComponentTyped } from 'svelte'
+  export default class extends SvelteComponentTyped<svelte.JSX.IntrinsicElements['svg']> {}
 }
