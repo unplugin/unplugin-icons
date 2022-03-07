@@ -288,6 +288,26 @@ See inside of `examples/next` for a working example project.
 
 <br></details>
 
+
+<details>
+<summary>esbuild</summary><br>
+
+```ts
+// esbuild.config.js
+import { build } from 'esbuild'
+
+build({
+  /* ... */
+  plugins: [
+    require('unplugin-icons/esbuild')({
+      /* options */
+    }),
+  ],
+})
+```
+
+<br></details>
+
 ###### Frameworks
 
 
