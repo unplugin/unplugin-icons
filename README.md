@@ -86,7 +86,7 @@ npm i -D @iconify/json
 ###### Install by Icon Set
 
 If you only want to use a few of the icon sets and don't want to download the entire collection, you can also install them individually with `@iconify-json/[collection-id]`.
-For example, to install [Material Design Icons](), you can do:
+For example, to install [Material Design Icons](https://icon-sets.iconify.design/mdi/), you can do:
 
 ```bash
 npm i -D @iconify-json/mdi
