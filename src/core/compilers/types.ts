@@ -8,7 +8,7 @@ export type Compiler = (
   options: ResolvedOptions
 ) => string | Promise<string>
 
-export type CustomCompiler = {
+export interface CustomCompiler {
   compiler: Awaitable<Compiler>
   extension?: string
 }

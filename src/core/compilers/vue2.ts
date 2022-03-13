@@ -8,6 +8,7 @@ export const Vue2Compiler = <Compiler>(async(
   icon: string,
 ) => {
   const { compile } = await importModule('vue-template-compiler')
+  // eslint-disable-next-line @typescript-eslint/prefer-ts-expect-error
   // @ts-ignore @ts-expect-error
   const transpile = (await importModule('vue-template-es2015-compiler'))
     .default

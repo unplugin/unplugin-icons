@@ -4,13 +4,16 @@
   "description": "Access thousands of icons as components on-demand universally",
   "homepage": "https://github.com/antfu/unplugin-icons",
   "bugs": "https://github.com/antfu/unplugin-icons/issues",
+  "license": "MIT",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/antfu/unplugin-icons"
   },
   "funding": "https://github.com/sponsors/antfu",
-  "license": "MIT",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/index.js",
@@ -74,9 +77,6 @@
       "import": "./dist/webpack.mjs"
     }
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "index.d.ts",
   "files": [
     "dist",
     "types",
@@ -87,10 +87,30 @@
     "dev": "tsup --watch src",
     "example:build": "npm -C examples/vite-vue3 run build",
     "example:dev": "npm -C examples/vite-vue3 run dev",
-    "lint": "eslint --ext .ts,.js,.vue .",
+    "lint": "eslint .",
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --commit --tag --push && npm publish",
     "test": "vitest"
+  },
+  "peerDependencies": {
+    "@svgr/core": ">=5.5.0",
+    "@vue/compiler-sfc": "^3.0.2",
+    "vue-template-compiler": "^2.6.12",
+    "vue-template-es2015-compiler": "^1.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@svgr/core": {
+      "optional": true
+    },
+    "@vue/compiler-sfc": {
+      "optional": true
+    },
+    "vue-template-compiler": {
+      "optional": true
+    },
+    "vue-template-es2015-compiler": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@antfu/install-pkg": "^0.1.0",
@@ -119,25 +139,5 @@
     "typescript": "^4.6.2",
     "vite": "^2.8.6",
     "vitest": "^0.6.0"
-  },
-  "peerDependencies": {
-    "@svgr/core": ">=5.5.0",
-    "@vue/compiler-sfc": "^3.0.2",
-    "vue-template-compiler": "^2.6.12",
-    "vue-template-es2015-compiler": "^1.9.0"
-  },
-  "peerDependenciesMeta": {
-    "@svgr/core": {
-      "optional": true
-    },
-    "@vue/compiler-sfc": {
-      "optional": true
-    },
-    "vue-template-compiler": {
-      "optional": true
-    },
-    "vue-template-es2015-compiler": {
-      "optional": true
-    }
   }
 }
