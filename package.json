@@ -99,26 +99,26 @@
     "debug": "^4.3.3",
     "kolorist": "^1.5.1",
     "local-pkg": "^0.4.1",
-    "unplugin": "^0.3.3"
+    "unplugin": "^0.4.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.16.1",
-    "@iconify/json": "^2.1.12",
+    "@antfu/eslint-config": "^0.18.8",
+    "@iconify/json": "^2.1.14",
     "@iconify/types": "^1.0.12",
     "@svgr/core": "^6.2.1",
     "@types/debug": "^4.1.7",
     "@types/node": "^17.0.21",
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@vue/compiler-sfc": "^3.2.31",
     "bumpp": "^7.1.1",
     "cross-env": "^7.0.3",
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
     "esno": "^0.14.1",
     "rollup": "^2.70.0",
-    "tsup": "^5.11.13",
+    "tsup": "^5.12.1",
     "typescript": "^4.6.2",
     "vite": "^2.8.6",
-    "vitest": "^0.5.9"
+    "vitest": "^0.6.0"
   },
   "peerDependencies": {
     "@svgr/core": ">=5.5.0",
