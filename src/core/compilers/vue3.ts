@@ -13,7 +13,7 @@ export const Vue3Compiler = <Compiler>(async(svg: string, collection: string, ic
     filename: `${collection}-${icon}.vue`,
   })
 
-  code = code.replace(/^export /g, '')
+  code = code.replace(/^export /gm, '')
   code += `\n\nexport default { name: '${collection}-${icon}', render${injectScripts ? `, data() {${injectScripts};return { idMap }}` : ''} }`
   code += '\n/* vite-plugin-components disabled */'
 
