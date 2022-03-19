@@ -1,17 +1,17 @@
-import createDebugger from 'debug'
-import { isPackageExists } from 'local-pkg'
+import type { IconifyLoaderOptions } from '@iconify/utils'
+import { loadNodeIcon } from '@iconify/utils/lib/loader/node-loader'
 import type { ResolvedOptions } from '../types'
-import type { ResolvedIconPath } from './modern'
-import { loadCollection, searchForIcon } from './modern'
 import { compilers } from './compilers'
-import { warnOnce } from './utils'
-import { getCustomIcon } from './custom'
 import type { Compiler } from './compilers/types'
-
-export const debug = createDebugger('unplugin-icons:load')
 
 const URL_PREFIXES = ['/~icons/', '~icons/', 'virtual:icons/', 'virtual/icons/']
 const iconPathRE = new RegExp(`${URL_PREFIXES.map(v => `^${v}`).join('|')}`)
+
+export interface ResolvedIconPath {
+  collection: string
+  icon: string
+  query: Record<string, string | undefined>
+}
 
 export function isIconPath(path: string) {
   return iconPathRE.test(path)
@@ -53,51 +53,39 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
   }
 }
 
-export async function getIcon(collection: string, icon: string, query: Record<string, string | undefined>, options: ResolvedOptions) {
-  const custom = options.customCollections[collection]
-
-  if (custom) {
-    const result = await getCustomIcon(custom, collection, icon, query, options)
-    if (result)
-      return result
-  }
-
-  return await getBuiltinIcon(collection, icon, query, options)
-}
-
-const legacyExists = isPackageExists('@iconify/json')
-
-export async function getBuiltinIcon(collection: string, icon: string, query: Record<string, string | undefined>, options?: ResolvedOptions, warn = true): Promise<string | null> {
-  // possible icon names
-  const ids = [
-    icon,
-    icon.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase(),
-    icon.replace(/([a-z])(\d+)/g, '$1-$2'),
-  ]
-
-  const iconSet = await loadCollection(collection, options?.autoInstall && !legacyExists)
-  if (iconSet)
-    return await searchForIcon(iconSet, collection, ids, query, options)
-
-  if (warn)
-    warnOnce(`failed to load \`@iconify-json/${collection}\`, have you installed it?`)
-
-  return null
-}
-
 export async function generateComponent({ collection, icon, query }: ResolvedIconPath, options: ResolvedOptions) {
-  let svg = await getIcon(collection, icon, query, options)
+  const warn = `${collection}/${icon}`
+  const {
+    scale,
+    defaultStyle,
+    defaultClass,
+    customCollections,
+    iconCustomizer: providedIconCustomizer,
+    autoInstall = false,
+  } = options
+  const iconifyLoaderOptions: IconifyLoaderOptions = {
+    addXmlNs: false,
+    scale,
+    customCollections,
+    autoInstall,
+    defaultClass,
+    defaultStyle,
+    warn,
+    customizations: {
+      async iconCustomizer(collection, icon, props) {
+        await providedIconCustomizer?.(collection, icon, props)
+        Object.keys(query).forEach((p) => {
+          const v = query[p]
+          // exclude raw compiler entry to be serialized as svg attr
+          if (p !== 'raw' && v !== undefined && v !== null)
+            props[p] = v
+        })
+      },
+    },
+  }
+  const svg = await loadNodeIcon(collection, icon, iconifyLoaderOptions)
   if (!svg)
-    throw new Error(`Icon \`${collection}:${icon}\` not found`)
-
-  const { defaultStyle, defaultClass } = options
-
-  // query params and iconCustomizer takes precedence
-  if (defaultClass && !svg.includes(' class='))
-    svg = svg.replace('<svg ', `<svg class="${defaultClass}" `)
-  // query params and iconCustomizer takes precedence
-  if (defaultStyle && !svg.includes(' style='))
-    svg = svg.replace('<svg ', `<svg style="${defaultStyle}" `)
+    throw new Error(`Icon \`${warn}\` not found`)
 
   // accept raw compiler from query params
   const _compiler = query.raw === 'true' ? 'raw' : options.compiler
