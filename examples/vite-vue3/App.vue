@@ -1,12 +1,10 @@
 <template>
   <div class="markdown-body" style="padding: 2em 3em">
     <i-logos-vue style="font-size:2em" />
-    <br>
+    <br />
     <h2>Icons</h2>
     <p>
-      <i-carbon-app-connectivity />
       <i-mdi-account />
-      <mdi-alarm-off />
       <i-fa-solid-dice-five />
       <i-heroicons-outline-menu-alt-2 />
       <i-ri-apps-2-line />
@@ -18,35 +16,47 @@
       <i-twemoji-1st-place-medal />
       <IIcTwotone23mp />
       <MdiStore24Hour />
+      <br />
+    </p>
+    <h2>Customizer via Config</h2>
+    <p>
+      <i-carbon-app-connectivity />
+      <i-custom-car-a />
+    </p>
+    <h2>Custom Props via Query</h2>
+    <p>
       <MdiAlarmOff />
       <MdiAlarmOff2 />
-      <br>
     </p>
     <h2>Custom Icons</h2>
     <p>
       <i-custom-steering-wheel style="color:rgb(32, 115, 129)" />
-      <i-custom-car-a />
       <i-inline-foo />
       <i-inline-async />
+      <i-custom-car-a />
     </p>
     <h2>Collection alias</h2>
     <p>
       <i-park-abnormal />
       <i-icon-park-abnormal />
     </p>
-    <h2>Raw Icons from <strong>raw</strong> query param</h2>
-    <pre>
-      import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'
-      {{ RawMdiAlarmOff }}
-    </pre>
-    <span v-html="RawMdiAlarmOff"></span>
-    <pre>
-      import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
-      {{ RawMdiAlarmOff2 }}
-    </pre>
-    <span v-html="RawMdiAlarmOff2"></span>
-    <br/>
-    from <code>unplugin-icons</code>
+    <h2>
+      Raw Icons from
+      <strong>raw</strong> query param
+    </h2>
+    <div style="display: grid; grid-template-columns: 100px 1fr; align-items: center;">
+      <span v-html="RawMdiAlarmOff"></span>
+      <div>
+        <code style="opacity:0.5">import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'</code>
+        <pre>{{ RawMdiAlarmOff }}</pre>
+      </div>
+      <span v-html="RawMdiAlarmOff2"></span>
+      <div>
+        <code style="opacity:0.5">import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'</code>
+        <pre>{{ RawMdiAlarmOff2 }}</pre>
+      </div>
+    </div>
+    <br />
   </div>
 </template>
 
