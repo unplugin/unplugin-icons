@@ -2,7 +2,7 @@ import type { Component } from 'solid-js'
 
 import logo from './logo.svg'
 import styles from './App.module.css'
-import Icon from '~icons/mdi/alpha-s-circle'
+import Icon from '~icons/logos/solidjs-icon'
 
 const App: Component = () => {
   return (

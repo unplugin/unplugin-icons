@@ -1,6 +1,6 @@
 import { toArray, uniq } from '@antfu/utils'
+import { camelToKebab } from '@iconify/utils/lib/misc/strings'
 import { collections as allCollections } from './core/collections'
-import { camelToKebab } from './core/utils'
 
 export interface ComponentResolverOption {
   /**
