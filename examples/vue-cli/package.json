@@ -20,6 +20,6 @@
     "unplugin-icons": "workspace:*",
     "unplugin-vue2-script-setup": "^0.10.0",
     "vue-template-compiler": "^2.6.14",
-    "vue-tsc": "^0.32.1"
+    "vue-tsc": "^0.33.2"
   }
 }

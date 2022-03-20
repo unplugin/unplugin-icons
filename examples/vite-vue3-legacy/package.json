@@ -13,7 +13,7 @@
     "@vue/compiler-sfc": "^3.2.31",
     "typescript": "^4.6.2",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^0.17.21",
+    "unplugin-vue-components": "^0.18.3",
     "vite": "^2.8.6"
   }
 }
