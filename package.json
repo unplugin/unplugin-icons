@@ -13,36 +13,43 @@
   "funding": "https://github.com/sponsors/antfu",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     },
     "./*": "./*",
     "./esbuild": {
       "require": "./dist/esbuild.js",
-      "import": "./dist/esbuild.mjs"
+      "import": "./dist/esbuild.mjs",
+      "types": "./dist/esbuild.d.ts"
     },
     "./loaders": {
       "require": "./dist/loaders.js",
-      "import": "./dist/loaders.mjs"
+      "import": "./dist/loaders.mjs",
+      "types": "./dist/loaders.d.ts"
     },
     "./nuxt": {
       "require": "./dist/nuxt.js",
-      "import": "./dist/nuxt.mjs"
+      "import": "./dist/nuxt.mjs",
+      "types": "./dist/nuxt.d.ts"
     },
     "./resolver": {
       "require": "./dist/resolver.js",
-      "import": "./dist/resolver.mjs"
+      "import": "./dist/resolver.mjs",
+      "types": "./dist/resolver.d.ts"
     },
     "./rollup": {
       "require": "./dist/rollup.js",
-      "import": "./dist/rollup.mjs"
+      "import": "./dist/rollup.mjs",
+      "types": "./dist/rollup.d.ts"
     },
     "./types": {
       "require": "./dist/types.js",
-      "import": "./dist/types.mjs"
+      "import": "./dist/types.mjs",
+      "types": "./dist/types.d.ts"
     },
     "./types/preact": {
       "types": "./types/preact.d.ts"
@@ -70,11 +77,22 @@
     },
     "./vite": {
       "require": "./dist/vite.js",
-      "import": "./dist/vite.mjs"
+      "import": "./dist/vite.mjs",
+      "types": "./dist/vite.d.ts"
     },
     "./webpack": {
       "require": "./dist/webpack.js",
-      "import": "./dist/webpack.mjs"
+      "import": "./dist/webpack.mjs",
+      "types": "./dist/webpack.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts",
+        "./dist/*",
+        "./*"
+      ]
     }
   },
   "files": [

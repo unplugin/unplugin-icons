@@ -12,12 +12,10 @@ async function run() {
   for (const file of files) {
     // eslint-disable-next-line no-console
     console.log('[postbuild]', basename(file))
-    const name = basename(file, '.js')
     let code = await fs.readFile(file, 'utf8')
     code = code.replace('exports.default =', 'module.exports =')
     code += 'exports.default = module.exports;'
     await fs.writeFile(file, code)
-    await fs.writeFile(`${name}.d.ts`, `export { default } from './dist/${name}'\n`)
   }
 }
 
