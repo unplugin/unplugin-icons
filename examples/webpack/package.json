@@ -8,7 +8,7 @@
     "vue": "^3.2.26"
   },
   "devDependencies": {
-    "@iconify/json": "^2.1.17",
+    "@iconify/json": "^2.1.20",
     "unplugin-icons": "workspace:*",
     "unplugin-vue2-script-setup": "^0.10.0",
     "vue-template-compiler": "^2.6.14",
