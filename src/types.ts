@@ -39,6 +39,18 @@ export interface Options {
   iconCustomizer?: IconCustomizer
 
   /**
+   * Transform raw `svg`.
+   *
+   * **WARNING**: `transform` will be only applied when using `custom` icon collection.
+   *
+   * @param svg The loaded `svg`
+   * @param collection The name of the collection
+   * @param icon The name of the icon
+   * @return The transformed `svg`.
+   */
+  transform?: (svg: string, collection: string, icon: string) => Awaitable<string>
+
+  /**
    * Auto install icon sources package when the usages is detected
    *
    * @default false

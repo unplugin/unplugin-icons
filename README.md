@@ -547,6 +547,25 @@ import IconBar from '~icons/my-yet-other-icons/bar'
 > - To make your icons color adaptable, set `fill="currentColor"` or `stroke="currentColor"` in your SVG.
 > - Leave the `height` and `width` unspecified, we will set them for you.
 
+### Global Custom Icon Transformation
+
+From version `0.14.2`, when loading your custom icons, you can transform them, for example adding `fill` attribute with `currentColor`:
+```ts
+UnoCss({
+  presets: [
+    presetIcons({
+      transform(svg, collection, icon) {
+        // do not apply fill to this icon on this collection
+        if (collection === 'custom' && icon === 'my-icon')
+          return svg
+
+        return svg.replace(/^<svg /, '<svg fill="currentColor" ')
+      }
+    })
+  ]
+})
+```
+
 ### Use with Resolver
 
 When using with resolvers for auto-importing, you will need to tell it your custom collection names:
