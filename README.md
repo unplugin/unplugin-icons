@@ -642,25 +642,21 @@ See `src/App.vue` component and `vite.config.ts` configuration on `vite-vue3` ex
 
 From version `0.14.2`, when loading your custom icons, you can transform them, for example adding `fill` attribute with `currentColor`:
 ```ts
-UnoCss({
-  presets: [
-    presetIcons({
-      customCollections: {
-        // key as the collection name
-        'my-icons': {
-          'account': '<svg><!-- ... --></svg>',
-          /* ... */
-        },
-      },
-      transform(svg, collection, icon) {
-        // apply fill to this icon on this collection
-        if (collection === 'my-icons' && icon === 'account')
-          return svg.replace(/^<svg /, '<svg fill="currentColor" ')
+Icons({
+  customCollections: {
+    // key as the collection name
+    'my-icons': {
+      'account': '<svg><!-- ... --></svg>',
+      /* ... */
+    },
+  },
+  transform(svg, collection, icon) {
+    // apply fill to this icon on this collection
+    if (collection === 'my-icons' && icon === 'account')
+      return svg.replace(/^<svg /, '<svg fill="currentColor" ')
 
-        return svg
-      }
-    })
-  ]
+    return svg
+  }
 })
 ```
 
