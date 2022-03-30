@@ -653,11 +653,11 @@ UnoCss({
         },
       },
       transform(svg, collection, icon) {
-        // do not apply fill to this icon on this collection
+        // apply fill to this icon on this collection
         if (collection === 'my-icons' && icon === 'account')
-          return svg
+          return svg.replace(/^<svg /, '<svg fill="currentColor" ')
 
-        return svg.replace(/^<svg /, '<svg fill="currentColor" ')
+        return svg
       }
     })
   ]
