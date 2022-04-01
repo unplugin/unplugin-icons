@@ -638,6 +638,28 @@ import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
 
 See `src/App.vue` component and `vite.config.ts` configuration on `vite-vue3` example project.
 
+## Global Custom Icon Transformation
+
+From version `0.14.2`, when loading your custom icons, you can transform them, for example adding `fill` attribute with `currentColor`:
+```ts
+Icons({
+  customCollections: {
+    // key as the collection name
+    'my-icons': {
+      'account': '<svg><!-- ... --></svg>',
+      /* ... */
+    },
+  },
+  transform(svg, collection, icon) {
+    // apply fill to this icon on this collection
+    if (collection === 'my-icons' && icon === 'account')
+      return svg.replace(/^<svg /, '<svg fill="currentColor" ')
+
+    return svg
+  }
+})
+```
+
 ## Migrate from `vite-plugin-icons`
 
 `package.json`

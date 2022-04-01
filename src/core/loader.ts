@@ -61,6 +61,7 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
     defaultClass,
     customCollections,
     iconCustomizer: providedIconCustomizer,
+    transform,
     autoInstall = false,
   } = options
   const iconifyLoaderOptions: IconifyLoaderOptions = {
@@ -70,8 +71,10 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
     autoInstall,
     defaultClass,
     defaultStyle,
-    warn,
+    // there is no need to warn since we throw an error below
+    warn: undefined,
     customizations: {
+      transform,
       async iconCustomizer(collection, icon, props) {
         await providedIconCustomizer?.(collection, icon, props)
         Object.keys(query).forEach((p) => {
