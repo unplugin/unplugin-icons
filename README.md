@@ -192,6 +192,7 @@ module.exports = {
 
 ```ts
 // svelte.config.js
+import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess'
 import Icons from 'unplugin-icons/vite'
 
@@ -201,8 +202,7 @@ const config = {
   // for more information about preprocessors
   preprocess: preprocess(),
   kit: {
-    // hydrate the <div id="svelte"> element in src/app.html
-    target: '#svelte',
+    adapter: adapter(),
     vite: {
       plugins: [
         Icons({
@@ -459,7 +459,7 @@ Icons({ compiler: 'svelte' })
 
 Type Declarations
 
-For Svelte Kit, on `src/global.d.ts` file:
+For Svelte Kit, on `src/app.d.ts` file:
 ```html
 /// <reference types="@sveltejs/kit" />
 /// <reference types="unplugin-icons/types/svelte" />
