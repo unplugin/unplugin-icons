@@ -660,7 +660,7 @@ Icons({
 })
 ```
 
-### Advanced Custom Icon Set Cleanup
+## Advanced Custom Icon Set Cleanup
 
 When using this plugin with your custom icons, consider using a cleanup process similar to that done by [Iconify](https://iconify.design/) for any icons sets. All the tools you need are available in [Iconify Tools](https://docs.iconify.design/tools/tools2/).
 
