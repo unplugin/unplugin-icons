@@ -97,7 +97,7 @@ To boost your workflow, it's also possible to let `unplugin-icons` handle that i
 ```ts
 Icons({
   // expiremental
-  autoInstall: true
+  autoInstall: true,
 })
 ```
 
@@ -148,8 +148,8 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-icons/webpack')({ /* options */ })
-  ]
+    require('unplugin-icons/webpack')({ /* options */ }),
+  ],
 }
 ```
 
@@ -192,7 +192,7 @@ module.exports = {
 
 ```ts
 // svelte.config.js
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-auto'
 import preprocess from 'svelte-preprocess'
 import Icons from 'unplugin-icons/vite'
 
@@ -265,11 +265,11 @@ module.exports = {
         compiler: 'jsx',
         jsx: 'react',
       }),
-    );
+    )
 
-    return config;
+    return config
   },
-};
+}
 ```
 
 Check instructions in the `Frameworks -> React` section below if you faced module import errors.
@@ -482,8 +482,8 @@ For example, using `vue3`:
 
 ```vue
 <script setup lang='ts'>
-  import RawMdiAlarmOff from '~icons/mdi/alarm-off?raw&width=4em&height=4em'
-  import RawMdiAlarmOff2 from '~icons/mdi/alarm-off?raw&width=1em&height=1em'
+import RawMdiAlarmOff from '~icons/mdi/alarm-off?raw&width=4em&height=4em'
+import RawMdiAlarmOff2 from '~icons/mdi/alarm-off?raw&width=1em&height=1em'
 </script>
 <template>
   <!-- raw example -->
@@ -494,8 +494,8 @@ For example, using `vue3`:
     {{ RawMdiAlarmOff2 }}
   </pre>
   <!-- svg example -->
-  <span v-html="RawMdiAlarmOff"></span>
-  <span v-html="RawMdiAlarmOff2"></span>
+  <span v-html="RawMdiAlarmOff" />
+  <span v-html="RawMdiAlarmOff2" />
 </template>
 ```
 
@@ -508,20 +508,20 @@ From `v0.13` you can also provide a transform callback to `FileSystemIconLoader`
 ```ts
 import { promises as fs } from 'fs'
 // loader helpers
-import { FileSystemIconLoader } from 'unplugin-icons/loaders' 
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
-Icons({ 
+Icons({
   customCollections: {
     // key as the collection name
     'my-icons': {
-      'account': '<svg><!-- ... --></svg>',
+      account: '<svg><!-- ... --></svg>',
       // load your custom icon lazily
-      'settings': () => fs.readFile('./path/to/my-icon.svg', 'utf-8'),
+      settings: () => fs.readFile('./path/to/my-icon.svg', 'utf-8'),
       /* ... */
     },
-    'my-other-icons': async (iconName) => {
+    'my-other-icons': async(iconName) => {
       // your custom loader here. Do whatever you want.
-      // for example, fetch from a remote server: 
+      // for example, fetch from a remote server:
       return await fetch(`https://example.com/icons/${iconName}.svg`).then(res => res.text())
     },
     // a helper to load icons from the file system
@@ -529,9 +529,9 @@ Icons({
     // you can also provide a transform callback to change each icon (optional)
     'my-yet-other-icons': FileSystemIconLoader(
       './assets/icons',
-      svg => svg.replace(/^<svg /, '<svg fill="currentColor" ')
+      svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
     ),
-  }
+  },
 })
 ```
 
@@ -557,7 +557,7 @@ IconResolver({
     'my-icons',
     'my-other-icons',
     'my-yet-other-icons',
-  ]
+  ],
 })
 ```
 
@@ -576,20 +576,20 @@ For example, you can configure `iconCustomizer` to change all icons for a collec
 ```ts
 import { promises as fs } from 'fs'
 // loader helpers
-import { FileSystemIconLoader } from 'unplugin-icons/loaders' 
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
-Icons({ 
+Icons({
   customCollections: {
     // key as the collection name
     'my-icons': {
-      'account': '<svg><!-- ... --></svg>',
+      account: '<svg><!-- ... --></svg>',
       // load your custom icon lazily
-      'settings': () => fs.readFile('./path/to/my-icon.svg', 'utf-8'),
+      settings: () => fs.readFile('./path/to/my-icon.svg', 'utf-8'),
       /* ... */
     },
-    'my-other-icons': async (iconName) => {
+    'my-other-icons': async(iconName) => {
       // your custom loader here. Do whatever you want.
-      // for example, fetch from a remote server: 
+      // for example, fetch from a remote server:
       return await fetch(`https://example.com/icons/${iconName}.svg`).then(res => res.text())
     },
     // a helper to load icons from the file system
@@ -597,26 +597,26 @@ Icons({
     // you can also provide a transform callback to change each icon (optional)
     'my-yet-other-icons': FileSystemIconLoader(
       './assets/icons',
-      svg => svg.replace(/^<svg /, '<svg fill="currentColor" ')
+      svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
     ),
   },
   iconCustomizer(collection, icon, props) {
-    // customize all icons in this collection  
+    // customize all icons in this collection
     if (collection === 'my-other-icons') {
-        props.width = '4em'
-        props.height = '4em'
-    }  
-    // customize this icon in this collection  
+      props.width = '4em'
+      props.height = '4em'
+    }
+    // customize this icon in this collection
     if (collection === 'my-icons' && icon === 'account') {
-        props.width = '6em'
-        props.height = '6em'
-    }  
-    // customize this @iconify icon in this collection  
+      props.width = '6em'
+      props.height = '6em'
+    }
+    // customize this @iconify icon in this collection
     if (collection === 'mdi' && icon === 'account') {
-        props.width = '2em'
-        props.height = '2em'
-    }  
-  }
+      props.width = '2em'
+      props.height = '2em'
+    }
+  },
 })
 ```
 
@@ -646,7 +646,7 @@ Icons({
   customCollections: {
     // key as the collection name
     'my-icons': {
-      'account': '<svg><!-- ... --></svg>',
+      account: '<svg><!-- ... --></svg>',
       /* ... */
     },
   },
@@ -656,7 +656,7 @@ Icons({
       return svg.replace(/^<svg /, '<svg fill="currentColor" ')
 
     return svg
-  }
+  },
 })
 ```
 
@@ -722,7 +722,7 @@ Icons({
   defaultStyle: '', // Style apply to icons
   defaultClass: '', // Class names apply to icons
   compiler: null, // 'vue2', 'vue3', 'jsx'
-  jsx: 'react' // 'react' or 'preact'
+  jsx: 'react', // 'react' or 'preact'
 })
 ```
 
@@ -748,7 +748,7 @@ export default {
     Components({
       resolvers: [
         IconsResolver(),
-      ]
+      ],
     }),
     Icons(),
   ],
@@ -786,12 +786,12 @@ export default {
       resolvers: [
         IconsResolver({
           prefix: 'Icon',
-          extension: 'jsx'
-        })
+          extension: 'jsx',
+        }),
       ],
     }),
     Icons({
-      compiler: 'jsx' // or 'solid'
+      compiler: 'jsx', // or 'solid'
     }),
   ],
 }
@@ -826,7 +826,7 @@ By default, the prefix is set to `i` while you can customize via config
 
 ```ts
 IconsResolver({
-  prefix: 'icon' // <--
+  prefix: 'icon', // <--
 })
 ```
 
@@ -842,7 +842,7 @@ Non-prefix mode is also supported
 IconsResolver({
   prefix: false, // <--
   // this is optional, default enabling all the collections supported by Iconify
-  enabledCollections: ['mdi']
+  enabledCollections: ['mdi'],
 })
 ```
 
