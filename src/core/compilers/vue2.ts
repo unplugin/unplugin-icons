@@ -2,7 +2,7 @@ import { importModule } from 'local-pkg'
 import type { Compiler } from './types'
 
 // refer to: https://github.com/underfin/vite-plugin-vue2/blob/master/src/template/compileTemplate.ts
-export const Vue2Compiler = <Compiler>(async(
+export const Vue2Compiler = <Compiler>(async (
   svg: string,
   collection: string,
   icon: string,

@@ -276,6 +276,8 @@ Check instructions in the `Frameworks -> React` section below if you faced modul
 
 ⚠️ **Warning:** to import an icon is necessary to explicitly add the `.jsx` extension to the import path, so that Next.js knows how to load it, by example:
 
+<!-- eslint-skip -->
+
 ```ts
 import IconArrowRight from '~icons/dashicons/arrow-right.jsx';
                                                      // ^-- write `.jsx` to avoid
@@ -326,9 +328,11 @@ Icons({ compiler: 'vue3' })
 
 Type Declarations
 
+<!-- eslint-skip -->
+
 ```jsonc
 // tsconfig.json
-{ 
+{
   "compilerOptions": {
     "types": [
       "unplugin-icons/types/vue",
@@ -354,6 +358,8 @@ Icons({ compiler: 'vue2' })
 ```
 
 Type Declarations
+
+<!-- eslint-skip -->
 
 ```jsonc
 // tsconfig.json
@@ -382,6 +388,8 @@ Icons({ compiler: 'jsx', jsx: 'react' })
 ```
 
 Type Declarations
+
+<!-- eslint-skip -->
 
 ```jsonc
 // tsconfig.json
@@ -412,6 +420,8 @@ Icons({ compiler: 'jsx', jsx: 'preact' })
 
 Type Declarations
 
+<!-- eslint-skip -->
+
 ```jsonc
 // tsconfig.json
 { 
@@ -435,6 +445,8 @@ Icons({ compiler: 'solid' })
 ```
 
 Type Declarations
+
+<!-- eslint-skip -->
 
 ```jsonc
 // tsconfig.json
@@ -460,13 +472,15 @@ Icons({ compiler: 'svelte' })
 Type Declarations
 
 For Svelte Kit, on `src/app.d.ts` file:
-```html
+
+```js
 /// <reference types="@sveltejs/kit" />
 /// <reference types="unplugin-icons/types/svelte" />
 ```
 
 For Svelte + Vite, on `src/vite-env.d.ts` file:
-```html
+
+```js
 /// <reference types="svelte" />
 /// <reference types="vite/client" />
 /// <reference types="unplugin-icons/types/svelte" />
@@ -485,6 +499,7 @@ For example, using `vue3`:
 import RawMdiAlarmOff from '~icons/mdi/alarm-off?raw&width=4em&height=4em'
 import RawMdiAlarmOff2 from '~icons/mdi/alarm-off?raw&width=1em&height=1em'
 </script>
+
 <template>
   <!-- raw example -->
   <pre>
@@ -519,7 +534,7 @@ Icons({
       settings: () => fs.readFile('./path/to/my-icon.svg', 'utf-8'),
       /* ... */
     },
-    'my-other-icons': async(iconName) => {
+    'my-other-icons': async (iconName) => {
       // your custom loader here. Do whatever you want.
       // for example, fetch from a remote server:
       return await fetch(`https://example.com/icons/${iconName}.svg`).then(res => res.text())
@@ -587,7 +602,7 @@ Icons({
       settings: () => fs.readFile('./path/to/my-icon.svg', 'utf-8'),
       /* ... */
     },
-    'my-other-icons': async(iconName) => {
+    'my-other-icons': async (iconName) => {
       // your custom loader here. Do whatever you want.
       // for example, fetch from a remote server:
       return await fetch(`https://example.com/icons/${iconName}.svg`).then(res => res.text())
@@ -799,6 +814,8 @@ export default {
 
 Then you can use any icons with the prefix `Icon` as you want without explicit importing. Type declarations will be generated on the fly.
 
+<!-- eslint-disable react/jsx-no-undef -->
+
 ```js
 export function Component() {
   return (
@@ -863,8 +880,8 @@ You can add an alias for any collection to the `IconResolver` plugin:
 IconsResolver({
   alias: {
     park: 'icon-park',
-    fas:  'fa-solid',
-    ...
+    fas: 'fa-solid',
+    // ...
   }
 })
 ```

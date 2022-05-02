@@ -2,7 +2,7 @@ import { importModule } from 'local-pkg'
 import { camelize } from '@iconify/utils/lib/misc/strings'
 import type { Compiler } from './types'
 
-export const JSXCompiler = <Compiler>(async(
+export const JSXCompiler = <Compiler>(async (
   svg,
   collection,
   icon,
