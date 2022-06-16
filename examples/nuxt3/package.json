@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.1.34",
+    "nuxt": "3.0.0-rc.4",
+    "unplugin-icons": "link:../.."
+  }
+}
