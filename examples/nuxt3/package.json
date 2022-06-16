@@ -7,7 +7,7 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@iconify/json": "^2.1.34",
+    "@iconify/json": "^2.1.62",
     "nuxt": "3.0.0-rc.4",
     "unplugin-icons": "link:../.."
   }

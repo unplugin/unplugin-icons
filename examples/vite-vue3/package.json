@@ -5,26 +5,25 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.2.26"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.1.3",
+    "@iconify-json/carbon": "^1.1.5",
     "@iconify-json/fa-solid": "^1.1.1",
     "@iconify-json/heroicons-outline": "^1.1.1",
-    "@iconify-json/ic": "^1.1.2",
-    "@iconify-json/icon-park": "^1.1.1",
+    "@iconify-json/ic": "^1.1.4",
+    "@iconify-json/icon-park": "^1.1.3",
     "@iconify-json/logos": "^1.1.5",
-    "@iconify-json/mdi": "^1.1.10",
+    "@iconify-json/mdi": "^1.1.20",
     "@iconify-json/mdi-light": "^1.1.1",
     "@iconify-json/noto-v1": "^1.1.1",
-    "@iconify-json/ri": "^1.1.1",
-    "@iconify-json/twemoji": "^1.1.3",
-    "@vitejs/plugin-vue": "^2.3.1",
-    "@vue/compiler-sfc": "^3.2.33",
-    "typescript": "^4.6.4",
-    "unconfig": "^0.3.3",
+    "@iconify-json/ri": "^1.1.2",
+    "@iconify-json/twemoji": "^1.1.4",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "typescript": "^4.7.3",
+    "unconfig": "^0.3.4",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^0.19.3",
-    "vite": "^2.9.6"
+    "unplugin-vue-components": "^0.19.6",
+    "vite": "^2.9.12"
   }
 }

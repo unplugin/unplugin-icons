@@ -5,15 +5,14 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.2.26"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@iconify/json": "^2.1.34",
-    "@vitejs/plugin-vue": "^2.3.1",
-    "@vue/compiler-sfc": "^3.2.33",
-    "typescript": "^4.6.4",
+    "@iconify/json": "^2.1.62",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "typescript": "^4.7.3",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^0.19.3",
-    "vite": "^2.9.6"
+    "unplugin-vue-components": "^0.19.6",
+    "vite": "^2.9.12"
   }
 }

@@ -641,6 +641,7 @@ or you can use `query` params to apply to individual icons:
 import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4em&height=4em'
 import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
 </script>
+
 <template>
   <!-- width=4em and height=4em -->
   <mdi-alarm-off />
