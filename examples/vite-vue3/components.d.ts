@@ -24,8 +24,6 @@ declare module '@vue/runtime-core' {
     IParkAbnormal: typeof import('~icons/icon-park/abnormal')['default']
     IRiApps2Line: typeof import('~icons/ri/apps2-line')['default']
     ITwemoji1stPlaceMedal: typeof import('~icons/twemoji/1st-place-medal')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
   }
 }
 
