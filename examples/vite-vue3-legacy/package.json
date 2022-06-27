@@ -8,11 +8,11 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@iconify/json": "^2.1.62",
+    "@iconify/json": "^2.1.68",
     "@vitejs/plugin-vue": "^2.3.3",
-    "typescript": "^4.7.3",
+    "typescript": "^4.7.4",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^0.19.6",
-    "vite": "^2.9.12"
+    "unplugin-vue-components": "^0.20.1",
+    "vite": "^2.9.13"
   }
 }

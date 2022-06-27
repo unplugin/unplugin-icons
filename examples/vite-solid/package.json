@@ -10,9 +10,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.5",
+    "@iconify-json/logos": "^1.1.6",
     "unplugin-icons": "workspace:*",
-    "vite": "^2.9.12",
+    "vite": "^2.9.13",
     "vite-plugin-solid": "^2.2.6"
   },
   "dependencies": {
