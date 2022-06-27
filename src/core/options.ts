@@ -13,6 +13,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     jsx = guessJSX(),
     customCollections = {},
     iconCustomizer = () => {},
+    transform,
     autoInstall = false,
   } = options
 
@@ -32,6 +33,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     compiler,
     jsx,
     webComponents,
+    transform,
     autoInstall,
   }
 }
