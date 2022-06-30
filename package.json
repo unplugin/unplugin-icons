@@ -102,7 +102,7 @@
   ],
   "scripts": {
     "build": "esno scripts/prebuild.ts && tsup && esno scripts/postbuild.ts",
-    "dev": "tsup --watch src",
+    "dev": "esno scripts/prebuild.ts && tsup --watch src",
     "example:build": "npm -C examples/vite-vue3 run build",
     "example:dev": "npm -C examples/vite-vue3 run dev",
     "lint": "eslint .",
