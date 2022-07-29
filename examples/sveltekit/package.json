@@ -10,10 +10,10 @@
   },
   "devDependencies": {
     "@iconify-json/icon-park": "^1.1.5",
-    "@iconify-json/logos": "^1.1.6",
-    "@iconify-json/mdi": "^1.1.24",
+    "@iconify-json/logos": "^1.1.13",
+    "@iconify-json/mdi": "^1.1.29",
     "@sveltejs/kit": "next",
-    "svelte": "^3.48.0",
+    "svelte": "^3.49.0",
     "svelte-check": "^2.8.0",
     "svelte-preprocess": "^4.10.7",
     "tslib": "^2.4.0",

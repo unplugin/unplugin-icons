@@ -12,8 +12,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env",
-      "unplugin-vue2-script-setup/types"
+      "webpack-env"
     ],
     "paths": {
       "@/*": [

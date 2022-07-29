@@ -7,6 +7,6 @@
   "devDependencies": {
     "@iconify-json/mono-icons": "^1.1.2",
     "unplugin-icons": "workspace:*",
-    "vite": "^2.9.13"
+    "vite": "^3.0.4"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "name": "vue-cli",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-tsc --noEmit && vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.24.0",
+    "vue": "^2.7.8"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.1.85",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-typescript": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "typescript": "^4.7.4",
+    "unplugin-icons": "workspace:*",
+    "vue-tsc": "^0.39.2"
+  }
+}

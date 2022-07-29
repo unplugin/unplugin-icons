@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const ScriptSetup = require('unplugin-vue2-script-setup/webpack')
-const Icons = require('unplugin-icons/webpack').default
+const Icons = require('unplugin-icons/webpack')
 
 /**
  * @type {import('@vue/cli-service').ProjectOptions}
@@ -8,10 +7,9 @@ const Icons = require('unplugin-icons/webpack').default
 module.exports = {
   configureWebpack: {
     plugins: [
-      ScriptSetup({
-        refTransform: true,
+      Icons({
+        compiler: 'vue2',
       }),
-      Icons(),
     ],
   },
   chainWebpack(config) {

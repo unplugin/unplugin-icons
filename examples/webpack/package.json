@@ -1,19 +1,13 @@
 {
-  "name": "nuxt-example",
+  "name": "webpack-example",
   "private": true,
   "scripts": {
     "build": "webpack"
   },
-  "dependencies": {
-    "vue": "^3.2.37"
-  },
   "devDependencies": {
-    "@iconify/json": "^2.1.68",
+    "@iconify/json": "^2.1.85",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue2-script-setup": "^0.11.0",
-    "vue-template-compiler": "^2.6.14",
-    "vue-template-es2015-compiler": "^1.9.1",
-    "webpack": "^5.73.0",
+    "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   }
 }
