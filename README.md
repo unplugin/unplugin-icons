@@ -435,6 +435,35 @@ Type Declarations
 
 <br></details>
 
+<details>
+<summary>Qwik</summary><br>
+
+JSX support requires peer dependency `@svgr/core`:
+
+```bash
+npm i -D @svgr/core
+```
+
+```ts
+Icons({ compiler: 'jsx', jsx: 'qwik' })
+```
+
+Type Declarations
+
+<!-- eslint-skip -->
+
+```jsonc
+// tsconfig.json
+{ 
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/qwik",
+    ]
+  }
+}
+```
+
+<br></details>
 
 <details>
 <summary>Solid</summary><br>
