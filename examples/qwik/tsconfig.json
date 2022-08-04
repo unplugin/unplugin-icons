@@ -15,7 +15,7 @@
     "skipLibCheck": true,
     "incremental": true,
     "isolatedModules": true,
-    "types": ["vite/client"]
+    "types": ["unplugin-icons/types/qwik", "vite/client"]
   },
   "include": ["src"]
 }

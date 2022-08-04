@@ -1,7 +1,5 @@
 import { App } from './app';
 
-import './global.css';
-
 export default () => {
   return (
     <html>

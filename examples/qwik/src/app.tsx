@@ -1,11 +1,10 @@
 import { component$, Host } from '@builder.io/qwik'
-import { Logo } from '../logo/logo'
 import Party from '~icons/twemoji/party-popper'
 
 export const App = component$(() => {
   return (
-    <Host class="my-app p-20">
-      <p class="mb-10">
+    <Host>
+      <p>
         <a href="https://qwik.builder.io/">
           <img
             alt="Qwik Logo"
@@ -16,13 +15,13 @@ export const App = component$(() => {
         </a>
       </p>
 
-      <h1 class="text-3xl mb-2">
+      <h1>
         Congratulations Qwik is working!
         <Party class="inline ml-4" />
       </h1>
 
-      <hr class="mt-10" />
-      <p class="text-center text-sm mt-2">
+      <hr/>
+      <p>
         Made with ❤️ by{' '}
         <a target="_blank" href="https://www.builder.io/">
           Builder.io

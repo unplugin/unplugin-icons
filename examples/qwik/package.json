@@ -1,28 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "build": "npm run typecheck && npm run build.client && npm run build.ssr",
-    "build.client": "vite build",
-    "build.ssr": "vite build --ssr src/entry.express.tsx",
-    "dev": "npm run dev.ssr",
-    "dev.client": "vite",
-    "dev.debug": "node --inspect-brk node_modules/vite/bin/vite.js --force --mode ssr",
-    "dev.ssr": "node --inspect node_modules/vite/bin/vite.js --mode ssr",
-    "lint": "eslint \"src/**/*.ts*\"",
-    "serve": "node server/entry.express",
-    "start": "npm run dev",
-    "typecheck": "tsc --incremental --noEmit"
+    "build": "tsc --incremental --noEmit && vite build && vite build --ssr src/entry.express.tsx",
+    "dev": "vite",
+    "serve": "node server/entry.express"
   },
   "devDependencies": {
     "@builder.io/qwik": "0.0.39",
     "@iconify/json": "^2.1.86",
     "@types/express": "4.17.13",
     "@types/node": "latest",
-    "autoprefixer": "10.4.7",
     "express": "4.17.3",
-    "node-fetch": "3.2.9",
-    "postcss": "8.4.14",
-    "tailwindcss": "3.0.24",
     "typescript": "4.7.4",
     "unplugin-icons": "workspace:*",
     "vite": "3.0.2"
@@ -30,7 +18,5 @@
   "engines": {
     "node": ">=14"
   },
-  "homepage": "https://qwik.builder.io/",
-  "license": "",
   "type": "module"
 }
