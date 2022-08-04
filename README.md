@@ -96,7 +96,7 @@ To boost your workflow, it's also possible to let `unplugin-icons` handle that i
 
 ```ts
 Icons({
-  // expiremental
+  // experimental
   autoInstall: true,
 })
 ```
