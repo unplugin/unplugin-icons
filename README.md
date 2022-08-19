@@ -531,7 +531,7 @@ Icons({
     'my-icons': {
       account: '<svg><!-- ... --></svg>',
       // load your custom icon lazily
-      settings: () => fs.readFile('./path/to/my-icon.svg', 'utf-8'),
+      settings: () => fs.readFileSync('./path/to/my-icon.svg', 'utf-8'),
       /* ... */
     },
     'my-other-icons': async (iconName) => {
