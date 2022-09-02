@@ -137,7 +137,7 @@
     "debug": "^4.3.4",
     "kolorist": "^1.5.1",
     "local-pkg": "^0.4.2",
-    "unplugin": "^0.8.0"
+    "unplugin": "^0.9.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
