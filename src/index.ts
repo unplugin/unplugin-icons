@@ -38,19 +38,18 @@ const unplugin = createUnplugin<Options>((options = {}) => {
       }
       return null
     },
+    loadInclude(id) {
+      return isIconPath(id)
+    },
     async load(id) {
       const config = await resolved
-      if (isIconPath(id)) {
-        const code = await generateComponentFromPath(id, config) || null
-        if (code) {
-          return {
-            code,
-            map: { version: 3, mappings: '', sources: [] } as any,
-          }
+      const code = await generateComponentFromPath(id, config) || null
+      if (code) {
+        return {
+          code,
+          map: { version: 3, mappings: '', sources: [] } as any,
         }
       }
-
-      return null
     },
     rollup: {
       api: {
