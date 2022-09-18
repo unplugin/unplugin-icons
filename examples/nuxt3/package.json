@@ -7,8 +7,8 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@iconify/json": "^2.1.85",
-    "nuxt": "3.0.0-rc.6",
+    "@iconify/json": "^2.1.108",
+    "nuxt": "3.0.0-rc.10",
     "unplugin-icons": "link:../.."
   }
 }
