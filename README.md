@@ -700,7 +700,7 @@ Read [Cleaning up icons](https://docs.iconify.design/articles/cleaning-up-icons/
 `vite.config.json`
 
 ```diff
-import Components from 'unplugin-components/vite'
+import Components from 'unplugin-vue-components/vite'
 - import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
 + import Icons from 'unplugin-icons/vite'
 + import IconsResolver from 'unplugin-icons/resolver'
