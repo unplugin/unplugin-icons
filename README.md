@@ -636,6 +636,9 @@ Icons({
 ```
 
 or you can use `query` params to apply to individual icons:
+
+<!-- eslint-skip -->
+
 ```vue
 <script setup lang='ts'>
 import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4em&height=4em'

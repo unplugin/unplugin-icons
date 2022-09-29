@@ -12,10 +12,10 @@
   "devDependencies": {
     "@iconify-json/logos": "^1.1.16",
     "unplugin-icons": "workspace:*",
-    "vite": "^3.1.2",
-    "vite-plugin-solid": "^2.3.2"
+    "vite": "^3.1.4",
+    "vite-plugin-solid": "^2.3.9"
   },
   "dependencies": {
-    "solid-js": "^1.5.5"
+    "solid-js": "^1.5.7"
   }
 }
