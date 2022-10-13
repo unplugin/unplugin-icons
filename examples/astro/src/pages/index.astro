@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AstroLogo from "~icons/logos/astro";
+import MdiStore24Hour from "~icons/mdi/store-24-hour";
+import MdiAlarmOff from "~icons/mdi/alarm-off";
+import IconParkAbnormal from "~icons/icon-park/abnormal";
+import RawMdiAlarmOff from "~icons/mdi/alarm-off?raw&width=4em&height=4em";
+import RawMdiAlarmOff2 from "~icons/mdi/alarm-off?raw&width=1em&height=1em";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <AstroLogo style="font-size:2em" />
+    <br />
+    <br />
+    <MdiStore24Hour />
+    <MdiAlarmOff />
+    <IconParkAbnormal />
+    <Fragment set:html={RawMdiAlarmOff} />
+    <Fragment set:html={RawMdiAlarmOff2} />
+  </main>
+</Layout>
+
+<style>
+  main {
+    text-align: center;
+  }
+</style>
