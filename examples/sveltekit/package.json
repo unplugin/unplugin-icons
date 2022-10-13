@@ -2,11 +2,11 @@
   "private": "true",
   "type": "module",
   "scripts": {
-    "build": "svelte-kit build",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "dev": "svelte-kit dev",
-    "preview": "svelte-kit preview"
+    "build": "vite build",
+    "check": "sveltekit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "sveltekit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "dev": "vite dev",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@iconify-json/icon-park": "^1.1.6",
