@@ -1,3 +1,8 @@
+<script setup lang='ts'>
+import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
+import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
+</script>
+
 <template>
   <div class="markdown-body" style="padding: 2em 3em">
     <i-logos-vue style="font-size:2em" />
@@ -6,7 +11,7 @@
     <p>
       <i-carbon-app-connectivity />
       <i-mdi-account />
-      <mdi-alarm-off />
+      <MdiAlarmOff />
       <i-fa-solid-dice-five />
       <i-heroicons-outline-menu-alt-2 />
       <i-ri-apps-2-line />
@@ -36,8 +41,3 @@
     from <code>unplugin-icons</code>
   </div>
 </template>
-
-<script setup lang='ts'>
-import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
-import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
-</script>

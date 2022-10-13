@@ -1,6 +1,6 @@
 {
-  "private": "true",
   "type": "module",
+  "private": "true",
   "scripts": {
     "build": "vite build",
     "check": "sveltekit sync && svelte-check --tsconfig ./tsconfig.json",

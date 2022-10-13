@@ -1,2 +1,5 @@
-dist
-examples
+build/
+dist/
+node_modules/
+*.svelte
+*.d.ts
