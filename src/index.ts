@@ -24,14 +24,16 @@ const unplugin = createUnplugin<Options>((options = {}) => {
         }
         else {
           switch (compiler) {
+            case 'astro':
+              return `${res}.astro`
             case 'jsx':
               return `${res}.jsx`
+            case 'marko':
+              return `${res}.marko`
             case 'svelte':
               return `${res}.svelte`
             case 'solid':
               return `${res}.tsx`
-            case 'marko':
-              return `${res}.marko`
           }
         }
         return res
