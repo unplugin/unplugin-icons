@@ -23,7 +23,6 @@ const config: UserConfig = {
     Components({
       dts: true,
       resolvers: [
-        // @ts-ignore
         IconsResolver({
           alias: {
             park: 'icon-park',

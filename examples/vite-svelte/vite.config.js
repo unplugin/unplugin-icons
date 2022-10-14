@@ -4,11 +4,11 @@ import Icons from 'unplugin-icons/vite'
 
 const options = process.env.CUSTOM_COMPILER === 'true'
   ? {
-    compiler: {
-      extension: 'svelte',
-      compiler: compilerFactory(),
-    },
-  }
+      compiler: {
+        extension: 'svelte',
+        compiler: compilerFactory(),
+      },
+    }
   : { compiler: 'svelte' }
 
 export default defineConfig({

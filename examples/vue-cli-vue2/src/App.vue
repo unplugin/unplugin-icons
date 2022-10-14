@@ -7,14 +7,14 @@ export default {
   components: {
     LogosVue,
     MdiStore24Hour,
-    MdiAlarmOff
-  }
+    MdiAlarmOff,
+  },
 }
 </script>
 
 <template>
   <div class="markdown-body" style="padding: 2em 3em">
-    <logos-vue style="font-size:2em" />
+    <LogosVue style="font-size:2em" />
     <br>
     <p>
       Icons

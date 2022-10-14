@@ -6,7 +6,7 @@ module.exports = {
       require('unplugin-icons/webpack')({
         compiler: 'jsx',
         jsx: 'react',
-      })
+      }),
     )
 
     return config

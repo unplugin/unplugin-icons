@@ -1,6 +1,6 @@
 {
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "cross-env DEBUG=unplugin-icons:* vite build",
     "dev": "cross-env DEBUG=unplugin-icons:* vite",

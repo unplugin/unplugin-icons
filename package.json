@@ -109,6 +109,7 @@
     "example:build": "npm -C examples/vite-vue3 run build",
     "example:dev": "npm -C examples/vite-vue3 run dev",
     "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
     "prepublishOnly": "npm run build",
     "release": "npx bumpp --commit --tag --push && npm publish",
     "test": "vitest"
