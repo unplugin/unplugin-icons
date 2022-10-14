@@ -7,4 +7,5 @@ loadConfig({
     }),
   ],
 })
+// eslint-disable-next-line no-console
   .then(i => console.log(i))

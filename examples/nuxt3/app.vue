@@ -6,7 +6,7 @@ import MdiAlarmOff from '~icons/mdi/alarm-off'
 
 <template>
   <div class="markdown-body" style="padding: 2em 3em">
-    <logo-nuxt style="font-size:2em" />
+    <LogoNuxt style="font-size:2em" />
     <br>
     <p>
       Icons

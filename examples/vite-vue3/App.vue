@@ -1,7 +1,15 @@
+<script setup lang='ts'>
+import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
+import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4em&height=4em'
+import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
+import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'
+import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
+</script>
+
 <template>
   <div class="markdown-body" style="padding: 2em 3em">
     <i-logos-vue style="font-size:2em" />
-    <br />
+    <br>
     <h2>Icons</h2>
     <p>
       <i-mdi-account />
@@ -16,7 +24,7 @@
       <i-twemoji-1st-place-medal />
       <IIcTwotone23mp />
       <MdiStore24Hour />
-      <br />
+      <br>
     </p>
     <h2>Customizer via Config</h2>
     <p>
@@ -45,28 +53,20 @@
       <strong>raw</strong> query param
     </h2>
     <div style="display: grid; grid-template-columns: 100px 1fr; align-items: center;">
-      <span v-html="RawMdiAlarmOff"></span>
+      <span v-html="RawMdiAlarmOff" />
       <div>
         <code style="opacity:0.5">import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'</code>
         <pre>{{ RawMdiAlarmOff }}</pre>
       </div>
-      <span v-html="RawMdiAlarmOff2"></span>
+      <span v-html="RawMdiAlarmOff2" />
       <div>
         <code style="opacity:0.5">import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'</code>
         <pre>{{ RawMdiAlarmOff2 }}</pre>
       </div>
     </div>
-    <br />
+    <br>
   </div>
 </template>
-
-<script setup lang='ts'>
-import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
-import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4em&height=4em'
-import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
-import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'
-import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
-</script>
 
 <style scoped>
 pre {
