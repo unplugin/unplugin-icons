@@ -29,7 +29,7 @@ Access thousands of icons as components **on-demand** universally.
 
 ## Usage
 
-Import icons names with the convension `~icons/{collection}/{icon}` and use them directly as components. [Auto importing is also possible](#auto-importing).
+Import icons names with the convention `~icons/{collection}/{icon}` and use them directly as components. [Auto importing is also possible](#auto-importing).
 
 ###### React
 
