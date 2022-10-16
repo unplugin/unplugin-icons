@@ -13,17 +13,17 @@
     "@iconify-json/heroicons-outline": "^1.1.4",
     "@iconify-json/ic": "^1.1.9",
     "@iconify-json/icon-park": "^1.1.6",
-    "@iconify-json/logos": "^1.1.16",
-    "@iconify-json/mdi": "^1.1.33",
+    "@iconify-json/logos": "^1.1.17",
+    "@iconify-json/mdi": "^1.1.34",
     "@iconify-json/mdi-light": "^1.1.2",
     "@iconify-json/noto-v1": "^1.1.3",
     "@iconify-json/ri": "^1.1.3",
     "@iconify-json/twemoji": "^1.1.5",
-    "@vitejs/plugin-vue": "^3.1.0",
+    "@vitejs/plugin-vue": "^3.1.2",
     "typescript": "^4.8.4",
-    "unconfig": "^0.3.6",
+    "unconfig": "^0.3.7",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^0.22.7",
-    "vite": "^3.1.4"
+    "unplugin-vue-components": "^0.22.8",
+    "vite": "^3.1.8"
   }
 }

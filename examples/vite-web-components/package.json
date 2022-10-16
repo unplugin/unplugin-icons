@@ -8,6 +8,6 @@
     "@iconify-json/ion": "^1.1.4",
     "@iconify-json/mono-icons": "^1.1.2",
     "unplugin-icons": "workspace:*",
-    "vite": "^3.1.4"
+    "vite": "^3.1.8"
   }
 }

@@ -137,7 +137,7 @@
   "dependencies": {
     "@antfu/install-pkg": "^0.1.1",
     "@antfu/utils": "^0.5.2",
-    "@iconify/utils": "^2.0.0",
+    "@iconify/utils": "^2.0.1",
     "debug": "^4.3.4",
     "kolorist": "^1.6.0",
     "local-pkg": "^0.4.2",
@@ -145,20 +145,20 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
-    "@iconify/json": "^2.1.115",
+    "@iconify/json": "^2.1.122",
     "@iconify/types": "^2.0.0",
-    "@svgr/core": "^6.3.1",
+    "@svgr/core": "^6.5.0",
     "@types/debug": "^4.1.7",
-    "@types/node": "^18.7.23",
-    "@vue/compiler-sfc": "^3.2.40",
+    "@types/node": "^18.11.0",
+    "@vue/compiler-sfc": "^3.2.41",
     "bumpp": "^8.2.1",
     "cross-env": "^7.0.3",
-    "eslint": "^8.24.0",
+    "eslint": "^8.25.0",
     "esno": "^0.16.3",
     "rollup": "^2.79.1",
     "tsup": "^6.2.3",
     "typescript": "^4.8.4",
-    "vite": "^3.1.4",
-    "vitest": "^0.23.4"
+    "vite": "^3.1.8",
+    "vitest": "^0.24.3"
   }
 }
