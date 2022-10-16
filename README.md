@@ -310,6 +310,27 @@ build({
 
 <br></details>
 
+<details>
+<summary>Astro</summary><br>
+
+```ts
+// astro.config.mjs
+import { defineConfig } from 'astro/config'
+import Icons from 'unplugin-icons/vite'
+// https://astro.build/config
+export default defineConfig({
+  vite: {
+    plugins: [
+      Icons({
+        compiler: 'astro',
+      }),
+    ],
+  },
+})
+```
+
+<br></details>
+
 ###### Frameworks
 
 
@@ -484,6 +505,26 @@ For Svelte + Vite, on `src/vite-env.d.ts` file:
 /// <reference types="svelte" />
 /// <reference types="vite/client" />
 /// <reference types="unplugin-icons/types/svelte" />
+```
+
+<br></details>
+
+<details>
+<summary>Astro</summary><br>
+
+Type Declarations
+
+<!-- eslint-skip -->
+
+```jsonc
+// tsconfig.json
+{ 
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/astro",
+    ]
+  }
+}
 ```
 
 <br></details>

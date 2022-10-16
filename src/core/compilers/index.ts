@@ -1,4 +1,5 @@
 import type { ResolvedOptions } from '../../types'
+import { AstroCompiler } from './astro'
 import { JSXCompiler } from './jsx'
 import { MarkoCompiler } from './marko'
 import { NoneCompiler } from './none'
@@ -11,13 +12,14 @@ import { Vue3Compiler } from './vue3'
 import { WebComponentsCompiler } from './web-components'
 
 export const compilers: Record<ResolvedOptions['compiler'], Compiler> = {
-  'vue2': Vue2Compiler,
-  'vue3': Vue3Compiler,
-  'solid': SolidCompiler,
-  'svelte': SvelteCompiler,
+  'astro': AstroCompiler,
   'jsx': JSXCompiler,
   'marko': MarkoCompiler,
   'none': NoneCompiler,
   'raw': RawCompiler,
+  'solid': SolidCompiler,
+  'svelte': SvelteCompiler,
+  'vue2': Vue2Compiler,
+  'vue3': Vue3Compiler,
   'web-components': WebComponentsCompiler,
 }

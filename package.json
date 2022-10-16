@@ -49,6 +49,9 @@
       "require": "./dist/types.js",
       "import": "./dist/types.mjs"
     },
+    "./types/astro": {
+      "types": "./types/astro.d.ts"
+    },
     "./types/preact": {
       "types": "./types/preact.d.ts"
     },
