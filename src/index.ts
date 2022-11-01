@@ -3,7 +3,7 @@ import { resolveOptions } from './core/options'
 import { generateComponentFromPath, isIconPath, normalizeIconPath, resolveIconsPath } from './core/loader'
 import type { Options } from './types'
 
-const unplugin = createUnplugin<Options>((options = {}) => {
+const unplugin = createUnplugin<Options | undefined>((options = {}) => {
   const resolved = resolveOptions(options)
 
   return {
