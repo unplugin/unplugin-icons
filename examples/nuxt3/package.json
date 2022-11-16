@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.1.131",
-    "nuxt": "3.0.0-rc.12",
+    "nuxt": "^3.0.0",
     "unplugin-icons": "link:../.."
   }
 }
