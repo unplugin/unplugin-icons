@@ -335,7 +335,7 @@ export default defineConfig({
 
 
 <details>
-<summary>Vue 3</summary><br>
+<summary>Vue 3 / Vue 2.7+</summary><br>
 
 Vue 3 support requires peer dependency `@vue/compiler-sfc`:
 
@@ -366,7 +366,7 @@ Type Declarations
 
 
 <details>
-<summary>Vue 2</summary><br>
+<summary>Vue 2 (only for versions < 2.7)</summary><br>
 
 Vue 2 support requires peer dependency `vue-template-compiler`:
 
