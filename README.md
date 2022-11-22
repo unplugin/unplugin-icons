@@ -207,7 +207,6 @@ export default defineConfig({
   ]
 })
 ```
-```
 
 Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
 
