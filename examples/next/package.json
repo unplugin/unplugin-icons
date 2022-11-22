@@ -7,16 +7,16 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "12.3.1",
+    "next": "12.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@iconify/json": "2.1.131",
+    "@iconify/json": "2.1.141",
     "@svgr/core": "6.5.1",
-    "@types/node": "18.11.8",
-    "@types/react": "18.0.24",
-    "typescript": "4.8.4",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "typescript": "4.9.3",
     "unplugin-icons": "workspace:*"
   }
 }
