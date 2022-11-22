@@ -188,7 +188,7 @@ module.exports = {
 <br></details>
 
 <details>
-<summary>Svelte Kit</summary><br>
+<summary>SvelteKit</summary><br>
 
 The `unplugin-icons` plugin should be configured in the `vite.config.js` configuration file:
 
