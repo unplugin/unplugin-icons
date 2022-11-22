@@ -485,14 +485,14 @@ Icons({ compiler: 'svelte' })
 
 Type Declarations
 
-For Svelte Kit, on `src/app.d.ts` file:
+For SvelteKit, in the `src/app.d.ts` file:
 
 ```js
 /// <reference types="@sveltejs/kit" />
 /// <reference types="unplugin-icons/types/svelte" />
 ```
 
-For Svelte + Vite, on `src/vite-env.d.ts` file:
+For Svelte + Vite, in the `src/vite-env.d.ts` file:
 
 ```js
 /// <reference types="svelte" />
