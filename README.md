@@ -195,7 +195,7 @@ The `unplugin-icons` plugin should be configured in the `vite.config.js` configu
 ```ts
 // vite.config.js
 import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/kit/vite'
+import { sveltekit } from '@sveltejs/kit/vite'
 import Icons from 'unplugin-icons/vite'
 
 export default defineConfig({
