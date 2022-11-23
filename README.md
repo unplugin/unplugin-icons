@@ -188,32 +188,24 @@ module.exports = {
 <br></details>
 
 <details>
-<summary>Svelte Kit</summary><br>
+<summary>SvelteKit</summary><br>
+
+The `unplugin-icons` plugin should be configured in the `vite.config.js` configuration file:
 
 ```ts
-// svelte.config.js
-import adapter from '@sveltejs/adapter-auto'
-import preprocess from 'svelte-preprocess'
+// vite.config.js
+import { defineConfig } from 'vite'
+import { sveltekit } from '@sveltejs/kit/vite'
 import Icons from 'unplugin-icons/vite'
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-  // Consult https://github.com/sveltejs/svelte-preprocess
-  // for more information about preprocessors
-  preprocess: preprocess(),
-  kit: {
-    adapter: adapter(),
-    vite: {
-      plugins: [
-        Icons({
-          compiler: 'svelte',
-        }),
-      ],
-    },
-  },
-}
-
-export default config
+export default defineConfig({
+  plugins: [
+    sveltekit(),
+    Icons({
+      compiler: 'svelte',
+    })
+  ]
+})
 ```
 
 Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
@@ -223,12 +215,12 @@ Check instructions in the `Frameworks -> Svelte` section below if you faced modu
 <details>
 <summary>Svelte + Vite</summary><br>
 
-Svelte support requires plugin dependency `@sveltejs/vite-plugin-svelte`:
+Svelte support requires the `@sveltejs/vite-plugin-svelte` plugin:
 ```shell
 npm i -D @sveltejs/vite-plugin-svelte
 ```
 
-The `unplugin-icons` plugin should be configured on `vite.config.js` configuration file:
+The `unplugin-icons` plugin should be configured in the `vite.config.js` configuration file:
 
 ```ts
 // vite.config.js
@@ -492,14 +484,14 @@ Icons({ compiler: 'svelte' })
 
 Type Declarations
 
-For Svelte Kit, on `src/app.d.ts` file:
+For SvelteKit, in the `src/app.d.ts` file:
 
 ```js
 /// <reference types="@sveltejs/kit" />
 /// <reference types="unplugin-icons/types/svelte" />
 ```
 
-For Svelte + Vite, on `src/vite-env.d.ts` file:
+For Svelte + Vite, in the `src/vite-env.d.ts` file:
 
 ```js
 /// <reference types="svelte" />
