@@ -10,17 +10,17 @@
     "serve-custom": "npm run build-custom && cross-env DEBUG=unplugin-icons:* CUSTOM_COMPILER=true vite preview"
   },
   "devDependencies": {
-    "@iconify-json/icon-park": "^1.1.6",
-    "@iconify-json/logos": "^1.1.18",
-    "@iconify-json/mdi": "^1.1.35",
-    "@sveltejs/vite-plugin-svelte": "^1.2.0",
+    "@iconify-json/icon-park": "^1.1.7",
+    "@iconify-json/logos": "^1.1.19",
+    "@iconify-json/mdi": "^1.1.36",
+    "@sveltejs/vite-plugin-svelte": "^2.0.1",
     "@tsconfig/svelte": "^3.0.0",
     "cross-env": "^7.0.3",
-    "svelte": "^3.53.1",
-    "svelte-check": "^2.9.2",
-    "svelte-preprocess": "^4.10.7",
-    "typescript": "^4.9.3",
+    "svelte": "^3.54.0",
+    "svelte-check": "^2.10.2",
+    "svelte-preprocess": "^5.0.0",
+    "typescript": "^4.9.4",
     "unplugin-icons": "workspace:*",
-    "vite": "^3.2.4"
+    "vite": "^4.0.0"
   }
 }

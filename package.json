@@ -136,29 +136,29 @@
   },
   "dependencies": {
     "@antfu/install-pkg": "^0.1.1",
-    "@antfu/utils": "^0.6.3",
-    "@iconify/utils": "^2.0.2",
+    "@antfu/utils": "^0.7.2",
+    "@iconify/utils": "^2.0.3",
     "debug": "^4.3.4",
     "kolorist": "^1.6.0",
     "local-pkg": "^0.4.2",
-    "unplugin": "^1.0.0"
+    "unplugin": "^1.0.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.31.0",
-    "@iconify/json": "^2.1.141",
+    "@antfu/eslint-config": "^0.33.1",
+    "@iconify/json": "^2.1.151",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^6.5.1",
     "@types/debug": "^4.1.7",
-    "@types/node": "^18.11.9",
+    "@types/node": "^18.11.13",
     "@vue/compiler-sfc": "^3.2.45",
     "bumpp": "^8.2.1",
     "cross-env": "^7.0.3",
-    "eslint": "^8.28.0",
+    "eslint": "^8.29.0",
     "esno": "^0.16.3",
-    "rollup": "^3.4.0",
+    "rollup": "^3.7.3",
     "tsup": "^6.5.0",
-    "typescript": "^4.9.3",
-    "vite": "^3.2.4",
-    "vitest": "^0.25.2"
+    "typescript": "^4.9.4",
+    "vite": "^4.0.0",
+    "vitest": "^0.25.7"
   }
 }

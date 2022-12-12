@@ -10,12 +10,12 @@
     "preact": "^10.11.3"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.18",
+    "@iconify-json/logos": "^1.1.19",
     "@preact/preset-vite": "^2.4.0",
     "@svgr/core": "^6.5.1",
-    "typescript": "^4.9.3",
+    "typescript": "^4.9.4",
     "unplugin-icons": "workspace:*",
-    "vite": "^3.2.4",
+    "vite": "^4.0.0",
     "vite-plugin-inspect": "^0.7.9"
   }
 }

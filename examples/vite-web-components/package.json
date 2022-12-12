@@ -6,8 +6,8 @@
   },
   "devDependencies": {
     "@iconify-json/ion": "^1.1.4",
-    "@iconify-json/mono-icons": "^1.1.2",
+    "@iconify-json/mono-icons": "^1.1.3",
     "unplugin-icons": "workspace:*",
-    "vite": "^3.2.4"
+    "vite": "^4.0.0"
   }
 }
