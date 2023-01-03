@@ -13,13 +13,15 @@ export const WebComponentsCompiler = <Compiler>((svg, collection, icon, { webCom
       super()
       this.attachShadow({ mode: 'open' }).innerHTML = ${JSON.stringify(svg)}
     }`
-  } else {
+  }
+  else {
     // use connectedCallback because children can't be appended in the constructor of a CE:
     code += `connectedCallback() { this.innerHTML = ${JSON.stringify(svg)} }`
   }
-  code += `}`
-  if (options.autoDefine) {
+  code += '}'
+
+  if (options.autoDefine)
     code += `\ncustomElements.define('${id}', ${name})`
-  }
+
   return code
 })

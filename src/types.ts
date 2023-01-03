@@ -89,6 +89,12 @@ export interface Options {
      * @default 'icon'
      */
     iconPrefix?: string
+
+    /**
+     * Use shadow DOM
+     * @default false
+     */
+    shadow?: boolean
   }
 
   /**
