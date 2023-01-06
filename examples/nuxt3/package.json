@@ -7,8 +7,8 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.19",
-    "@iconify-json/mdi": "^1.1.36",
+    "@iconify-json/logos": "^1.1.21",
+    "@iconify-json/mdi": "^1.1.41",
     "nuxt": "^3.0.0",
     "unplugin-icons": "link:../.."
   }
