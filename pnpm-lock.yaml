@@ -66,6 +66,40 @@ importers:
       '@iconify/json': 2.2.3
       unplugin-icons: link:../..
 
+  examples/base-qwik:
+    specifiers:
+      '@builder.io/qwik': 0.16.2
+      '@types/eslint': 8.4.10
+      '@types/node': ^18.11.18
+      '@types/node-fetch': latest
+      '@typescript-eslint/eslint-plugin': 5.48.0
+      '@typescript-eslint/parser': 5.48.0
+      eslint: 8.31.0
+      eslint-plugin-qwik: 0.16.2
+      node-fetch: 3.3.0
+      prettier: 2.8.1
+      typescript: 4.9.4
+      undici: 5.14.0
+      unplugin-icons: workspace:*
+      vite: 4.0.3
+      vite-tsconfig-paths: 3.5.0
+    devDependencies:
+      '@builder.io/qwik': 0.16.2_undici@5.14.0
+      '@types/eslint': 8.4.10
+      '@types/node': 18.11.18
+      '@types/node-fetch': 2.6.2
+      '@typescript-eslint/eslint-plugin': 5.48.0_k73wpmdolxikpyqun3p36akaaq
+      '@typescript-eslint/parser': 5.48.0_iukboom6ndih5an6iafl45j2fe
+      eslint: 8.31.0
+      eslint-plugin-qwik: 0.16.2_eslint@8.31.0
+      node-fetch: 3.3.0
+      prettier: 2.8.1
+      typescript: 4.9.4
+      undici: 5.14.0
+      unplugin-icons: link:../..
+      vite: 4.0.3_@types+node@18.11.18
+      vite-tsconfig-paths: 3.5.0_vite@4.0.3
+
   examples/next:
     specifiers:
       '@iconify/json': 2.2.3
@@ -3712,7 +3746,7 @@ packages:
       babel-plugin-dynamic-import-node: 2.3.3
       core-js: 3.27.1
       core-js-compat: 3.16.3
-      semver: 7.3.7
+      semver: 7.3.8
       vue: 2.7.8
     transitivePeerDependencies:
       - supports-color
@@ -4037,7 +4071,7 @@ packages:
       open: 8.4.0
       ora: 5.4.1
       read-pkg: 5.2.0
-      semver: 7.3.7
+      semver: 7.3.8
       strip-ansi: 6.0.1
     transitivePeerDependencies:
       - encoding
@@ -5368,7 +5402,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /connect-history-api-fallback/1.6.0:
@@ -7686,7 +7720,7 @@ packages:
       memfs: 3.4.1
       minimatch: 3.1.2
       schema-utils: 2.7.0
-      semver: 7.3.7
+      semver: 7.3.8
       tapable: 1.1.3
       typescript: 4.9.4
       webpack: 5.75.0
@@ -12545,7 +12579,7 @@ packages:
       chalk: 4.1.2
       enhanced-resolve: 5.10.0
       micromatch: 4.0.4
-      semver: 7.3.7
+      semver: 7.3.8
       typescript: 4.9.4
       webpack: 5.75.0
     dev: true
