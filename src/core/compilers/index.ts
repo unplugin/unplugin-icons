@@ -3,6 +3,7 @@ import { AstroCompiler } from './astro'
 import { JSXCompiler } from './jsx'
 import { MarkoCompiler } from './marko'
 import { NoneCompiler } from './none'
+import { QwikCompiler } from './qwik'
 import { RawCompiler } from './raw'
 import { SolidCompiler } from './solid'
 import { SvelteCompiler } from './svelte'
@@ -22,4 +23,5 @@ export const compilers: Record<ResolvedOptions['compiler'], Compiler> = {
   'vue2': Vue2Compiler,
   'vue3': Vue3Compiler,
   'web-components': WebComponentsCompiler,
+  'qwik': QwikCompiler,
 }

@@ -28,6 +28,8 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
               return `${res}.astro`
             case 'jsx':
               return `${res}.jsx`
+            case 'qwik':
+              return `${res}.tsx`
             case 'marko':
               return `${res}.marko`
             case 'svelte':
