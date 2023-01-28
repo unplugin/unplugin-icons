@@ -137,7 +137,7 @@
   "dependencies": {
     "@antfu/install-pkg": "^0.1.1",
     "@antfu/utils": "^0.7.2",
-    "@iconify/utils": "^2.0.10",
+    "@iconify/utils": "^2.1.0",
     "debug": "^4.3.4",
     "kolorist": "^1.6.0",
     "local-pkg": "^0.4.2",
@@ -145,7 +145,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.34.0",
-    "@iconify/json": "^2.2.3",
+    "@iconify/json": "^2.2.13",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^6.5.1",
     "@types/debug": "^4.1.7",
