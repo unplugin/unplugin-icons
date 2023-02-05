@@ -158,7 +158,7 @@ module.exports = {
 <details>
 <summary>Nuxt</summary><br>
 
-Nuxt 2 and [Nuxt Vite](https://github.com/nuxt/vite)
+Nuxt 2 and [Nuxt Bridge](https://github.com/nuxt/bridge)
 
 ```ts
 // nuxt.config.js
