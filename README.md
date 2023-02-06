@@ -158,6 +158,8 @@ module.exports = {
 <details>
 <summary>Nuxt</summary><br>
 
+Nuxt 2 and [Nuxt Bridge](https://github.com/nuxt/bridge)
+
 ```ts
 // nuxt.config.js
 export default {
@@ -167,7 +169,16 @@ export default {
 }
 ```
 
-> This module works for both Nuxt 2 and [Nuxt Vite](https://github.com/nuxt/vite)
+Nuxt 3
+
+```ts
+// nuxt.config.js
+export default defineNuxtConfig({
+  modules: [
+    ["unplugin-icons/nuxt", { /* options */ }]
+  ],
+})
+```
 
 <br></details>
 
