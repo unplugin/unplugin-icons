@@ -137,7 +137,7 @@
   "dependencies": {
     "@antfu/install-pkg": "^0.1.1",
     "@antfu/utils": "^0.7.2",
-    "@iconify/utils": "^2.1.0",
+    "@iconify/utils": "^2.1.2",
     "debug": "^4.3.4",
     "kolorist": "^1.6.0",
     "local-pkg": "^0.4.2",
