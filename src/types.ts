@@ -65,7 +65,7 @@ export interface Options {
    *
    * @default (detect automatically, fallback to 'vue3')
    */
-  compiler?: 'astro' | 'jsx' | 'marko' | 'none' | 'solid' | 'svelte' | 'raw' | 'vue2' | 'vue3' | 'web-components' | CustomCompiler
+  compiler?: 'astro' | 'jsx' | 'marko' | 'none' | 'solid' | 'svelte' | 'raw' | 'vue2' | 'vue3' | 'web-components' | 'qwik' | CustomCompiler
 
   /**
    * JSX style, works only when compiler set to `jsx`

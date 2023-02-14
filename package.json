@@ -148,6 +148,7 @@
     "@iconify/json": "^2.2.13",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^6.5.1",
+    "@svgx/core": "^1.0.1",
     "@types/debug": "^4.1.7",
     "@types/node": "^18.11.18",
     "@vue/compiler-sfc": "^3.2.45",

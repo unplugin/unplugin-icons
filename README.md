@@ -532,6 +532,30 @@ Type Declarations
 
 <br></details>
 
+<details>
+<summary>Qwik</summary><br>
+
+```ts
+Icons({ compiler: 'qwik' })
+```
+
+Type Declarations
+
+<!-- eslint-skip -->
+
+```jsonc
+// tsconfig.json
+{ 
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/qwik",
+    ]
+  }
+}
+```
+
+<br></details>
+
 ## Use RAW compiler from query params
 
 From `v0.13.2` you can also use `raw` compiler to access the `svg` icon and use it on your html templates, just add `raw` to the icon query param.
