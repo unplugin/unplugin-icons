@@ -35,7 +35,7 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
     new URLSearchParams(queryRaw).forEach((value, key) => {
       // configure raw compiler for empty and true values only
       if (key === 'raw')
-        query.raw = value === '' || value === 'true' ? 'true' : 'false'
+        query.raw = (value === '' || value === 'true') ? 'true' : 'false'
       else
         query[key] = value
     })

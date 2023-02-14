@@ -1,5 +1,5 @@
 {
- "type": "module",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "qwik build",
@@ -14,20 +14,20 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "0.16.2",
-    "@types/eslint": "8.4.10",
-    "@types/node": "^18.11.18",
+    "@builder.io/qwik": "0.17.5",
+    "@types/eslint": "8.21.1",
+    "@types/node": "^18.13.0",
     "@types/node-fetch": "latest",
-    "@typescript-eslint/eslint-plugin": "5.48.0",
-    "@typescript-eslint/parser": "5.48.0",
-    "eslint": "8.31.0",
-    "eslint-plugin-qwik": "0.16.2",
+    "@typescript-eslint/eslint-plugin": "5.52.0",
+    "@typescript-eslint/parser": "5.52.0",
+    "eslint": "8.34.0",
+    "eslint-plugin-qwik": "0.17.5",
     "node-fetch": "3.3.0",
-    "prettier": "2.8.1",
-    "typescript": "4.9.4",
-    "undici": "5.14.0",
-    "vite": "4.0.3",
-    "vite-tsconfig-paths": "3.5.0",
-    "unplugin-icons": "workspace:*"
+    "prettier": "2.8.4",
+    "typescript": "4.9.5",
+    "undici": "5.19.1",
+    "unplugin-icons": "workspace:*",
+    "vite": "4.1.1",
+    "vite-tsconfig-paths": "4.0.5"
   }
 }

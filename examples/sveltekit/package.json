@@ -9,15 +9,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@iconify-json/icon-park": "^1.1.9",
-    "@iconify-json/logos": "^1.1.21",
-    "@iconify-json/mdi": "^1.1.41",
+    "@iconify-json/icon-park": "^1.1.10",
+    "@iconify-json/logos": "^1.1.23",
+    "@iconify-json/mdi": "^1.1.47",
     "@sveltejs/kit": "next",
-    "svelte": "^3.55.0",
-    "svelte-check": "^3.0.1",
-    "svelte-preprocess": "^5.0.0",
-    "tslib": "^2.4.1",
-    "typescript": "^4.9.4",
+    "svelte": "^3.55.1",
+    "svelte-check": "^3.0.3",
+    "svelte-preprocess": "^5.0.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5",
     "unplugin-icons": "workspace:*"
   }
 }

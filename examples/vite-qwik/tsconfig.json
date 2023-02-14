@@ -16,7 +16,7 @@
     "isolatedModules": true,
     "outDir": "tmp",
     "noEmit": true,
-    "types": ["node", "vite/client","unplugin-icons/types/qwik"],
+    "types": ["node", "vite/client", "unplugin-icons/types/qwik"],
     "paths": {
       "~/*": ["./src/*"]
     }

@@ -175,7 +175,7 @@ Nuxt 3
 // nuxt.config.js
 export default defineNuxtConfig({
   modules: [
-    ["unplugin-icons/nuxt", { /* options */ }]
+    ['unplugin-icons/nuxt', { /* options */ }]
   ],
 })
 ```
