@@ -13,7 +13,9 @@ export const JSXCompiler = <Compiler>(async (
   const svgr = svgrCore.transform || svgrCore.default || svgrCore
   let res = await svgr(
     svg,
-    {},
+    {
+      plugins: ['@svgr/plugin-jsx'],
+    },
     { componentName: camelize(`${collection}-${icon}`) },
   )
   // svgr does not provide an option to support preact (WHY?),
