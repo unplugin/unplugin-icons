@@ -8,22 +8,22 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.1.15",
+    "@iconify-json/carbon": "^1.1.16",
     "@iconify-json/fa-solid": "^1.1.4",
     "@iconify-json/heroicons-outline": "^1.1.6",
     "@iconify-json/ic": "^1.1.13",
     "@iconify-json/icon-park": "^1.1.10",
     "@iconify-json/logos": "^1.1.23",
-    "@iconify-json/mdi": "^1.1.47",
+    "@iconify-json/mdi": "^1.1.50",
     "@iconify-json/mdi-light": "^1.1.6",
     "@iconify-json/noto-v1": "^1.1.7",
     "@iconify-json/ri": "^1.1.5",
     "@iconify-json/twemoji": "^1.1.11",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "typescript": "^4.9.5",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "typescript": "^5.0.2",
     "unconfig": "^0.3.7",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^0.23.0",
-    "vite": "^4.1.1"
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.2.1"
   }
 }

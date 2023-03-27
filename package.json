@@ -1,7 +1,7 @@
 {
   "name": "unplugin-icons",
   "version": "0.15.3",
-  "packageManager": "pnpm@7.13.4",
+  "packageManager": "pnpm@7.30.3",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
@@ -111,11 +111,11 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "prepublishOnly": "npm run build",
-    "release": "npx bumpp --commit --tag --push && npm publish",
+    "release": "bumpp && npm publish",
     "test": "vitest"
   },
   "peerDependencies": {
-    "@svgr/core": ">=5.5.0",
+    "@svgr/core": ">=7.0.0",
     "@vue/compiler-sfc": "^3.0.2 || ^2.7.0",
     "vue-template-compiler": "^2.6.12",
     "vue-template-es2015-compiler": "^1.9.0"
@@ -137,30 +137,30 @@
   "dependencies": {
     "@antfu/install-pkg": "^0.1.1",
     "@antfu/utils": "^0.7.2",
-    "@iconify/utils": "^2.1.2",
+    "@iconify/utils": "^2.1.5",
     "debug": "^4.3.4",
     "kolorist": "^1.7.0",
     "local-pkg": "^0.4.3",
-    "unplugin": "^1.0.1"
+    "unplugin": "^1.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.35.2",
-    "@iconify/json": "^2.2.21",
+    "@antfu/eslint-config": "^0.37.0",
+    "@iconify/json": "^2.2.40",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^7.0.0",
     "@svgr/plugin-jsx": "^7.0.0",
     "@svgx/core": "^1.0.1",
     "@types/debug": "^4.1.7",
-    "@types/node": "^18.13.0",
+    "@types/node": "^18.15.10",
     "@vue/compiler-sfc": "^3.2.47",
-    "bumpp": "^8.2.1",
+    "bumpp": "^9.0.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.34.0",
+    "eslint": "^8.36.0",
     "esno": "^0.16.3",
-    "rollup": "^3.15.0",
-    "tsup": "^6.6.3",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.1",
-    "vitest": "^0.28.5"
+    "rollup": "^3.20.2",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.2.1",
+    "vitest": "^0.29.7"
   }
 }

@@ -8,8 +8,8 @@
   },
   "devDependencies": {
     "@iconify-json/logos": "^1.1.23",
-    "@iconify-json/mdi": "^1.1.47",
-    "nuxt": "^3.2.0",
+    "@iconify-json/mdi": "^1.1.50",
+    "nuxt": "^3.3.2",
     "unplugin-icons": "link:../.."
   }
 }
