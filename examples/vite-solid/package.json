@@ -13,7 +13,7 @@
     "solid-js": "^1.6.16"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.23",
+    "@iconify-json/logos": "^1.1.24",
     "unplugin-icons": "workspace:*",
     "vite": "^4.2.1",
     "vite-plugin-solid": "^2.6.1"

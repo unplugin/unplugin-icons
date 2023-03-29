@@ -10,7 +10,7 @@
     "preact": "^10.13.2"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.23",
+    "@iconify-json/logos": "^1.1.24",
     "@preact/preset-vite": "^2.5.0",
     "@svgr/core": "^7.0.0",
     "typescript": "^5.0.2",

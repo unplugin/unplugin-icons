@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@iconify-json/icon-park": "^1.1.10",
-    "@iconify-json/logos": "^1.1.23",
+    "@iconify-json/logos": "^1.1.24",
     "@iconify-json/mdi": "^1.1.50",
     "@sveltejs/kit": "next",
     "svelte": "^3.57.0",

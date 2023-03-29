@@ -1,7 +1,7 @@
 {
   "name": "unplugin-icons",
   "version": "0.16.0",
-  "packageManager": "pnpm@7.30.3",
+  "packageManager": "pnpm@8.0.0",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
@@ -145,22 +145,22 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.37.0",
-    "@iconify/json": "^2.2.40",
+    "@iconify/json": "^2.2.41",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^7.0.0",
     "@svgr/plugin-jsx": "^7.0.0",
     "@svgx/core": "^1.0.1",
     "@types/debug": "^4.1.7",
-    "@types/node": "^18.15.10",
+    "@types/node": "^18.15.11",
     "@vue/compiler-sfc": "^3.2.47",
     "bumpp": "^9.0.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.36.0",
+    "eslint": "^8.37.0",
     "esno": "^0.16.3",
     "rollup": "^3.20.2",
     "tsup": "^6.7.0",
     "typescript": "^5.0.2",
     "vite": "^4.2.1",
-    "vitest": "^0.29.7"
+    "vitest": "^0.29.8"
   }
 }
