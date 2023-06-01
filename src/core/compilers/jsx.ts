@@ -2,7 +2,7 @@ import { importModule } from 'local-pkg'
 import { camelize } from '@iconify/utils/lib/misc/strings'
 import type { Compiler } from './types'
 
-export const JSXCompiler = <Compiler>(async (
+export const JSXCompiler = (async (
   svg,
   collection,
   icon,
@@ -25,4 +25,4 @@ export const JSXCompiler = <Compiler>(async (
   if (options.jsx !== 'react')
     res = res.replace('import * as React from "react";', '')
   return res
-})
+}) as Compiler

@@ -3,7 +3,7 @@ import { handleSVGId } from '../svgId'
 import type { Compiler } from './types'
 
 // refer to: https://github.com/underfin/vite-plugin-vue2/blob/master/src/template/compileTemplate.ts
-export const Vue2Compiler = <Compiler>(async (
+export const Vue2Compiler = (async (
   svg: string,
   collection: string,
   icon: string,
@@ -40,4 +40,4 @@ export default {
 `
 
   return code
-})
+}) as Compiler

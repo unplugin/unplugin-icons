@@ -3,17 +3,17 @@ import { importModule } from 'local-pkg'
 import { camelize } from '@iconify/utils/lib/misc/strings'
 import type { Compiler } from './types'
 
-export const QwikCompiler = <Compiler>(async (
+export const QwikCompiler = (async (
   svg,
   collection,
   icon,
   options,
 ) => {
-  const defaultOptions = {
+  const defaultOptions: ToJsComponentOptions = {
     importSource: '@builder.io/qwik',
     runtime: 'automatic',
     componentName: camelize(`${collection}-${icon}`),
-  } as ToJsComponentOptions
+  }
   const mergedOptions = Object.assign({}, defaultOptions, options)
   const svgx = await importModule('@svgx/core')
   // check for v6 transform, v5 default and previous versions
@@ -23,4 +23,4 @@ export const QwikCompiler = <Compiler>(async (
     defaultExport: true,
   })
   return res
-})
+}) as Compiler

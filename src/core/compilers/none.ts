@@ -1,5 +1,5 @@
 import type { Compiler } from './types'
 
-export const NoneCompiler = <Compiler>((svg: string) => {
+export const NoneCompiler = ((svg: string) => {
   return svg
-})
+}) as Compiler

@@ -2,7 +2,7 @@ import { importModule } from 'local-pkg'
 import { handleSVGId } from '../svgId'
 import type { Compiler } from './types'
 
-export const Vue3Compiler = <Compiler>(async (svg: string, collection: string, icon: string) => {
+export const Vue3Compiler = (async (svg: string, collection: string, icon: string) => {
   const { compileTemplate } = await importModule('@vue/compiler-sfc')
 
   const { injectScripts, svg: handled } = handleSVGId(svg)
@@ -18,4 +18,4 @@ export const Vue3Compiler = <Compiler>(async (svg: string, collection: string, i
   code += '\n/* vite-plugin-components disabled */'
 
   return code
-})
+}) as Compiler

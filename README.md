@@ -320,6 +320,7 @@ build({
 // astro.config.mjs
 import { defineConfig } from 'astro/config'
 import Icons from 'unplugin-icons/vite'
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -589,7 +590,8 @@ From `v0.11`, you can now load your own icons!
 From `v0.13` you can also provide a transform callback to `FileSystemIconLoader`.
 
 ```ts
-import { promises as fs } from 'fs'
+import { promises as fs } from 'node:fs'
+
 // loader helpers
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
@@ -657,7 +659,8 @@ The `iconCustomizer` and `query` params will be applied to any collection, that 
 For example, you can configure `iconCustomizer` to change all icons for a collection or individual icons on a collection:
 
 ```ts
-import { promises as fs } from 'fs'
+import { promises as fs } from 'node:fs'
+
 // loader helpers
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 

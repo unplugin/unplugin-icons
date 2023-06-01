@@ -1,4 +1,4 @@
-const { resolve } = require('path')
+const { resolve } = require('node:path')
 const Icons = require('unplugin-icons/webpack')
 
 module.exports = {

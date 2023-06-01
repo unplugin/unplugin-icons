@@ -1,7 +1,7 @@
 import { camelize } from '@iconify/utils/lib/misc/strings'
 import type { Compiler } from './types'
 
-export const WebComponentsCompiler = <Compiler>((svg, collection, icon, { webComponents: options }) => {
+export const WebComponentsCompiler = ((svg, collection, icon, { webComponents: options }) => {
   let id = `${collection}-${icon}`
   if (options.iconPrefix)
     id = `${options.iconPrefix}-${id}`
@@ -24,4 +24,4 @@ export const WebComponentsCompiler = <Compiler>((svg, collection, icon, { webCom
     code += `\ncustomElements.define('${id}', ${name})`
 
   return code
-})
+}) as Compiler
