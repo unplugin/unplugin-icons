@@ -145,7 +145,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.37.0",
-    "@iconify/json": "^2.2.41",
+    "@iconify/json": "^2.2.72",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^7.0.0",
     "@svgr/plugin-jsx": "^7.0.0",
