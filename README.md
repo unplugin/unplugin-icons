@@ -402,10 +402,10 @@ Type Declarations
 <details>
 <summary>React</summary><br>
 
-JSX support requires peer dependency `@svgr/core`:
+JSX support requires peer dependency `@svgr/core` and its plugin `@svgr/plugin-jsx`:
 
 ```bash
-npm i -D @svgr/core
+npm i -D @svgr/core @svgr/plugin-jsx
 ```
 
 ```ts
@@ -433,10 +433,10 @@ Type Declarations
 <details>
 <summary>Preact</summary><br>
 
-JSX support requires peer dependency `@svgr/core`:
+JSX support requires peer dependency `@svgr/core` and its plugin `@svgr/plugin-jsx`:
 
 ```bash
-npm i -D @svgr/core
+npm i -D @svgr/core @svgr/plugin-jsx
 ```
 
 ```ts
