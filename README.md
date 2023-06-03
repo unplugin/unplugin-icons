@@ -177,6 +177,14 @@ export default defineNuxtConfig({
   modules: [
     ['unplugin-icons/nuxt', { /* options */ }]
   ],
+  
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        types: ["unplugin-icons/types/vue"]
+      }
+    }
+  },
 })
 ```
 
