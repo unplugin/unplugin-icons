@@ -4,8 +4,16 @@ import unplugin from '.'
 export default function (this: any, options: Options = {}, nuxt: any) {
   const nuxtApp = this?.nuxt || nuxt
 
-  if (nuxtApp?._version?.startsWith('3.'))
+  if (nuxtApp?._version?.startsWith('3.')) {
     options.compiler = 'vue3'
+
+    // injecting types
+    nuxtApp.options.typescript ||= {}
+    nuxtApp.options.typescript.tsConfig ||= {}
+    nuxtApp.options.typescript.tsConfig.compilerOptions ||= {}
+    nuxtApp.options.typescript.tsConfig.compilerOptions.types ||= []
+    nuxtApp.options.typescript.tsConfig.compilerOptions.types.push('unplugin-icons/types/vue')
+  }
 
   // install webpack plugin
   nuxtApp.hook('webpack:config', (configs: any[]) => {
