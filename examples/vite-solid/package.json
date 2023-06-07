@@ -15,7 +15,7 @@
   "devDependencies": {
     "@iconify-json/logos": "^1.1.31",
     "unplugin-icons": "workspace:*",
-    "vite": "^4.2.3",
+    "vite": "^4.3.9",
     "vite-plugin-solid": "^2.7.0"
   }
 }

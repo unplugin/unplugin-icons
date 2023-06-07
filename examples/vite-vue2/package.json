@@ -18,9 +18,9 @@
     "@iconify-json/noto-v1": "^1.1.7",
     "@iconify-json/ri": "^1.1.9",
     "@vitejs/plugin-vue2": "^2.2.0",
-    "typescript": "^5.0.4",
+    "typescript": "^5.1.3",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^0.25.0",
-    "vite": "^4.2.3"
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.3.9"
   }
 }

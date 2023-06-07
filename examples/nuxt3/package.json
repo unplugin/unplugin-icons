@@ -9,7 +9,7 @@
   "devDependencies": {
     "@iconify-json/logos": "^1.1.31",
     "@iconify-json/mdi": "^1.1.52",
-    "nuxt": "^3.5.2",
+    "nuxt": "^3.5.3",
     "unplugin-icons": "link:../.."
   }
 }
