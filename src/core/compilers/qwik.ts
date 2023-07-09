@@ -16,9 +16,8 @@ export const QwikCompiler = (async (
   }
   const mergedOptions = Object.assign({}, defaultOptions, options)
   const svgx = await importModule('@svgx/core')
-  // check for v6 transform, v5 default and previous versions
-  const toJsComponent = svgx.toJsComponent || svgx.default || svgx
-  const res = toJsComponent(svg, {
+  const toJsxComponent = svgx.toJsxComponent
+  const res = toJsxComponent(svg, {
     ...mergedOptions,
     defaultExport: true,
   })
