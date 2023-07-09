@@ -536,6 +536,12 @@ Type Declarations
 <details>
 <summary>Qwik</summary><br>
 
+Qwik support requires peer dependency `@svgx/core`:
+
+```bash
+npm i -D @svgx/core
+```
+
 ```ts
 Icons({ compiler: 'qwik' })
 ```
