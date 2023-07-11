@@ -29,7 +29,7 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
             case 'jsx':
               return `${res}.jsx`
             case 'qwik':
-              return `${res}.tsx`
+              return `${res}.jsx`
             case 'marko':
               return `${res}.marko`
             case 'svelte':

@@ -116,12 +116,16 @@
   },
   "peerDependencies": {
     "@svgr/core": ">=7.0.0",
+    "@svgx/core": "^1.0.1",
     "@vue/compiler-sfc": "^3.0.2 || ^2.7.0",
     "vue-template-compiler": "^2.6.12",
     "vue-template-es2015-compiler": "^1.9.0"
   },
   "peerDependenciesMeta": {
     "@svgr/core": {
+      "optional": true
+    },
+    "@svgx/core": {
       "optional": true
     },
     "@vue/compiler-sfc": {

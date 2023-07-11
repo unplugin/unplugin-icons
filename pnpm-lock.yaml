@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -515,10 +515,10 @@ importers:
         version: 5.0.8(@vue/cli-service@5.0.8)(core-js@3.30.2)(esbuild@0.17.19)(vue@2.7.8)
       '@vue/cli-plugin-typescript':
         specifier: ^5.0.8
-        version: 5.0.8(@vue/cli-service@5.0.8)(esbuild@0.17.19)(eslint@8.42.0)(typescript@5.1.3)(vue-template-compiler@2.7.14)(vue@2.7.8)
+        version: 5.0.8(@vue/cli-service@5.0.8)(esbuild@0.17.19)(eslint@8.42.0)(typescript@5.1.3)(vue@2.7.8)
       '@vue/cli-service':
         specifier: ^5.0.8
-        version: 5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)(vue-template-compiler@2.7.14)
+        version: 5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)
       typescript:
         specifier: ^5.1.3
         version: 5.1.3
@@ -3569,7 +3569,7 @@ packages:
     dependencies:
       '@babel/core': 7.22.1
       '@vue/babel-preset-app': 5.0.8(@babel/core@7.22.1)(core-js@3.30.2)(vue@2.7.8)
-      '@vue/cli-service': 5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)(vue-template-compiler@2.7.14)
+      '@vue/cli-service': 5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)
       '@vue/cli-shared-utils': 5.0.8
       babel-loader: 8.2.2(@babel/core@7.22.1)(webpack@5.86.0)
       thread-loader: 3.0.4(webpack@5.86.0)
@@ -3590,13 +3590,13 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': 5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)(vue-template-compiler@2.7.14)
+      '@vue/cli-service': 5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)
       '@vue/cli-shared-utils': 5.0.8
     transitivePeerDependencies:
       - encoding
     dev: true
 
-  /@vue/cli-plugin-typescript@5.0.8(@vue/cli-service@5.0.8)(esbuild@0.17.19)(eslint@8.42.0)(typescript@5.1.3)(vue-template-compiler@2.7.14)(vue@2.7.8):
+  /@vue/cli-plugin-typescript@5.0.8(@vue/cli-service@5.0.8)(esbuild@0.17.19)(eslint@8.42.0)(typescript@5.1.3)(vue@2.7.8):
     resolution: {integrity: sha512-JKJOwzJshBqsmp4yLBexwVMebOZ4VGJgbnYvmHVxasJOStF2RxwyW28ZF+zIvASGdat4sAUuo/3mAQyVhm7JHg==}
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
@@ -3612,16 +3612,15 @@ packages:
     dependencies:
       '@babel/core': 7.22.1
       '@types/webpack-env': 1.16.2
-      '@vue/cli-service': 5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)(vue-template-compiler@2.7.14)
+      '@vue/cli-service': 5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)
       '@vue/cli-shared-utils': 5.0.8
       babel-loader: 8.2.2(@babel/core@7.22.1)(webpack@5.86.0)
-      fork-ts-checker-webpack-plugin: 6.5.0(eslint@8.42.0)(typescript@5.1.3)(vue-template-compiler@2.7.14)(webpack@5.86.0)
+      fork-ts-checker-webpack-plugin: 6.5.0(eslint@8.42.0)(typescript@5.1.3)(webpack@5.86.0)
       globby: 11.1.0
       thread-loader: 3.0.4(webpack@5.86.0)
       ts-loader: 9.2.7(typescript@5.1.3)(webpack@5.86.0)
       typescript: 5.1.3
       vue: 2.7.8
-      vue-template-compiler: 2.7.14
       webpack: 5.86.0(esbuild@0.17.19)(webpack-cli@5.1.3)
     transitivePeerDependencies:
       - '@swc/core'
@@ -3638,10 +3637,10 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': 5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)(vue-template-compiler@2.7.14)
+      '@vue/cli-service': 5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)
     dev: true
 
-  /@vue/cli-service@5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19)(vue-template-compiler@2.7.14):
+  /@vue/cli-service@5.0.8(@babel/core@7.22.1)(@vue/compiler-sfc@3.3.4)(esbuild@0.17.19):
     resolution: {integrity: sha512-nV7tYQLe7YsTtzFrfOMIHc5N2hp5lHG2rpYr0aNja9rNljdgcPZLyQRb2YRivTHqTv7lI962UXFURcpStHgyFw==}
     engines: {node: ^12.0.0 || >= 14.0.0}
     hasBin: true
@@ -3681,7 +3680,7 @@ packages:
       '@vue/cli-plugin-vuex': 5.0.8(@vue/cli-service@5.0.8)
       '@vue/cli-shared-utils': 5.0.8
       '@vue/component-compiler-utils': 3.3.0
-      '@vue/vue-loader-v15': /vue-loader@15.9.8(@vue/compiler-sfc@3.3.4)(css-loader@6.7.0)(vue-template-compiler@2.7.14)(webpack@5.86.0)
+      '@vue/vue-loader-v15': /vue-loader@15.9.8(@vue/compiler-sfc@3.3.4)(css-loader@6.7.0)(webpack@5.86.0)
       '@vue/web-component-wrapper': 1.3.0
       acorn: 8.8.2
       acorn-walk: 8.2.0
@@ -3720,7 +3719,6 @@ packages:
       thread-loader: 3.0.4(webpack@5.86.0)
       vue-loader: 17.0.0(webpack@5.86.0)
       vue-style-loader: 4.1.3
-      vue-template-compiler: 2.7.14
       webpack: 5.86.0(esbuild@0.17.19)(webpack-cli@5.1.3)
       webpack-bundle-analyzer: 4.5.0
       webpack-chain: 6.5.1
@@ -7143,7 +7141,7 @@ packages:
       is-callable: 1.2.7
     dev: true
 
-  /fork-ts-checker-webpack-plugin@6.5.0(eslint@8.42.0)(typescript@5.1.3)(vue-template-compiler@2.7.14)(webpack@5.86.0):
+  /fork-ts-checker-webpack-plugin@6.5.0(eslint@8.42.0)(typescript@5.1.3)(webpack@5.86.0):
     resolution: {integrity: sha512-cS178Y+xxtIjEUorcHddKS7yCMlrDPV31mt47blKKRfMd70Kxu5xruAFE2o9sDY6wVC5deuob/u/alD04YYHnw==}
     engines: {node: '>=10', yarn: '>=1.0.0'}
     peerDependencies:
@@ -7172,7 +7170,6 @@ packages:
       semver: 7.5.1
       tapable: 1.1.3
       typescript: 5.1.3
-      vue-template-compiler: 2.7.14
       webpack: 5.86.0(esbuild@0.17.19)(webpack-cli@5.1.3)
     dev: true
 
@@ -12342,7 +12339,7 @@ packages:
     resolution: {integrity: sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==}
     dev: true
 
-  /vue-loader@15.9.8(@vue/compiler-sfc@3.3.4)(css-loader@6.7.0)(vue-template-compiler@2.7.14)(webpack@5.86.0):
+  /vue-loader@15.9.8(@vue/compiler-sfc@3.3.4)(css-loader@6.7.0)(webpack@5.86.0):
     resolution: {integrity: sha512-GwSkxPrihfLR69/dSV3+5CdMQ0D+jXg8Ma1S4nQXKJAznYFX14vHdc/NetQc34Dw+rBbIJyP7JOuVb9Fhprvog==}
     peerDependencies:
       '@vue/compiler-sfc': ^3.0.8
@@ -12365,7 +12362,6 @@ packages:
       loader-utils: 1.4.0
       vue-hot-reload-api: 2.3.4
       vue-style-loader: 4.1.3
-      vue-template-compiler: 2.7.14
       webpack: 5.86.0(esbuild@0.17.19)(webpack-cli@5.1.3)
     transitivePeerDependencies:
       - arc-templates
