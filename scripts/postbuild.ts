@@ -1,8 +1,10 @@
 import { basename, resolve } from 'node:path'
 import { promises as fs } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 import fg from 'fast-glob'
 
 async function run() {
+  const __dirname = fileURLToPath(new URL('.', import.meta.url))
   // fix cjs exports
   const files = await fg('*.js', {
     ignore: ['index.js', 'chunk-*', 'types.js', 'loaders.js'],

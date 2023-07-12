@@ -7,15 +7,15 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.15.1"
+    "preact": "^10.16.0"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.31",
+    "@iconify-json/logos": "^1.1.33",
     "@preact/preset-vite": "^2.5.0",
     "@svgr/core": "^8.0.0",
-    "typescript": "^5.1.3",
+    "typescript": "^5.1.6",
     "unplugin-icons": "workspace:*",
-    "vite": "^4.3.9",
-    "vite-plugin-inspect": "^0.7.28"
+    "vite": "^4.4.3",
+    "vite-plugin-inspect": "^0.7.32"
   }
 }

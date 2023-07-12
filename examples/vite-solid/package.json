@@ -10,12 +10,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "solid-js": "^1.7.6"
+    "solid-js": "^1.7.8"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.31",
+    "@iconify-json/logos": "^1.1.33",
     "unplugin-icons": "workspace:*",
-    "vite": "^4.3.9",
+    "vite": "^4.4.3",
     "vite-plugin-solid": "^2.7.0"
   }
 }
