@@ -1,7 +1,6 @@
 {
   "name": "vite-template-solid-icon-set",
-  "version": "0.0.0",
-  "description": "",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "start": "vite",
