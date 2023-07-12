@@ -1,6 +1,6 @@
 {
   "name": "unplugin-icons",
-  "version": "0.16.3",
+  "version": "0.16.4",
   "type": "module",
   "packageManager": "pnpm@8.6.7",
   "description": "Access thousands of icons as components on-demand universally",
