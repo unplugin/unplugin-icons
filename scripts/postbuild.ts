@@ -6,8 +6,8 @@ import fg from 'fast-glob'
 async function run() {
   const __dirname = fileURLToPath(new URL('.', import.meta.url))
   // fix cjs exports
-  const files = await fg('*.js', {
-    ignore: ['index.js', 'chunk-*', 'types.js', 'loaders.js'],
+  const files = await fg('*.cjs', {
+    ignore: ['index.cjs', 'chunk-*', 'types.cjs', 'loaders.cjs'],
     absolute: true,
     cwd: resolve(__dirname, '../dist'),
   })
