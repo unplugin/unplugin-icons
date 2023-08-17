@@ -113,7 +113,8 @@
     "lint-fix": "eslint . --fix",
     "prepublishOnly": "npm run build",
     "release": "bumpp && npm publish",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "@svgr/core": ">=7.0.0",
