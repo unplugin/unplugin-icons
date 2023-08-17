@@ -103,4 +103,4 @@ export interface Options {
   iconSource?: 'legacy' | 'modern' | 'auto'
 }
 
-export interface ResolvedOptions extends Omit<Required<Options>, 'iconSource'> {}
+export type ResolvedOptions = Omit<Required<Options>, 'iconSource' | 'transform'> & Pick<Options, 'transform'>
