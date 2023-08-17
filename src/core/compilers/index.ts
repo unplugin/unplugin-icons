@@ -25,13 +25,3 @@ export const compilers: Record<Exclude<ResolvedOptions['compiler'], CustomCompil
   'web-components': WebComponentsCompiler,
   'qwik': QwikCompiler,
 }
-
-interface a {
-  name: string
-  age: number
-}
-
-interface b {
-  test?: 'b' | 'c' | 'd' | a
-  key: string
-}
