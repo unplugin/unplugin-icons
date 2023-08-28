@@ -14,20 +14,20 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "1.2.6",
-    "@types/eslint": "8.44.0",
-    "@types/node": "^20.4.1",
+    "@builder.io/qwik": "1.2.10",
+    "@types/eslint": "8.44.2",
+    "@types/node": "^20.5.7",
     "@types/node-fetch": "latest",
-    "@typescript-eslint/eslint-plugin": "6.0.0",
-    "@typescript-eslint/parser": "6.0.0",
-    "eslint": "8.44.0",
-    "eslint-plugin-qwik": "1.2.6",
-    "node-fetch": "3.3.1",
-    "prettier": "3.0.0",
-    "typescript": "5.1.6",
-    "undici": "5.22.1",
+    "@typescript-eslint/eslint-plugin": "6.4.1",
+    "@typescript-eslint/parser": "6.4.1",
+    "eslint": "8.48.0",
+    "eslint-plugin-qwik": "1.2.10",
+    "node-fetch": "3.3.2",
+    "prettier": "3.0.2",
+    "typescript": "5.2.2",
+    "undici": "5.23.0",
     "unplugin-icons": "workspace:*",
-    "vite": "4.4.3",
+    "vite": "4.4.9",
     "vite-tsconfig-paths": "4.2.0"
   }
 }

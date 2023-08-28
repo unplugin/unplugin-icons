@@ -15,6 +15,7 @@
     "**/dist",
     "**/node_modules",
     "**/test",
+    "**/examples",
     "dist"
   ]
 }

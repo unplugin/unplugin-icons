@@ -7,16 +7,16 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.31.1",
+    "core-js": "^3.32.1",
     "vue": "^2.7.8"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.89",
+    "@iconify/json": "^2.2.106",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-typescript": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "unplugin-icons": "workspace:*",
-    "vue-tsc": "^1.8.4"
+    "vue-tsc": "^1.8.8"
   }
 }

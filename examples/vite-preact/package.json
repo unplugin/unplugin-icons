@@ -8,15 +8,15 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.16.0"
+    "preact": "^10.17.1"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.33",
+    "@iconify-json/logos": "^1.1.34",
     "@preact/preset-vite": "^2.5.0",
-    "@svgr/core": "^8.0.0",
-    "typescript": "^5.1.6",
+    "@svgr/core": "^8.1.0",
+    "typescript": "^5.2.2",
     "unplugin-icons": "workspace:*",
-    "vite": "^4.4.3",
-    "vite-plugin-inspect": "^0.7.32"
+    "vite": "^4.4.9",
+    "vite-plugin-inspect": "^0.7.38"
   }
 }
