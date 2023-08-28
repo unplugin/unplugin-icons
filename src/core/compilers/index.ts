@@ -7,12 +7,12 @@ import { QwikCompiler } from './qwik'
 import { RawCompiler } from './raw'
 import { SolidCompiler } from './solid'
 import { SvelteCompiler } from './svelte'
-import type { Compiler } from './types'
+import type { Compiler, CustomCompiler } from './types'
 import { Vue2Compiler } from './vue2'
 import { Vue3Compiler } from './vue3'
 import { WebComponentsCompiler } from './web-components'
 
-export const compilers: Record<ResolvedOptions['compiler'], Compiler> = {
+export const compilers: Record<Exclude<ResolvedOptions['compiler'], CustomCompiler>, Compiler> = {
   'astro': AstroCompiler,
   'jsx': JSXCompiler,
   'marko': MarkoCompiler,
