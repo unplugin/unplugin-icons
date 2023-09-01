@@ -65,6 +65,9 @@
     "./types/solid": {
       "types": "./types/solid.d.ts"
     },
+    "./types/svelte": {
+      "types": "./types/svelte.d.ts"
+    },
     "./types/svelte3": {
       "types": "./types/svelte3.d.ts"
     },

@@ -1,2 +1,2 @@
 /// <reference types="@sveltejs/kit" />
-/// <reference types="unplugin-icons/types/svelte4" />
+/// <reference types="unplugin-icons/types/svelte" />
