@@ -158,9 +158,6 @@ importers:
       svelte-check:
         specifier: ^3.5.0
         version: 3.5.0(@babel/core@7.22.8)(svelte@4.2.0)
-      svelte-preprocess:
-        specifier: ^5.0.4
-        version: 5.0.4(@babel/core@7.22.8)(svelte@4.2.0)(typescript@5.2.2)
       tslib:
         specifier: ^2.6.2
         version: 2.6.2
