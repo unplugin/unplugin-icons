@@ -1,8 +1,8 @@
 {
   "name": "unplugin-icons",
-  "version": "0.16.5",
   "type": "module",
-  "packageManager": "pnpm@8.6.7",
+  "version": "0.16.6",
+  "packageManager": "pnpm@8.7.0",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
@@ -16,39 +16,39 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./*": "./*",
     "./esbuild": {
       "types": "./dist/esbuild.d.ts",
-      "require": "./dist/esbuild.cjs",
-      "import": "./dist/esbuild.mjs"
+      "import": "./dist/esbuild.mjs",
+      "require": "./dist/esbuild.cjs"
     },
     "./loaders": {
       "types": "./dist/loaders.d.ts",
-      "require": "./dist/loaders.cjs",
-      "import": "./dist/loaders.mjs"
+      "import": "./dist/loaders.mjs",
+      "require": "./dist/loaders.cjs"
     },
     "./nuxt": {
       "types": "./dist/nuxt.d.ts",
-      "require": "./dist/nuxt.cjs",
-      "import": "./dist/nuxt.mjs"
+      "import": "./dist/nuxt.mjs",
+      "require": "./dist/nuxt.cjs"
     },
     "./resolver": {
       "types": "./dist/resolver.d.ts",
-      "require": "./dist/resolver.cjs",
-      "import": "./dist/resolver.mjs"
+      "import": "./dist/resolver.mjs",
+      "require": "./dist/resolver.cjs"
     },
     "./rollup": {
       "types": "./dist/rollup.d.ts",
-      "require": "./dist/rollup.cjs",
-      "import": "./dist/rollup.mjs"
+      "import": "./dist/rollup.mjs",
+      "require": "./dist/rollup.cjs"
     },
     "./types": {
       "types": "./dist/types.d.ts",
-      "require": "./dist/types.cjs",
-      "import": "./dist/types.mjs"
+      "import": "./dist/types.mjs",
+      "require": "./dist/types.cjs"
     },
     "./types/astro": {
       "types": "./types/astro.d.ts"
@@ -79,13 +79,13 @@
     },
     "./vite": {
       "types": "./dist/vite.d.ts",
-      "require": "./dist/vite.cjs",
-      "import": "./dist/vite.mjs"
+      "import": "./dist/vite.mjs",
+      "require": "./dist/vite.cjs"
     },
     "./webpack": {
       "types": "./dist/webpack.d.ts",
-      "require": "./dist/webpack.cjs",
-      "import": "./dist/webpack.mjs"
+      "import": "./dist/webpack.mjs",
+      "require": "./dist/webpack.cjs"
     }
   },
   "main": "dist/index.cjs",
@@ -113,7 +113,8 @@
     "lint-fix": "eslint . --fix",
     "prepublishOnly": "npm run build",
     "release": "bumpp && npm publish",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "@svgr/core": ">=7.0.0",
@@ -141,32 +142,32 @@
   },
   "dependencies": {
     "@antfu/install-pkg": "^0.1.1",
-    "@antfu/utils": "^0.7.5",
-    "@iconify/utils": "^2.1.7",
+    "@antfu/utils": "^0.7.6",
+    "@iconify/utils": "^2.1.9",
     "debug": "^4.3.4",
     "kolorist": "^1.8.0",
     "local-pkg": "^0.4.3",
-    "unplugin": "^1.3.2"
+    "unplugin": "^1.4.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.7",
-    "@iconify/json": "^2.2.89",
+    "@antfu/eslint-config": "^0.41.0",
+    "@iconify/json": "^2.2.106",
     "@iconify/types": "^2.0.0",
-    "@svgr/core": "^8.0.0",
-    "@svgr/plugin-jsx": "^8.0.1",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
     "@svgx/core": "^1.0.1",
     "@types/debug": "^4.1.8",
-    "@types/node": "^20.4.1",
+    "@types/node": "^20.5.7",
     "@vue/compiler-sfc": "^3.3.4",
-    "bumpp": "^9.1.1",
+    "bumpp": "^9.2.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.44.0",
-    "esno": "^0.16.3",
-    "fast-glob": "^3.3.0",
-    "rollup": "^3.26.2",
-    "tsup": "^7.1.0",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.3",
-    "vitest": "^0.33.0"
+    "eslint": "^8.48.0",
+    "esno": "^0.17.0",
+    "fast-glob": "^3.3.1",
+    "rollup": "^3.28.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.3"
   }
 }
