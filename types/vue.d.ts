@@ -1,1 +1,1 @@
-import './vue3'
+import './vue3.d.ts'
