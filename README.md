@@ -499,7 +499,7 @@ Type Declarations
 For SvelteKit, in the `src/app.d.ts` file:
 
 ```ts
-import 'unplugin-icons/types/svelte'
+import 'unplugin-icons/types/svelte';
 ```
 
 For Svelte + Vite, in the `src/vite-env.d.ts` file:
@@ -508,6 +508,13 @@ For Svelte + Vite, in the `src/vite-env.d.ts` file:
 /// <reference types="svelte" />
 /// <reference types="vite/client" />
 /// <reference types="unplugin-icons/types/svelte" />
+```
+
+If you're still using Svelte 3, replace the reference to use Svelte 3:
+```js
+/// <reference types="svelte" />
+/// <reference types="vite/client" />
+/// <reference types="unplugin-icons/types/svelte3" />
 ```
 
 <br></details>

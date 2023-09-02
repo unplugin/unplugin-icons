@@ -68,6 +68,12 @@
     "./types/svelte": {
       "types": "./types/svelte.d.ts"
     },
+    "./types/svelte3": {
+      "types": "./types/svelte3.d.ts"
+    },
+    "./types/svelte4": {
+      "types": "./types/svelte4.d.ts"
+    },
     "./types/vue": {
       "types": "./types/vue.d.ts"
     },
