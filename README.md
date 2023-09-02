@@ -498,8 +498,8 @@ Type Declarations
 
 For SvelteKit, in the `src/app.d.ts` file:
 
-```js
-/// <reference types="unplugin-icons/types/svelte" />
+```ts
+import 'unplugin-icons/types/svelte';
 ```
 
 For Svelte + Vite, in the `src/vite-env.d.ts` file:
