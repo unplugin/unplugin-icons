@@ -11,7 +11,7 @@
     "vue": "^2.7.8"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.106",
+    "@iconify/json": "^2.2.110",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-typescript": "^5.0.8",
     "@vue/cli-service": "^5.0.8",

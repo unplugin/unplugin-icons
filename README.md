@@ -499,7 +499,7 @@ Type Declarations
 For SvelteKit, in the `src/app.d.ts` file:
 
 ```ts
-import 'unplugin-icons/types/svelte';
+import 'unplugin-icons/types/svelte'
 ```
 
 For Svelte + Vite, in the `src/vite-env.d.ts` file:
