@@ -990,4 +990,4 @@ This project is part of my <a href='https://github.com/antfu-sponsors'>Sponsor P
 
 ## License
 
-MIT License © 2020-PRESENT [Anthony Fu](https://github.com/antfu)
+[MIT](./LICENSE) License © 2020-PRESENT [Anthony Fu](https://github.com/antfu)
