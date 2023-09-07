@@ -180,6 +180,8 @@ export default defineNuxtConfig({
 })
 ```
 
+See [the Nuxt example](examples/nuxt) for a working example project.
+
 <br></details>
 
 <details>
@@ -221,6 +223,8 @@ export default defineConfig({
 
 Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
 
+See [the SvelteKit example](examples/sveltekit) for a working example project.
+
 <br></details>
 
 <details>
@@ -250,6 +254,8 @@ export default defineConfig({
 ```
 
 Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
+
+See [the Svelte + Vite example](examples/vite-svelte) for a working example project.
 
 <br></details>
 
@@ -289,7 +295,7 @@ import IconArrowRight from '~icons/dashicons/arrow-right.jsx';
 <IconArrowRight />
 ```
 
-See inside of `examples/next` for a working example project.
+See [the Next.js example](examples/next) for a working example project.
 
 <br></details>
 
@@ -333,6 +339,8 @@ export default defineConfig({
 })
 ```
 
+See [the Astro example](examples/astro) for a working example project.
+
 <br></details>
 
 ###### Frameworks
@@ -366,6 +374,8 @@ Type Declarations
 }
 ```
 
+See [the Vue 3 example](examples/vite-vue3) for a working example project.
+
 <br></details>
 
 
@@ -397,6 +407,8 @@ Type Declarations
 }
 ```
 
+See [the Vue 2 example](examples/vite-vue2) for a working example project.
+
 <br></details>
 
 <details>
@@ -426,6 +438,8 @@ Type Declarations
   }
 }
 ```
+
+See [the React example](examples/vite-react) for a working example project.
 
 <br></details>
 
@@ -458,6 +472,8 @@ Type Declarations
 }
 ```
 
+See [the Preact example](examples/vite-preact) for a working example project.
+
 <br></details>
 
 
@@ -483,6 +499,8 @@ Type Declarations
   }
 }
 ```
+
+See [the Solid example](examples/vite-solid) for a working example project.
 
 <br></details>
 
@@ -517,6 +535,8 @@ If you're still using Svelte 3, replace the reference to use Svelte 3:
 /// <reference types="unplugin-icons/types/svelte3" />
 ```
 
+See [the Svelte example](examples/vite-svelte) for a working example project.
+
 <br></details>
 
 <details>
@@ -536,6 +556,8 @@ Type Declarations
   }
 }
 ```
+
+See [the Astro example](examples/astro) for a working example project.
 
 <br></details>
 
@@ -566,6 +588,8 @@ Type Declarations
   }
 }
 ```
+
+See [the Qwik example](examples/vite-qwik) for a working example project.
 
 <br></details>
 
