@@ -180,7 +180,7 @@ export default defineNuxtConfig({
 })
 ```
 
-See [the Nuxt example](examples/nuxt) for a working example project.
+See [the Nuxt example](examples/nuxt3) for a working example project.
 
 <br></details>
 
