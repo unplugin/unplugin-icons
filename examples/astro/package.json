@@ -15,5 +15,9 @@
   "devDependencies": {
     "@iconify/json": "^2.2.110",
     "unplugin-icons": "workspace:*"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }
