@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@builder.io/qwik": "1.2.10",
+    "@svgx/core": "^1.0.1",
     "@types/eslint": "8.44.2",
     "@types/node": "^20.5.9",
     "@types/node-fetch": "latest",

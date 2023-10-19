@@ -1,6 +1,7 @@
 {
   "name": "vite-preact-example",
   "description": "unplugin-icons + Preact (Vite)",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "scripts": {

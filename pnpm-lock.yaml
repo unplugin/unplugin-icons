@@ -207,6 +207,9 @@ importers:
       '@builder.io/qwik':
         specifier: 1.2.10
         version: 1.2.10(undici@5.23.0)
+      '@svgx/core':
+        specifier: ^1.0.1
+        version: 1.0.1
       '@types/eslint':
         specifier: 8.44.2
         version: 8.44.2

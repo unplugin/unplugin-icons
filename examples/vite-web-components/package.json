@@ -1,6 +1,7 @@
 {
   "name": "vite-web-components-example",
   "description": "unplugin-icons + Web Components (Vite)",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "vite",
