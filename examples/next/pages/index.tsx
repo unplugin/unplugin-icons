@@ -22,21 +22,26 @@ const Home: NextPage = () => {
         </a>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing
+          {' '}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>
-              Documentation <IconArrowRight />
+              Documentation
+              {' '}
+              <IconArrowRight />
             </h2>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>
-              Learn <IconArrowRight />
+              Learn
+              {' '}
+              <IconArrowRight />
             </h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
@@ -46,14 +51,18 @@ const Home: NextPage = () => {
             className={styles.card}
           >
             <h2>
-              Examples <IconArrowRight />
+              Examples
+              {' '}
+              <IconArrowRight />
             </h2>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
 
           <a href="https://vercel.com/new" className={styles.card}>
             <h2>
-              Deploy <IconArrowRight />
+              Deploy
+              {' '}
+              <IconArrowRight />
             </h2>
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.

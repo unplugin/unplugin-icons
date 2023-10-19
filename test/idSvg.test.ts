@@ -1,4 +1,4 @@
-import { expect, test } from 'vitest'
+import { expect, it } from 'vitest'
 import { handleSVGId } from '../src/core/svgId'
 
 const fixture = `
@@ -42,6 +42,6 @@ const fixture = `
 </svg>
 `
 
-test('handleSVGId', () => {
+it('handleSVGId', () => {
   expect(handleSVGId(fixture)).toMatchSnapshot()
 })

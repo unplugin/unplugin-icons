@@ -41,7 +41,7 @@ function App() {
   return (
     <div>
       <IconAccessibility />
-      <IconAccountBox style={{ fontSize: '2em', color: 'red' }}/>
+      <IconAccountBox style={{ fontSize: '2em', color: 'red' }} />
     </div>
   )
 }
@@ -932,7 +932,7 @@ export function Component() {
   return (
     <div>
       <IconCarbonApps />
-      <IconMdiAccountBox style="font-size: 2em; color: red"/>
+      <IconMdiAccountBox style="font-size: 2em; color: red" />
     </div>
   )
 }
