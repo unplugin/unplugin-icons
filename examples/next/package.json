@@ -18,5 +18,9 @@
     "@types/react": "18.2.21",
     "typescript": "5.2.2",
     "unplugin-icons": "workspace:*"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }
