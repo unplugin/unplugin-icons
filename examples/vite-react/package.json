@@ -1,6 +1,7 @@
 {
   "name": "vite-react-example",
   "description": "unplugin-icons + React (Vite)",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "scripts": {
