@@ -14,6 +14,7 @@
     "@iconify-json/logos": "^1.1.35",
     "@preact/preset-vite": "^2.5.0",
     "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
     "typescript": "^5.2.2",
     "unplugin-icons": "workspace:*",
     "vite": "^4.4.9",
