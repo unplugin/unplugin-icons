@@ -13,6 +13,7 @@ import RawMdiAlarmOff3 from 'virtual:icons/mdi/alarm-off?raw&width=unset&height=
     <br>
     <h2>Icons</h2>
     <p>
+      <i-mdi:light-flood-down />
       <i-mdi-account />
       <i-fa-solid-dice-five />
       <i-heroicons-outline-menu-alt-2 />
