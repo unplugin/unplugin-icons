@@ -1,4 +1,6 @@
 {
+  "name":"vite-vue2-example",
+  "description": "unplugin-icons + Vue2 (Vite)",
   "private": true,
   "scripts": {
     "dev": "vite",

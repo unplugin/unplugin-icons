@@ -1,4 +1,6 @@
 {
+  "name": "vite-svelte",
+  "description": "unplugin-icons + Svelte (Vite)",
   "type": "module",
   "private": true,
   "scripts": {

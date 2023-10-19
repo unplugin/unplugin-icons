@@ -1,5 +1,6 @@
 {
-  "name": "vite-template-solid-icon-set",
+  "name": "vite-solid-example",
+  "description": "unplugin-icons + Solid (Vite)",
   "private": true,
   "license": "MIT",
   "scripts": {

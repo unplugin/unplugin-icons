@@ -1,4 +1,6 @@
 {
+  "name": "vite-vue3-example",
+  "description": "unplugin-icons + Vue3 (Vite)",
   "private": true,
   "scripts": {
     "dev": "cross-env DEBUG=unplugin-icons:* vite",

@@ -1,5 +1,7 @@
 {
+  "name": "sveltekit-example",
   "type": "module",
+  "description": "unplugin-icons + SvelteKit",
   "private": true,
   "scripts": {
     "build": "vite build",

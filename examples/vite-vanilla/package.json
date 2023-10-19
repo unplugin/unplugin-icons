@@ -1,4 +1,6 @@
 {
+  "name": "vite-vanilla-example",
+  "description": "unplugin-icons + VanillaJS (Vite)",
   "private": true,
   "scripts": {
     "dev": "vite",

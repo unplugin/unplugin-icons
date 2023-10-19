@@ -1,4 +1,7 @@
 {
+  "name": "nuxt3-example",
+  "description": "unplugin-icons + Nuxt 3",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
