@@ -3,8 +3,8 @@ import './App.css'
 import ReactLogo from '~icons/logos/react'
 import RawReactLogo from '~icons/logos/react?raw'
 
-function a() {
-  return <svg/>
+function _a() {
+  return <svg />
 }
 
 function App() {
@@ -18,11 +18,17 @@ function App() {
         <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount(count => count + 1)}>
-            count is: {count}
+            count is:
+            {' '}
+            {count}
           </button>
         </p>
         <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
+          Edit
+          {' '}
+          <code>App.tsx</code>
+          {' '}
+          and save to test HMR updates.
         </p>
         <p>
           <a
