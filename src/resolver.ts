@@ -77,18 +77,40 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
   collections.sort((a, b) => b.length - a.length)
 
   return (name: string) => {
-    const kebab = camelToKebab(name)
-    if (!kebab.startsWith(prefix))
-      return
+    let collection: string
+    let icon: string
+    if (name.includes(':')) {
+      const [iconPrefix, iconSuffix] = name.split(':')
+      collection = camelToKebab(iconPrefix)
+      if (!collection.startsWith(prefix))
+        return
 
-    const slice = kebab.slice(prefix.length)
-    const collection = collections.find(i => slice.startsWith(`${i}-`)) || collections.find(i => slice.startsWith(i))
-    if (!collection)
-      return
+      const slice = collection.slice(prefix.length)
+      const resolvedCollection = collections.find(i => slice.startsWith(`${i}-`)) || collections.find(i => slice.startsWith(i))
+      if (!resolvedCollection)
+        return
 
-    let icon = slice.slice(collection.length)
-    if (icon[0] === '-')
-      icon = icon.slice(1)
+      collection = resolvedCollection
+
+      icon = camelToKebab(iconSuffix)
+      if (icon[0] === '-')
+        icon = icon.slice(1)
+    }
+    else {
+      const kebab = camelToKebab(name)
+      if (!kebab.startsWith(prefix))
+        return
+
+      const slice = kebab.slice(prefix.length)
+      const resolvedCollection = collections.find(i => slice.startsWith(`${i}-`)) || collections.find(i => slice.startsWith(i))
+      if (!resolvedCollection)
+        return
+
+      collection = resolvedCollection
+      icon = slice.slice(resolvedCollection.length)
+      if (icon[0] === '-')
+        icon = icon.slice(1)
+    }
 
     if (!icon)
       return
