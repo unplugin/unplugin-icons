@@ -25,5 +25,9 @@
     "unplugin-icons": "workspace:*",
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.4.9"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }

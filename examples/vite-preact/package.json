@@ -18,5 +18,9 @@
     "unplugin-icons": "workspace:*",
     "vite": "^4.4.9",
     "vite-plugin-inspect": "^0.7.38"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }

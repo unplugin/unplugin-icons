@@ -11,5 +11,9 @@
     "@iconify-json/mdi": "^1.1.54",
     "nuxt": "^3.7.0",
     "unplugin-icons": "link:../.."
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }
