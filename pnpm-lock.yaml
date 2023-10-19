@@ -405,6 +405,12 @@ importers:
       vite:
         specifier: ^4.4.9
         version: 4.4.9(@types/node@20.8.7)
+      vue-template-compiler:
+        specifier: ^2.6.12
+        version: 2.7.14
+      vue-template-es2015-compiler:
+        specifier: ^1.9.0
+        version: 1.9.1
 
   examples/vite-vue3:
     dependencies:

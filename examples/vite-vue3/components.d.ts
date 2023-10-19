@@ -23,7 +23,6 @@ declare module 'vue' {
     IMdiAccount: typeof import('~icons/mdi/account')['default']
     IMdiDiceD12: typeof import('~icons/mdi/dice-d12')['default']
     IMdiLightAlarm: typeof import('~icons/mdi-light/alarm')['default']
-    IMdiLightFloodDown: typeof import('~icons/mdi-light/flood-down')['default']
     INotoV1FlagForFlagJapan: typeof import('~icons/noto-v1/flag-for-flag-japan')['default']
     IParkAbnormal: typeof import('~icons/icon-park/abnormal')['default']
     IRiApps2Line: typeof import('~icons/ri/apps2-line')['default']
