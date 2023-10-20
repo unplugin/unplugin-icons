@@ -574,6 +574,15 @@ npm i -D @svgx/core
 Icons({ compiler: 'qwik' })
 ```
 
+Alternatively, you can use `jsx` compiler, requires peer dependency `@svgr/core` and its plugin `@svgr/plugin-jsx`:
+```bash
+npm i -D @svgr/core @svgr/plugin-jsx
+```
+
+```ts
+Icons({ compiler: 'jsx', jsx: 'qwik' })
+```
+
 Type Declarations
 
 <!-- eslint-skip -->

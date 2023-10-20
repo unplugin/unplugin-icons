@@ -9,6 +9,8 @@ export default defineConfig(() => {
       Icons({
         autoInstall: true,
         compiler: 'qwik',
+        // compiler: 'jsx',
+        // jsx: 'qwik',
       }),
       qwikVite(),
       tsconfigPaths(),
