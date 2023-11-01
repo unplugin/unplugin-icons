@@ -86,7 +86,8 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
         return
 
       const slice = collection.slice(prefix.length)
-      const resolvedCollection = collections.find(i => slice.startsWith(`${i}-`)) || collections.find(i => slice.startsWith(i))
+      // find the collection
+      const resolvedCollection = collections.find(i => slice === i)
       if (!resolvedCollection)
         return
 
