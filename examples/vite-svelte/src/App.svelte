@@ -3,7 +3,7 @@
   import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
   import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
   import IconParkAbnormal from 'virtual:icons/icon-park/abnormal'
-  import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'
+  import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4.25rem&height=4.25rem'
   import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
 </script>
 
