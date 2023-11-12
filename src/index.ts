@@ -12,7 +12,7 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
     resolveId(id) {
       if (isIconPath(id)) {
         const normalizedId = normalizeIconPath(id)
-        // fix
+        // fix issue 322
         const queryIndex = normalizedId.indexOf('?')
         const res = `${(queryIndex > -1 ? normalizedId.slice(0, queryIndex) : normalizedId)
           .replace(/\.\w+$/i, '')
