@@ -1,4 +1,7 @@
 {
+  "name":"vite-vue2-example",
+  "description": "unplugin-icons + Vue2 (Vite)",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -21,6 +24,12 @@
     "typescript": "^5.2.2",
     "unplugin-icons": "workspace:*",
     "unplugin-vue-components": "^0.25.2",
-    "vite": "^4.4.9"
+    "vite": "^4.4.9",
+    "vue-template-compiler": "^2.6.12",
+    "vue-template-es2015-compiler": "^1.9.0"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }

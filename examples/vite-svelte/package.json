@@ -1,4 +1,6 @@
 {
+  "name": "vite-svelte",
+  "description": "unplugin-icons + Svelte (Vite)",
   "type": "module",
   "private": true,
   "scripts": {
@@ -22,5 +24,9 @@
     "typescript": "^5.2.2",
     "unplugin-icons": "workspace:*",
     "vite": "^4.4.9"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }

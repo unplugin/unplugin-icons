@@ -1,5 +1,6 @@
 {
-  "name": "vue-cli",
+  "name": "vue-cli-example",
+  "description": "unplugin-icons + Vue2 (Vue CLI)",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -18,5 +19,9 @@
     "typescript": "^5.2.2",
     "unplugin-icons": "workspace:*",
     "vue-tsc": "^1.8.8"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }

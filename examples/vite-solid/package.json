@@ -1,5 +1,7 @@
 {
-  "name": "vite-template-solid-icon-set",
+  "name": "vite-solid-example",
+  "description": "unplugin-icons + Solid (Vite)",
+  "type": "module",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -13,8 +15,14 @@
   },
   "devDependencies": {
     "@iconify-json/logos": "^1.1.35",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
     "unplugin-icons": "workspace:*",
     "vite": "^4.4.9",
     "vite-plugin-solid": "^2.7.0"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }

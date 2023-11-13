@@ -1,0 +1,19 @@
+# Examples
+
+| Example                 | Source                                                                                      | Playground                                                                                                |
+|-------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| `Astro`                 | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/astro)               | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/astro)        |
+| `Next`                  | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/next)                | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/next)         |
+| `Nuxt 3`                | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/nuxt3)               | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/nuxt3)        |
+| `SvelteKit`             | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/sveltekit)           | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/sveltekit)    |
+| `Preact (Vite)`         | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vite-preact)         | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vite-preact)  |
+| `Qwik (Vite)`           | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vite-qwik)           | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vite-qwik)    |
+| `React (Vite)`          | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vite-react)          | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vite-react)   |
+| `Solid (Vite)`          | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vite-solid)          | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vite-solid)   |
+| `Svelte (Vite)`         | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vite-svelte)         | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vite-svelte)  |
+| `VanillaJS (Vite)`      | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vite-vanilla)        | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vite-vanilla) |
+| `Vue2 (Vite)`           | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vite-vue2)           | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vite-vue2)    |
+| `Vue3 (Vite)`           | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vite-vue3)           | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vite-vue3)    |
+| `Vue3 legacy (Vite)`    | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vite-vue3-legacy)    | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vite-vue3-legacy)    |
+| `Web Components (Vite)` | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vite-web-components) | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vite-web-components)    |
+| `Vue2 (Vue CLI)`        | [GitHub](https://github.com/unplugin/unplugin-icons/tree/main/examples/vue-cli-vue2)        | [Play Online](https://stackblitz.com/fork/github/unplugin/unplugin-icons/tree/main/examples/vue-cli-vue2)    |
