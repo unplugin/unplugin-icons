@@ -10,9 +10,9 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.35",
-    "@iconify-json/mdi": "^1.1.54",
-    "nuxt": "^3.7.0",
+    "@iconify-json/logos": "^1.1.37",
+    "@iconify-json/mdi": "^1.1.55",
+    "nuxt": "^3.8.1",
     "unplugin-icons": "link:../.."
   },
   "stackblitz": {
