@@ -11,9 +11,12 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
     enforce: 'pre',
     resolveId(id) {
       if (isIconPath(id)) {
-        const res = normalizeIconPath(id)
+        const normalizedId = normalizeIconPath(id)
+        // fix issue 322
+        const queryIndex = normalizedId.indexOf('?')
+        const res = `${(queryIndex > -1 ? normalizedId.slice(0, queryIndex) : normalizedId)
           .replace(/\.\w+$/i, '')
-          .replace(/^\//, '')
+          .replace(/^\//, '')}${queryIndex > -1 ? `?${normalizedId.slice(queryIndex)}` : ''}`
         const resolved = resolveIconsPath(res)
         // accept raw compiler from query params
         const compiler = resolved?.query?.raw === 'true' ? 'raw' : options.compiler
