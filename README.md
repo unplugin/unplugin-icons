@@ -186,6 +186,29 @@ export default defineNuxtConfig({
 })
 ```
 
+Or work with [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) resolvers
+
+```ts
+import ViteComponents from 'unplugin-vue-components/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: [
+    'unplugin-icons/nuxt',
+  ],
+  vite: {
+    plugins: [
+      ViteComponents({
+        resolvers: [
+          IconsResolver({/* options */}),
+        ],
+      }),
+    ],
+  },
+})
+```
+
 See [the Nuxt example](examples/nuxt3) for a working example project.
 
 <br></details>

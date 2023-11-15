@@ -2,8 +2,8 @@
   "name": "astro-example",
   "type": "module",
   "version": "0.0.1",
-  "description": "unplugin-icons + Astro",
   "private": true,
+  "description": "unplugin-icons + Astro",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

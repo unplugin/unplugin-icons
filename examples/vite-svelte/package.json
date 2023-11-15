@@ -1,8 +1,8 @@
 {
   "name": "vite-svelte",
-  "description": "unplugin-icons + Svelte (Vite)",
   "type": "module",
   "private": true,
+  "description": "unplugin-icons + Svelte (Vite)",
   "scripts": {
     "build": "cross-env DEBUG=unplugin-icons:* vite build",
     "dev": "cross-env DEBUG=unplugin-icons:* vite",

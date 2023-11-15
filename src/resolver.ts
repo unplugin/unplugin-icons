@@ -45,6 +45,13 @@ export interface ComponentResolverOption {
    * @deprecated renamed to `prefix`
    */
   componentPrefix?: string
+
+  /**
+   * For collections strict matching.
+   * Default is `false`, not side effect.
+   * Set `true` to enable strict matching with `-` suffix for all collections.
+   */
+  strict?: boolean
 }
 
 /**
@@ -59,6 +66,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
     alias = {},
     customCollections = [],
     extension,
+    strict = false,
   } = options
 
   const prefix = rawPrefix ? `${camelToKebab(rawPrefix)}-` : ''
@@ -101,7 +109,7 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
         return
 
       const slice = kebab.slice(prefix.length)
-      const resolvedCollection = collections.find(i => slice.startsWith(`${i}-`)) || collections.find(i => slice.startsWith(i))
+      const resolvedCollection = collections.find(i => slice.startsWith(`${i}-`)) || (!strict && collections.find(i => slice.startsWith(i)))
       if (!resolvedCollection)
         return
 

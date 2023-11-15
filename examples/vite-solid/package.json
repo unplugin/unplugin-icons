@@ -1,8 +1,8 @@
 {
   "name": "vite-solid-example",
-  "description": "unplugin-icons + Solid (Vite)",
   "type": "module",
   "private": true,
+  "description": "unplugin-icons + Solid (Vite)",
   "license": "MIT",
   "scripts": {
     "start": "vite",

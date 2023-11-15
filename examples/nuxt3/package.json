@@ -1,8 +1,8 @@
 {
   "name": "nuxt3-example",
-  "description": "unplugin-icons + Nuxt 3",
   "type": "module",
   "private": true,
+  "description": "unplugin-icons + Nuxt 3",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -13,7 +13,8 @@
     "@iconify-json/logos": "^1.1.37",
     "@iconify-json/mdi": "^1.1.55",
     "nuxt": "^3.8.1",
-    "unplugin-icons": "link:../.."
+    "unplugin-icons": "link:../..",
+    "unplugin-vue-components": "^0.25.2"
   },
   "stackblitz": {
     "installDependencies": false,
