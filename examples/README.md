@@ -1,6 +1,6 @@
 # Examples
 
-**NOTE**: `Qwik (Vite) example on StackBlitz  will switch to `compiler: 'jsx'` and `jsx: 'qwik'`, replacing `@svgx/core` with `@svgr/core` and `@svgr/plugin-jsx`) |
+**NOTE**: Qwik (Vite) example running on StackBlitz will switch to `compiler: 'jsx'` and `jsx: 'qwik'`, replacing `@svgx/core` with `@svgr/core` and `@svgr/plugin-jsx`)
 
 | Example                 | Source                                                                                      | Playground                                                                                                                                                                                                                                 |
 |-------------------------|---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
