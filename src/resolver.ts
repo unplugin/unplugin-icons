@@ -86,15 +86,14 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
         return
 
       const slice = collection.slice(prefix.length)
-      const resolvedCollection = collections.find(i => slice.startsWith(`${i}-`)) || collections.find(i => slice.startsWith(i))
+      // find the collection
+      const resolvedCollection = collections.find(i => slice === i)
       if (!resolvedCollection)
         return
 
       collection = resolvedCollection
 
       icon = camelToKebab(iconSuffix)
-      if (icon[0] === '-')
-        icon = icon.slice(1)
     }
     else {
       const kebab = camelToKebab(name)
@@ -108,9 +107,10 @@ export default function ComponentsResolver(options: ComponentResolverOption = {}
 
       collection = resolvedCollection
       icon = slice.slice(resolvedCollection.length)
-      if (icon[0] === '-')
-        icon = icon.slice(1)
     }
+
+    if (icon[0] === '-')
+      icon = icon.slice(1)
 
     if (!icon)
       return

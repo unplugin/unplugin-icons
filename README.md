@@ -7,7 +7,7 @@ Access thousands of icons as components **on-demand** universally.
 ### Features
 
 - 🌏 Universal
-  - 🤹 **Any** icon sets - 100+ popular sets with over 10,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
+  - 🤹 **Any** icon sets - ~150 popular sets with over 200,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
   - 📦 **Major** build tools - Vite, Webpack, Rollup, Nuxt, etc. Powered by [unplugin](https://github.com/unjs/unplugin).
   - 🪜 **Major** frameworks - Vanilla, Web Components, React, Vue 3, Vue 2, Solid, Svelte, and more. [Contribute](./src/core/compilers).
   - 🍱 **Any** combinations of them!
@@ -19,11 +19,11 @@ Access thousands of icons as components **on-demand** universally.
 - 🦾 TypeScript support.
 - 🔍 [Browse Icons](https://icones.js.org/)
 
-<table><td><br>
+<table><tr><td><br>
 
 &nbsp;&nbsp;&nbsp;💡 **Story behind this tool**: [Journey with Icons Continues](https://antfu.me/posts/journey-with-icons-continues) - a blog post by Anthony&nbsp;&nbsp;&nbsp;
 
-</td></table>
+</td></tr></table>
 
 > **`vite-plugin-icons` has been renamed to `unplugin-icons`**, see the [migration guide](#migrate-from-vite-plugin-icons)
 
@@ -102,6 +102,12 @@ Icons({
 ```
 
 It will install the icon set when you import them. The right package manager will be auto-detected (`npm`, `yarn` or `pnpm`).
+
+## Examples
+
+You can play online with the examples in this repo in StackBlitz, see [playgrounds page](./examples/README.md).
+
+Fork any of the online examples and reproduce the issue you're facing, then share the link with us.
 
 ## Configuration
 

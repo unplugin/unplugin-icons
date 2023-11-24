@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
-import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4em&height=4em'
+import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4.25rem&height=4.25rem'
 import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
-import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'
+import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4.25rem&height=4.25rem'
 import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
 import RawMdiAlarmOff3 from 'virtual:icons/mdi/alarm-off?raw&width=unset&height=unset'
 </script>
@@ -16,6 +16,7 @@ import RawMdiAlarmOff3 from 'virtual:icons/mdi/alarm-off?raw&width=unset&height=
       <i-mdi:light-flood-down />
       <i-mdi-account />
       <i-fa-solid-dice-five />
+      <i-heroicons-outline:menu-alt-2 />
       <i-heroicons-outline-menu-alt-2 />
       <i-ri-apps-2-line />
       <i-mdi-dice-d12 />
@@ -64,7 +65,7 @@ import RawMdiAlarmOff3 from 'virtual:icons/mdi/alarm-off?raw&width=unset&height=
       <span v-html="RawMdiAlarmOff" />
       <div>
         <code style="opacity: 0.5">import RawMdiAlarmOff from
-          'virtual:icons/mdi/alarm-off?raw&width=4em&height=4em'</code>
+          'virtual:icons/mdi/alarm-off?raw&width=4.25rem&height=4.25rem'</code>
         <pre>{{ RawMdiAlarmOff }}</pre>
       </div>
       <span v-html="RawMdiAlarmOff2" />

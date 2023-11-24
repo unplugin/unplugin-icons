@@ -1,5 +1,7 @@
 {
-  "name": "vite-preact-icon-set",
+  "name": "vite-preact-example",
+  "description": "unplugin-icons + Preact (Vite)",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,15 +10,20 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.17.1"
+    "preact": "^10.19.1"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.35",
-    "@preact/preset-vite": "^2.5.0",
+    "@iconify-json/logos": "^1.1.37",
+    "@preact/preset-vite": "^2.6.0",
     "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
     "typescript": "^5.2.2",
     "unplugin-icons": "workspace:*",
-    "vite": "^4.4.9",
-    "vite-plugin-inspect": "^0.7.38"
+    "vite": "^4.5.0",
+    "vite-plugin-inspect": "^0.7.42"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
   }
 }

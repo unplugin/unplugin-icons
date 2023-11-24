@@ -4,7 +4,7 @@ export default () => {
   return (
     <>
       <head>
-        <title> Qwik With Icons </title>
+        <title>Qwik With Icons </title>
       </head>
       <body>
         <App />
