@@ -14,10 +14,5 @@ export const tsup: Options = {
   external: [
     'vue',
     '@iconify/json/package.json',
-  ], /* ,
-  outExtension({ format }) {
-    return {
-      js: format === 'cjs' ? '.cjs' : '.js',
-    }
-  }, */
+  ],
 }
