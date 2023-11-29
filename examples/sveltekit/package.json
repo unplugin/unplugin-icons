@@ -1,8 +1,8 @@
 {
   "name": "sveltekit-example",
   "type": "module",
-  "description": "unplugin-icons + SvelteKit",
   "private": true,
+  "description": "unplugin-icons + SvelteKit",
   "scripts": {
     "build": "vite build",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

@@ -1,7 +1,7 @@
 {
   "name": "vite-vue3-legacy-example",
-  "description": "unplugin-icons + Vue3 legacy (Vite)",
   "private": true,
+  "description": "unplugin-icons + Vue3 legacy (Vite)",
   "scripts": {
     "dev": "cross-env DEBUG=unplugin-icons:* vite",
     "build": "vite build"

@@ -1,7 +1,7 @@
 {
   "name": "next-example",
-  "description": "unplugin-icons + Next",
   "private": true,
+  "description": "unplugin-icons + Next",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

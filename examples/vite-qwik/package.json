@@ -1,8 +1,8 @@
 {
   "name": "vite-qwik-example",
-  "description": "unplugin-icons + Qwik (Vite)",
   "type": "module",
   "private": true,
+  "description": "unplugin-icons + Qwik (Vite)",
   "scripts": {
     "build": "qwik build",
     "build.client": "vite build",

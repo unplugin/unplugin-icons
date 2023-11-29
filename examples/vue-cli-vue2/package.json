@@ -1,7 +1,7 @@
 {
   "name": "vue-cli-example",
-  "description": "unplugin-icons + Vue2 (Vue CLI)",
   "private": true,
+  "description": "unplugin-icons + Vue2 (Vue CLI)",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-tsc --noEmit && vue-cli-service build",
