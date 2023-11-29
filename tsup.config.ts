@@ -4,7 +4,7 @@ export const tsup: Options = {
   splitting: true,
   clean: true,
   dts: true,
-  entryPoints: [
+  entry: [
     'src/*.ts',
   ],
   format: [
@@ -15,9 +15,4 @@ export const tsup: Options = {
     'vue',
     '@iconify/json/package.json',
   ],
-  outExtension({ format }) {
-    return {
-      js: format === 'cjs' ? '.cjs' : '.mjs',
-    }
-  },
 }
