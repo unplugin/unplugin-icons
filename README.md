@@ -149,6 +149,18 @@ export default {
 <details>
 <summary>Webpack</summary><br>
 
+From version `v0.18.0+` you need to use `default` export:
+```ts
+// webpack.config.js
+module.exports = {
+  /* ... */
+  plugins: [
+    require('unplugin-icons/webpack').default({ /* options */ }),
+  ],
+}
+```
+
+If you are using a version earlier than `v0.18.0`:  
 ```ts
 // webpack.config.js
 module.exports = {
@@ -193,6 +205,33 @@ See [the Nuxt example](examples/nuxt3) for a working example project.
 <details>
 <summary>Vue CLI</summary><br>
 
+From version `v0.18.0+` you need to use `default` export:
+```ts
+// vue.config.js
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      require('unplugin-icons/webpack').default({ /* options */ }),
+    ],
+  },
+}
+```
+
+or you can rename the Vue configuration file to `vue.config.mjs` and use static import syntax (you should use latest `@vue/cli-service ^5.0.8`):
+```ts
+// vue.config.mjs
+import Icons from 'unplugin-icons/webpack'
+
+export default {
+  configureWebpack: {
+    plugins: [
+      Icons({ /* options */ }),
+    ],
+  },
+}
+```
+
+If you are using a version earlier than `v0.18.0`:
 ```ts
 // vue.config.js
 module.exports = {
@@ -268,9 +307,51 @@ See [the Svelte + Vite example](examples/vite-svelte) for a working example proj
 <details>
 <summary>Next.js</summary><br>
 
-The `unplugin-icons` plugin should be configured on `next.config.js` configuration file:
+The `unplugin-icons` plugin should be configured on `next.config.js` configuration file.
 
+From version `v0.18.0+` you need to use `default` export:
+```ts
+// next.config.js
+/** @type {import('next').NextConfig} */
+module.exports = {
+  reactStrictMode: true,
+  webpack(config) {
+    config.plugins.push(
+      require('unplugin-icons/webpack').default({
+        compiler: 'jsx',
+        jsx: 'react'
+      })
+    )
+
+    return config
+  },
+}
+```
+
+or you can rename the Next configuration file to `next.config.mjs` and use static import syntax:
+```ts
+// next.config.mjs
+import Icons from 'unplugin-icons/webpack'
+
+/** @type {import('next').NextConfig} */
+export default {
+  reactStrictMode: true,
+  webpack(config) {
+    config.plugins.push(
+      Icons({
+        compiler: 'jsx',
+        jsx: 'react'
+      })
+    )        
+
+    return config
+  }
+}
+```
+
+If you are using a version earlier than `v0.18.0`:
 ```js
+// next.config.js
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
