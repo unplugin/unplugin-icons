@@ -149,24 +149,12 @@ export default {
 <details>
 <summary>Webpack</summary><br>
 
-From version `v0.18.0+` you need to use `default` export:
 ```ts
 // webpack.config.js
 module.exports = {
   /* ... */
   plugins: [
     require('unplugin-icons/webpack').default({ /* options */ }),
-  ],
-}
-```
-
-If you are using a version earlier than `v0.18.0`:  
-```ts
-// webpack.config.js
-module.exports = {
-  /* ... */
-  plugins: [
-    require('unplugin-icons/webpack')({ /* options */ }),
   ],
 }
 ```
@@ -205,7 +193,6 @@ See [the Nuxt example](examples/nuxt3) for a working example project.
 <details>
 <summary>Vue CLI</summary><br>
 
-From version `v0.18.0+` you need to use `default` export:
 ```ts
 // vue.config.js
 module.exports = {
@@ -217,7 +204,7 @@ module.exports = {
 }
 ```
 
-or you can rename the Vue configuration file to `vue.config.mjs` and use static import syntax (you should use latest `@vue/cli-service ^5.0.8`):
+You can also rename the Vue configuration file to `vue.config.mjs` and use static import syntax (you should use latest `@vue/cli-service ^5.0.8`):
 ```ts
 // vue.config.mjs
 import Icons from 'unplugin-icons/webpack'
@@ -226,18 +213,6 @@ export default {
   configureWebpack: {
     plugins: [
       Icons({ /* options */ }),
-    ],
-  },
-}
-```
-
-If you are using a version earlier than `v0.18.0`:
-```ts
-// vue.config.js
-module.exports = {
-  configureWebpack: {
-    plugins: [
-      require('unplugin-icons/webpack')({ /* options */ }),
     ],
   },
 }
@@ -307,9 +282,7 @@ See [the Svelte + Vite example](examples/vite-svelte) for a working example proj
 <details>
 <summary>Next.js</summary><br>
 
-The `unplugin-icons` plugin should be configured on `next.config.js` configuration file.
-
-From version `v0.18.0+` you need to use `default` export:
+The `unplugin-icons` plugin should be configured on `next.config.js` configuration file:
 ```ts
 // next.config.js
 /** @type {import('next').NextConfig} */
@@ -328,7 +301,7 @@ module.exports = {
 }
 ```
 
-or you can rename the Next configuration file to `next.config.mjs` and use static import syntax:
+You can also rename the Next configuration file to `next.config.mjs` and use static import syntax:
 ```ts
 // next.config.mjs
 import Icons from 'unplugin-icons/webpack'
@@ -346,25 +319,6 @@ export default {
 
     return config
   }
-}
-```
-
-If you are using a version earlier than `v0.18.0`:
-```js
-// next.config.js
-/** @type {import('next').NextConfig} */
-module.exports = {
-  reactStrictMode: true,
-  webpack(config) {
-    config.plugins.push(
-      require('unplugin-icons/webpack')({
-        compiler: 'jsx',
-        jsx: 'react',
-      }),
-    )
-
-    return config
-  },
 }
 ```
 
@@ -393,11 +347,12 @@ See [the Next.js example](examples/next) for a working example project.
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
+import Icons from 'unplugin-icons/esbuild'
 
 build({
   /* ... */
   plugins: [
-    require('unplugin-icons/esbuild')({
+    Icons({
       /* options */
     }),
   ],
