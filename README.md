@@ -154,7 +154,7 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-icons/webpack')({ /* options */ }),
+    require('unplugin-icons/webpack').default({ /* options */ }),
   ],
 }
 ```
@@ -221,7 +221,21 @@ See [the Nuxt example](examples/nuxt3) for a working example project.
 module.exports = {
   configureWebpack: {
     plugins: [
-      require('unplugin-icons/webpack')({ /* options */ }),
+      require('unplugin-icons/webpack').default({ /* options */ }),
+    ],
+  },
+}
+```
+
+You can also rename the Vue configuration file to `vue.config.mjs` and use static import syntax (you should use latest `@vue/cli-service ^5.0.8`):
+```ts
+// vue.config.mjs
+import Icons from 'unplugin-icons/webpack'
+
+export default {
+  configureWebpack: {
+    plugins: [
+      Icons({ /* options */ }),
     ],
   },
 }
@@ -292,21 +306,42 @@ See [the Svelte + Vite example](examples/vite-svelte) for a working example proj
 <summary>Next.js</summary><br>
 
 The `unplugin-icons` plugin should be configured on `next.config.js` configuration file:
-
-```js
+```ts
+// next.config.js
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
   webpack(config) {
     config.plugins.push(
-      require('unplugin-icons/webpack')({
+      require('unplugin-icons/webpack').default({
         compiler: 'jsx',
-        jsx: 'react',
-      }),
+        jsx: 'react'
+      })
     )
 
     return config
   },
+}
+```
+
+You can also rename the Next configuration file to `next.config.mjs` and use static import syntax:
+```ts
+// next.config.mjs
+import Icons from 'unplugin-icons/webpack'
+
+/** @type {import('next').NextConfig} */
+export default {
+  reactStrictMode: true,
+  webpack(config) {
+    config.plugins.push(
+      Icons({
+        compiler: 'jsx',
+        jsx: 'react'
+      })
+    )        
+
+    return config
+  }
 }
 ```
 
@@ -335,11 +370,12 @@ See [the Next.js example](examples/next) for a working example project.
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
+import Icons from 'unplugin-icons/esbuild'
 
 build({
   /* ... */
   plugins: [
-    require('unplugin-icons/esbuild')({
+    Icons({
       /* options */
     }),
   ],
@@ -601,6 +637,15 @@ npm i -D @svgx/core
 
 ```ts
 Icons({ compiler: 'qwik' })
+```
+
+Alternatively, you can use `jsx` compiler, requires peer dependency `@svgr/core` and its plugin `@svgr/plugin-jsx`:
+```bash
+npm i -D @svgr/core @svgr/plugin-jsx
+```
+
+```ts
+Icons({ compiler: 'jsx', jsx: 'qwik' })
 ```
 
 Type Declarations

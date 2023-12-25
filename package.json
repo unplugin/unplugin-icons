@@ -1,8 +1,8 @@
 {
   "name": "unplugin-icons",
   "type": "module",
-  "version": "0.17.4",
-  "packageManager": "pnpm@8.10.3",
+  "version": "0.18.1",
+  "packageManager": "pnpm@8.11.0",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
@@ -15,40 +15,75 @@
   "bugs": "https://github.com/unplugin/unplugin-icons/issues",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./*": "./*",
     "./esbuild": {
-      "types": "./dist/esbuild.d.ts",
-      "import": "./dist/esbuild.mjs",
-      "require": "./dist/esbuild.cjs"
+      "import": {
+        "types": "./dist/esbuild.d.ts",
+        "default": "./dist/esbuild.js"
+      },
+      "require": {
+        "types": "./dist/esbuild.d.cts",
+        "default": "./dist/esbuild.cjs"
+      }
     },
     "./loaders": {
-      "types": "./dist/loaders.d.ts",
-      "import": "./dist/loaders.mjs",
-      "require": "./dist/loaders.cjs"
+      "import": {
+        "types": "./dist/loaders.d.ts",
+        "default": "./dist/loaders.js"
+      },
+      "require": {
+        "types": "./dist/loaders.d.cts",
+        "default": "./dist/loaders.cjs"
+      }
     },
     "./nuxt": {
-      "types": "./dist/nuxt.d.ts",
-      "import": "./dist/nuxt.mjs",
-      "require": "./dist/nuxt.cjs"
+      "import": {
+        "types": "./dist/nuxt.d.ts",
+        "default": "./dist/nuxt.js"
+      },
+      "require": {
+        "types": "./dist/nuxt.d.cts",
+        "default": "./dist/nuxt.cjs"
+      }
     },
     "./resolver": {
-      "types": "./dist/resolver.d.ts",
-      "import": "./dist/resolver.mjs",
-      "require": "./dist/resolver.cjs"
+      "import": {
+        "types": "./dist/resolver.d.ts",
+        "default": "./dist/resolver.js"
+      },
+      "require": {
+        "types": "./dist/resolver.d.cts",
+        "default": "./dist/resolver.cjs"
+      }
     },
     "./rollup": {
-      "types": "./dist/rollup.d.ts",
-      "import": "./dist/rollup.mjs",
-      "require": "./dist/rollup.cjs"
+      "import": {
+        "types": "./dist/rollup.d.ts",
+        "default": "./dist/rollup.js"
+      },
+      "require": {
+        "types": "./dist/rollup.d.cts",
+        "default": "./dist/rollup.cjs"
+      }
     },
     "./types": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/types.mjs",
-      "require": "./dist/types.cjs"
+      "import": {
+        "types": "./dist/types.d.ts",
+        "default": "./dist/types.js"
+      },
+      "require": {
+        "types": "./dist/types.d.cts",
+        "default": "./dist/types.cjs"
+      }
     },
     "./types/astro": {
       "types": "./types/astro.d.ts"
@@ -84,18 +119,28 @@
       "types": "./types/web-components.d.ts"
     },
     "./vite": {
-      "types": "./dist/vite.d.ts",
-      "import": "./dist/vite.mjs",
-      "require": "./dist/vite.cjs"
+      "import": {
+        "types": "./dist/vite.d.ts",
+        "default": "./dist/vite.js"
+      },
+      "require": {
+        "types": "./dist/vite.d.cts",
+        "default": "./dist/vite.cjs"
+      }
     },
     "./webpack": {
-      "types": "./dist/webpack.d.ts",
-      "import": "./dist/webpack.mjs",
-      "require": "./dist/webpack.cjs"
+      "import": {
+        "types": "./dist/webpack.d.ts",
+        "default": "./dist/webpack.js"
+      },
+      "require": {
+        "types": "./dist/webpack.d.cts",
+        "default": "./dist/webpack.cjs"
+      }
     }
   },
   "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -111,7 +156,7 @@
     "types"
   ],
   "scripts": {
-    "build": "esno scripts/prebuild.ts && tsup && esno scripts/postbuild.ts",
+    "build": "esno scripts/prebuild.ts && tsup",
     "dev": "esno scripts/prebuild.ts && tsup --watch src",
     "example:build": "npm -C examples/vite-vue3 run build",
     "example:dev": "npm -C examples/vite-vue3 run dev",
@@ -147,33 +192,34 @@
     }
   },
   "dependencies": {
-    "@antfu/install-pkg": "^0.1.1",
+    "@antfu/install-pkg": "^0.3.0",
     "@antfu/utils": "^0.7.6",
-    "@iconify/utils": "^2.1.11",
+    "@iconify/utils": "^2.1.12",
     "debug": "^4.3.4",
     "kolorist": "^1.8.0",
     "local-pkg": "^0.5.0",
-    "unplugin": "^1.5.0"
+    "unplugin": "^1.5.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "1.0.0-beta.27",
-    "@iconify/json": "^2.2.141",
+    "@antfu/eslint-config": "^2.1.1",
+    "@iconify/json": "^2.2.149",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgx/core": "^1.0.1",
     "@types/debug": "^4.1.12",
-    "@types/node": "^20.9.0",
-    "@vue/compiler-sfc": "^3.3.8",
+    "@types/node": "^20.10.0",
+    "@vue/compiler-sfc": "^3.3.9",
     "bumpp": "^9.2.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.53.0",
+    "eslint": "^8.54.0",
     "esno": "^4.0.0",
     "fast-glob": "^3.3.2",
-    "rollup": "^4.4.0",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0",
+    "publint": "^0.2.5",
+    "rollup": "^4.6.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.4",
     "vitest": "1.0.0-beta.2"
   }
 }

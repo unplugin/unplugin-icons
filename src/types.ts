@@ -72,7 +72,7 @@ export interface Options {
    *
    * @default (detect automatically, fallback to 'react')
    */
-  jsx?: 'react' | 'preact'
+  jsx?: 'react' | 'preact' | 'qwik'
 
   /**
    * Config for Web Components compiler
