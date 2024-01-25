@@ -103,6 +103,27 @@ Icons({
 
 It will install the icon set when you import them. The right package manager will be auto-detected (`npm`, `yarn` or `pnpm`).
 
+###### Install from custom  `scope`
+
+If you need to use icons from a third party package other than `@iconify-json`, you can specify `scope` 
+
+```ts
+Icons({
+  scope: '@my-scope',
+})
+```
+> `@my-scope` is the package name of the package that contains the icons. Your package must follow the [iconifyIcon type](https://iconify.design/docs/types/iconify-icon.html) specification.
+
+Combined with `autoInstall`, your icons will be loaded from the `scope` you specify.
+
+```ts
+Icons({
+  scope: '@my-scope',
+  autoInstall: true,
+})
+```
+
+
 ## Examples
 
 You can play online with the examples in this repo in StackBlitz, see [playgrounds page](./examples/README.md).
@@ -315,7 +336,7 @@ export default {
         compiler: 'jsx',
         jsx: 'react'
       })
-    )        
+    )
 
     return config
   }
