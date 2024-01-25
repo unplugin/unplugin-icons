@@ -15,6 +15,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     iconCustomizer = () => {},
     transform,
     autoInstall = false,
+    scope,
   } = options
 
   const webComponents = Object.assign({
@@ -35,6 +36,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     webComponents,
     transform,
     autoInstall,
+    scope,
   }
 }
 
@@ -53,7 +55,7 @@ async function getVueVersion() {
     const result = await getPackageInfo('vue')
     if (!result)
       return null
-    return result.version.startsWith('2.') ? 'vue2' : 'vue3'
+    return result.version?.startsWith('2.') ? 'vue2' : 'vue3'
   }
   catch {
     return null

@@ -63,12 +63,14 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
     iconCustomizer: providedIconCustomizer,
     transform,
     autoInstall = false,
+    scope,
   } = options
   const iconifyLoaderOptions: IconifyLoaderOptions = {
     addXmlNs: false,
     scale,
     customCollections,
     autoInstall,
+    scope,
     defaultClass,
     defaultStyle,
     // there is no need to warn since we throw an error below

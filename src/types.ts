@@ -58,6 +58,13 @@ export interface Options {
   autoInstall?: boolean
 
   /**
+   * The scope of the icon sources package
+   *
+   * @default '@iconify-json'
+   */
+  scope?: string
+
+  /**
    * Compiler
    *
    * - none: plain SVG content
@@ -103,4 +110,4 @@ export interface Options {
   iconSource?: 'legacy' | 'modern' | 'auto'
 }
 
-export type ResolvedOptions = Omit<Required<Options>, 'iconSource' | 'transform'> & Pick<Options, 'transform'>
+export type ResolvedOptions = Omit<Required<Options>, 'iconSource' | 'transform' | 'scope'> & Pick<Options, 'transform' | 'scope'>
