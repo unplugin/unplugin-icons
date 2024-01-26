@@ -1,10 +1,24 @@
-import { promises as fs } from 'node:fs'
+import { cpSync, promises as fs } from 'node:fs'
 import type { UserConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Icons from 'unplugin-icons/vite'
-import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+import { ExternalPackageIconLoader, FileSystemIconLoader } from 'unplugin-icons/loaders'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
+
+/************************************************************/
+// DON'T DO THIS IN YOUR CODE: IT IS FOR TESTING PURPOSES ONLY
+cpSync(
+  './plain-color-icons',
+  './node_modules/plain-color-icons',
+  { recursive: true },
+)
+cpSync(
+  './@test-scope',
+  './node_modules/@test-scope',
+  { recursive: true },
+)
+/************************************************************/
 
 const config: UserConfig = {
   plugins: [
@@ -12,6 +26,8 @@ const config: UserConfig = {
     Icons({
       compiler: 'vue3',
       customCollections: {
+        ...ExternalPackageIconLoader('@test-scope/test-color-icons'),
+        ...ExternalPackageIconLoader('plain-color-icons'),
         custom: FileSystemIconLoader('assets/custom-a'),
         inline: {
           foo: `
@@ -37,7 +53,13 @@ const config: UserConfig = {
           alias: {
             park: 'icon-park',
           },
-          customCollections: ['custom', 'inline'],
+          customCollections: [
+            'custom',
+            'inline',
+            // custom external packages
+            'plain-color-icons',
+            'test-color-icons',
+          ],
         }),
       ],
     }),
