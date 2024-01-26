@@ -739,7 +739,7 @@ See the [Vue 3 + Vite example](./examples/vite-vue3/vite.config.ts).
 
 From version `v0.18.3` you can use other packages to load icons from others authors.
 
-**WARNING**: the package must include `icons.json` file with the `icons` data in `IconifyJSON` format, which can be exported with Iconify Tools. Check [Exporting icon set as JSON package](https://iconify.design/docs/libraries/tools/export/json-package.html) for more details.
+**WARNING**: external packages must include `icons.json` file with the `icons` data in `IconifyJSON` format, which can be exported with Iconify Tools. Check [Exporting icon set as JSON package](https://iconify.design/docs/libraries/tools/export/json-package.html) for more details.
 
 For example, you can use `an-awesome-collection` or `@my-awesome-collections/some-collection` to load your custom or third party icons:
 ```ts
