@@ -5,6 +5,9 @@ import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
 import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4.25rem&height=4.25rem'
 import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
 import RawMdiAlarmOff3 from 'virtual:icons/mdi/alarm-off?raw&width=unset&height=unset'
+import Custom1 from 'virtual:icons/plain-color-icons/about?raw'
+import Custom2 from 'virtual:icons/test-color-icons/about?raw'
+import ExternalCustom3 from 'virtual:icons/test-color-icons/about'
 </script>
 
 <template>
@@ -27,6 +30,9 @@ import RawMdiAlarmOff3 from 'virtual:icons/mdi/alarm-off?raw&width=unset&height=
       <i-twemoji-1st-place-medal />
       <IIcTwotone23mp />
       <MdiStore24Hour />
+      <ExternalCustom3 />
+      <i-test-color-icons:about />
+      <i-plain-color-icons:about />
       <br>
     </p>
     <h2>Customizer via Config</h2>
@@ -79,6 +85,18 @@ import RawMdiAlarmOff3 from 'virtual:icons/mdi/alarm-off?raw&width=unset&height=
         <code style="opacity: 0.5">import RawMdiAlarmOff3 from
           'virtual:icons/mdi/alarm-off?raw&width=unset&height=unset'</code>
         <pre>{{ RawMdiAlarmOff3 }}</pre>
+      </div>
+      <span v-html="Custom1" />
+      <div>
+        <code style="opacity: 0.5">import Custom1 from
+          'virtual:icons/plain-color-icons/about?raw'</code>
+        <pre>{{ Custom1 }}</pre>
+      </div>
+      <span v-html="Custom2" />
+      <div>
+        <code style="opacity: 0.5">import Custom2 from
+          'virtual:icons/test-color-icons/about?raw'</code>
+        <pre>{{ Custom2 }}</pre>
       </div>
     </div>
     <br>
