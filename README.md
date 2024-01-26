@@ -749,6 +749,16 @@ import { ExternalPackageIconLoader } from 'unplugin-icons/loaders'
 Icons({ customCollections: ExternalPackageIconLoader('my-awesome-collection') })
 ```
 
+When using with resolvers for auto-importing, remember you will need to tell it your custom collection names:
+```ts
+IconResolver({
+  customCollections: [
+    'my-awesome-collection',
+  ],
+})
+```
+
+
 You can also combine it with `FileSystemIconLoader` or with other custom icon loaders:
 ```ts
 // loader helpers
@@ -766,6 +776,8 @@ Icons({
   },
 )
 ```
+
+See the [Vue 3 + Vite example](./examples/vite-vue3/vite.config.ts).
 
 ## Icon customizer
 
