@@ -735,6 +735,38 @@ IconResolver({
 
 See the [Vue 3 + Vite example](./examples/vite-vue3/vite.config.ts).
 
+### Use Custom External Collection Packages
+
+From version `v0.18.3` you can use other packages to load your custom icons.
+
+**WARNING**: the package must follow
+
+For example, you can use `my-awesome-collection` or `@my-awesome-collections/some-collection` to load your custom icons:
+```ts
+// loader helpers
+import { ExternalPackageIconLoader } from 'unplugin-icons/loaders'
+
+Icons({ customCollections: ExternalPackageIconLoader('my-awesome-collection') })
+```
+
+You can also combine it with `FileSystemIconLoader` or with other custom icon loaders:
+```ts
+// loader helpers
+import { ExternalPackageIconLoader, FileSystemIconLoader } from 'unplugin-icons/loaders'
+
+Icons({ 
+  customCollections: {
+    ...ExternalPackageIconLoader('my-awesome-collection'),
+    ...ExternalPackageIconLoader('@my-awesome-collections/some-collection'),
+    ...ExternalPackageIconLoader('@my-awesome-collections/some-other-collection'),
+    'my-yet-other-icons': FileSystemIconLoader(
+      './assets/icons', 
+      svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
+    ),
+  },
+)
+```
+
 ## Icon customizer
 
 From `v0.13` you can also customize each icon using `iconCustomizer` configuration option or using query params when importing them.
