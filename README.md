@@ -411,7 +411,7 @@ export default defineConfig({
 })
 ```
 
-See [the Astro + Vue example](examples/astro) for a working example project.
+See [the Astro + Vue example](examples/astro-vue) for a working example project.
 
 <br></details>
 
@@ -648,7 +648,7 @@ Only the Vue type declarations are required:
 }
 ```
 
-See [the Astro + Vue example](examples/astro) for a working example project.
+See [the Astro + Vue example](examples/astro-vue) for a working example project.
 
 <br></details>
 
