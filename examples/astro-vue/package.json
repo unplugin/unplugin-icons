@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@astrojs/vue": "^4.0.3",
+    "astro": "^3.5.3"
+  },
+  "description": "unplugin-icons + Astro",
+  "devDependencies": {
+    "@iconify/json": "^2.2.141",
+    "unplugin-icons": "workspace:*"
+  },
+  "name": "astro-example",
+  "private": true,
+  "scripts": {
+    "astro": "astro",
+    "build": "astro build",
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "start": "astro dev"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.js && npm install && npm run dev"
+  },
+  "type": "module",
+  "version": "0.0.1"
+}
