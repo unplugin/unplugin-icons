@@ -633,6 +633,26 @@ See [the Astro example](examples/astro) for a working example project.
 <br></details>
 
 <details>
+<summary>Astro + Vue</summary><br>
+
+Only the Vue type declarations are required:
+
+```jsonc
+// tsconfig.json
+{
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/vue",
+    ]
+  }
+}
+```
+
+See [the Astro + Vue example](examples/astro) for a working example project.
+
+<br></details>
+
+<details>
 <summary>Qwik</summary><br>
 
 Qwik support requires peer dependency `@svgx/core`:
