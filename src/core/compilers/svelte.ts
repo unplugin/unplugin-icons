@@ -9,7 +9,7 @@ export function compileSvelte(svg: string, runes = false) {
   const content = `{@html \`${escapeSvelte(svg.slice(openTagEnd + 1, closeTagStart))}\`}`
   const closeTag = svg.slice(closeTagStart)
   const sfc = `${openTag}${content}${closeTag}`
-  return runes ? `<script>const {...p}=$props()</script>${sfc}` : sfc
+  return runes ? `<script>const{...p}=$props()</script>${sfc}` : sfc
 }
 
 // escape curlies, backtick, \t, \r, \n to avoid breaking output of {@html `here`} in .svelte
