@@ -11,6 +11,7 @@ import type { Compiler, CustomCompiler } from './types'
 import { Vue2Compiler } from './vue2'
 import { Vue3Compiler } from './vue3'
 import { WebComponentsCompiler } from './web-components'
+import { SvelteRunesCompiler } from './svelte-runes'
 
 export const compilers: Record<Exclude<ResolvedOptions['compiler'], CustomCompiler>, Compiler> = {
   'astro': AstroCompiler,
@@ -20,6 +21,7 @@ export const compilers: Record<Exclude<ResolvedOptions['compiler'], CustomCompil
   'raw': RawCompiler,
   'solid': SolidCompiler,
   'svelte': SvelteCompiler,
+  'svelte-runes': SvelteRunesCompiler,
   'vue2': Vue2Compiler,
   'vue3': Vue3Compiler,
   'web-components': WebComponentsCompiler,
