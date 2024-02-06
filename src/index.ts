@@ -36,6 +36,7 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
             case 'marko':
               return `${res}.marko`
             case 'svelte':
+            case 'svelte-runes':
               return `${res}.svelte`
             case 'solid':
               return `${res}.tsx`
