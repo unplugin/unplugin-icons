@@ -15,10 +15,13 @@ export const SvelteCompiler = (async (svg: string) => {
   }
   const openTagEnd = svg.indexOf('>', svg.indexOf('<svg '))
   const closeTagStart = svg.lastIndexOf('</svg')
-  const openTag = `${svg.slice(0, openTagEnd)} {...${svelteRunes ? 'p' : '$$props'}}>`
-  const content = `{@html \`${escapeSvelte(svg.slice(openTagEnd + 1, closeTagStart))}\`}`
-  const closeTag = svg.slice(closeTagStart)
-  const sfc = `${openTag}${content}${closeTag}`
+  let sfc = `${svg.slice(0, openTagEnd)} {...${svelteRunes ? 'p' : '$$props'}}>`
+  if (svelteRunes)
+    sfc += svg.slice(openTagEnd + 1, closeTagStart)
+  else
+    sfc += `{@html \`${escapeSvelte(svg.slice(openTagEnd + 1, closeTagStart))}\`}`
+
+  sfc += svg.slice(closeTagStart)
   return svelteRunes ? `<script>const{...p}=$props()</script>${sfc}` : sfc
 }) as Compiler
 
