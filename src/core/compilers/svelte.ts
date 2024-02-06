@@ -5,11 +5,11 @@ export const SvelteCompiler = ((svg: string) => compileSvelte(svg)) as Compiler
 export function compileSvelte(svg: string, runes = false) {
   const openTagEnd = svg.indexOf('>', svg.indexOf('<svg '))
   const closeTagStart = svg.lastIndexOf('</svg')
-  const openTag = `${svg.slice(0, openTagEnd)} {...${runes ? '' : '$$'}props}>`
+  const openTag = `${svg.slice(0, openTagEnd)} {...${runes ? 'p' : '$$props'}}>`
   const content = `{@html \`${escapeSvelte(svg.slice(openTagEnd + 1, closeTagStart))}\`}`
   const closeTag = svg.slice(closeTagStart)
   const sfc = `${openTag}${content}${closeTag}`
-  return runes ? `<script>const{...props} = $props()</script>\n${sfc}` : sfc
+  return runes ? `<script>const {...p}=$props()</script>${sfc}` : sfc
 }
 
 // escape curlies, backtick, \t, \r, \n to avoid breaking output of {@html `here`} in .svelte
