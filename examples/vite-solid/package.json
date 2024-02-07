@@ -11,15 +11,15 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "solid-js": "^1.8.5"
+    "solid-js": "^1.8.12"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.37",
+    "@iconify-json/logos": "^1.1.42",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "unplugin-icons": "workspace:*",
-    "vite": "^4.5.0",
-    "vite-plugin-solid": "^2.7.2"
+    "vite": "^5.0.12",
+    "vite-plugin-solid": "^2.9.1"
   },
   "stackblitz": {
     "installDependencies": false,

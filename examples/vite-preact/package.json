@@ -10,17 +10,17 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.19.1"
+    "preact": "^10.19.3"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.37",
-    "@preact/preset-vite": "^2.6.0",
+    "@iconify-json/logos": "^1.1.42",
+    "@preact/preset-vite": "^2.8.1",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.3",
     "unplugin-icons": "workspace:*",
-    "vite": "^4.5.0",
-    "vite-plugin-inspect": "^0.7.42"
+    "vite": "^5.0.12",
+    "vite-plugin-inspect": "^0.8.3"
   },
   "stackblitz": {
     "installDependencies": false,

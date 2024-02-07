@@ -8,9 +8,9 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "@iconify-json/mono-icons": "^1.1.5",
+    "@iconify-json/mono-icons": "^1.1.8",
     "unplugin-icons": "workspace:*",
-    "vite": "^4.5.0"
+    "vite": "^5.0.12"
   },
   "stackblitz": {
     "installDependencies": false,

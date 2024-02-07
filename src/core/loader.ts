@@ -63,7 +63,9 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
     iconCustomizer: providedIconCustomizer,
     transform,
     autoInstall = false,
+    collectionsNodeResolvePath,
   } = options
+
   const iconifyLoaderOptions: IconifyLoaderOptions = {
     addXmlNs: false,
     scale,
@@ -71,6 +73,7 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
     autoInstall,
     defaultClass,
     defaultStyle,
+    cwd: collectionsNodeResolvePath,
     // there is no need to warn since we throw an error below
     warn: undefined,
     customizations: {
