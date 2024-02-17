@@ -204,6 +204,7 @@ module.exports = {
 ```
 
 You can also rename the Vue configuration file to `vue.config.mjs` and use static import syntax (you should use latest `@vue/cli-service ^5.0.8`):
+
 ```ts
 // vue.config.mjs
 import Icons from 'unplugin-icons/webpack'
@@ -250,6 +251,7 @@ See [the SvelteKit example](examples/sveltekit) for a working example project.
 <summary>Svelte + Vite</summary><br>
 
 Svelte support requires the `@sveltejs/vite-plugin-svelte` plugin:
+
 ```shell
 npm i -D @sveltejs/vite-plugin-svelte
 ```
@@ -282,6 +284,7 @@ See [the Svelte + Vite example](examples/vite-svelte) for a working example proj
 <summary>Next.js</summary><br>
 
 The `unplugin-icons` plugin should be configured on `next.config.js` configuration file:
+
 ```ts
 // next.config.js
 /** @type {import('next').NextConfig} */
@@ -301,6 +304,7 @@ module.exports = {
 ```
 
 You can also rename the Next configuration file to `next.config.mjs` and use static import syntax:
+
 ```ts
 // next.config.mjs
 import Icons from 'unplugin-icons/webpack'
@@ -563,6 +567,7 @@ For Svelte + Vite, in the `src/vite-env.d.ts` file:
 ```
 
 If you're still using Svelte 3, replace the reference to use Svelte 3:
+
 ```js
 /// <reference types="svelte" />
 /// <reference types="vite/client" />
@@ -609,6 +614,7 @@ Icons({ compiler: 'qwik' })
 ```
 
 Alternatively, you can use `jsx` compiler, requires peer dependency `@svgr/core` and its plugin `@svgr/plugin-jsx`:
+
 ```bash
 npm i -D @svgr/core @svgr/plugin-jsx
 ```
@@ -708,6 +714,7 @@ import IconBar from '~icons/my-yet-other-icons/bar'
 ```
 
 > 💡 SVG Authoring Tips:
+>
 > - To make your icons color adaptable, set `fill="currentColor"` or `stroke="currentColor"` in your SVG.
 > - Leave the `height` and `width` unspecified, we will set them for you.
 
@@ -734,6 +741,7 @@ From version `v0.18.3` you can use other packages to load icons from others auth
 **WARNING**: external packages must include `icons.json` file with the `icons` data in `IconifyJSON` format, which can be exported with Iconify Tools. Check [Exporting icon set as JSON package](https://iconify.design/docs/libraries/tools/export/json-package.html) for more details.
 
 For example, you can use `an-awesome-collection` or `@my-awesome-collections/some-collection` to load your custom or third party icons:
+
 ```ts
 // loader helpers
 import { ExternalPackageIconLoader } from 'unplugin-icons/loaders'
@@ -742,6 +750,7 @@ Icons({ customCollections: ExternalPackageIconLoader('my-awesome-collection') })
 ```
 
 When using with resolvers for auto-importing, remember you will need to tell it your custom collection names:
+
 ```ts
 IconResolver({
   customCollections: [
@@ -751,6 +760,7 @@ IconResolver({
 ```
 
 You can also combine it with `FileSystemIconLoader` or with other custom icon loaders:
+
 ```ts
 // loader helpers
 import { ExternalPackageIconLoader, FileSystemIconLoader } from 'unplugin-icons/loaders'
@@ -853,6 +863,7 @@ See `src/App.vue` component and `vite.config.ts` configuration on `vite-vue3` ex
 ## Global Custom Icon Transformation
 
 From version `0.14.2`, when loading your custom icons, you can transform them, for example adding `fill` attribute with `currentColor`:
+
 ```ts
 Icons({
   customCollections: {
@@ -1054,7 +1065,7 @@ Non-prefix mode is also supported
 
 ```ts
 IconsResolver({
-  prefix: false, // <--
+  prefix: '', // <--
   // this is optional, default enabling all the collections supported by Iconify
   enabledCollections: ['mdi'],
 })
