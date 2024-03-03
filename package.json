@@ -91,6 +91,9 @@
     "./types/preact": {
       "types": "./types/preact.d.ts"
     },
+    "./types/qwik": {
+      "types": "./types/qwik.d.ts"
+    },
     "./types/raw": {
       "types": "./types/raw.d.ts"
     },
