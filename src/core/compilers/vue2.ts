@@ -11,7 +11,8 @@ export const Vue2Compiler = (async (
   const { compile } = await importModule('vue-template-compiler')
   // eslint-disable-next-line ts/prefer-ts-expect-error
   // @ts-ignore @ts-expect-error
-  const transpile = (await importModule('vue-template-es2015-compiler'))
+  const transpileMod = (await importModule('vue-template-es2015-compiler'))
+  const transpile = transpileMod.default || transpileMod
 
   const { injectScripts, svg: handled } = handleSVGId(svg)
 
