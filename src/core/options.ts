@@ -54,7 +54,7 @@ function guessJSX(): ResolvedOptions['jsx'] {
 async function getVueVersion() {
   try {
     const result = await getPackageInfo('vue')
-    if (!result)
+    if (!result || !result.version)
       return null
     return result.version?.startsWith('2.') ? 'vue2' : 'vue3'
   }

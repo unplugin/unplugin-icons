@@ -14,5 +14,8 @@ import MdiAlarmOff from '~icons/mdi/alarm-off'
       <MdiAlarmOff />
       from <code>unplugin-icons</code>
     </p>
+    <h1>Auto import Components</h1>
+    <Circle />
+    <LayoutFooter />
   </div>
 </template>
