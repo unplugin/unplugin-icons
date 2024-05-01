@@ -14,7 +14,7 @@
     "@iconify-json/mdi": "^1.1.66",
     "nuxt": "^3.11.2",
     "unplugin-icons": "link:../..",
-    "unplugin-vue-components": "^0.25.2"
+    "unplugin-vue-components": "^0.27.0"
   },
   "stackblitz": {
     "installDependencies": false,
