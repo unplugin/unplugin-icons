@@ -16,7 +16,7 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
         const queryIndex = normalizedId.indexOf('?')
         const res = `${(queryIndex > -1 ? normalizedId.slice(0, queryIndex) : normalizedId)
           .replace(/\.\w+$/i, '')
-          .replace(/^\//, '')}${queryIndex > -1 ? `?${normalizedId.slice(queryIndex)}` : ''}`
+          .replace(/^\//, '')}${queryIndex > -1 ? `?${normalizedId.slice(queryIndex + 1)}` : ''}`
         const resolved = resolveIconsPath(res)
         // accept raw compiler from query params
         const compiler = resolved?.query?.raw === 'true' ? 'raw' : options.compiler

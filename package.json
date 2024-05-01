@@ -1,8 +1,8 @@
 {
   "name": "unplugin-icons",
   "type": "module",
-  "version": "0.18.1",
-  "packageManager": "pnpm@8.11.0",
+  "version": "0.18.5",
+  "packageManager": "pnpm@9.0.6",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
@@ -90,6 +90,9 @@
     },
     "./types/preact": {
       "types": "./types/preact.d.ts"
+    },
+    "./types/qwik": {
+      "types": "./types/qwik.d.ts"
     },
     "./types/raw": {
       "types": "./types/raw.d.ts"
@@ -192,34 +195,34 @@
     }
   },
   "dependencies": {
-    "@antfu/install-pkg": "^0.3.0",
-    "@antfu/utils": "^0.7.6",
-    "@iconify/utils": "^2.1.12",
+    "@antfu/install-pkg": "^0.3.3",
+    "@antfu/utils": "^0.7.7",
+    "@iconify/utils": "^2.1.23",
     "debug": "^4.3.4",
     "kolorist": "^1.8.0",
     "local-pkg": "^0.5.0",
-    "unplugin": "^1.5.1"
+    "unplugin": "^1.10.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.1.1",
-    "@iconify/json": "^2.2.149",
+    "@antfu/eslint-config": "^2.16.1",
+    "@iconify/json": "^2.2.205",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgx/core": "^1.0.1",
     "@types/debug": "^4.1.12",
-    "@types/node": "^20.10.0",
-    "@vue/compiler-sfc": "^3.3.9",
-    "bumpp": "^9.2.0",
+    "@types/node": "^20.12.7",
+    "@vue/compiler-sfc": "^3.4.26",
+    "bumpp": "^9.4.1",
     "cross-env": "^7.0.3",
-    "eslint": "^8.54.0",
-    "esno": "^4.0.0",
+    "eslint": "^9.1.1",
+    "esno": "^4.7.0",
     "fast-glob": "^3.3.2",
-    "publint": "^0.2.5",
-    "rollup": "^4.6.0",
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.2",
-    "vite": "^5.0.4",
+    "publint": "^0.2.7",
+    "rollup": "^4.17.2",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
     "vitest": "1.0.0-beta.2"
   }
 }

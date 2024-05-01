@@ -39,6 +39,11 @@ export interface Options {
   iconCustomizer?: IconCustomizer
 
   /**
+   * Current working directory for resolving collections from node_modules
+   */
+  collectionsNodeResolvePath?: string
+
+  /**
    * Transform raw `svg`.
    *
    * **WARNING**: `transform` will be only applied when using `custom` icon collection.
