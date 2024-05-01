@@ -13,13 +13,13 @@
   "devDependencies": {
     "@iconify-json/icon-park": "^1.1.13",
     "@iconify-json/logos": "^1.1.42",
-    "@iconify-json/mdi": "^1.1.64",
-    "@sveltejs/kit": "^2.5.0",
-    "@sveltejs/vite-plugin-svelte": "^3.0.2",
-    "svelte": "^4.2.9",
-    "svelte-check": "^3.6.3",
+    "@iconify-json/mdi": "^1.1.66",
+    "@sveltejs/kit": "^2.5.7",
+    "@sveltejs/vite-plugin-svelte": "^3.1.0",
+    "svelte": "^4.2.15",
+    "svelte-check": "^3.7.0",
     "tslib": "^2.6.2",
-    "typescript": "^5.3.3",
+    "typescript": "^5.4.5",
     "unplugin-icons": "workspace:*"
   },
   "stackblitz": {
