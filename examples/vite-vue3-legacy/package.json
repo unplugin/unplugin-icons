@@ -10,13 +10,13 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.205",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@iconify/json": "^2.2.230",
+    "@vitejs/plugin-vue": "^5.0.5",
     "cross-env": "^7.0.3",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.4",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^0.27.0",
-    "vite": "^5.2.10"
+    "unplugin-vue-components": "^0.27.3",
+    "vite": "^5.3.4"
   },
   "stackblitz": {
     "installDependencies": false,
