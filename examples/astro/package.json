@@ -15,7 +15,7 @@
     "astro": "^4.12.2"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.230",
+    "@iconify/json": "^2.2.232",
     "unplugin-icons": "workspace:*"
   },
   "stackblitz": {

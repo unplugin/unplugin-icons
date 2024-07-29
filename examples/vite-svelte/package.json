@@ -23,7 +23,7 @@
     "svelte-preprocess": "^6.0.2",
     "typescript": "^5.5.4",
     "unplugin-icons": "workspace:*",
-    "vite": "^5.3.4"
+    "vite": "^5.3.5"
   },
   "stackblitz": {
     "installDependencies": false,
