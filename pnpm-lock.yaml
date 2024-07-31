@@ -15,8 +15,8 @@ importers:
         specifier: ^0.7.7
         version: 0.7.7
       '@iconify/utils':
-        specifier: ^2.1.23
-        version: 2.1.23
+        specifier: ^2.1.29
+        version: 2.1.29
       debug:
         specifier: ^4.3.4
         version: 4.3.4
@@ -86,7 +86,7 @@ importers:
         version: 4.17.2
       tsup:
         specifier: ^8.0.2
-        version: 8.0.2(postcss@8.4.33)(typescript@5.4.5)
+        version: 8.0.2(postcss@8.4.38)(typescript@5.4.5)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -166,7 +166,7 @@ importers:
         version: 4.2.15
       svelte-check:
         specifier: ^3.7.0
-        version: 3.7.0(@babel/core@7.23.9)(postcss-load-config@4.0.1(postcss@8.4.33))(postcss@8.4.33)(svelte@4.2.15)
+        version: 3.7.0(@babel/core@7.24.5)(postcss-load-config@4.0.1(postcss@8.4.38))(postcss@8.4.38)(svelte@4.2.15)
       tslib:
         specifier: ^2.6.2
         version: 2.6.2
@@ -349,10 +349,10 @@ importers:
         version: 4.2.15
       svelte-check:
         specifier: ^3.7.0
-        version: 3.7.0(@babel/core@7.23.9)(postcss-load-config@4.0.1(postcss@8.4.33))(postcss@8.4.33)(svelte@4.2.15)
+        version: 3.7.0(@babel/core@7.24.5)(postcss-load-config@4.0.1(postcss@8.4.38))(postcss@8.4.38)(svelte@4.2.15)
       svelte-preprocess:
         specifier: ^5.1.4
-        version: 5.1.4(@babel/core@7.23.9)(postcss-load-config@4.0.1(postcss@8.4.33))(postcss@8.4.33)(svelte@4.2.15)(typescript@5.4.5)
+        version: 5.1.4(@babel/core@7.24.5)(postcss-load-config@4.0.1(postcss@8.4.38))(postcss@8.4.38)(svelte@4.2.15)(typescript@5.4.5)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -419,7 +419,7 @@ importers:
         version: link:../..
       unplugin-vue-components:
         specifier: ^0.27.0
-        version: 0.27.0(@babel/parser@7.23.9)(rollup@4.17.2)(vue@2.7.8)
+        version: 0.27.0(@babel/parser@7.24.5)(rollup@4.17.2)(vue@2.7.8)
       vite:
         specifier: ^5.2.10
         version: 5.2.10(@types/node@20.12.7)(terser@5.27.0)
@@ -486,7 +486,7 @@ importers:
         version: link:../..
       unplugin-vue-components:
         specifier: ^0.27.0
-        version: 0.27.0(@babel/parser@7.23.9)(rollup@4.17.2)(vue@3.2.37)
+        version: 0.27.0(@babel/parser@7.24.5)(rollup@4.17.2)(vue@3.2.37)
       vite:
         specifier: ^5.2.10
         version: 5.2.10(@types/node@20.12.7)(terser@5.27.0)
@@ -514,7 +514,7 @@ importers:
         version: link:../..
       unplugin-vue-components:
         specifier: ^0.27.0
-        version: 0.27.0(@babel/parser@7.23.9)(rollup@4.17.2)(vue@3.2.37)
+        version: 0.27.0(@babel/parser@7.24.5)(rollup@4.17.2)(vue@3.2.37)
       vite:
         specifier: ^5.2.10
         version: 5.2.10(@types/node@20.12.7)(terser@5.27.0)
@@ -642,6 +642,9 @@ packages:
 
   '@antfu/install-pkg@0.3.3':
     resolution: {integrity: sha512-nHHsk3NXQ6xkCfiRRC8Nfrg8pU5kkr3P3Y9s9dKqiuRmBD0Yap7fymNDjGFKeWhZQHqqbCS5CfeMy9wtExM24w==}
+
+  '@antfu/utils@0.7.10':
+    resolution: {integrity: sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==}
 
   '@antfu/utils@0.7.7':
     resolution: {integrity: sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==}
@@ -1977,8 +1980,8 @@ packages:
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
-  '@iconify/utils@2.1.23':
-    resolution: {integrity: sha512-YGNbHKM5tyDvdWZ92y2mIkrfvm5Fvhe6WJSkWu7vvOFhMtYDP0casZpoRz0XEHZCrYsR4stdGT3cZ52yp5qZdQ==}
+  '@iconify/utils@2.1.29':
+    resolution: {integrity: sha512-wCcTsmlJvTi1VWBgcJ7HeuWlh7gLGWY7L9HmbgMfjOfsoo7DADemB2Nqnrw1KvCdEAxLL5wTMBAOP5BesFrtng==}
 
   '@img/sharp-darwin-arm64@0.33.3':
     resolution: {integrity: sha512-FaNiGX1MrOuJ3hxuNzWgsT/mg5OHG/Izh59WW2mk1UwYHUwtfbhk5QNKYZgxf0pLOhx9ctGiGa2OykD71vOnSw==}
@@ -4170,6 +4173,15 @@ packages:
       supports-color:
         optional: true
 
+  debug@4.3.6:
+    resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
   decode-named-character-reference@1.0.2:
     resolution: {integrity: sha512-O8x12RzrUF8xyVcY0KJowWsmaJxQbmy0/EtnNtHRpsOcT7dFk5W598coHqBVpmWo1oQQfsCqfCmkZN5DJrZVdg==}
 
@@ -6119,6 +6131,9 @@ packages:
   mlly@1.6.1:
     resolution: {integrity: sha512-vLgaHvaeunuOXHSmEbZ9izxPx3USsk8KCQ8iC+aTlp5sKRSoZvwhHh5L9VbKSaVC6sJDqbyohIS76E2VmHIPAA==}
 
+  mlly@1.7.1:
+    resolution: {integrity: sha512-rrVRZRELyQzrIUAVMHxP97kv+G786pHmOKzuFII8zDYahFBS7qnHh2AlYSl1GAHhaMPCz6/oHjVMcfFYgFYHgA==}
+
   module-alias@2.2.2:
     resolution: {integrity: sha512-A/78XjoX2EmNvppVWEhM2oGk3x4lLxnkEA4jTbaK97QKSDjkIoOsKQlfylt/d3kKKi596Qy3NP5XrXJ6fZIC9Q==}
 
@@ -6538,6 +6553,9 @@ packages:
 
   pkg-types@1.0.3:
     resolution: {integrity: sha512-nN7pYi0AQqJnoLPC9eHFQ8AcyaixBUOwvqc5TDnIKCMEE6I0y8P7OKA7fPexsXGCGxQDl/cmrLAp26LhcwxZ4A==}
+
+  pkg-types@1.1.3:
+    resolution: {integrity: sha512-+JrgthZG6m3ckicaOB74TwQ+tBWsFl3qVQg7mN8ulwSOElJ7gBhKzj2VkCPnZ4NlF6kEquYU+RIYNVAvzd54UA==}
 
   pluralize@8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
@@ -7816,6 +7834,9 @@ packages:
   ufo@1.3.2:
     resolution: {integrity: sha512-o+ORpgGwaYQXgqGDwd+hkS4PuZ3QnmqMMxRuajK/a38L6fTpcE5GPIfrf+L/KemFzfUpeUQc1rRS1iDBozvnFA==}
 
+  ufo@1.5.4:
+    resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
+
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
 
@@ -8512,6 +8533,8 @@ snapshots:
   '@antfu/install-pkg@0.3.3':
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
+
+  '@antfu/utils@0.7.10': {}
 
   '@antfu/utils@0.7.7': {}
 
@@ -10037,15 +10060,15 @@ snapshots:
 
   '@iconify/types@2.0.0': {}
 
-  '@iconify/utils@2.1.23':
+  '@iconify/utils@2.1.29':
     dependencies:
       '@antfu/install-pkg': 0.1.1
-      '@antfu/utils': 0.7.7
+      '@antfu/utils': 0.7.10
       '@iconify/types': 2.0.0
-      debug: 4.3.4
+      debug: 4.3.6
       kolorist: 1.8.0
       local-pkg: 0.5.0
-      mlly: 1.6.1
+      mlly: 1.7.1
     transitivePeerDependencies:
       - supports-color
 
@@ -12706,6 +12729,10 @@ snapshots:
     dependencies:
       ms: 2.1.2
 
+  debug@4.3.6:
+    dependencies:
+      ms: 2.1.2
+
   decode-named-character-reference@1.0.2:
     dependencies:
       character-entities: 2.0.2
@@ -15226,6 +15253,13 @@ snapshots:
       pkg-types: 1.0.3
       ufo: 1.3.2
 
+  mlly@1.7.1:
+    dependencies:
+      acorn: 8.11.3
+      pathe: 1.1.2
+      pkg-types: 1.1.3
+      ufo: 1.5.4
+
   module-alias@2.2.2: {}
 
   mri@1.2.0: {}
@@ -15636,6 +15670,12 @@ snapshots:
       mlly: 1.4.0
       pathe: 1.1.1
 
+  pkg-types@1.1.3:
+    dependencies:
+      confbox: 0.1.7
+      mlly: 1.7.1
+      pathe: 1.1.2
+
   pluralize@8.0.0: {}
 
   portfinder@1.0.28:
@@ -15716,12 +15756,12 @@ snapshots:
     dependencies:
       postcss: 8.4.33
 
-  postcss-load-config@4.0.1(postcss@8.4.33):
+  postcss-load-config@4.0.1(postcss@8.4.38):
     dependencies:
       lilconfig: 2.1.0
       yaml: 2.3.3
     optionalDependencies:
-      postcss: 8.4.33
+      postcss: 8.4.38
 
   postcss-loader@6.2.1(postcss@8.4.28)(webpack@5.91.0(esbuild@0.19.8)):
     dependencies:
@@ -16867,7 +16907,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@3.7.0(@babel/core@7.23.9)(postcss-load-config@4.0.1(postcss@8.4.33))(postcss@8.4.33)(svelte@4.2.15):
+  svelte-check@3.7.0(@babel/core@7.24.5)(postcss-load-config@4.0.1(postcss@8.4.38))(postcss@8.4.38)(svelte@4.2.15):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.20
       chokidar: 3.5.3
@@ -16876,7 +16916,7 @@ snapshots:
       picocolors: 1.0.0
       sade: 1.8.1
       svelte: 4.2.15
-      svelte-preprocess: 5.1.4(@babel/core@7.23.9)(postcss-load-config@4.0.1(postcss@8.4.33))(postcss@8.4.33)(svelte@4.2.15)(typescript@5.4.5)
+      svelte-preprocess: 5.1.4(@babel/core@7.24.5)(postcss-load-config@4.0.1(postcss@8.4.38))(postcss@8.4.38)(svelte@4.2.15)(typescript@5.4.5)
       typescript: 5.4.5
     transitivePeerDependencies:
       - '@babel/core'
@@ -16893,7 +16933,7 @@ snapshots:
     dependencies:
       svelte: 4.2.15
 
-  svelte-preprocess@5.1.4(@babel/core@7.23.9)(postcss-load-config@4.0.1(postcss@8.4.33))(postcss@8.4.33)(svelte@4.2.15)(typescript@5.4.5):
+  svelte-preprocess@5.1.4(@babel/core@7.24.5)(postcss-load-config@4.0.1(postcss@8.4.38))(postcss@8.4.38)(svelte@4.2.15)(typescript@5.4.5):
     dependencies:
       '@types/pug': 2.0.6
       detect-indent: 6.1.0
@@ -16902,9 +16942,9 @@ snapshots:
       strip-indent: 3.0.0
       svelte: 4.2.15
     optionalDependencies:
-      '@babel/core': 7.23.9
-      postcss: 8.4.33
-      postcss-load-config: 4.0.1(postcss@8.4.33)
+      '@babel/core': 7.24.5
+      postcss: 8.4.38
+      postcss-load-config: 4.0.1(postcss@8.4.38)
       typescript: 5.4.5
 
   svelte@4.2.15:
@@ -17106,7 +17146,7 @@ snapshots:
 
   tslib@2.6.2: {}
 
-  tsup@8.0.2(postcss@8.4.33)(typescript@5.4.5):
+  tsup@8.0.2(postcss@8.4.38)(typescript@5.4.5):
     dependencies:
       bundle-require: 4.0.2(esbuild@0.19.8)
       cac: 6.7.14
@@ -17116,14 +17156,14 @@ snapshots:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 4.0.1(postcss@8.4.33)
+      postcss-load-config: 4.0.1(postcss@8.4.38)
       resolve-from: 5.0.0
       rollup: 4.17.2
       source-map: 0.8.0-beta.0
       sucrase: 3.34.0
       tree-kill: 1.2.2
     optionalDependencies:
-      postcss: 8.4.33
+      postcss: 8.4.38
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -17170,6 +17210,8 @@ snapshots:
   ufo@1.3.1: {}
 
   ufo@1.3.2: {}
+
+  ufo@1.5.4: {}
 
   unbox-primitive@1.0.2:
     dependencies:
@@ -17301,7 +17343,7 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  unplugin-vue-components@0.27.0(@babel/parser@7.23.9)(rollup@4.17.2)(vue@2.7.8):
+  unplugin-vue-components@0.27.0(@babel/parser@7.24.5)(rollup@4.17.2)(vue@2.7.8):
     dependencies:
       '@antfu/utils': 0.7.7
       '@rollup/pluginutils': 5.1.0(rollup@4.17.2)
@@ -17315,12 +17357,12 @@ snapshots:
       unplugin: 1.10.1
       vue: 2.7.8
     optionalDependencies:
-      '@babel/parser': 7.23.9
+      '@babel/parser': 7.24.5
     transitivePeerDependencies:
       - rollup
       - supports-color
 
-  unplugin-vue-components@0.27.0(@babel/parser@7.23.9)(rollup@4.17.2)(vue@3.2.37):
+  unplugin-vue-components@0.27.0(@babel/parser@7.24.5)(rollup@4.17.2)(vue@3.2.37):
     dependencies:
       '@antfu/utils': 0.7.7
       '@rollup/pluginutils': 5.1.0(rollup@4.17.2)
@@ -17334,7 +17376,7 @@ snapshots:
       unplugin: 1.10.1
       vue: 3.2.37
     optionalDependencies:
-      '@babel/parser': 7.23.9
+      '@babel/parser': 7.24.5
     transitivePeerDependencies:
       - rollup
       - supports-color
