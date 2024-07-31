@@ -406,6 +406,36 @@ See [the Astro example](examples/astro) for a working example project.
 
 <br></details>
 
+<details>
+<summary>Astro + Vue</summary><br>
+
+Required [@astrojs/vue](https://docs.astro.build/es/guides/integrations-guide/vue/) installed.
+
+```ts
+// astro.config.mjs
+import { defineConfig } from 'astro/config'
+import Vue from '@astrojs/vue'
+import Icons from 'unplugin-icons/vite'
+
+// https://astro.build/config
+export default defineConfig({
+  integrations: [
+    Vue(),
+  ],
+  vite: {
+    plugins: [
+      Icons({
+        compiler: 'vue3',
+      }),
+    ],
+  },
+})
+```
+
+See [the Astro + Vue example](examples/astro-vue) for a working example project.
+
+<br></details>
+
 ###### Frameworks
 
 <details>
@@ -615,6 +645,26 @@ Type Declarations
 ```
 
 See [the Astro example](examples/astro) for a working example project.
+
+<br></details>
+
+<details>
+<summary>Astro + Vue</summary><br>
+
+Only the Vue type declarations are required:
+
+```jsonc
+// tsconfig.json
+{
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/vue",
+    ]
+  }
+}
+```
+
+See [the Astro + Vue example](examples/astro-vue) for a working example project.
 
 <br></details>
 
