@@ -13,17 +13,17 @@
   },
   "devDependencies": {
     "@iconify-json/icon-park": "^1.1.13",
-    "@iconify-json/logos": "^1.1.42",
-    "@iconify-json/mdi": "^1.1.66",
-    "@sveltejs/vite-plugin-svelte": "^3.1.0",
+    "@iconify-json/logos": "^1.1.43",
+    "@iconify-json/mdi": "^1.1.67",
+    "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@tsconfig/svelte": "^5.0.4",
     "cross-env": "^7.0.3",
-    "svelte": "^4.2.15",
-    "svelte-check": "^3.7.0",
-    "svelte-preprocess": "^5.1.4",
-    "typescript": "^5.4.5",
+    "svelte": "^4.2.18",
+    "svelte-check": "^3.8.4",
+    "svelte-preprocess": "^6.0.2",
+    "typescript": "^5.5.4",
     "unplugin-icons": "workspace:*",
-    "vite": "^5.2.10"
+    "vite": "^5.3.5"
   },
   "stackblitz": {
     "installDependencies": false,

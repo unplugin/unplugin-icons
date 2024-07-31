@@ -1,8 +1,8 @@
 {
   "name": "unplugin-icons",
   "type": "module",
-  "version": "0.19.0",
-  "packageManager": "pnpm@9.0.6",
+  "version": "0.19.1",
+  "packageManager": "pnpm@9.6.0",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
@@ -196,33 +196,33 @@
   },
   "dependencies": {
     "@antfu/install-pkg": "^0.3.3",
-    "@antfu/utils": "^0.7.7",
+    "@antfu/utils": "^0.7.10",
     "@iconify/utils": "^2.1.29",
-    "debug": "^4.3.4",
+    "debug": "^4.3.6",
     "kolorist": "^1.8.0",
     "local-pkg": "^0.5.0",
-    "unplugin": "^1.10.1"
+    "unplugin": "^1.12.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.16.1",
-    "@iconify/json": "^2.2.205",
+    "@antfu/eslint-config": "^2.24.0",
+    "@iconify/json": "^2.2.232",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgx/core": "^1.0.1",
     "@types/debug": "^4.1.12",
-    "@types/node": "^20.12.7",
-    "@vue/compiler-sfc": "^3.4.26",
+    "@types/node": "^22.0.0",
+    "@vue/compiler-sfc": "^3.4.34",
     "bumpp": "^9.4.1",
     "cross-env": "^7.0.3",
-    "eslint": "^9.1.1",
+    "eslint": "^9.8.0",
     "esno": "^4.7.0",
     "fast-glob": "^3.3.2",
-    "publint": "^0.2.7",
-    "rollup": "^4.17.2",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.10",
-    "vitest": "1.0.0-beta.2"
+    "publint": "^0.2.9",
+    "rollup": "^4.19.1",
+    "tsup": "^8.2.3",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5",
+    "vitest": "^2.0.4"
   }
 }
