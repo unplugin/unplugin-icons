@@ -28,8 +28,8 @@ export const SvelteCompiler = (async (svg: string) => {
 // escape curlies, backtick, \t, \r, \n to avoid breaking output of {@html `here`} in .svelte
 export function escapeSvelte(str: string): string {
   return str
-    .replace(/{/g, '&#123;')
-    .replace(/}/g, '&#125;')
+    .replace(/\{/g, '&#123;')
+    .replace(/\}/g, '&#125;')
     .replace(/`/g, '&#96;')
     .replace(/\\([trn])/g, ' ')
 }

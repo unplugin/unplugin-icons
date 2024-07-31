@@ -658,7 +658,7 @@ Only the Vue type declarations are required:
 {
   "compilerOptions": {
     "types": [
-      "unplugin-icons/types/vue",
+      "unplugin-icons/types/vue"
     ]
   }
 }

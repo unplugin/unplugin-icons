@@ -7,7 +7,7 @@ export function handleSVGId(svg: string) {
 
   if (hasID) {
     svg = svg
-      .replace(/\b([\w-]+?)="url\(#(.+?)\)"/g, (_, s, id) => {
+      .replace(/\b([\w-]+)="url\(#(.+?)\)"/g, (_, s, id) => {
         idMap[id] = `'${id}':'uicons-'+__randId()`
         return `:${s}="'url(#'+idMap['${id}']+')'"`
       })
