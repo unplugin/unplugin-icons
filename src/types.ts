@@ -41,7 +41,7 @@ export interface Options {
   /**
    * Current working directory for resolving collections from node_modules
    */
-  collectionsNodeResolvePath?: string
+  collectionsNodeResolvePath?: string | string[]
 
   /**
    * Transform raw `svg`.
