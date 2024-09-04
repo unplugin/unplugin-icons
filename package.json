@@ -195,7 +195,7 @@
     }
   },
   "dependencies": {
-    "@antfu/install-pkg": "^0.3.3",
+    "@antfu/install-pkg": "^0.4.1",
     "@antfu/utils": "^0.7.10",
     "@iconify/utils": "^2.1.29",
     "debug": "^4.3.6",
