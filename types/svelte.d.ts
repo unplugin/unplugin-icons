@@ -1,1 +1,1 @@
-import './svelte4.d.ts'
+import './svelte5.d.ts'
