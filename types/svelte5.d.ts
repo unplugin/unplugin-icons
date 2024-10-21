@@ -1,13 +1,17 @@
 declare module 'virtual:icons/*' {
-  import { Component } from 'svelte'
+  import type { Component } from 'svelte'
   import type { SvelteHTMLElements } from 'svelte/elements'
 
-  export default Component<SvelteHTMLElements['svg']>
+  const component: Component<SvelteHTMLElements['svg']>
+
+  export default component
 }
 
 declare module '~icons/*' {
-  import { Component } from 'svelte'
+  import type { Component } from 'svelte'
   import type { SvelteHTMLElements } from 'svelte/elements'
 
-  export default Component<SvelteHTMLElements['svg']>
+  const component: Component<SvelteHTMLElements['svg']>
+
+  export default component
 }
