@@ -1,8 +1,8 @@
 {
   "name": "unplugin-icons",
   "type": "module",
-  "version": "0.19.3",
-  "packageManager": "pnpm@9.12.2",
+  "version": "0.20.0",
+  "packageManager": "pnpm@9.12.3",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
@@ -111,6 +111,9 @@
     },
     "./types/svelte4": {
       "types": "./types/svelte4.d.ts"
+    },
+    "./types/svelte5": {
+      "types": "./types/svelte5.d.ts"
     },
     "./types/vue": {
       "types": "./types/vue.d.ts"

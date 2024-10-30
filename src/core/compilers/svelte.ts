@@ -5,7 +5,6 @@ let svelteRunes: boolean | null
 export const SvelteCompiler = (async (svg: string) => {
   if (svelteRunes == null) {
     try {
-      // @ts-expect-error we don't have svelte as dependency
       const { VERSION } = await import('svelte/compiler')
       svelteRunes = Number(VERSION.split('.')[0]) >= 5
     }
