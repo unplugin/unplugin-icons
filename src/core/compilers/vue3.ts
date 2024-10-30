@@ -8,6 +8,7 @@ export const Vue3Compiler = (async (svg: string, collection: string, icon: strin
   const { injectScripts, svg: handled } = handleSVGId(svg)
 
   let { code } = compileTemplate({
+
     source: handled,
     id: `${collection}:${icon}`,
     filename: `${collection}-${icon}.vue`,

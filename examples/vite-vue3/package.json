@@ -22,6 +22,7 @@
     "@iconify-json/noto-v1": "^1.1.11",
     "@iconify-json/ri": "^1.1.21",
     "@iconify-json/twemoji": "^1.1.15",
+    "@iconify-json/vscode-icons": "^1.2.2",
     "@vitejs/plugin-vue": "^5.1.1",
     "cross-env": "^7.0.3",
     "typescript": "^5.5.4",
