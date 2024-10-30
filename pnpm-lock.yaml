@@ -523,8 +523,8 @@ importers:
         version: 3.2.37
     devDependencies:
       '@iconify/json':
-        specifier: ^2.2.232
-        version: 2.2.232
+        specifier: ^2.2.265
+        version: 2.2.266
       '@vitejs/plugin-vue':
         specifier: ^5.1.1
         version: 5.1.1(vite@5.3.5(@types/node@22.0.0)(terser@5.27.0))(vue@3.2.37)
@@ -569,8 +569,8 @@ importers:
         version: 2.7.8
     devDependencies:
       '@iconify/json':
-        specifier: ^2.2.232
-        version: 2.2.232
+        specifier: ^2.2.265
+        version: 2.2.266
       '@vue/cli-plugin-babel':
         specifier: ^5.0.8
         version: 5.0.8(@vue/cli-service@5.0.8(@vue/compiler-sfc@3.4.34)(esbuild@0.23.0)(lodash@4.17.21)(vue-template-compiler@2.7.16)(webpack-sources@3.2.3))(core-js@3.37.1)(esbuild@0.23.0)(vue@2.7.8)
@@ -2037,6 +2037,9 @@ packages:
 
   '@iconify/json@2.2.232':
     resolution: {integrity: sha512-o1W5bNDuXTd3ugywfX9uRmhuJTKYOLhH4qk+eUpkR8WEYdTmMW+FSiFO5R2KqD94Tzoi8Ef8u/R7felU5xk3eQ==}
+
+  '@iconify/json@2.2.266':
+    resolution: {integrity: sha512-lv+lmPjhDh5/sCaom8AX39USmneRMcQRT/SKoDsxizOjVKycZ8PRk7kNKi776YkKzuksb0Xv5Tfi/Mrr3YLQgQ==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -9783,6 +9786,11 @@ snapshots:
       pathe: 1.1.2
 
   '@iconify/json@2.2.232':
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.2
+
+  '@iconify/json@2.2.266':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
