@@ -1,2 +1,4 @@
-<script>export let content;</script>
-<svg {...$$props}>{@html content}</svg>
+<script>
+  const { content, ...props } = $props();
+</script>
+<svg {...props}>{@html content}</svg>

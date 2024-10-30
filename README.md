@@ -615,6 +615,13 @@ For Svelte + Vite, in the `src/vite-env.d.ts` file:
 /// <reference types="unplugin-icons/types/svelte" />
 ```
 
+If you're still using Svelte 4, replace the reference to use Svelte 4:
+```js
+/// <reference types="svelte" />
+/// <reference types="vite/client" />
+/// <reference types="unplugin-icons/types/svelte4" />
+```
+
 If you're still using Svelte 3, replace the reference to use Svelte 3:
 ```js
 /// <reference types="svelte" />
