@@ -16,7 +16,7 @@ export const Vue3Compiler = (async (svg: string, collection: string, icon: strin
   code = `import { markRaw } from 'vue'\n${code}`
   code = code.replace(/^export /gm, '')
   code += `\n\nexport default markRaw({ name: '${collection}-${icon}', render${
-    injectScripts ? `, data() {${injectScripts};return { idMap }}` : ''
+    injectScripts ? `, setup() {${injectScripts};return { idMap }}` : ''
   } })`
   code += '\n/* vite-plugin-components disabled */'
 

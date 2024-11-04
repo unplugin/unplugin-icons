@@ -6,7 +6,7 @@ const Icons = require('unplugin-icons/webpack')
 module.exports = {
   configureWebpack: {
     plugins: [
-      Icons({
+      Icons.default({
         compiler: 'vue2',
       }),
     ],

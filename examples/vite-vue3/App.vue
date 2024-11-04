@@ -8,6 +8,7 @@ import RawMdiAlarmOff3 from 'virtual:icons/mdi/alarm-off?raw&width=unset&height=
 import Custom1 from 'virtual:icons/plain-color-icons/about?raw'
 import Custom2 from 'virtual:icons/test-color-icons/about?raw'
 import ExternalCustom3 from 'virtual:icons/test-color-icons/about'
+import VSCodePython from 'virtual:icons/vscode-icons/file-type-python'
 </script>
 
 <template>
@@ -30,6 +31,7 @@ import ExternalCustom3 from 'virtual:icons/test-color-icons/about'
       <i-twemoji-1st-place-medal />
       <IIcTwotone23mp />
       <MdiStore24Hour />
+      <VSCodePython />
       <ExternalCustom3 />
       <i-test-color-icons:about />
       <i-plain-color-icons:about />

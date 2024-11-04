@@ -10,7 +10,7 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.232",
+    "@iconify/json": "^2.2.265",
     "@vitejs/plugin-vue": "^5.1.1",
     "cross-env": "^7.0.3",
     "typescript": "^5.5.4",
