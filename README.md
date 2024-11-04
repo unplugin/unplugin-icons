@@ -8,7 +8,7 @@ Access thousands of icons as components **on-demand** universally.
 
 - 🌏 Universal
   - 🤹 **Any** icon sets - ~150 popular sets with over 200,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
-  - 📦 **Major** build tools - Vite, Webpack, Rollup, Nuxt, etc. Powered by [unplugin](https://github.com/unjs/unplugin).
+  - 📦 **Major** build tools - Vite, Webpack, Rollup, Nuxt, Rspack, etc. Powered by [unplugin](https://github.com/unjs/unplugin).
   - 🚀 **Major** frameworks - Vanilla, Web Components, React, Vue 3, Vue 2, Solid, Svelte, and more. [Contribute](./src/core/compilers).
   - 🍱 **Any** combinations of them!
 - ☁️ On-demand - Only bundle the icons you really use, while having all the options.
@@ -211,6 +211,22 @@ export default defineNuxtConfig({
 See [the Nuxt example](examples/nuxt3) for a working example project.
 
 <br></details>
+
+<details>
+<summary>Rspack</summary>
+
+```ts
+import Icons from 'unplugin-icons/rspack'
+
+// rspack.config.mjs
+export default defineConfig({
+  plugins: [
+    // ...
+    Icons({/* options */}),
+  ]
+})
+```
+</details>
 
 <details>
 <summary>Vue CLI</summary><br>
