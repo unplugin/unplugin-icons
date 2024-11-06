@@ -1,7 +1,7 @@
 {
   "name": "unplugin-icons",
   "type": "module",
-  "version": "0.20.0",
+  "version": "0.20.1",
   "packageManager": "pnpm@9.12.3",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
