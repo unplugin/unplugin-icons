@@ -989,7 +989,7 @@ Read [Cleaning up icons](https://docs.iconify.design/articles/cleaning-up-icons/
 }
 ```
 
-`vite.config.json`
+`vite.config.js`
 
 ```diff
 import Components from 'unplugin-vue-components/vite'
