@@ -8,17 +8,17 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.37.1",
+    "core-js": "^3.39.0",
     "vue": "^2.7.8"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.265",
+    "@iconify/json": "^2.2.276",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-typescript": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
-    "typescript": "^5.5.4",
+    "typescript": "^5.7.2",
     "unplugin-icons": "workspace:*",
-    "vue-tsc": "^2.0.29"
+    "vue-tsc": "^2.1.10"
   },
   "stackblitz": {
     "installDependencies": false,

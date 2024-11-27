@@ -10,12 +10,12 @@
     "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.232",
-    "@rspack/cli": "^1.0.14",
-    "@rspack/core": "^1.0.14",
+    "@iconify/json": "^2.2.276",
+    "@rspack/cli": "^1.1.4",
+    "@rspack/core": "^1.1.4",
     "cross-env": "^7.0.3",
     "unplugin-icons": "workspace:*",
-    "vue-loader": "^17.3.1"
+    "vue-loader": "^17.4.2"
   },
   "stackblitz": {
     "installDependencies": false,
