@@ -17,6 +17,7 @@ export const JSXCompiler = (async (
     svg,
     {
       plugins: ['@svgr/plugin-jsx'],
+      ref: options.jsx === 'react',
     },
     { componentName: camelize(`${collection}-${icon}`) },
   )
