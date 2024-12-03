@@ -1,5 +1,5 @@
-import { basename, resolve } from 'node:path'
 import { promises as fs } from 'node:fs'
+import { basename, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import jc from '@iconify/json/collections.json'
 

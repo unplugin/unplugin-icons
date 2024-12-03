@@ -1,7 +1,7 @@
 import type { ToJsComponentOptions } from '@svgx/core'
-import { importModule } from 'local-pkg'
-import { camelize } from '@iconify/utils/lib/misc/strings'
 import type { Compiler } from './types'
+import { camelize } from '@iconify/utils/lib/misc/strings'
+import { importModule } from 'local-pkg'
 
 export const QwikCompiler = (async (
   svg,

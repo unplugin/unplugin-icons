@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './App.css'
 import ReactLogo from '~icons/logos/react'
 import RawReactLogo from '~icons/logos/react?raw'
+import './App.css'
 
 function _a() {
   return <svg />

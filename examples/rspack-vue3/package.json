@@ -10,7 +10,7 @@
     "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.276",
+    "@iconify/json": "^2.2.279",
     "@rspack/cli": "^1.1.4",
     "@rspack/core": "^1.1.4",
     "cross-env": "^7.0.3",

@@ -1,8 +1,8 @@
 import type { IconifyLoaderOptions } from '@iconify/utils'
-import { loadNodeIcon } from '@iconify/utils/lib/loader/node-loader'
 import type { ResolvedOptions } from '../types'
-import { compilers } from './compilers'
 import type { Compiler } from './compilers/types'
+import { loadNodeIcon } from '@iconify/utils/lib/loader/node-loader'
+import { compilers } from './compilers'
 
 const URL_PREFIXES = ['/~icons/', '~icons/', 'virtual:icons/', 'virtual/icons/']
 const iconPathRE = new RegExp(`${URL_PREFIXES.map(v => `^${v}`).join('|')}`)

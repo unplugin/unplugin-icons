@@ -28,4 +28,4 @@ const info = {
 
 const metadata = {}
 const chars = {}
-export { icons, info, metadata, chars }
+export { chars, icons, info, metadata }

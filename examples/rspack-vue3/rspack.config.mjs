@@ -2,8 +2,8 @@ import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from '@rspack/cli'
 import { rspack } from '@rspack/core'
-import { VueLoaderPlugin } from 'vue-loader'
 import Icons from 'unplugin-icons/rspack'
+import { VueLoaderPlugin } from 'vue-loader'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 

@@ -2,7 +2,7 @@
   "name": "unplugin-icons",
   "type": "module",
   "version": "0.20.2",
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.14.4",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
@@ -221,25 +221,25 @@
     "unplugin": "^1.16.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.10.0",
-    "@iconify/json": "^2.2.276",
+    "@antfu/eslint-config": "^3.11.2",
+    "@iconify/json": "^2.2.279",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgx/core": "^1.0.1",
     "@types/debug": "^4.1.12",
-    "@types/node": "^22.10.0",
+    "@types/node": "^22.10.1",
     "@vue/compiler-sfc": "^3.5.13",
     "bumpp": "^9.8.1",
     "cross-env": "^7.0.3",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "esno": "^4.8.0",
     "fast-glob": "^3.3.2",
     "publint": "^0.2.12",
-    "rollup": "^4.27.4",
+    "rollup": "^4.28.0",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
-    "vite": "^6.0.1",
-    "vitest": "^2.1.6"
+    "vite": "^6.0.2",
+    "vitest": "^2.1.8"
   }
 }

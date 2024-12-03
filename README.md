@@ -188,8 +188,8 @@ export default defineNuxtConfig({
 Or work with [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) resolvers
 
 ```ts
-import ViteComponents from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import ViteComponents from 'unplugin-vue-components/vite'
 
 // nuxt.config.ts
 export default defineNuxtConfig({
@@ -264,10 +264,10 @@ export default {
 The `unplugin-icons` plugin should be configured in the `vite.config.js` configuration file:
 
 ```ts
-// vite.config.js
-import { defineConfig } from 'vite'
 import { sveltekit } from '@sveltejs/kit/vite'
 import Icons from 'unplugin-icons/vite'
+// vite.config.js
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
@@ -296,10 +296,10 @@ npm i -D @sveltejs/vite-plugin-svelte
 The `unplugin-icons` plugin should be configured in the `vite.config.js` configuration file:
 
 ```ts
-// vite.config.js
-import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import Icons from 'unplugin-icons/vite'
+// vite.config.js
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
@@ -428,9 +428,9 @@ See [the Astro example](examples/astro) for a working example project.
 Required [@astrojs/vue](https://docs.astro.build/es/guides/integrations-guide/vue/) installed.
 
 ```ts
+import Vue from '@astrojs/vue'
 // astro.config.mjs
 import { defineConfig } from 'astro/config'
-import Vue from '@astrojs/vue'
 import Icons from 'unplugin-icons/vite'
 
 // https://astro.build/config
@@ -1046,8 +1046,8 @@ For example in Vite:
 ```js
 // vite.config.js
 import Vue from '@vitejs/plugin-vue'
-import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 
 export default {
@@ -1082,10 +1082,10 @@ Use with [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import)
 For example in Vite:
 
 ```js
+import AutoImport from 'unplugin-auto-import/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 // vite.config.js
 import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
-import AutoImport from 'unplugin-auto-import/vite'
 
 export default {
   plugins: [

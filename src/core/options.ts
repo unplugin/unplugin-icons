@@ -1,7 +1,7 @@
-import process from 'node:process'
-import { getPackageInfo, isPackageExists } from 'local-pkg'
-import createDebugger from 'debug'
 import type { Options, ResolvedOptions } from '../types'
+import process from 'node:process'
+import createDebugger from 'debug'
+import { getPackageInfo, isPackageExists } from 'local-pkg'
 
 const debug = createDebugger('unplugin-icons:options')
 

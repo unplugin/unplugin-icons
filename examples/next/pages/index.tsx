@@ -1,9 +1,9 @@
-import Head from 'next/head'
 import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head'
 import IconArrowRight from '~icons/dashicons/arrow-right.jsx'
 import NextLogo from '~icons/logos/nextjs.jsx'
 import VercelLogo from '~icons/logos/vercel.jsx'
+import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (

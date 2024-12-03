@@ -1,9 +1,9 @@
-import { promises as fs } from 'node:fs'
 import type { UserConfig } from 'vite'
+import { promises as fs } from 'node:fs'
 import Vue from '@vitejs/plugin-vue'
-import Icons from 'unplugin-icons/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 import IconsResolver from 'unplugin-icons/resolver'
+import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 
 const config: UserConfig = {
