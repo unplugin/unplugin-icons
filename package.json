@@ -2,7 +2,7 @@
   "name": "unplugin-icons",
   "type": "module",
   "version": "22.0.0",
-  "packageManager": "pnpm@9.15.3",
+  "packageManager": "pnpm@10.4.1",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
@@ -172,8 +172,8 @@
     "types"
   ],
   "scripts": {
-    "build": "esno scripts/prebuild.ts && tsup",
-    "dev": "esno scripts/prebuild.ts && tsup --watch src",
+    "build": "tsx scripts/prebuild.ts && tsup",
+    "dev": "tsx scripts/prebuild.ts && tsup --watch src",
     "example:build": "npm -C examples/vite-vue3 run build",
     "example:dev": "npm -C examples/vite-vue3 run dev",
     "lint": "eslint .",
@@ -212,34 +212,31 @@
     }
   },
   "dependencies": {
-    "@antfu/install-pkg": "^0.5.0",
-    "@antfu/utils": "^0.7.10",
-    "@iconify/utils": "^2.2.1",
+    "@antfu/install-pkg": "^1.0.0",
+    "@iconify/utils": "^2.3.0",
     "debug": "^4.4.0",
-    "kolorist": "^1.8.0",
-    "local-pkg": "^0.5.1",
-    "unplugin": "^2.1.0"
+    "local-pkg": "^1.0.0",
+    "unplugin": "^2.2.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.12.1",
-    "@iconify/json": "^2.2.292",
+    "@antfu/eslint-config": "^4.3.0",
+    "@antfu/utils": "^9.1.0",
+    "@iconify/json": "^2.2.308",
     "@iconify/types": "^2.0.0",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgx/core": "^1.0.1",
     "@types/debug": "^4.1.12",
-    "@types/node": "^22.10.5",
+    "@types/node": "^22.13.4",
     "@vue/compiler-sfc": "^3.5.13",
-    "bumpp": "^9.9.3",
-    "cross-env": "^7.0.3",
-    "eslint": "^9.17.0",
-    "esno": "^4.8.0",
-    "fast-glob": "^3.3.3",
-    "publint": "^0.3.0",
-    "rollup": "^4.30.1",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.7",
-    "vitest": "^2.1.8"
+    "bumpp": "^10.0.3",
+    "eslint": "^9.20.1",
+    "publint": "^0.3.5",
+    "rollup": "^4.34.8",
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5"
   }
 }

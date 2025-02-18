@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@astrojs/vue": "^4.5.3",
-    "astro": "^4.16.16"
+    "astro": "^4.16.18"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.279",
+    "@iconify/json": "^2.2.308",
     "unplugin-icons": "workspace:*"
   },
   "stackblitz": {

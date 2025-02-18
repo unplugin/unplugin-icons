@@ -4,26 +4,25 @@
   "private": true,
   "description": "unplugin-icons + Svelte (Vite)",
   "scripts": {
-    "build": "cross-env DEBUG=unplugin-icons:* vite build",
-    "dev": "cross-env DEBUG=unplugin-icons:* vite",
-    "serve": "npm run build && cross-env DEBUG=unplugin-icons:* vite preview",
-    "build-custom": "cross-env DEBUG=unplugin-icons:* CUSTOM_COMPILER=true vite build",
-    "dev-custom": "cross-env DEBUG=unplugin-icons:* CUSTOM_COMPILER=true vite",
-    "serve-custom": "npm run build-custom && cross-env DEBUG=unplugin-icons:* CUSTOM_COMPILER=true vite preview"
+    "build": "DEBUG='unplugin-icons:*' vite build",
+    "dev": "DEBUG='unplugin-icons:*' vite",
+    "serve": "npm run build && DEBUG='unplugin-icons:*' vite preview",
+    "build-custom": "DEBUG='unplugin-icons:*' CUSTOM_COMPILER=true vite build",
+    "dev-custom": "DEBUG='unplugin-icons:*' CUSTOM_COMPILER=true vite",
+    "serve-custom": "npm run build-custom && DEBUG='unplugin-icons:*' CUSTOM_COMPILER=true vite preview"
   },
   "devDependencies": {
-    "@iconify-json/icon-park": "^1.2.1",
-    "@iconify-json/logos": "^1.2.3",
-    "@iconify-json/mdi": "^1.2.1",
-    "@sveltejs/vite-plugin-svelte": "^5.0.1",
+    "@iconify-json/icon-park": "^1.2.2",
+    "@iconify-json/logos": "^1.2.4",
+    "@iconify-json/mdi": "^1.2.3",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@tsconfig/svelte": "^5.0.4",
-    "cross-env": "^7.0.3",
-    "svelte": "^5.4.0",
-    "svelte-check": "^4.1.0",
+    "svelte": "^5.20.1",
+    "svelte-check": "^4.1.4",
     "svelte-preprocess": "^6.0.3",
-    "typescript": "^5.7.2",
+    "typescript": "^5.7.3",
     "unplugin-icons": "workspace:*",
-    "vite": "^6.0.2"
+    "vite": "^6.1.0"
   },
   "stackblitz": {
     "installDependencies": false,
