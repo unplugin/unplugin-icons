@@ -1,7 +1,6 @@
-import type { SvelteHTMLElements } from 'svelte/elements'
-
 declare module 'virtual:icons/*' {
   import type { Component, Snippet } from 'svelte'
+  import type { SvelteHTMLElements } from 'svelte/elements'
 
   const component: Component<SvelteHTMLElements['svg']>
   const snippet: Snippet<[SvelteHTMLElements['svg']?]>
@@ -12,6 +11,7 @@ declare module 'virtual:icons/*' {
 
 declare module '~icons/*' {
   import type { Component, Snippet } from 'svelte'
+  import type { SvelteHTMLElements } from 'svelte/elements'
 
   const component: Component<SvelteHTMLElements['svg']>
   const snippet: Snippet<[SvelteHTMLElements['svg']?]>
