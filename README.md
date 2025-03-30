@@ -227,7 +227,7 @@ export default defineConfig({
 })
 ```
 
-</details>
+<br></details>
 
 <details>
 <summary>Vue CLI</summary><br>
@@ -276,6 +276,7 @@ export default defineConfig({
     sveltekit(),
     Icons({
       compiler: 'svelte',
+      // compiler: 'svelte-snippet', For snippet support
     })
   ]
 })
@@ -284,31 +285,6 @@ export default defineConfig({
 Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
 
 See [the SvelteKit example](examples/sveltekit) for a working example project.
-
-<br></details>
-
-<details>
-<summary>SvelteKit + Snippet</summary><br>
-
-The `unplugin-icons` plugin should be configured in the `vite.config.js` configuration file:
-
-```ts
-import { sveltekit } from '@sveltejs/kit/vite'
-import Icons from 'unplugin-icons/vite'
-// vite.config.js
-import { defineConfig } from 'vite'
-
-export default defineConfig({
-  plugins: [
-    sveltekit(),
-    Icons({
-      compiler: 'svelte-snippet',
-    })
-  ]
-})
-```
-
-Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
 
 See [the SvelteKit + Snippet example](examples/sveltekit-snippet) for a working example project.
 
@@ -336,6 +312,7 @@ export default defineConfig({
     svelte(),
     Icons({
       compiler: 'svelte',
+      // compiler: 'svelte-snippet', For snippet support
     }),
   ],
 })
@@ -344,37 +321,6 @@ export default defineConfig({
 Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
 
 See [the Svelte + Vite example](examples/vite-svelte) for a working example project.
-
-<br></details>
-
-<details>
-<summary>Svelte + Snippet + Vite</summary><br>
-
-Svelte support requires the `@sveltejs/vite-plugin-svelte` plugin:
-
-```shell
-npm i -D @sveltejs/vite-plugin-svelte
-```
-
-The `unplugin-icons` plugin should be configured in the `vite.config.js` configuration file:
-
-```ts
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-import Icons from 'unplugin-icons/vite'
-// vite.config.js
-import { defineConfig } from 'vite'
-
-export default defineConfig({
-  plugins: [
-    svelte(),
-    Icons({
-      compiler: 'svelte-snippet',
-    }),
-  ],
-})
-```
-
-Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
 
 See [the Svelte + Snippet + Vite example](examples/vite-svelte-snippet) for a working example project.
 
