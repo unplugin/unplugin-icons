@@ -226,6 +226,7 @@ export default defineConfig({
   ]
 })
 ```
+
 </details>
 
 <details>
@@ -243,6 +244,7 @@ module.exports = {
 ```
 
 You can also rename the Vue configuration file to `vue.config.mjs` and use static import syntax (you should use latest `@vue/cli-service ^5.0.8`):
+
 ```ts
 // vue.config.mjs
 import Icons from 'unplugin-icons/webpack'
@@ -286,9 +288,37 @@ See [the SvelteKit example](examples/sveltekit) for a working example project.
 <br></details>
 
 <details>
+<summary>SvelteKit + Snippet</summary><br>
+
+The `unplugin-icons` plugin should be configured in the `vite.config.js` configuration file:
+
+```ts
+import { sveltekit } from '@sveltejs/kit/vite'
+import Icons from 'unplugin-icons/vite'
+// vite.config.js
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  plugins: [
+    sveltekit(),
+    Icons({
+      compiler: 'svelte-snippet',
+    })
+  ]
+})
+```
+
+Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
+
+See [the SvelteKit + Snippet example](examples/sveltekit-snippet) for a working example project.
+
+<br></details>
+
+<details>
 <summary>Svelte + Vite</summary><br>
 
 Svelte support requires the `@sveltejs/vite-plugin-svelte` plugin:
+
 ```shell
 npm i -D @sveltejs/vite-plugin-svelte
 ```
@@ -318,9 +348,43 @@ See [the Svelte + Vite example](examples/vite-svelte) for a working example proj
 <br></details>
 
 <details>
+<summary>Svelte + Snippet + Vite</summary><br>
+
+Svelte support requires the `@sveltejs/vite-plugin-svelte` plugin:
+
+```shell
+npm i -D @sveltejs/vite-plugin-svelte
+```
+
+The `unplugin-icons` plugin should be configured in the `vite.config.js` configuration file:
+
+```ts
+import { svelte } from '@sveltejs/vite-plugin-svelte'
+import Icons from 'unplugin-icons/vite'
+// vite.config.js
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  plugins: [
+    svelte(),
+    Icons({
+      compiler: 'svelte-snippet',
+    }),
+  ],
+})
+```
+
+Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
+
+See [the Svelte + Snippet + Vite example](examples/vite-svelte-snippet) for a working example project.
+
+<br></details>
+
+<details>
 <summary>Next.js</summary><br>
 
 The `unplugin-icons` plugin should be configured on `next.config.js` configuration file:
+
 ```ts
 // next.config.js
 /** @type {import('next').NextConfig} */
@@ -340,6 +404,7 @@ module.exports = {
 ```
 
 You can also rename the Next configuration file to `next.config.mjs` and use static import syntax:
+
 ```ts
 // next.config.mjs
 import Icons from 'unplugin-icons/webpack'
@@ -615,12 +680,32 @@ See [the Solid example](examples/vite-solid) for a working example project.
 Icons({ compiler: 'svelte' })
 ```
 
+If you want to use [snippet](https://svelte.dev/docs/svelte/snippet)
+
+```ts
+Icons({ compiler: 'svelte-snippet' })
+```
+
 Type Declarations
 
 For SvelteKit, in the `src/app.d.ts` file:
 
 ```ts
 import 'unplugin-icons/types/svelte'
+```
+
+For SvelteKit + Snippet
+
+```ts
+import 'unplugin-icons/types/svelte-snippet'
+```
+
+For Svelte + Snippet + Vite, in the `src/vite-env.d.ts` file:
+
+```js
+/// <reference types="svelte" />
+/// <reference types="vite/client" />
+/// <reference types="unplugin-icons/types/svelte-snippet" />
 ```
 
 For Svelte + Vite, in the `src/vite-env.d.ts` file:
@@ -632,6 +717,7 @@ For Svelte + Vite, in the `src/vite-env.d.ts` file:
 ```
 
 If you're still using Svelte 4, replace the reference to use Svelte 4:
+
 ```js
 /// <reference types="svelte" />
 /// <reference types="vite/client" />
@@ -639,6 +725,7 @@ If you're still using Svelte 4, replace the reference to use Svelte 4:
 ```
 
 If you're still using Svelte 3, replace the reference to use Svelte 3:
+
 ```js
 /// <reference types="svelte" />
 /// <reference types="vite/client" />
@@ -705,6 +792,7 @@ Icons({ compiler: 'qwik' })
 ```
 
 Alternatively, you can use `jsx` compiler, requires peer dependency `@svgr/core` and its plugin `@svgr/plugin-jsx`:
+
 ```bash
 npm i -D @svgr/core @svgr/plugin-jsx
 ```
@@ -804,6 +892,7 @@ import IconBar from '~icons/my-yet-other-icons/bar'
 ```
 
 > 💡 SVG Authoring Tips:
+>
 > - To make your icons color adaptable, set `fill="currentColor"` or `stroke="currentColor"` in your SVG.
 > - Leave the `height` and `width` unspecified, we will set them for you.
 
@@ -830,6 +919,7 @@ From version `v0.18.3` you can use other packages to load icons from others auth
 **WARNING**: external packages must include `icons.json` file with the `icons` data in `IconifyJSON` format, which can be exported with Iconify Tools. Check [Exporting icon set as JSON package](https://iconify.design/docs/libraries/tools/export/json-package.html) for more details.
 
 For example, you can use `an-awesome-collection` or `@my-awesome-collections/some-collection` to load your custom or third party icons:
+
 ```ts
 // loader helpers
 import { ExternalPackageIconLoader } from 'unplugin-icons/loaders'
@@ -838,6 +928,7 @@ Icons({ customCollections: ExternalPackageIconLoader('my-awesome-collection') })
 ```
 
 When using with resolvers for auto-importing, remember you will need to tell it your custom collection names:
+
 ```ts
 IconResolver({
   customCollections: [
@@ -847,6 +938,7 @@ IconResolver({
 ```
 
 You can also combine it with `FileSystemIconLoader` or with other custom icon loaders:
+
 ```ts
 // loader helpers
 import { ExternalPackageIconLoader, FileSystemIconLoader } from 'unplugin-icons/loaders'
@@ -949,6 +1041,7 @@ See `src/App.vue` component and `vite.config.ts` configuration on `vite-vue3` ex
 ## Global Custom Icon Transformation
 
 From version `0.14.2`, when loading your custom icons, you can transform them, for example adding `fill` attribute with `currentColor`:
+
 ```ts
 Icons({
   customCollections: {
@@ -972,7 +1065,7 @@ Icons({
 
 When using this plugin with your custom icons, consider using a cleanup process similar to that done by [Iconify](https://iconify.design/) for any icons sets. All the tools you need are available in [Iconify Tools](https://docs.iconify.design/tools/tools2/).
 
-You can check this repo, using `unplugin-icons` on a `SvelteKit` project: https://github.com/iconify/tools/tree/main/%40iconify-demo/unplugin-svelte.
+You can check this repo, using `unplugin-icons` on a `SvelteKit` project: <https://github.com/iconify/tools/tree/main/%40iconify-demo/unplugin-svelte>.
 
 Read [Cleaning up icons](https://docs.iconify.design/articles/cleaning-up-icons/) article from [Iconify](https://iconify.design/) for more details.
 
