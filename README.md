@@ -680,6 +680,8 @@ If you're still using Svelte 3, replace the reference to use Svelte 3:
 
 See [the Svelte example](examples/vite-svelte) for a working example project.
 
+See [the Svelte + Snippet example](examples/vite-svelte-snippet) for a working example project.
+
 <br></details>
 
 <details>
