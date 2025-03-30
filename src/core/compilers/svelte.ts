@@ -21,7 +21,7 @@ export const SvelteCompiler = (async (svg: string) => {
     sfc += `{@html \`${escapeSvelte(svg.slice(openTagEnd + 1, closeTagStart))}\`}`
 
   sfc += svg.slice(closeTagStart)
-  return svelteRunes ? `<script module>export{snippet}</script><script>const{...p}=$props()</script>{#snippet snippet(p)}${sfc}{/snippet}${sfc}` : sfc
+  return svelteRunes ? `<script module>export{snippet}</script><script>const{...p}=$props()</script>{#snippet snippet(p)}${sfc}{/snippet}{@render snippet(p)}` : sfc
 }) as Compiler
 
 // escape curlies, backtick, \t, \r, \n to avoid breaking output of {@html `here`} in .svelte
