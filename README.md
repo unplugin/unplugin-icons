@@ -166,7 +166,7 @@ module.exports = {
 Nuxt 2 and [Nuxt Bridge](https://github.com/nuxt/bridge)
 
 ```ts
-// nuxt.config.js
+// nuxt.config.ts
 export default {
   buildModules: [
     ['unplugin-icons/nuxt', { /* options */ }],
@@ -174,10 +174,10 @@ export default {
 }
 ```
 
-Nuxt 3
+Nuxt 3/4
 
 ```ts
-// nuxt.config.js
+// nuxt.config.ts
 export default defineNuxtConfig({
   modules: [
     ['unplugin-icons/nuxt', { /* options */ }]
@@ -208,7 +208,7 @@ export default defineNuxtConfig({
 })
 ```
 
-See [the Nuxt example](examples/nuxt3) for a working example project.
+See [the Nuxt example](examples/nuxt4) for a working example project.
 
 <br></details>
 

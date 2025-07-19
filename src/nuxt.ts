@@ -4,7 +4,7 @@ import unplugin from '.'
 export default function (this: any, options: Options = {}, nuxt: any) {
   const nuxtApp = this?.nuxt || nuxt
 
-  if (nuxtApp?._version?.startsWith('3.')) {
+  if (nuxtApp?._version?.startsWith('3.') || nuxtApp?._version?.startsWith('4.')) {
     options.compiler = 'vue3'
 
     // injecting types
