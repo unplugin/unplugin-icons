@@ -1,3 +1,8 @@
 packages:
-  - 'examples/*'
+  - examples/*
   - '!examples/nuxt4'
+
+onlyBuiltDependencies:
+  - core-js
+  - esbuild
+  - svelte-preprocess
