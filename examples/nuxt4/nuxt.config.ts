@@ -1,7 +1,7 @@
 import IconsResolver from 'unplugin-icons/resolver'
 import ViteComponents from 'unplugin-vue-components/vite'
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     'unplugin-icons/nuxt',
