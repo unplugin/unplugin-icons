@@ -459,6 +459,8 @@ See [the Astro + Vue example](examples/astro-vue) for a working example project.
 
 Vue 3 / Vue 2.7+ support requires peer dependency `@vue/compiler-sfc`:
 
+> Note that as of Vue 3.12.13+, this is no longer required as it is now included as a dependency of the main `vue` package.
+
 ```bash
 npm i -D @vue/compiler-sfc
 ```
