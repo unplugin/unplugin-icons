@@ -1,6 +1,7 @@
 import type { ResolvedOptions } from '../../types'
 import type { Compiler, CustomCompiler } from './types'
 import { AstroCompiler } from './astro'
+import { EmberCompiler } from './ember'
 import { JSXCompiler } from './jsx'
 import { MarkoCompiler } from './marko'
 import { NoneCompiler } from './none'
@@ -14,6 +15,7 @@ import { WebComponentsCompiler } from './web-components'
 
 export const compilers: Record<Exclude<ResolvedOptions['compiler'], CustomCompiler>, Compiler> = {
   'astro': AstroCompiler,
+  'ember': EmberCompiler,
   'jsx': JSXCompiler,
   'marko': MarkoCompiler,
   'none': NoneCompiler,
