@@ -2,11 +2,8 @@ import type { Compiler } from './types'
 
 export const EmberCompiler = ((svg: string) => {
   const svgWithProps = svg.replace('<svg', '<svg ...attributes')
-  return `import type { TOC } from '@ember/component/template-only';
+  return `import { template } from "@ember/template-compiler";
 
-interface IconSignature {
-  Element: SVGElement;
-}
-
-<template>${svgWithProps}</template> satisfies TOC<IconSignature>;`
+const Icon = template(${JSON.stringify(svgWithProps)})
+export default Icon;`
 }) as Compiler
