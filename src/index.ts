@@ -29,8 +29,6 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
           switch (compiler) {
             case 'astro':
               return `${res}.astro`
-            case 'ember':
-              return `${res}.gts`
             case 'jsx':
               return `${res}.jsx`
             case 'qwik':
