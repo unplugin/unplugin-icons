@@ -1,7 +1,7 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const Icons = require('unplugin-icons/webpack')
+const Icons = require('unplugin-icons/webpack');
 
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
@@ -25,9 +25,11 @@ module.exports = function (defaults) {
     staticInvokables: true,
     packagerOptions: {
       webpackConfig: {
-        plugins: [Icons({
-          compiler: 'ember'
-        })],
+        plugins: [
+          Icons({
+            compiler: 'ember',
+          }),
+        ],
       },
     },
     skipBabel: [

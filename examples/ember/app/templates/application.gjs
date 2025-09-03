@@ -1,4 +1,4 @@
-import Tomster from "~icons/logos/ember-tomster";
+import Tomster from '~icons/logos/ember-tomster';
 
 <template>
   <h2 id="title">Welcome to Ember</h2>
