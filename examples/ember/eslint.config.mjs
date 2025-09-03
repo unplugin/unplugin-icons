@@ -1,3 +1,11 @@
+import babelParser from '@babel/eslint-parser'
+import js from '@eslint/js'
+
+import eslintConfigPrettier from 'eslint-config-prettier'
+import ember from 'eslint-plugin-ember/recommended'
+import n from 'eslint-plugin-n'
+import qunit from 'eslint-plugin-qunit'
+
 /**
  * Debugging:
  *   https://eslint.org/docs/latest/use/configure/debug
@@ -12,15 +20,7 @@
  *     npx eslint --inspect-config
  *
  */
-import globals from 'globals';
-import js from '@eslint/js';
-
-import ember from 'eslint-plugin-ember/recommended';
-import eslintConfigPrettier from 'eslint-config-prettier';
-import qunit from 'eslint-plugin-qunit';
-import n from 'eslint-plugin-n';
-
-import babelParser from '@babel/eslint-parser';
+import globals from 'globals'
 
 const esmParserOptions = {
   ecmaFeatures: { modules: true },
@@ -31,7 +31,7 @@ const esmParserOptions = {
       ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
     ],
   },
-};
+}
 
 export default [
   js.configs.recommended,
@@ -120,4 +120,4 @@ export default [
       },
     },
   },
-];
+]
