@@ -5,9 +5,9 @@
     "build": "webpack"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.363",
+    "@iconify/json": "^2.2.383",
     "unplugin-icons": "workspace:*",
-    "webpack": "^5.101.0",
+    "webpack": "^5.101.3",
     "webpack-cli": "^5.1.4"
   }
 }
