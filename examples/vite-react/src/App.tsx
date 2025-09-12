@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ReactLogo style={{ fontSize: '3em' }} />
+        <ReactLogo title="React Logo" style={{ fontSize: '3em' }} />
         <span dangerouslySetInnerHTML={{ __html: RawReactLogo }}></span>
         <p>Hello Vite + React!</p>
         <p>
