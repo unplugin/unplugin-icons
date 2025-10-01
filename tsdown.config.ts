@@ -7,9 +7,11 @@ export default defineConfig({
   external: ['vue', '@iconify/json/package.json'],
   exports: {
     async customExports(exp) {
-      for await (const [pkg, types] of getDtsTypesFiles()) {
-        if (!exp[pkg]) {
-          exp[pkg] = { types }
+      // replace this for await with `import { glob } from 'node:fs/promises'
+      // requires node v22.14.0+ => https://nodejs.org/api/fs.html
+      for await (const [key, types] of getDtsTypesFiles()) {
+        if (!exp[key]) {
+          exp[key] = { types }
         }
       }
       return exp
@@ -45,11 +47,14 @@ async function patchNode16CJSDefaultExports(
   }))
 }
 
-async function* getDtsTypesFiles() {
+async function* getDtsTypesFiles(): AsyncGenerator<[
+  key: string,
+  types: string,
+], undefined, void> {
   const files = await fsPromises.readdir('./types/')
   for (const file of files) {
     if (file.endsWith('.d.ts') && file !== 'index.d.ts') {
-      yield [`./types/${file.replace(/\.d\.ts$/, '')}`, `./types/${file}`]
+      yield [`./types/${file.replace(/\.d\.ts$/, '')}`, `./types/${file}`] as const
     }
   }
 }
