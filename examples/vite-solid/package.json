@@ -18,7 +18,7 @@
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "unplugin-icons": "workspace:*",
-    "vite": "^7.1.5",
+    "vite": "^7.1.7",
     "vite-plugin-solid": "^2.11.8"
   },
   "stackblitz": {

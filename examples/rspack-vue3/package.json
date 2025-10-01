@@ -10,9 +10,9 @@
     "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.383",
-    "@rspack/cli": "^1.5.3",
-    "@rspack/core": "^1.5.3",
+    "@iconify/json": "^2.2.390",
+    "@rspack/cli": "^1.5.8",
+    "@rspack/core": "^1.5.8",
     "unplugin-icons": "workspace:*",
     "vue-loader": "^17.4.2"
   },

@@ -22,10 +22,10 @@
     "@iconify-json/ri": "^1.2.5",
     "@iconify-json/vscode-icons": "^1.2.30",
     "@vitejs/plugin-vue2": "^2.3.3",
-    "typescript": "^5.9.2",
+    "typescript": "^5.9.3",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^29.0.0",
-    "vite": "^7.1.5",
+    "unplugin-vue-components": "^29.1.0",
+    "vite": "^7.1.7",
     "vue-template-compiler": "^2.7.16",
     "vue-template-es2015-compiler": "^1.9.1"
   },
