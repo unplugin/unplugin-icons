@@ -15,8 +15,14 @@
   "bugs": "https://github.com/unplugin/unplugin-icons/issues",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./esbuild": {
       "import": "./dist/esbuild.js",
@@ -31,8 +37,14 @@
       "require": "./dist/nuxt.cjs"
     },
     "./resolver": {
-      "import": "./dist/resolver.js",
-      "require": "./dist/resolver.cjs"
+      "import": {
+        "types": "./dist/resolver.d.ts",
+        "default": "./dist/resolver.js"
+      },
+      "require": {
+        "types": "./resolver.d.cts",
+        "default": "./dist/resolver.cjs"
+      }
     },
     "./rolldown": {
       "import": "./dist/rolldown.js",
@@ -58,7 +70,46 @@
       "import": "./dist/webpack.js",
       "require": "./dist/webpack.cjs"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./astro": {
+      "types": "./types/astro.d.ts"
+    },
+    "./preact": {
+      "types": "./types/preact.d.ts"
+    },
+    "./qwik": {
+      "types": "./types/qwik.d.ts"
+    },
+    "./raw": {
+      "types": "./types/raw.d.ts"
+    },
+    "./react": {
+      "types": "./types/react.d.ts"
+    },
+    "./solid": {
+      "types": "./types/solid.d.ts"
+    },
+    "./svelte": {
+      "types": "./types/svelte.d.ts"
+    },
+    "./svelte3": {
+      "types": "./types/svelte3.d.ts"
+    },
+    "./svelte4": {
+      "types": "./types/svelte4.d.ts"
+    },
+    "./svelte5": {
+      "types": "./types/svelte5.d.ts"
+    },
+    "./vue": {
+      "types": "./types/vue.d.ts"
+    },
+    "./vue3": {
+      "types": "./types/vue3.d.ts"
+    },
+    "./web-components": {
+      "types": "./types/web-components.d.ts"
+    }
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -66,13 +117,16 @@
   "typesVersions": {
     "*": {
       "*": [
+        "./types/*.d.ts",
+        "./index.d.cts",
+        "./resolver.d.cts",
         "./dist/*",
         "./*"
       ]
     }
   },
   "files": [
-    "*.d.ts",
+    "*.d.cts",
     "dist",
     "types"
   ],
