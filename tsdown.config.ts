@@ -17,17 +17,17 @@ export default defineConfig({
       return exp
     },
   },
-  hooks: {
+  /* hooks: {
     'build:done': async () => {
       await patchNode16CJSDefaultExports([
         'index',
         'resolver',
       ])
     },
-  },
+  }, */
 })
 
-async function patchNode16CJSDefaultExports(
+/* async function patchNode16CJSDefaultExports(
   files: string[],
 ) {
   await Promise.all(files.map(async (file) => {
@@ -45,7 +45,7 @@ async function patchNode16CJSDefaultExports(
       }
     }
   }))
-}
+} */
 
 async function* getDtsTypesFiles(): AsyncGenerator<[
   key: string,
