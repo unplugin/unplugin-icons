@@ -1,13 +1,6 @@
 /* eslint-disable */
-import {
-  CustomCompiler,
-  CustomIconLoader,
-  IconCustomizer,
-  InlineCollection,
-  Options,
-  ResolvedOptions,
-  default as unplugin
-} from './dist/index.cjs';
+import unplugin from "./dist/index.cjs";
+import type { CustomCompiler, CustomIconLoader, IconCustomizer, InlineCollection, Options, ResolvedOptions } from "./dist/types.cjs";
 
 declare namespace unplugin {
   export type {
@@ -19,7 +12,7 @@ declare namespace unplugin {
     ResolvedOptions
   };
   const _default = unplugin;
-  export { _default as default };
+  export = _default;
 }
 
 export = unplugin;

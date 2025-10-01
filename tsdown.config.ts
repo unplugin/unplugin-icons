@@ -6,12 +6,11 @@ export default defineConfig({
   format: ['esm', 'cjs'],
   external: ['vue', '@iconify/json/package.json'],
   exports: {
-    async customExports(exp) {
+    async customExports(exp, { pkg: pkgJson }) {
+      pkgJson.types = './index.d.cts'
       for await (const [pkg, types] of getDtsTypesFiles()) {
         if (!exp[pkg]) {
-          exp[pkg] = {
-            types: `./types/${types}`,
-          }
+          exp[pkg] = { types }
         }
       }
       exp['.'] = {
@@ -43,7 +42,7 @@ async function* getDtsTypesFiles() {
   const files = await fsPromises.readdir('./types/')
   for (const file of files) {
     if (file.endsWith('.d.ts') && file !== 'index.d.ts') {
-      yield [`./${file.replace(/\.d\.ts$/, '')}`, file]
+      yield [`./types/${file.replace(/\.d\.ts$/, '')}`, `./types/${file}`]
     }
   }
 }
