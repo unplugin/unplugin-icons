@@ -71,43 +71,43 @@
       "require": "./dist/webpack.cjs"
     },
     "./package.json": "./package.json",
-    "./astro": {
+    "./types/astro": {
       "types": "./types/astro.d.ts"
     },
-    "./preact": {
+    "./types/preact": {
       "types": "./types/preact.d.ts"
     },
-    "./qwik": {
+    "./types/qwik": {
       "types": "./types/qwik.d.ts"
     },
-    "./raw": {
+    "./types/raw": {
       "types": "./types/raw.d.ts"
     },
-    "./react": {
+    "./types/react": {
       "types": "./types/react.d.ts"
     },
-    "./solid": {
+    "./types/solid": {
       "types": "./types/solid.d.ts"
     },
-    "./svelte": {
+    "./types/svelte": {
       "types": "./types/svelte.d.ts"
     },
-    "./svelte3": {
+    "./types/svelte3": {
       "types": "./types/svelte3.d.ts"
     },
-    "./svelte4": {
+    "./types/svelte4": {
       "types": "./types/svelte4.d.ts"
     },
-    "./svelte5": {
+    "./types/svelte5": {
       "types": "./types/svelte5.d.ts"
     },
-    "./vue": {
+    "./types/vue": {
       "types": "./types/vue.d.ts"
     },
-    "./vue3": {
+    "./types/vue3": {
       "types": "./types/vue3.d.ts"
     },
-    "./web-components": {
+    "./types/web-components": {
       "types": "./types/web-components.d.ts"
     }
   },
