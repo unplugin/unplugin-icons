@@ -79,12 +79,12 @@
   "scripts": {
     "build": "tsx scripts/prebuild.ts && tsdown",
     "dev": "tsx scripts/prebuild.ts && tsdown --watch src",
-    "example:build": "npm -C examples/vite-vue3 run build",
-    "example:dev": "npm -C examples/vite-vue3 run dev",
+    "example:build": "pnpm -C examples/vite-vue3 run build",
+    "example:dev": "pnpm -C examples/vite-vue3 run dev",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
-    "prepublishOnly": "npm run build",
-    "release": "bumpp && npm publish",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
