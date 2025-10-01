@@ -105,7 +105,6 @@
   "typesVersions": {
     "*": {
       "*": [
-        "./types/*.d.ts",
         "./dist/*",
         "./*"
       ]
