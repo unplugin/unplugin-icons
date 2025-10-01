@@ -4,4 +4,5 @@ export default defineConfig({
   entry: ['src/*.ts'],
   format: ['esm', 'cjs'],
   external: ['vue', '@iconify/json/package.json'],
+  exports: true,
 })
