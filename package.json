@@ -15,149 +15,54 @@
   "bugs": "https://github.com/unplugin/unplugin-icons/issues",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      }
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
-    "./*": "./*",
     "./esbuild": {
-      "import": {
-        "types": "./dist/esbuild.d.ts",
-        "default": "./dist/esbuild.js"
-      },
-      "require": {
-        "types": "./dist/esbuild.d.cts",
-        "default": "./dist/esbuild.cjs"
-      }
+      "import": "./dist/esbuild.js",
+      "require": "./dist/esbuild.cjs"
     },
     "./loaders": {
-      "import": {
-        "types": "./dist/loaders.d.ts",
-        "default": "./dist/loaders.js"
-      },
-      "require": {
-        "types": "./dist/loaders.d.cts",
-        "default": "./dist/loaders.cjs"
-      }
+      "import": "./dist/loaders.js",
+      "require": "./dist/loaders.cjs"
     },
     "./nuxt": {
-      "import": {
-        "types": "./dist/nuxt.d.ts",
-        "default": "./dist/nuxt.js"
-      },
-      "require": {
-        "types": "./dist/nuxt.d.cts",
-        "default": "./dist/nuxt.cjs"
-      }
+      "import": "./dist/nuxt.js",
+      "require": "./dist/nuxt.cjs"
     },
     "./resolver": {
-      "import": {
-        "types": "./dist/resolver.d.ts",
-        "default": "./dist/resolver.js"
-      },
-      "require": {
-        "types": "./dist/resolver.d.cts",
-        "default": "./dist/resolver.cjs"
-      }
+      "import": "./dist/resolver.js",
+      "require": "./dist/resolver.cjs"
+    },
+    "./rolldown": {
+      "import": "./dist/rolldown.js",
+      "require": "./dist/rolldown.cjs"
     },
     "./rollup": {
-      "import": {
-        "types": "./dist/rollup.d.ts",
-        "default": "./dist/rollup.js"
-      },
-      "require": {
-        "types": "./dist/rollup.d.cts",
-        "default": "./dist/rollup.cjs"
-      }
-    },
-    "./types": {
-      "import": {
-        "types": "./dist/types.d.ts",
-        "default": "./dist/types.js"
-      },
-      "require": {
-        "types": "./dist/types.d.cts",
-        "default": "./dist/types.cjs"
-      }
-    },
-    "./types/astro": {
-      "types": "./types/astro.d.ts"
-    },
-    "./types/preact": {
-      "types": "./types/preact.d.ts"
-    },
-    "./types/qwik": {
-      "types": "./types/qwik.d.ts"
-    },
-    "./types/raw": {
-      "types": "./types/raw.d.ts"
-    },
-    "./types/react": {
-      "types": "./types/react.d.ts"
-    },
-    "./types/solid": {
-      "types": "./types/solid.d.ts"
-    },
-    "./types/svelte": {
-      "types": "./types/svelte.d.ts"
-    },
-    "./types/svelte3": {
-      "types": "./types/svelte3.d.ts"
-    },
-    "./types/svelte4": {
-      "types": "./types/svelte4.d.ts"
-    },
-    "./types/svelte5": {
-      "types": "./types/svelte5.d.ts"
-    },
-    "./types/vue": {
-      "types": "./types/vue.d.ts"
-    },
-    "./types/vue3": {
-      "types": "./types/vue3.d.ts"
-    },
-    "./types/web-components": {
-      "types": "./types/web-components.d.ts"
-    },
-    "./vite": {
-      "import": {
-        "types": "./dist/vite.d.ts",
-        "default": "./dist/vite.js"
-      },
-      "require": {
-        "types": "./dist/vite.d.cts",
-        "default": "./dist/vite.cjs"
-      }
-    },
-    "./webpack": {
-      "import": {
-        "types": "./dist/webpack.d.ts",
-        "default": "./dist/webpack.js"
-      },
-      "require": {
-        "types": "./dist/webpack.d.cts",
-        "default": "./dist/webpack.cjs"
-      }
+      "import": "./dist/rollup.js",
+      "require": "./dist/rollup.cjs"
     },
     "./rspack": {
-      "import": {
-        "types": "./dist/rspack.d.ts",
-        "default": "./dist/rspack.js"
-      },
-      "require": {
-        "types": "./dist/rspack.d.cts",
-        "default": "./dist/rspack.cjs"
-      }
-    }
+      "import": "./dist/rspack.js",
+      "require": "./dist/rspack.cjs"
+    },
+    "./types": {
+      "import": "./dist/types.js",
+      "require": "./dist/types.cjs"
+    },
+    "./vite": {
+      "import": "./dist/vite.js",
+      "require": "./dist/vite.cjs"
+    },
+    "./webpack": {
+      "import": "./dist/webpack.js",
+      "require": "./dist/webpack.cjs"
+    },
+    "./package.json": "./package.json"
   },
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
   "typesVersions": {
     "*": {
       "*": [
