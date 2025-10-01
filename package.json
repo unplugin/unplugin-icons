@@ -15,14 +15,8 @@
   "bugs": "https://github.com/unplugin/unplugin-icons/issues",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./index.d.cts",
-        "default": "./dist/index.cjs"
-      }
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./esbuild": {
       "import": "./dist/esbuild.js",
@@ -37,14 +31,8 @@
       "require": "./dist/nuxt.cjs"
     },
     "./resolver": {
-      "import": {
-        "types": "./dist/resolver.d.ts",
-        "default": "./dist/resolver.js"
-      },
-      "require": {
-        "types": "./resolver.d.cts",
-        "default": "./dist/resolver.cjs"
-      }
+      "import": "./dist/resolver.js",
+      "require": "./dist/resolver.cjs"
     },
     "./rolldown": {
       "import": "./dist/rolldown.js",
@@ -118,15 +106,12 @@
     "*": {
       "*": [
         "./types/*.d.ts",
-        "./index.d.cts",
-        "./resolver.d.cts",
         "./dist/*",
         "./*"
       ]
     }
   },
   "files": [
-    "*.d.cts",
     "dist",
     "types"
   ],
