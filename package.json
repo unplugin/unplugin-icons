@@ -89,6 +89,9 @@
     "./types/svelte5": {
       "types": "./types/svelte5.d.ts"
     },
+    "./types/svelte-snippet": {
+      "types": "./types/svelte-snippet.d.ts"
+    },
     "./types/vue": {
       "types": "./types/vue.d.ts"
     },
