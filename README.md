@@ -764,14 +764,13 @@ return require('@embroider/compat').compatBuild(app, Webpack, {
 For Vite applications, add the Icon plugin to the plugins array in `vite.config.js`:
 
 ```ts
-import { classicEmberSupport, ember, extensions } from '@embroider/vite'
+import { ember, extensions } from '@embroider/vite'
 import { babel } from '@rollup/plugin-babel'
 import Icons from 'unplugin-icons/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
-    classicEmberSupport(),
     ember(),
     Icons({
       compiler: 'ember',
