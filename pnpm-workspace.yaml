@@ -1,6 +1,6 @@
 packages:
   - examples/*
-  - "!examples/nuxt4"
+  - '!examples/nuxt4'
 
 onlyBuiltDependencies:
   - core-js
