@@ -65,6 +65,9 @@
     "./types/preact": {
       "types": "./types/preact.d.ts"
     },
+    "./types/ember": {
+      "types": "./types/ember.d.ts"
+    },
     "./types/qwik": {
       "types": "./types/qwik.d.ts"
     },
