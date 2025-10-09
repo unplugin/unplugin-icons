@@ -743,7 +743,47 @@ Ember support requires using either Webpack or Vite
 Icons({ compiler: 'ember' })
 ```
 
-For Webpack applications, add the Icon plugin to the webpack plugins array in `ember-cli-build.js`:
+For Vite applications, add the Icon plugin to the plugins array in `vite.config.js`:
+
+```ts
+import { ember, extensions } from '@embroider/vite'
+import { babel } from '@rollup/plugin-babel'
+import Icons from 'unplugin-icons/vite'
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  plugins: [
+    ember(),
+    Icons({
+      compiler: 'ember',
+    }),
+    babel({
+      babelHelpers: 'runtime',
+      extensions,
+    }),
+  ],
+})
+```
+
+Type Declarations:
+
+```jsonc
+// tsconfig.json
+{
+  "compilerOptions": {
+    "types": [
+      // ... existing declarations omitted ...
+      "unplugin-icons/types/ember"
+    ]
+  }
+}
+```
+
+<details><summary>Ember + Webpack</summary>
+
+Assuming your app was generated with `--embroider`, or manually migrated to embroider following the instructions on [the old embroider readme](https://github.com/embroider-build/embroider/tree/stable?tab=readme-ov-file#how-to-try-it)
+
+Add the Icon plugin to the webpack plugins array in `ember-cli-build.js`:
 
 <!-- eslint-skip -->
 
@@ -761,44 +801,7 @@ return require('@embroider/compat').compatBuild(app, Webpack, {
     // ...other options
 ```
 
-For Vite applications, add the Icon plugin to the plugins array in `vite.config.js`:
-
-```ts
-import { ember, extensions } from '@embroider/vite'
-import { babel } from '@rollup/plugin-babel'
-import Icons from 'unplugin-icons/vite'
-import { defineConfig } from 'vite'
-
-export default defineConfig({
-  plugins: [
-    ember(),
-    Icons({
-      compiler: 'ember',
-    }),
-    // extra plugins here
-    babel({
-      babelHelpers: 'runtime',
-      extensions,
-    }),
-  ],
-})
-```
-
-Type Declarations:
-
-```jsonc
-// tsconfig.json
-{
-  "compilerOptions": {
-    "types": [
-      "ember-source/types",
-      "@embroider/core/virtual",
-      // In vite this is required "vite/client",
-      "unplugin-icons/types/ember"
-    ]
-  }
-}
-```
+</details>
 
 See the [Ember (with Webpack)](examples/webpack-ember) or [Ember vite example](examples/vite-ember) for a working example project.
 
