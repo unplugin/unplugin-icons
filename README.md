@@ -737,13 +737,13 @@ See [the Qwik example](examples/vite-qwik) for a working example project.
 <details>
 <summary>Ember</summary><br>
 
-Ember support requires using Embroider (either with Webpack or Vite)
+Ember support requires using either Webpack or Vite
 
 ```ts
 Icons({ compiler: 'ember' })
 ```
 
-For Webpack based Embroider applications, add the Icon plugin to the plugin array in `ember-cli-build.js`:
+For Webpack applications, add the Icon plugin to the webpack plugins array in `ember-cli-build.js`:
 
 <!-- eslint-skip -->
 
@@ -761,7 +761,7 @@ return require('@embroider/compat').compatBuild(app, Webpack, {
     // ...other options
 ```
 
-For Vite based Embroider applications, add the Icon plugin to the plugin array in `vite.config.js`:
+For Vite applications, add the Icon plugin to the plugins array in `vite.config.js`:
 
 ```ts
 import { classicEmberSupport, ember, extensions } from '@embroider/vite'
@@ -801,7 +801,7 @@ Type Declarations:
 }
 ```
 
-See the [Ember (with Webpack)](examples/ember) or [Ember vite example](examples/vite-ember) for a working example project.
+See the [Ember (with Webpack)](examples/webpack-ember) or [Ember vite example](examples/vite-ember) for a working example project.
 
 <br></details>
 
