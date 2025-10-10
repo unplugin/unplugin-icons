@@ -73,6 +73,10 @@ npm i -D unplugin-icons
 
 We use [Iconify](https://iconify.design/) as the icons data source (supports 100+ iconsets).
 
+> [!TIP]
+> ✨ If you are using VS Code, you can install the [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) extension by [@antfu](https://github.com/antfu) to get inlay preview, auto-completion, and hover information for your icons.
+
+
 You have two ways to install them:
 
 ###### Install Full Collection
