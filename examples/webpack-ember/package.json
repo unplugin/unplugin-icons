@@ -1,0 +1,44 @@
+{
+  "name": "ember-example",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Small description for ember-example goes here",
+  "author": "",
+  "license": "MIT",
+  "repository": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "engines": {
+    "node": ">= 20.11"
+  },
+  "scripts": {
+    "start": "ember serve"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@ember/optional-features": "^2.2.0",
+    "@embroider/compat": "^3.9.1",
+    "@embroider/core": "^3.5.7",
+    "@embroider/macros": "^1.18.1",
+    "@embroider/webpack": "^4.1.1",
+    "@glimmer/component": "^2.0.0",
+    "@iconify-json/logos": "^1.2.5",
+    "@iconify-json/mdi": "^1.2.3",
+    "ember-auto-import": "^2.10.0",
+    "ember-cli": "~6.6.0",
+    "ember-cli-babel": "^8.2.0",
+    "ember-cli-htmlbars": "^6.3.0",
+    "ember-cli-inject-live-reload": "^2.1.0",
+    "ember-resolver": "^13.1.1",
+    "ember-source": "~6.7.0",
+    "ember-template-imports": "^4.3.0",
+    "loader.js": "^4.7.0",
+    "unplugin-icons": "link:../..",
+    "webpack": "^5.101.0"
+  },
+  "ember": {
+    "edition": "octane"
+  }
+}

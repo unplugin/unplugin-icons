@@ -734,6 +734,79 @@ See [the Qwik example](examples/vite-qwik) for a working example project.
 
 <br></details>
 
+<details>
+<summary>Ember</summary><br>
+
+Ember support requires using either Webpack or Vite
+
+```ts
+Icons({ compiler: 'ember' })
+```
+
+For Vite applications, add the Icon plugin to the plugins array in `vite.config.js`:
+
+```ts
+import { ember, extensions } from '@embroider/vite'
+import { babel } from '@rollup/plugin-babel'
+import Icons from 'unplugin-icons/vite'
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  plugins: [
+    ember(),
+    Icons({
+      compiler: 'ember',
+    }),
+    babel({
+      babelHelpers: 'runtime',
+      extensions,
+    }),
+  ],
+})
+```
+
+Type Declarations:
+
+```jsonc
+// tsconfig.json
+{
+  "compilerOptions": {
+    "types": [
+      // ... existing declarations omitted ...
+      "unplugin-icons/types/ember"
+    ]
+  }
+}
+```
+
+<details><summary>Ember + Webpack</summary>
+
+Assuming your app was generated with `--embroider`, or manually migrated to embroider following the instructions on [the old embroider readme](https://github.com/embroider-build/embroider/tree/stable?tab=readme-ov-file#how-to-try-it)
+
+Add the Icon plugin to the webpack plugins array in `ember-cli-build.js`:
+
+<!-- eslint-skip -->
+
+```ts
+return require('@embroider/compat').compatBuild(app, Webpack, {
+    packagerOptions: {
+      webpackConfig: {
+        plugins: [
+          Icons({
+            compiler: 'ember',
+          }),
+        ],
+      },
+    },
+    // ...other options
+```
+
+</details>
+
+See the [Ember (with Webpack)](examples/webpack-ember) or [Ember vite example](examples/vite-ember) for a working example project.
+
+<br></details>
+
 ## Use RAW compiler from query params
 
 From `v0.13.2` you can also use `raw` compiler to access the `svg` icon and use it on your html templates, just add `raw` to the icon query param.

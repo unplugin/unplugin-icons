@@ -62,6 +62,9 @@
     "./types/astro": {
       "types": "./types/astro.d.ts"
     },
+    "./types/ember": {
+      "types": "./types/ember.d.ts"
+    },
     "./types/preact": {
       "types": "./types/preact.d.ts"
     },
