@@ -11,7 +11,7 @@
     "@iconify-json/ion": "^1.2.6",
     "@iconify-json/mono-icons": "^1.2.0",
     "unplugin-icons": "workspace:*",
-    "vite": "^7.1.7"
+    "vite": "^7.1.10"
   },
   "stackblitz": {
     "installDependencies": false,

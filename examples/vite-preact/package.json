@@ -19,7 +19,7 @@
     "@svgr/plugin-jsx": "^8.1.0",
     "typescript": "^5.9.3",
     "unplugin-icons": "workspace:*",
-    "vite": "^7.1.7",
+    "vite": "^7.1.10",
     "vite-plugin-inspect": "^11.3.3"
   },
   "stackblitz": {

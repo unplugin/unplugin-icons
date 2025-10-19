@@ -17,12 +17,12 @@
     "@iconify-json/mdi": "^1.2.3",
     "@sveltejs/vite-plugin-svelte": "^5.1.1",
     "@tsconfig/svelte": "^5.0.5",
-    "svelte": "^5.39.7",
-    "svelte-check": "^4.3.2",
+    "svelte": "^5.41.0",
+    "svelte-check": "^4.3.3",
     "svelte-preprocess": "^6.0.3",
     "typescript": "^5.9.3",
     "unplugin-icons": "workspace:*",
-    "vite": "^7.1.7"
+    "vite": "^7.1.10"
   },
   "stackblitz": {
     "installDependencies": false,
