@@ -45,6 +45,15 @@ const config: UserConfig = {
           props.color = 'skyblue'
         }
       },
+      hmrResolver(file, folder, normalizedSVGIconName) {
+        console.log(file, folder, normalizedSVGIconName)
+        if (file.endsWith('assets/giftbox.svg')) {
+          return 'inline/async'
+        }
+        if (folder.endsWith('assets/custom-a')) {
+          return `custom/${normalizedSVGIconName}`
+        }
+      },
     }),
     Components({
       dts: true,
