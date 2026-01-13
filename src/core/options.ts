@@ -56,7 +56,8 @@ async function getVueVersion() {
     const result = await getPackageInfo('vue')
     if (!result || !result.version)
       return null
-    return result.version?.startsWith('2.') ? 'vue2' : 'vue3'
+    // Only support Vue 3, Vue 2 is no longer supported
+    return result.version?.startsWith('3.') ? 'vue3' : null
   }
   catch {
     return null

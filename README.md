@@ -9,7 +9,7 @@ Access thousands of icons as components **on-demand** universally.
 - 🌏 Universal
   - 🤹 **Any** icon sets - ~150 popular sets with over 200,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
   - 📦 **Major** build tools - Vite, Webpack, Rollup, Nuxt, Rspack, etc. Powered by [unplugin](https://github.com/unjs/unplugin).
-  - 🚀 **Major** frameworks - Vanilla, Web Components, React, Vue 3, Vue 2, Solid, Svelte, and more. [Contribute](./src/core/compilers).
+  - 🚀 **Major** frameworks - Vanilla, Web Components, React, Vue 3, Solid, Svelte, and more. [Contribute](./src/core/compilers).
   - 🍱 **Any** combinations of them!
 - ☁️ On-demand - Only bundle the icons you really use, while having all the options.
 - 🖨 SSR / SSG friendly - Ship the icons with your page, no more FOUC.
@@ -458,9 +458,9 @@ See [the Astro + Vue example](examples/astro-vue) for a working example project.
 ###### Frameworks
 
 <details>
-<summary>Vue 3 / Vue 2.7+</summary><br>
+<summary>Vue 3</summary><br>
 
-Vue 3 / Vue 2.7+ support requires peer dependency `@vue/compiler-sfc`:
+Vue 3 support requires peer dependency `@vue/compiler-sfc`:
 
 > Note that as of Vue 3.2.13+, this is no longer required as it is now included as a dependency of the main `vue` package.
 
@@ -488,38 +488,6 @@ Type Declarations
 ```
 
 See [the Vue 3 example](examples/vite-vue3) for a working example project.
-
-<br></details>
-
-<details>
-<summary>Vue 2 (only for versions < 2.7)</summary><br>
-
-Vue 2 support requires peer dependency `vue-template-compiler`:
-
-```bash
-npm i -D vue-template-compiler
-```
-
-```ts
-Icons({ compiler: 'vue2' })
-```
-
-Type Declarations
-
-<!-- eslint-skip -->
-
-```jsonc
-// tsconfig.json
-{
-  "compilerOptions": {
-    "types": [
-      "unplugin-icons/types/vue",
-    ]
-  }
-}
-```
-
-See [the Vue 2 example](examples/vite-vue2) for a working example project.
 
 <br></details>
 
@@ -1107,7 +1075,7 @@ Icons({
   scale: 1.2, // Scale of icons against 1em
   defaultStyle: '', // Style apply to icons
   defaultClass: '', // Class names apply to icons
-  compiler: null, // 'vue2', 'vue3', 'jsx'
+  compiler: null, // 'vue3', 'jsx'
   jsx: 'react', // 'react' or 'preact'
 })
 ```
@@ -1115,7 +1083,7 @@ Icons({
 ## Auto Importing
 
 <details>
-<summary>Vue 2 & 3</summary><br>
+<summary>Vue 3</summary><br>
 
 Use with [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components)
 
