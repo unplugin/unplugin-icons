@@ -5,7 +5,7 @@ export type Compiler = (
   svg: string,
   collection: string,
   icon: string,
-  options: ResolvedOptions
+  options: ResolvedOptions,
 ) => string | Promise<string>
 
 export interface CustomCompiler {

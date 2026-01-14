@@ -17,26 +17,26 @@
     "start": "ember serve"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.4",
-    "@ember/optional-features": "^2.2.0",
-    "@embroider/compat": "^3.9.1",
-    "@embroider/core": "^3.5.7",
-    "@embroider/macros": "^1.19.2",
-    "@embroider/webpack": "^4.1.1",
+    "@babel/core": "^7.28.6",
+    "@ember/optional-features": "^2.3.0",
+    "@embroider/compat": "^3.9.3",
+    "@embroider/core": "^3.5.9",
+    "@embroider/macros": "^1.19.6",
+    "@embroider/webpack": "^4.1.2",
     "@glimmer/component": "^2.0.0",
-    "@iconify-json/logos": "^1.2.9",
+    "@iconify-json/logos": "^1.2.10",
     "@iconify-json/mdi": "^1.2.3",
-    "ember-auto-import": "^2.11.1",
+    "ember-auto-import": "^2.12.0",
     "ember-cli": "~6.6.0",
     "ember-cli-babel": "^8.2.0",
     "ember-cli-htmlbars": "^6.3.0",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-resolver": "^13.1.1",
     "ember-source": "~6.7.0",
-    "ember-template-imports": "^4.3.0",
+    "ember-template-imports": "^4.4.0",
     "loader.js": "^4.7.0",
     "unplugin-icons": "link:../..",
-    "webpack": "^5.102.1"
+    "webpack": "^5.104.1"
   },
   "ember": {
     "edition": "octane"

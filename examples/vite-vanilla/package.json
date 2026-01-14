@@ -10,7 +10,7 @@
   "devDependencies": {
     "@iconify-json/mono-icons": "^1.2.0",
     "unplugin-icons": "workspace:*",
-    "vite": "^7.1.10"
+    "vite": "^7.3.1"
   },
   "stackblitz": {
     "installDependencies": false,

@@ -12,11 +12,11 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/vue": "^4.5.3",
-    "astro": "^4.16.19"
+    "@astrojs/vue": "^5.1.4",
+    "astro": "^5.16.9"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.397",
+    "@iconify/json": "^2.2.427",
     "unplugin-icons": "workspace:*"
   },
   "stackblitz": {

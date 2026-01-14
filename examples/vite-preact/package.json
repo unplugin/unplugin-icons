@@ -10,16 +10,16 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.27.2"
+    "preact": "^10.28.2"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.2.9",
+    "@iconify-json/logos": "^1.2.10",
     "@preact/preset-vite": "^2.10.2",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "typescript": "^5.9.3",
     "unplugin-icons": "workspace:*",
-    "vite": "^7.1.10",
+    "vite": "^7.3.1",
     "vite-plugin-inspect": "^11.3.3"
   },
   "stackblitz": {

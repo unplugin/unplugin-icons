@@ -12,10 +12,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.19"
+    "astro": "^5.16.9"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.397",
+    "@iconify/json": "^2.2.427",
     "unplugin-icons": "workspace:*"
   },
   "stackblitz": {
