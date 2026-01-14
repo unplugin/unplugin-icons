@@ -14,17 +14,17 @@
   },
   "bugs": "https://github.com/unplugin/unplugin-icons/issues",
   "exports": {
-    ".": "./dist/index.js",
-    "./esbuild": "./dist/esbuild.js",
-    "./loaders": "./dist/loaders.js",
-    "./nuxt": "./dist/nuxt.js",
-    "./resolver": "./dist/resolver.js",
-    "./rolldown": "./dist/rolldown.js",
-    "./rollup": "./dist/rollup.js",
-    "./rspack": "./dist/rspack.js",
-    "./types": "./dist/types.js",
-    "./vite": "./dist/vite.js",
-    "./webpack": "./dist/webpack.js",
+    ".": "./dist/index.mjs",
+    "./esbuild": "./dist/esbuild.mjs",
+    "./loaders": "./dist/loaders.mjs",
+    "./nuxt": "./dist/nuxt.mjs",
+    "./resolver": "./dist/resolver.mjs",
+    "./rolldown": "./dist/rolldown.mjs",
+    "./rollup": "./dist/rollup.mjs",
+    "./rspack": "./dist/rspack.mjs",
+    "./types": "./dist/types.mjs",
+    "./vite": "./dist/vite.mjs",
+    "./webpack": "./dist/webpack.mjs",
     "./package.json": "./package.json",
     "./types/astro": {
       "types": "./types/astro.d.ts"
@@ -72,7 +72,7 @@
   "typesVersions": {
     "*": {
       "*": [
-        "./dist/*",
+        "./dist/*.d.mts",
         "./*"
       ]
     }

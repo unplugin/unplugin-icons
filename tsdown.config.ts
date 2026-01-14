@@ -3,9 +3,9 @@ import { defineConfig } from 'tsdown'
 
 export default defineConfig({
   entry: ['src/*.ts'],
-  format: ['esm'],
-  external: ['vue', '@iconify/json/package.json'],
-  fixedExtension: false,
+  dts: true,
+  external: ['vue', 'vite', 'rollup', '@iconify/json/package.json'],
+  inlineOnly: ['@antfu/utils'],
   exports: {
     async customExports(exp) {
       // replace this for await with `import { glob } from 'node:fs/promises'
