@@ -116,8 +116,8 @@
   "dependencies": {
     "@antfu/install-pkg": "^1.1.0",
     "@iconify/utils": "^3.1.0",
-    "debug": "^4.4.3",
     "local-pkg": "^1.1.2",
+    "obug": "^2.1.1",
     "unplugin": "^2.3.11"
   },
   "devDependencies": {
@@ -128,7 +128,6 @@
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgx/core": "^1.0.1",
-    "@types/debug": "^4.1.12",
     "@types/node": "^25.0.8",
     "@vue/compiler-sfc": "^3.5.26",
     "bumpp": "^10.4.0",

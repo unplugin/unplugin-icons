@@ -1,9 +1,9 @@
 import type { Options, ResolvedOptions } from '../types'
 import process from 'node:process'
-import createDebugger from 'debug'
 import { getPackageInfo, isPackageExists } from 'local-pkg'
+import { createDebug } from 'obug'
 
-const debug = createDebugger('unplugin-icons:options')
+const debug = createDebug('unplugin-icons:options')
 
 export async function resolveOptions(options: Options): Promise<ResolvedOptions> {
   const {
