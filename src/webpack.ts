@@ -1,4 +1,5 @@
-import type { Options } from './types'
-import unplugin from '.'
+import unplugin from './index'
 
-export default unplugin.webpack as (options?: Options) => any
+const webpack = unplugin.webpack
+export default webpack
+export { webpack as 'module.exports' }

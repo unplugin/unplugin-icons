@@ -1,4 +1,5 @@
-import type { Options } from './types'
-import unplugin from '.'
+import unplugin from './index'
 
-export default unplugin.rspack as (options?: Options) => any
+const rspack = unplugin.rspack
+export default rspack
+export { rspack as 'module.exports' }

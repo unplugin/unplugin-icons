@@ -1,3 +1,5 @@
-import unplugin from '.'
+import unplugin from './index'
 
-export default unplugin.rollup
+const rollup = unplugin.rollup
+export default rollup
+export { rollup as 'module.exports' }
