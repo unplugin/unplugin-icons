@@ -14,50 +14,17 @@
   },
   "bugs": "https://github.com/unplugin/unplugin-icons/issues",
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
-    "./esbuild": {
-      "import": "./dist/esbuild.js",
-      "require": "./dist/esbuild.cjs"
-    },
-    "./loaders": {
-      "import": "./dist/loaders.js",
-      "require": "./dist/loaders.cjs"
-    },
-    "./nuxt": {
-      "import": "./dist/nuxt.js",
-      "require": "./dist/nuxt.cjs"
-    },
-    "./resolver": {
-      "import": "./dist/resolver.js",
-      "require": "./dist/resolver.cjs"
-    },
-    "./rolldown": {
-      "import": "./dist/rolldown.js",
-      "require": "./dist/rolldown.cjs"
-    },
-    "./rollup": {
-      "import": "./dist/rollup.js",
-      "require": "./dist/rollup.cjs"
-    },
-    "./rspack": {
-      "import": "./dist/rspack.js",
-      "require": "./dist/rspack.cjs"
-    },
-    "./types": {
-      "import": "./dist/types.js",
-      "require": "./dist/types.cjs"
-    },
-    "./vite": {
-      "import": "./dist/vite.js",
-      "require": "./dist/vite.cjs"
-    },
-    "./webpack": {
-      "import": "./dist/webpack.js",
-      "require": "./dist/webpack.cjs"
-    },
+    ".": "./dist/index.js",
+    "./esbuild": "./dist/esbuild.js",
+    "./loaders": "./dist/loaders.js",
+    "./nuxt": "./dist/nuxt.js",
+    "./resolver": "./dist/resolver.js",
+    "./rolldown": "./dist/rolldown.js",
+    "./rollup": "./dist/rollup.js",
+    "./rspack": "./dist/rspack.js",
+    "./types": "./dist/types.js",
+    "./vite": "./dist/vite.js",
+    "./webpack": "./dist/webpack.js",
     "./package.json": "./package.json",
     "./types/astro": {
       "types": "./types/astro.d.ts"
@@ -102,9 +69,6 @@
       "types": "./types/web-components.d.ts"
     }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.cts",
   "typesVersions": {
     "*": {
       "*": [
