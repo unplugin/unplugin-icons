@@ -106,6 +106,54 @@ export interface Options {
    * @deprecated no longer needed
    */
   iconSource?: 'legacy' | 'modern' | 'auto'
+
+  /**
+   * HMR helper to resolve the icon id from local file SVG changes.
+   *
+   * **NOTE:** works only with Vite.
+   *
+   * Since there is no way to correlate the icon name with the local file SVG, we need a helper to invalidate the
+   * corresponding icon module.
+   *
+   * For example, we can have a custom collection using `readFile`, we cannot resolve `~icons/inline/async`
+   * when `<project-root>/assets/giftbox.svg` changes:
+   * ```ts
+   * customCollections: {
+   *   inline: {
+   *     async: () => fs.readFile('assets/giftbox.svg', 'utf-8')
+   *   }
+   * }
+   * ```
+   *
+   * To resolve the icon in the previous example you will need to add:
+   * ```ts
+   * hmrResolver(file) => file.endsWidth('assets/giftbox.svg') ? 'inline/async' : undefined
+   * ```
+   *
+   * The `normalizedSVGIconName` is the SVG basename without the extension converted to kebab-case, will help you when using `FileSystemIconLoader`:
+   * ```ts
+   * customCollections: {
+   *   custom: FileSystemIconLoader('assets/custom-a')
+   * }
+   * ```
+   *
+   * then, to resolve the icons from the `assets/custom-a` folder you only need to add the corresponding collection name:
+   * To resolve the icon in the previous example you will need to add:
+   * ```ts
+   * hmrResolver(file, folderName, normalizedSVGIconName) {
+   *   if (folderName.endsWith('assets/custom-a') {
+   *     return `custom/${normalizedSVGIconName}`
+   *   }
+   * }
+   * ```
+   *
+   * @param file The file path received from the Vite's [handleHotUpdate](https://vite.dev/guide/api-plugin.html#handlehotupdate) hook.
+   * @param folderName The normalized folder containing the file.
+   * @param normalizedSVGIconName The normalized SVG name (basename without extension and the path).
+   * @return The icon collection and name to invalidate (<collection>/<icon>).
+   * @see https://vitejs.dev/guide/api-plugin.html#handlehotupdate
+   */
+  hmrResolver?: (file: string, folderName: string, normalizedSVGIconName: string) => Awaitable<string | string[] | undefined>
 }
 
-export type ResolvedOptions = Omit<Required<Options>, 'iconSource' | 'transform'> & Pick<Options, 'transform'>
+export type ResolvedOptions = Omit<Required<Options>, 'iconSource' | 'transform' | 'hmrResolver'> & Pick<Options, 'transform' | 'hmrResolver'>

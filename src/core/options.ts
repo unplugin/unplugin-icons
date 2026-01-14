@@ -17,6 +17,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     transform,
     autoInstall = false,
     collectionsNodeResolvePath = process.cwd(),
+    hmrResolver,
   } = options
 
   const webComponents = Object.assign({
@@ -38,6 +39,7 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     transform,
     autoInstall,
     collectionsNodeResolvePath,
+    hmrResolver,
   }
 }
 

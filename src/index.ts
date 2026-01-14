@@ -1,4 +1,6 @@
 import type { Options } from './types'
+import { basename, dirname } from 'node:path'
+import { camelToKebab } from '@iconify/utils/lib/misc/strings'
 import { createUnplugin } from 'unplugin'
 import { generateComponentFromPath, isIconPath, normalizeIconPath, resolveIconsPath } from './core/loader'
 import { resolveOptions } from './core/options'
@@ -57,6 +59,43 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
           map: { version: 3, mappings: '', sources: [] } as any,
         }
       }
+    },
+    vite: {
+      async handleHotUpdate({ file, server }) {
+        const hmrResolver = await resolved.then(({ hmrResolver }) => hmrResolver)
+        if (!hmrResolver) {
+          return undefined
+        }
+        const iconId = await hmrResolver(
+          file,
+          dirname(file).replace(/\\/g, '/'),
+          camelToKebab(basename(file).replace(/\.\w+$/, '')),
+        )
+        if (!iconId) {
+          return undefined
+        }
+
+        const icons = Array.isArray(iconId) ? iconId : [iconId]
+        const modules: import('vite').ModuleNode[] = []
+        for (const id of icons) {
+          const iconPath = isIconPath(id)
+          let module = iconPath ? server.moduleGraph.getModuleById(id) : undefined
+          if (module) {
+            modules.push(module)
+            continue
+          }
+          if (!iconPath) {
+            for (const prefix of ['~icons', 'virtual:icons', 'virtual/icons']) {
+              module = server.moduleGraph.getModuleById(`${prefix}/${id}`)
+              if (module) {
+                modules.push(module)
+                break
+              }
+            }
+          }
+        }
+        return modules.length > 0 ? modules : undefined
+      },
     },
     rollup: {
       api: {
