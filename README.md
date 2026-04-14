@@ -994,6 +994,31 @@ Icons({
 })
 ```
 
+To let CSS and the `viewBox` control sizing, use `unset` or `none` instead of `auto`:
+
+```ts
+Icons({
+  customCollections: {
+    logos: FileSystemIconLoader('./assets/logos'),
+  },
+  iconCustomizer(collection, icon, props) {
+    if (collection === 'logos') {
+      props.width = 'unset'
+      props.height = 'unset'
+    }
+  },
+})
+```
+
+```css
+.brand-logo {
+  width: 11rem;
+  height: auto;
+}
+```
+
+This works for custom collections and Iconify collections. `auto` keeps a real SVG dimension value, while `unset` and `none` omit the root `width` and `height` attributes entirely.
+
 or you can use `query` params to apply to individual icons:
 
 <!-- eslint-skip -->
