@@ -5,6 +5,27 @@ export type CustomIconLoader = (name: string) => Awaitable<string | undefined>
 export type IconCustomizer = (collection: string, icon: string, props: Record<string, string>) => Awaitable<void>
 export type InlineCollection = Record<string, string | (() => Awaitable<string | undefined>)>
 export type { CustomCompiler }
+export interface CustomHMRIconLoader {
+  /**
+   * The name of the custom collection.
+   */
+  name: string
+  /**
+   * The custom icon loader to resolve the icon.
+   */
+  iconLoader: CustomIconLoader
+  /**
+   * Returns the name of the resolved icon if this collection resolved the svg icon.
+   */
+  handleHMREvent: (
+    normalizedSVGPath: string,
+  ) => string | undefined
+  /**
+   * Returns the path of the icon if this collection resolved the svg icon.
+   */
+  resolveVirtualIconPath: (name: string) => string | undefined
+}
+export type CustomCollectionIconLoader = CustomIconLoader | InlineCollection | CustomHMRIconLoader
 
 export interface Options {
   /**

@@ -2,6 +2,7 @@ import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from '@rspack/cli'
 import { rspack } from '@rspack/core'
+import { FileSystemHMRIconLoader } from 'unplugin-icons/loaders'
 import Icons from 'unplugin-icons/rspack'
 import { VueLoaderPlugin } from 'vue-loader'
 
@@ -58,7 +59,11 @@ export default defineConfig({
       __VUE_PROD_DEVTOOLS__: false,
     }),
     new VueLoaderPlugin(),
-    Icons(),
+    Icons({
+      customCollections: {
+        ...FileSystemHMRIconLoader('custom-a', 'custom'),
+      },
+    }),
   ],
   optimization: {
     minimizer: [

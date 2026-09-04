@@ -1,5 +1,10 @@
 import type { IconifyLoaderOptions } from '@iconify/utils'
-import type { ResolvedOptions } from '../types'
+import type {
+  CustomCollectionIconLoader,
+  CustomHMRIconLoader,
+  ResolvedOptions,
+} from '../types'
+
 import type { Compiler } from './compilers/types'
 import { loadNodeIcon } from '@iconify/utils/lib/loader/node-loader'
 import { compilers } from './compilers'
@@ -11,6 +16,10 @@ export interface ResolvedIconPath {
   collection: string
   icon: string
   query: Record<string, string | undefined>
+}
+
+export function isCustomHMRIconLoader(loader: CustomCollectionIconLoader): loader is CustomHMRIconLoader {
+  return typeof loader === 'function' ? false : 'iconLoader' in loader && 'handleHMREvent' in loader
 }
 
 export function isIconPath(path: string) {
@@ -61,15 +70,24 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
     defaultClass,
     customCollections,
     iconCustomizer: providedIconCustomizer,
-    transform,
+    transform: useTransform,
     autoInstall = false,
     collectionsNodeResolvePath,
   } = options
 
+  const iconifyCustomCollections = Object.fromEntries(
+    Object.entries(customCollections).map(([key, loader]) => [
+      key,
+      typeof loader === 'function'
+        ? async (name: string) => await loader(name)
+        : loader,
+    ]),
+  ) as IconifyLoaderOptions['customCollections']
+
   const iconifyLoaderOptions: IconifyLoaderOptions = {
     addXmlNs: false,
     scale,
-    customCollections,
+    customCollections: iconifyCustomCollections,
     autoInstall,
     defaultClass,
     defaultStyle,
@@ -77,7 +95,11 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
     // there is no need to warn since we throw an error below
     warn: undefined,
     customizations: {
-      transform,
+      transform: typeof useTransform === 'function'
+        ? async (svg, collection, icon) => {
+          return await useTransform(svg, collection, icon)
+        }
+        : undefined,
       async iconCustomizer(collection, icon, props) {
         await providedIconCustomizer?.(collection, icon, props)
         Object.keys(query).forEach((p) => {
@@ -108,9 +130,17 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
   throw new Error(`Unknown compiler: ${_compiler}`)
 }
 
-export async function generateComponentFromPath(path: string, options: ResolvedOptions) {
+export function generateComponentFromPath(
+  path: string,
+  options: ResolvedOptions,
+  callback: (icon: ResolvedIconPath) => void,
+) {
   const resolved = resolveIconsPath(path)
-  if (!resolved)
+  if (!resolved) {
     return null
-  return generateComponent(resolved, options)
+  }
+  return generateComponent(resolved, options).then((icon) => {
+    callback(resolved)
+    return icon
+  })
 }

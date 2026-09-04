@@ -1,11 +1,19 @@
-import type { Options, ResolvedOptions } from '../types'
+import type { CustomHMRIconLoader, Options, ResolvedOptions } from '../types'
 import process from 'node:process'
 import { getPackageInfo, isPackageExists } from 'local-pkg'
 import { createDebug } from 'obug'
+import { isCustomHMRIconLoader } from './loader'
 
 const debug = createDebug('unplugin-icons:options')
 
-export async function resolveOptions(options: Options): Promise<ResolvedOptions> {
+export async function resolveOptions(options: Options): Promise<{
+  resolved: ResolvedOptions
+  invalidateHMR: <T>(
+    id: string,
+    map: (id: string) => T | undefined,
+  ) => Promise<T[] | undefined>
+  resolveVirtualIconPath: (collectionName: string, iconName: string) => string | undefined
+}> {
   const {
     scale = 1.2,
     defaultStyle = '',
@@ -26,18 +34,55 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
 
   debug('compiler', compiler)
 
+  const useCustomCollections: typeof customCollections = {}
+  const hmrCustomIconResolvers: CustomHMRIconLoader[] = []
+  for (const [key, collection] of Object.entries(customCollections)) {
+    if (isCustomHMRIconLoader(collection)) {
+      hmrCustomIconResolvers.push(collection)
+      useCustomCollections[key as keyof typeof customCollections] = async (name) => {
+        return await collection.iconLoader(name)
+      }
+    }
+    else {
+      useCustomCollections[key as keyof typeof customCollections] = collection
+    }
+  }
+
+  async function invalidateHMR<T>(
+    id: string,
+    findModule: (id: string) => T | undefined,
+  ): Promise<T[] | undefined> {
+    return await import('./hmr').then(({
+      collectHMRResolvers,
+    }) => collectHMRResolvers(
+      id,
+      hmrCustomIconResolvers,
+      findModule,
+    ))
+  }
+
+  function resolveVirtualIconPath(collectionName: string, iconName: string): string | undefined {
+    return hmrCustomIconResolvers
+      .find(r => r.name === collectionName)
+      ?.resolveVirtualIconPath(iconName)
+  }
+
   return {
-    scale,
-    defaultStyle,
-    defaultClass,
-    customCollections,
-    iconCustomizer,
-    compiler,
-    jsx,
-    webComponents,
-    transform,
-    autoInstall,
-    collectionsNodeResolvePath,
+    invalidateHMR,
+    resolveVirtualIconPath,
+    resolved: {
+      scale,
+      defaultStyle,
+      defaultClass,
+      customCollections: useCustomCollections,
+      iconCustomizer,
+      compiler,
+      jsx,
+      webComponents,
+      transform,
+      autoInstall,
+      collectionsNodeResolvePath,
+    },
   }
 }
 

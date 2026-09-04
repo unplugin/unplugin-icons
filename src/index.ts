@@ -1,6 +1,11 @@
 import type { Options } from './types'
 import { createUnplugin } from 'unplugin'
-import { generateComponentFromPath, isIconPath, normalizeIconPath, resolveIconsPath } from './core/loader'
+import {
+  generateComponentFromPath,
+  isIconPath,
+  normalizeIconPath,
+  resolveIconsPath,
+} from './core/loader'
 import { resolveOptions } from './core/options'
 
 const unplugin = createUnplugin<Options | undefined>((options = {}) => {
@@ -49,8 +54,26 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
       return isIconPath(id)
     },
     async load(id) {
-      const config = await resolved
-      const code = await generateComponentFromPath(id, config) || null
+      const {
+        config,
+        resolveVirtualIconPath,
+      } = await resolved.then(({
+        resolved: config,
+        resolveVirtualIconPath,
+      }) => ({
+        config,
+        resolveVirtualIconPath,
+      }))
+      const code = await generateComponentFromPath(
+        id,
+        config,
+        ({ collection, icon }) => {
+          const path = resolveVirtualIconPath(collection, icon)
+          if (path) {
+            this.addWatchFile(path)
+          }
+        },
+      ) || null
       if (code) {
         return {
           code,
@@ -61,6 +84,17 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
     rollup: {
       api: {
         config: options,
+      },
+    },
+    vite: {
+      async handleHotUpdate(ctx) {
+        const mGraph = ctx.server.moduleGraph
+        return await resolved.then(({
+          invalidateHMR,
+        }) => invalidateHMR(
+          ctx.file,
+          id => mGraph.getModuleById(id),
+        ))
       },
     },
   }
