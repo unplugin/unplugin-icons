@@ -72,7 +72,7 @@ async function resolveIcon(
     }
     if (stat.isFile()) {
       pathToName.set(path, name)
-      nameToPath.set(name, resolve(path))
+      nameToPath.set(name, path)
       let svg = await fs.readFile(path, 'utf-8')
       const cleanupIdx = svg.indexOf('<svg')
       if (cleanupIdx > 0) {
