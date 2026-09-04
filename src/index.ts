@@ -8,7 +8,7 @@ import {
 } from './core/loader'
 import { resolveOptions } from './core/options'
 
-const unplugin = createUnplugin<Options | undefined>((options = {}) => {
+const unplugin = createUnplugin<Options | undefined>((options = {}, meta) => {
   const resolved = resolveOptions(options)
 
   return {
@@ -68,7 +68,9 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
         id,
         config,
         ({ collection, icon }) => {
-          const path = resolveVirtualIconPath(collection, icon)
+          const path = meta.framework !== 'vite'
+            ? resolveVirtualIconPath(collection, icon)
+            : undefined
           if (path) {
             this.addWatchFile(path)
           }
