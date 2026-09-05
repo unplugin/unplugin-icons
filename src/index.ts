@@ -91,12 +91,13 @@ const unplugin = createUnplugin<Options | undefined>((options = {}, meta) => {
     vite: {
       async handleHotUpdate(ctx) {
         const mGraph = ctx.server.moduleGraph
-        return await resolved.then(({
+        const modules = await resolved.then(({
           invalidateHMR,
         }) => invalidateHMR(
           ctx.file,
           id => mGraph.getModuleById(id),
         ))
+        return modules?.length ? modules : undefined
       },
     },
   }

@@ -1,10 +1,10 @@
 import type { CustomHMRIconLoader } from '../types'
 
-export async function collectHMRResolvers<T>(
+export function collectVirtualIconModuleNames<T>(
   id: string,
   hmrCustomIconResolvers: CustomHMRIconLoader[],
   findModule: (id: string) => T | undefined,
-): Promise<T[] | undefined> {
+): T[] | undefined {
   if (!hmrCustomIconResolvers.length) {
     return undefined
   }

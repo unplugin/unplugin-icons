@@ -53,8 +53,8 @@ export async function resolveOptions(options: Options): Promise<{
     findModule: (id: string) => T | undefined,
   ): Promise<T[] | undefined> {
     return await import('./hmr').then(({
-      collectHMRResolvers,
-    }) => collectHMRResolvers(
+      collectVirtualIconModuleNames,
+    }) => collectVirtualIconModuleNames(
       id,
       hmrCustomIconResolvers,
       findModule,
