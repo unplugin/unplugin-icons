@@ -1,6 +1,6 @@
 import type { Awaitable } from '@antfu/utils'
 import type { AutoInstall, ExternalPkgName } from '@iconify/utils/lib/loader/types'
-import type { CustomHMRIconLoader, CustomIconLoader } from './'
+import type { CustomHMRIconLoader, CustomIconLoader } from './types'
 import { promises as fs } from 'node:fs'
 import { resolve } from 'node:path'
 import { createExternalPackageIconLoader } from '@iconify/utils/lib/loader/external-pkg'

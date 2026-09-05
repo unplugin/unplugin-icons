@@ -29,6 +29,7 @@ export interface CustomHMRIconLoader {
    */
   resolveVirtualIconPath: (name: string) => string | undefined
 }
+export type CustomCollectionIconLoader = CustomIconLoader | InlineCollection | CustomHMRIconLoader
 
 export interface Options {
   /**
@@ -55,7 +56,7 @@ export interface Options {
   /**
    * Loader for custom loaders
    */
-  customCollections?: Record<string, CustomIconLoader | InlineCollection>
+  customCollections?: Record<string, CustomCollectionIconLoader>
 
   /**
    * Icon customizer
@@ -132,4 +133,7 @@ export interface Options {
   iconSource?: 'legacy' | 'modern' | 'auto'
 }
 
-export type ResolvedOptions = Omit<Required<Options>, 'iconSource' | 'transform'> & Pick<Options, 'transform'>
+export type ResolveCustomCollections = Record<string, CustomIconLoader | InlineCollection>
+export type ResolvedOptions = Omit<Required<Omit<Options, 'customCollections'>>, 'iconSource' | 'transform'> & Pick<Options, 'transform'> & {
+  customCollections: ResolveCustomCollections
+}

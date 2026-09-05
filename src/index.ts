@@ -8,7 +8,7 @@ import {
 } from './core/loader'
 import { resolveOptions } from './core/options'
 
-const unplugin = createUnplugin<Options | undefined>((options = {}, meta) => {
+const unplugin = createUnplugin<Options | undefined>((options = {}) => {
   const resolved = resolveOptions(options)
 
   return {

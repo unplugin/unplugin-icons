@@ -1,6 +1,4 @@
-import type { CustomHMRIconLoader, CustomIconLoader, InlineCollection } from '../types'
-
-export type CustomCollectionIconLoader = CustomIconLoader | InlineCollection | CustomHMRIconLoader
+import type { CustomCollectionIconLoader, CustomHMRIconLoader } from '../types'
 
 export function isCustomHMRIconLoader(loader: CustomCollectionIconLoader): loader is CustomHMRIconLoader {
   return typeof loader === 'function'

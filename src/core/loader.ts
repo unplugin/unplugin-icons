@@ -1,8 +1,5 @@
 import type { IconifyLoaderOptions } from '@iconify/utils'
-import type {
-  ResolvedOptions,
-} from '../types'
-
+import type { ResolvedOptions } from '../types'
 import type { Compiler } from './compilers/types'
 import { loadNodeIcon } from '@iconify/utils/lib/loader/node-loader'
 import { compilers } from './compilers'

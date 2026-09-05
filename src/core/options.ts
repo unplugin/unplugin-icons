@@ -1,4 +1,9 @@
-import type { CustomHMRIconLoader, Options, ResolvedOptions } from '../types'
+import type {
+  CustomHMRIconLoader,
+  Options,
+  ResolveCustomCollections,
+  ResolvedOptions,
+} from '../types'
 import process from 'node:process'
 import { getPackageInfo, isPackageExists } from 'local-pkg'
 import { createDebug } from 'obug'
@@ -34,7 +39,7 @@ export async function resolveOptions(options: Options): Promise<{
 
   debug('compiler', compiler)
 
-  const useCustomCollections: typeof customCollections = {}
+  const useCustomCollections: ResolveCustomCollections = {}
   const hmrCustomIconResolvers: CustomHMRIconLoader[] = []
   for (const [key, collection] of Object.entries(customCollections)) {
     if (isCustomHMRIconLoader(collection)) {
