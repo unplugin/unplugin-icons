@@ -18,7 +18,7 @@ export default defineNuxtConfig({
           IconsResolver({
             prefix: '',
             strict: true,
-            customCollections: ['custom-a'],
+            customCollections: ['custom'],
           }),
         ],
         dts: true,
