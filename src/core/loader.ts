@@ -1,7 +1,5 @@
 import type { IconifyLoaderOptions } from '@iconify/utils'
 import type {
-  CustomCollectionIconLoader,
-  CustomHMRIconLoader,
   ResolvedOptions,
 } from '../types'
 
@@ -16,10 +14,6 @@ export interface ResolvedIconPath {
   collection: string
   icon: string
   query: Record<string, string | undefined>
-}
-
-export function isCustomHMRIconLoader(loader: CustomCollectionIconLoader): loader is CustomHMRIconLoader {
-  return typeof loader === 'function' ? false : 'iconLoader' in loader && 'handleHMREvent' in loader
 }
 
 export function isIconPath(path: string) {

@@ -25,7 +25,6 @@ export interface CustomHMRIconLoader {
    */
   resolveVirtualIconPath: (name: string) => string | undefined
 }
-export type CustomCollectionIconLoader = CustomIconLoader | InlineCollection | CustomHMRIconLoader
 
 export interface Options {
   /**
