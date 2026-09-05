@@ -7,6 +7,10 @@ export type InlineCollection = Record<string, string | (() => Awaitable<string |
 export type { CustomCompiler }
 export interface CustomHMRIconLoader {
   /**
+   * Internal marker to avoid wrong detection when using other custom icon loaders like `IconCustomizer`.
+   */
+  __unpluginIconsHmr: true
+  /**
    * The name of the custom collection.
    */
   name: string

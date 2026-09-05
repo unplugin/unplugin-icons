@@ -6,7 +6,8 @@ export function isCustomHMRIconLoader(loader: CustomCollectionIconLoader): loade
   return typeof loader === 'function'
     ? false
     : (
-        'name' in loader && typeof loader.name === 'string'
+        '__unpluginIconsHmr' in loader && loader.__unpluginIconsHmr === true
+        && 'name' in loader && typeof loader.name === 'string'
         && 'iconLoader' in loader && typeof loader.iconLoader === 'function'
         && 'handleHMREvent' in loader && typeof loader.handleHMREvent === 'function'
         && 'resolveVirtualIconPath' in loader && typeof loader.resolveVirtualIconPath === 'function'

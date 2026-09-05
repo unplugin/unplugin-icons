@@ -1,6 +1,6 @@
 import type { Awaitable } from '@antfu/utils'
 import type { AutoInstall, ExternalPkgName } from '@iconify/utils/lib/loader/types'
-import type { CustomHMRIconLoader, CustomIconLoader } from '.'
+import type { CustomHMRIconLoader, CustomIconLoader } from './'
 import { promises as fs } from 'node:fs'
 import { resolve } from 'node:path'
 import { createExternalPackageIconLoader } from '@iconify/utils/lib/loader/external-pkg'
@@ -29,6 +29,7 @@ export function FileSystemHMRIconLoader(
   const nameToPath = new Map<string, string>()
   const customCollection: Record<string, CustomHMRIconLoader> = {}
   customCollection[collectionName] = {
+    __unpluginIconsHmr: true,
     name: collectionName,
     iconLoader: async (name) => {
       return await resolveIcon(
