@@ -68,7 +68,7 @@ const unplugin = createUnplugin<Options | undefined>((options = {}, meta) => {
         id,
         config,
         ({ collection, icon }) => {
-          const path = meta.framework !== 'vite'
+          const path = !meta || !(meta.framework === 'vite')
             ? resolveVirtualIconPath(collection, icon)
             : undefined
           if (path) {
