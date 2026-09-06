@@ -1,10 +1,12 @@
 import type {
-  CustomHMRIconLoader,
   CustomCollectionIconLoader as IconifyCustomCollectionIconLoader,
 } from '@iconify/utils/lib/loader/types'
 import type { Options, ResolvedOptions } from '../types'
 import process from 'node:process'
-import { isCustomHMRIconLoader } from '@iconify/utils/lib/loader/hmr-utils'
+import {
+  createHMRHelper,
+  isCustomHMRIconLoader,
+} from '@iconify/utils/lib/loader/hmr-utils'
 import { getPackageInfo, isPackageExists } from 'local-pkg'
 import { createDebug } from 'obug'
 
@@ -15,7 +17,7 @@ export async function resolveOptions(options: Options): Promise<{
   invalidateHMR: <T>(
     id: string,
     map: (id: string) => T | undefined,
-  ) => Promise<T[] | undefined>
+  ) => T[] | undefined
   resolveVirtualIconPath: (collectionName: string, iconName: string) => string | undefined
 }> {
   const {
@@ -36,38 +38,38 @@ export async function resolveOptions(options: Options): Promise<{
     iconPrefix: 'icon',
   }, options.webComponents)
 
-  const customHMRIconLoadersMap = new Map<string, CustomHMRIconLoader>()
+  const hrmCollection: Record<string, IconifyCustomCollectionIconLoader> = {}
   for (const collection of Object.values(customCollections)) {
     if (typeof collection === 'object' && '__iconifyCustomHmrIconLoader' in collection) {
       const loader = collection as IconifyCustomCollectionIconLoader
       if (isCustomHMRIconLoader(loader)) {
-        customHMRIconLoadersMap.set(loader.name, loader)
+        hrmCollection[loader.name] = loader
       }
     }
   }
-  const customHMRIconLoaders = Array.from(customHMRIconLoadersMap.values())
 
-  async function invalidateHMR<T>(
-    id: string,
-    findModule: (id: string) => T | undefined,
-  ): Promise<T[] | undefined> {
-    return await import('./hmr').then(({
-      collectVirtualIconModuleNames,
-    }) => collectVirtualIconModuleNames(
-      id,
-      customHMRIconLoaders,
-      findModule,
-    ))
-  }
-
-  function resolveVirtualIconPath(collectionName: string, iconName: string): string | undefined {
-    return customHMRIconLoadersMap.get(collectionName)?.resolveSVGIconPath(iconName)
-  }
+  const {
+    handleHotUpdate,
+    resolveSVGIconPath: resolveVirtualIconPath,
+  } = createHMRHelper(
+    <T>(
+      collection: string,
+      icon: string,
+      findModules: (id: string) => T | undefined,
+    ) => (
+      [
+        `~icons/${collection}/${icon}`,
+        `virtual:icons/${collection}/${icon}`,
+        `virtual/icons/${collection}/${icon}`,
+      ].map(findModules).filter(Boolean) as T[]
+    ),
+    hrmCollection,
+  )
 
   debug('compiler', compiler)
 
   return {
-    invalidateHMR,
+    invalidateHMR: handleHotUpdate as any,
     resolveVirtualIconPath,
     config: {
       scale,
