@@ -1,7 +1,7 @@
 import type { UserConfig } from 'vite'
 import { cpSync, promises as fs } from 'node:fs'
 import Vue from '@vitejs/plugin-vue'
-import { ExternalPackageIconLoader, FileSystemIconLoader } from 'unplugin-icons/loaders'
+import { ExternalPackageIconLoader, FileSystemHMRIconLoader } from 'unplugin-icons/loaders'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -28,7 +28,7 @@ const config: UserConfig = {
       customCollections: {
         ...ExternalPackageIconLoader('@test-scope/test-color-icons'),
         ...ExternalPackageIconLoader('plain-color-icons'),
-        custom: FileSystemIconLoader('assets/custom-a'),
+        ...FileSystemHMRIconLoader('assets/custom-a', 'custom'),
         inline: {
           foo: `
 <?xml version="1.0" standalone="no"?>

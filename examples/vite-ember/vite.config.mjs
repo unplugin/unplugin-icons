@@ -1,5 +1,6 @@
 import { ember, extensions } from '@embroider/vite'
 import { babel } from '@rollup/plugin-babel'
+import { FileSystemHMRIconLoader } from 'unplugin-icons/loaders'
 import Icons from 'unplugin-icons/vite'
 import { defineConfig } from 'vite'
 
@@ -8,6 +9,9 @@ export default defineConfig({
     ember(),
     Icons({
       compiler: 'ember',
+      customCollections: {
+        ...FileSystemHMRIconLoader('custom-a', 'custom'),
+      },
     }),
     // extra plugins here
     babel({

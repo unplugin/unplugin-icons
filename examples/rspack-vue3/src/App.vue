@@ -2,8 +2,10 @@
 import { ref } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
 import VueLogo from '~icons/logos/vue'
+import CustomCarA from '~icons/custom/car-a'
 
 console.log(VueLogo)
+console.log(CustomCarA)
 const title = ref("Rspack + Vue");
 </script>
 
@@ -15,6 +17,7 @@ const title = ref("Rspack + Vue");
 		<a href="https://vuejs.org/" target="_blank">
 			<VueLogo class="logo vue" style="width: 6em;" alt="Vue logo" />
 		</a>
+    <CustomCarA />
 	</div>
 	<HelloWorld :msg="title" />
 </template>

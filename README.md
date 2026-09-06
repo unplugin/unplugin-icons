@@ -27,6 +27,8 @@ Access thousands of icons as components **on-demand** universally.
 
 > **`vite-plugin-icons` has been renamed to `unplugin-icons`**, see the [migration guide](#migration-from-vite-plugin-icons)
 
+> From v24.0.0 `unplugin-icons` requires **Node 20 or above**: [unplugin v3.0.0](https://github.com/unjs/unplugin/releases/tag/v3.0.0) requires **Node 20 or above**.
+
 ## Quick Start
 
 ### Basic Usage
@@ -926,6 +928,53 @@ Icons({
     ...ExternalPackageIconLoader('an-awesome-collection'),
     ...ExternalPackageIconLoader('@my-awesome-collections/some-collection'),
     ...ExternalPackageIconLoader('@my-awesome-collections/some-other-collection'),
+    'my-yet-other-icons': FileSystemIconLoader(
+      './assets/icons',
+      svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
+    ),
+  },
+})
+```
+
+See the [Vue 3 example](examples/vite-vue3) for a complete setup.
+
+### File System Icon Loader with Hot Module Replacement (HMR)
+
+Load icons from your local file system including (HMR) when you change your local SVG files.
+
+Since `unplugin-icons` is built on top of [unplugin](https://github.com/unjs/unplugin), HMR should work out of the box with Vite, Webpack, and Rspack. You can also use it with other build tools that support HMR when running the dev server.
+
+> **⚠️ Important HMR Limitations:**
+> * **Directory Location:** Your local SVG folder must reside **inside your project's root directory**. If the folder is placed outside the root, the underlying bundler's file watcher may not detect file changes, causing HMR to fail.
+> * **Ember + Webpack:** Legacy watcher architectures (like Ember CLI with Broccoli) are extremely strict with their sandboxed environments. Your custom SVG folder must be placed inside a natively watched tree (such as `app/`). If placed elsewhere, the file system events will be ignored by Broccoli and will never notify Webpack to invalidate the virtual module cache.
+
+For example:
+```ts
+// loader helpers
+import { FileSystemHMRIconLoader } from 'unplugin-icons/loaders'
+
+Icons({ customCollections: FileSystemHMRIconLoader('./assets/my-local-svg-folder', 'my-awesome-collection') })
+```
+
+When using with resolvers for auto-importing, remember you will need to tell it your custom collection names:
+```ts
+IconResolver({
+  customCollections: [
+    'my-awesome-collection',
+  ],
+})
+```
+
+You can also combine it with `FileSystemIconLoader` or with other custom icon loaders:
+```ts
+// loader helpers
+import { ExternalPackageIconLoader, FileSystemIconLoader } from 'unplugin-icons/loaders'
+
+Icons({
+  customCollections: {
+    ...ExternalPackageIconLoader('an-awesome-collection'),
+    ...ExternalPackageIconLoader('@my-awesome-collections/some-collection'),
+    ...FileSystemHMRIconLoader('./assets/my-local-svg-folder', 'my-awesome-collection'),
     'my-yet-other-icons': FileSystemIconLoader(
       './assets/icons',
       svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
