@@ -6,3 +6,4 @@ example/README.md
 .idea
 .svelte-kit/
 examples/nuxt4/pnpm-lock.yaml
+examples/**/.astro/
