@@ -38,12 +38,12 @@ export async function resolveOptions(options: Options): Promise<{
     iconPrefix: 'icon',
   }, options.webComponents)
 
-  const hrmCollection: Record<string, IconifyCustomCollectionIconLoader> = {}
+  const hmrCustomCollections: Record<string, IconifyCustomCollectionIconLoader> = {}
   for (const collection of Object.values(customCollections)) {
     if (typeof collection === 'object' && '__iconifyCustomHmrIconLoader' in collection) {
       const loader = collection as IconifyCustomCollectionIconLoader
       if (isCustomHMRIconLoader(loader)) {
-        hrmCollection[loader.name] = loader
+        hmrCustomCollections[loader.name] = loader
       }
     }
   }
@@ -63,7 +63,7 @@ export async function resolveOptions(options: Options): Promise<{
         `virtual/icons/${collection}/${icon}`,
       ].map(findModules).filter(Boolean) as T[]
     ),
-    hrmCollection,
+    hmrCustomCollections,
   )
 
   debug('compiler', compiler)
