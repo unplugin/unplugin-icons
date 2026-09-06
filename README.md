@@ -940,7 +940,7 @@ See the [Vue 3 example](examples/vite-vue3) for a complete setup.
 
 ### File System Icon Loader with Hot Module Replacement (HMR)
 
-Load icons from your local file system including (HMR) when you change your local SVG files.
+Load icons from your local file system including HMR when you change your local SVG files.
 
 Since `unplugin-icons` is built on top of [unplugin](https://github.com/unjs/unplugin), HMR should work out of the box with Vite, Webpack, and Rspack. You can also use it with other build tools that support HMR when running the dev server.
 
@@ -968,7 +968,7 @@ IconResolver({
 You can also combine it with `FileSystemIconLoader` or with other custom icon loaders:
 ```ts
 // loader helpers
-import { ExternalPackageIconLoader, FileSystemIconLoader } from 'unplugin-icons/loaders'
+import { ExternalPackageIconLoader, FileSystemHMRIconLoader, FileSystemIconLoader } from 'unplugin-icons/loaders'
 
 Icons({
   customCollections: {
