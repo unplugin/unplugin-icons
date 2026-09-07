@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import CustomCarA from '~icons/custom/car-a.jsx'
 import IconArrowRight from '~icons/dashicons/arrow-right.jsx'
 import NextLogo from '~icons/logos/nextjs.jsx'
 import VercelLogo from '~icons/logos/vercel.jsx'
@@ -20,6 +21,8 @@ const Home: NextPage = () => {
         <a href="https://nextjs.org">
           <NextLogo width={307} height={185} />
         </a>
+
+        <CustomCarA />
 
         <p className={styles.description}>
           Get started by editing

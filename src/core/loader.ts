@@ -61,15 +61,24 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
     defaultClass,
     customCollections,
     iconCustomizer: providedIconCustomizer,
-    transform,
+    transform: useTransform,
     autoInstall = false,
     collectionsNodeResolvePath,
   } = options
 
+  const iconifyCustomCollections = Object.fromEntries(
+    Object.entries(customCollections).map(([key, loader]) => [
+      key,
+      typeof loader === 'function'
+        ? async (name: string) => await loader(name)
+        : loader,
+    ]),
+  ) as IconifyLoaderOptions['customCollections']
+
   const iconifyLoaderOptions: IconifyLoaderOptions = {
     addXmlNs: false,
     scale,
-    customCollections,
+    customCollections: iconifyCustomCollections,
     autoInstall,
     defaultClass,
     defaultStyle,
@@ -77,7 +86,11 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
     // there is no need to warn since we throw an error below
     warn: undefined,
     customizations: {
-      transform,
+      transform: typeof useTransform === 'function'
+        ? async (svg, collection, icon) => {
+          return await useTransform(svg, collection, icon)
+        }
+        : undefined,
       async iconCustomizer(collection, icon, props) {
         await providedIconCustomizer?.(collection, icon, props)
         Object.keys(query).forEach((p) => {
@@ -90,8 +103,9 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
     },
   }
   const svg = await loadNodeIcon(collection, icon, iconifyLoaderOptions)
-  if (!svg)
+  if (!svg) {
     throw new Error(`Icon \`${warn}\` not found`)
+  }
 
   // accept raw compiler from query params
   const _compiler = query.raw === 'true' ? 'raw' : options.compiler
@@ -101,16 +115,23 @@ export async function generateComponent({ collection, icon, query }: ResolvedIco
       ? compilers[_compiler]
       : (await _compiler.compiler) as Compiler
 
-    if (compiler)
+    if (compiler) {
       return compiler(svg, collection, icon, options)
+    }
   }
 
   throw new Error(`Unknown compiler: ${_compiler}`)
 }
 
-export async function generateComponentFromPath(path: string, options: ResolvedOptions) {
+export async function generateComponentFromPath(path: string, options: ResolvedOptions): Promise<{
+  code: string
+  resolved: ResolvedIconPath
+} | null> {
   const resolved = resolveIconsPath(path)
-  if (!resolved)
-    return null
-  return generateComponent(resolved, options)
+  return resolved
+    ? {
+        code: await generateComponent(resolved, options),
+        resolved,
+      }
+    : null
 }

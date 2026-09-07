@@ -2,6 +2,7 @@
   "name": "webpack-example",
   "private": true,
   "scripts": {
+    "dev": "webpack serve",
     "build": "webpack"
   },
   "devDependencies": {

@@ -49,11 +49,27 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
       return isIconPath(id)
     },
     async load(id) {
-      const config = await resolved
-      const code = await generateComponentFromPath(id, config) || null
-      if (code) {
+      const {
+        config,
+        resolveVirtualIconPath,
+      } = await resolved.then(({
+        config,
+        resolveVirtualIconPath,
+      }) => ({
+        config,
+        resolveVirtualIconPath,
+      }))
+      const result = await generateComponentFromPath(id, config)
+      if (result) {
+        const path = resolveVirtualIconPath(
+          result.resolved.collection,
+          result.resolved.icon,
+        )
+        if (path) {
+          this.addWatchFile(path)
+        }
         return {
-          code,
+          code: result.code,
           map: { version: 3, mappings: '', sources: [] } as any,
         }
       }
@@ -61,6 +77,18 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
     rollup: {
       api: {
         config: options,
+      },
+    },
+    vite: {
+      async handleHotUpdate(ctx) {
+        const mGraph = ctx.server.moduleGraph
+        const modules = await resolved.then(({
+          invalidateHMR,
+        }) => invalidateHMR(
+          ctx.file,
+          id => mGraph.getModuleById(id),
+        ))
+        return modules?.length ? modules : undefined
       },
     },
   }

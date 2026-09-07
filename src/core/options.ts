@@ -1,11 +1,25 @@
+import type {
+  CustomCollectionIconLoader as IconifyCustomCollectionIconLoader,
+} from '@iconify/utils/lib/loader/types'
 import type { Options, ResolvedOptions } from '../types'
 import process from 'node:process'
+import {
+  createHMRHelper,
+  isCustomHMRIconLoader,
+} from '@iconify/utils/lib/loader/hmr-utils'
 import { getPackageInfo, isPackageExists } from 'local-pkg'
 import { createDebug } from 'obug'
 
 const debug = createDebug('unplugin-icons:options')
 
-export async function resolveOptions(options: Options): Promise<ResolvedOptions> {
+export async function resolveOptions(options: Options): Promise<{
+  config: ResolvedOptions
+  invalidateHMR: <T>(
+    id: string,
+    map: (id: string) => T | undefined,
+  ) => T[] | undefined
+  resolveVirtualIconPath: (collectionName: string, iconName: string) => string | undefined
+}> {
   const {
     scale = 1.2,
     defaultStyle = '',
@@ -24,20 +38,52 @@ export async function resolveOptions(options: Options): Promise<ResolvedOptions>
     iconPrefix: 'icon',
   }, options.webComponents)
 
+  const hmrCustomCollections: Record<string, IconifyCustomCollectionIconLoader> = {}
+  for (const collection of Object.values(customCollections)) {
+    if (typeof collection === 'object' && '__iconifyCustomHmrIconLoader' in collection) {
+      const loader = collection as IconifyCustomCollectionIconLoader
+      if (isCustomHMRIconLoader(loader)) {
+        hmrCustomCollections[loader.name] = loader
+      }
+    }
+  }
+
+  const {
+    handleHotUpdate,
+    resolveSVGIconPath: resolveVirtualIconPath,
+  } = createHMRHelper(
+    <T>(
+      collection: string,
+      icon: string,
+      findModules: (id: string) => T | undefined,
+    ) => (
+      [
+        `~icons/${collection}/${icon}`,
+        `virtual:icons/${collection}/${icon}`,
+        `virtual/icons/${collection}/${icon}`,
+      ].map(findModules).filter(Boolean) as T[]
+    ),
+    hmrCustomCollections,
+  )
+
   debug('compiler', compiler)
 
   return {
-    scale,
-    defaultStyle,
-    defaultClass,
-    customCollections,
-    iconCustomizer,
-    compiler,
-    jsx,
-    webComponents,
-    transform,
-    autoInstall,
-    collectionsNodeResolvePath,
+    invalidateHMR: handleHotUpdate as any,
+    resolveVirtualIconPath,
+    config: {
+      scale,
+      defaultStyle,
+      defaultClass,
+      customCollections,
+      iconCustomizer,
+      compiler,
+      jsx,
+      webComponents,
+      transform,
+      autoInstall,
+      collectionsNodeResolvePath,
+    },
   }
 }
 

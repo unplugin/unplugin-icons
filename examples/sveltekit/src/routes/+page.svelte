@@ -5,6 +5,7 @@ import MdiAlarmOff from 'virtual:icons/mdi/alarm-off'
 import IconParkAbnormal from 'virtual:icons/icon-park/abnormal'
 import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4.25em&height=4.25em'
 import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
+import CustomCarA from 'virtual:icons/custom/car-a'
 </script>
 
 <main>
@@ -14,6 +15,7 @@ import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1e
   <MdiStore24Hour />
   <MdiAlarmOff />
   <IconParkAbnormal />
+  <CustomCarA />
   {@html RawMdiAlarmOff}
   {@html RawMdiAlarmOff2}
 </main>

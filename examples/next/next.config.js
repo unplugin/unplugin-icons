@@ -1,3 +1,4 @@
+const { FileSystemHMRIconLoader } = require('unplugin-icons/loaders')
 const plugin = require('unplugin-icons/webpack')
 
 /** @type {import('next').NextConfig} */
@@ -8,6 +9,9 @@ module.exports = {
       (plugin.default || plugin)({
         compiler: 'jsx',
         jsx: 'react',
+        customCollections: {
+          ...FileSystemHMRIconLoader('custom-a', 'custom'),
+        },
       }),
     )
 
