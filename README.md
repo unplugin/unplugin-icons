@@ -9,7 +9,7 @@ Access thousands of icons as components **on-demand** universally.
 - 🌏 Universal
   - 🤹 **Any** icon sets - ~150 popular sets with over 200,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
   - 📦 **Major** build tools - Vite, Webpack, Rollup, Nuxt, Rspack, etc. Powered by [unplugin](https://github.com/unjs/unplugin).
-  - 🚀 **Major** frameworks - Vanilla, Web Components, React, Vue 3, Solid, Svelte, and more. [Contribute](./src/core/compilers).
+  - 🚀 **Major** frameworks - Vanilla, Web Components, React, Vue 3, Vue Vapor, Solid, Svelte, and more. [Contribute](./src/core/compilers).
   - 🍱 **Any** combinations of them!
 - ☁️ On-demand - Only bundle the icons you really use, while having all the options.
 - 🖨 SSR / SSG friendly - Ship the icons with your page, no more FOUC.
@@ -478,6 +478,41 @@ Add to your `tsconfig.json`:
 ```
 
 See [the Vue 3 example](examples/vite-vue3) for a complete setup.
+
+<br></details>
+
+<details>
+<summary>Vue Vapor</summary><br>
+
+Emits [Vapor mode](https://github.com/vuejs/core/tree/minor/packages/runtime-vapor) components instead of virtual-DOM ones. An app mounted with `createVaporApp` and no VDOM interop plugin renders a virtual-DOM icon as nothing at all — no error, no warning — so a Vapor app needs this compiler rather than `vue3`.
+
+**Configuration:**
+
+```ts
+Icons({ compiler: 'vue-vapor' })
+```
+
+**Peer Dependency:**
+
+Requires Vue 3.6+:
+
+```bash
+npm i -D @vue/compiler-vapor
+```
+
+**TypeScript Support:**
+
+Add to your `tsconfig.json`:
+
+```jsonc
+{
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/vue"
+    ]
+  }
+}
+```
 
 <br></details>
 
@@ -1154,7 +1189,7 @@ Icons({
   defaultClass: '',       // CSS classes applied to all icons
   
   // Compiler configuration
-  compiler: null,         // Framework compiler: 'vue3', 'jsx', 'svelte', 'solid', etc.
+  compiler: null,         // Framework compiler: 'vue3', 'vue-vapor', 'jsx', 'svelte', 'solid', etc.
   jsx: 'react',           // JSX framework: 'react' or 'preact' (when compiler: 'jsx')
   
   // Custom collections

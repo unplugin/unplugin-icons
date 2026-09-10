@@ -97,6 +97,7 @@
     "@svgr/core": ">=7.0.0",
     "@svgx/core": "^1.0.1",
     "@vue/compiler-sfc": "^3.0.2",
+    "@vue/compiler-vapor": "^3.6.0-rc.5",
     "svelte": "^3.0.0 || ^4.0.0 || ^5.0.0"
   },
   "peerDependenciesMeta": {
@@ -107,6 +108,9 @@
       "optional": true
     },
     "@vue/compiler-sfc": {
+      "optional": true
+    },
+    "@vue/compiler-vapor": {
       "optional": true
     },
     "svelte": {
@@ -130,6 +134,7 @@
     "@svgx/core": "^1.0.1",
     "@types/node": "^25.0.8",
     "@vue/compiler-sfc": "^3.5.26",
+    "@vue/compiler-vapor": "^3.6.0-rc.5",
     "bumpp": "^10.4.0",
     "eslint": "^9.39.2",
     "publint": "^0.3.16",
