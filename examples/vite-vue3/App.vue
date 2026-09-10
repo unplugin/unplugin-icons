@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import MdiStore24Hour from 'virtual:icons/mdi/store-24-hour'
-import MdiAlarmOff from 'virtual:icons/mdi/alarm-off?width=4.25rem&height=4.25rem'
-import MdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?width=1em&height=1em'
-import RawMdiAlarmOff from 'virtual:icons/mdi/alarm-off?raw&width=4.25rem&height=4.25rem'
-import RawMdiAlarmOff2 from 'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'
-import RawMdiAlarmOff3 from 'virtual:icons/mdi/alarm-off?raw&width=unset&height=unset'
+import MdiStore24Hour from 'virtual:icons/fa6-regular/comments'
+import FA6Comments from 'virtual:icons/fa6-regular/comments?height=2.25rem'
+import RawFA6Comments from 'virtual:icons/fa6-regular/comments?raw'
+import RawFA6CommentsWithHeight from 'virtual:icons/fa6-regular/comments?raw&height=2.25rem'
+import RawFA6CommentsWithWidth from 'virtual:icons/fa6-regular/comments?raw&width=2.25em'
+import RawFA6CommentsWithSize from 'virtual:icons/fa6-regular/comments?raw&width=3em&height=2em'
+import RawFA6CommentsWithUnsetHeight from 'virtual:icons/fa6-regular/comments?raw&height=unset'
+import RawFA6CommentsWithUnsetWidth from 'virtual:icons/fa6-regular/comments?raw&width=unset'
+import RawFA6CommentsWithUnsetSize from 'virtual:icons/fa6-regular/comments?raw&width=unset&height=unset'
 import Custom1 from 'virtual:icons/plain-color-icons/about?raw'
 import Custom2 from 'virtual:icons/test-color-icons/about?raw'
 import ExternalCustom3 from 'virtual:icons/test-color-icons/about'
@@ -44,8 +47,8 @@ import VSCodePython from 'virtual:icons/vscode-icons/file-type-python'
     </p>
     <h2>Custom Props via Query</h2>
     <p>
-      <MdiAlarmOff />
-      <MdiAlarmOff2 />
+      <FA6Comments />
+      <FA6Comments2 />
     </p>
     <h2>Custom Icons</h2>
     <p>
@@ -61,32 +64,50 @@ import VSCodePython from 'virtual:icons/vscode-icons/file-type-python'
     </p>
     <h2>
       Raw Icons from
-      <strong>raw</strong> query param
+      <strong>raw</strong> query param, also testing size params on non-square icon
     </h2>
-    <div
-      style="
-        display: grid;
-        grid-template-columns: 100px 1fr;
-        align-items: center;
-      "
-    >
-      <span v-html="RawMdiAlarmOff" />
+    <div class="test-grid">
+      <span v-html="RawFA6Comments" />
       <div>
-        <code style="opacity: 0.5">import RawMdiAlarmOff from
-          'virtual:icons/mdi/alarm-off?raw&width=4.25rem&height=4.25rem'</code>
-        <pre>{{ RawMdiAlarmOff }}</pre>
+        <code style="opacity: 0.5">import RawFA6Comments from
+          'virtual:icons/fa6-regular/comments?raw'</code>
+        <pre>{{ RawFA6Comments }}</pre>
       </div>
-      <span v-html="RawMdiAlarmOff2" />
+      <span v-html="RawFA6CommentsWithHeight" />
       <div>
-        <code style="opacity: 0.5">import RawMdiAlarmOff2 from
-          'virtual:icons/mdi/alarm-off?raw&width=1em&height=1em'</code>
-        <pre>{{ RawMdiAlarmOff2 }}</pre>
+        <code style="opacity: 0.5">import RawFA6CommentsWithHeight from
+          'virtual:icons/fa6-regular/comments?raw&height=2.25rem'</code>
+        <pre>{{ RawFA6CommentsWithHeight }}</pre>
       </div>
-      <span v-html="RawMdiAlarmOff3" />
+      <span v-html="RawFA6CommentsWithWidth" />
       <div>
-        <code style="opacity: 0.5">import RawMdiAlarmOff3 from
-          'virtual:icons/mdi/alarm-off?raw&width=unset&height=unset'</code>
-        <pre>{{ RawMdiAlarmOff3 }}</pre>
+        <code style="opacity: 0.5">import RawFA6CommentsWithWidth from
+          'virtual:icons/fa6-regular/comments?raw&width=2.25em'</code>
+        <pre>{{ RawFA6CommentsWithWidth }}</pre>
+      </div>
+      <span v-html="RawFA6CommentsWithSize" />
+      <div>
+        <code style="opacity: 0.5">import RawFA6CommentsWithSize from
+          'virtual:icons/fa6-regular/comments?raw&width=3em&height=2em'</code>
+        <pre>{{ RawFA6CommentsWithSize }}</pre>
+      </div>
+      <span v-html="RawFA6CommentsWithUnsetHeight" />
+      <div>
+        <code style="opacity: 0.5">import RawFA6CommentsWithUnsetHeight from
+          'virtual:icons/fa6-regular/comments?raw&height=unset'</code>
+        <pre>{{ RawFA6CommentsWithUnsetHeight }}</pre>
+      </div>
+      <span v-html="RawFA6CommentsWithUnsetWidth" />
+      <div>
+        <code style="opacity: 0.5">import RawFA6CommentsWithUnsetWidth from
+          'virtual:icons/fa6-regular/comments?raw&width=unset'</code>
+        <pre>{{ RawFA6CommentsWithUnsetWidth }}</pre>
+      </div>
+      <span v-html="RawFA6CommentsWithUnsetSize" />
+      <div>
+        <code style="opacity: 0.5">import RawFA6CommentsWithUnsetSize from
+          'virtual:icons/fa6-regular/comments?raw&width=unset&height=unset'</code>
+        <pre>{{ RawFA6CommentsWithUnsetSize }}</pre>
       </div>
       <span v-html="Custom1" />
       <div>
@@ -108,5 +129,22 @@ import VSCodePython from 'virtual:icons/vscode-icons/file-type-python'
 <style scoped>
 pre {
   overflow-x: auto;
+}
+
+.test-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.test-grid > span {
+  display: inline-flex;
+  box-shadow: 0 0 0 1px rgba(128, 128, 128, 0.5);
+}
+
+/* Make sure span does not stretch if SVG has width */
+.test-grid > span:has(svg[width]) {
+  width: fit-content;  
 }
 </style>
