@@ -94,11 +94,11 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@svgr/core": "catalog:peers",
-    "@svgx/core": "catalog:peers",
-    "@vue/compiler-sfc": "catalog:peers",
-    "@vue/compiler-vapor": "catalog:peers",
-    "svelte": "catalog:peers"
+    "@svgr/core": ">=7.0.0",
+    "@svgx/core": "^1.0.1",
+    "@vue/compiler-sfc": "^3.0.2",
+    "@vue/compiler-vapor": "^3.6.0-rc.5",
+    "svelte": "^3.0.0 || ^4.0.0 || ^5.0.0"
   },
   "peerDependenciesMeta": {
     "@svgr/core": {
