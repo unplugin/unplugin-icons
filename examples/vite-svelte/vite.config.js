@@ -12,6 +12,8 @@ const options = process.env.CUSTOM_COMPILER === 'true'
     }
   : { compiler: 'svelte' }
 
+const RE_BACKTICK = /`/g
+
 export default defineConfig({
   plugins: [
     svelte(),
@@ -27,7 +29,7 @@ function customSvelteCompiler(svg) {
   const content = svg.slice(openTagEnd + 1, closeTagStart)
   return `<script>
   import CustomSvg from "/src/CustomSvg.svelte";
-  const content=\`${content.replace(/`/g, '&#96;')}\`;
+  const content=\`${content.replace(RE_BACKTICK, '&#96;')}\`;
 </script>
 <CustomSvg ${attributes} {...$$props} {content}/>
 `

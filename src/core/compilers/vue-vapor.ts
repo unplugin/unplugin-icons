@@ -3,6 +3,7 @@ import { importModule } from 'local-pkg'
 import { handleSVGId } from '../svgId'
 
 const renderFnRE = /^(?:export )?function render\((\w+)\)\s*\{/m
+const RE_EXPORT_STATEMENT = /^export /gm
 
 export const VueVaporCompiler = (async (svg: string, collection: string, icon: string) => {
   const { compile } = await importModule('@vue/compiler-vapor')
@@ -29,7 +30,7 @@ export const VueVaporCompiler = (async (svg: string, collection: string, icon: s
   }
 
   // dropping `export` lets the module below close over `render` and export the component instead
-  code = `import { defineVaporComponent, markRaw } from 'vue'\n${code.replace(/^export /gm, '')}`
+  code = `import { defineVaporComponent, markRaw } from 'vue'\n${code.replace(RE_EXPORT_STATEMENT, '')}`
   code += `\n\nexport default markRaw(defineVaporComponent({ name: '${name}', render }))`
   code += '\n/* vite-plugin-components disabled */'
 

@@ -2,6 +2,11 @@ import type { Compiler } from './types'
 
 let svelteRunes: boolean | null
 
+const RE_OPEN_CURLY = /\{/g
+const RE_CLOSE_CURLY = /\}/g
+const RE_BACKTICK = /`/g
+const RE_ESCAPED_WHITESPACE = /\\([trn])/g
+
 export const SvelteCompiler = (async (svg: string) => {
   if (svelteRunes == null) {
     try {
@@ -27,8 +32,8 @@ export const SvelteCompiler = (async (svg: string) => {
 // escape curlies, backtick, \t, \r, \n to avoid breaking output of {@html `here`} in .svelte
 export function escapeSvelte(str: string): string {
   return str
-    .replace(/\{/g, '&#123;')
-    .replace(/\}/g, '&#125;')
-    .replace(/`/g, '&#96;')
-    .replace(/\\([trn])/g, ' ')
+    .replace(RE_OPEN_CURLY, '&#123;')
+    .replace(RE_CLOSE_CURLY, '&#125;')
+    .replace(RE_BACKTICK, '&#96;')
+    .replace(RE_ESCAPED_WHITESPACE, ' ')
 }

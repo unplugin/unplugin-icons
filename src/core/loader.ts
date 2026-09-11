@@ -6,6 +6,7 @@ import { compilers } from './compilers'
 
 const URL_PREFIXES = ['/~icons/', '~icons/', 'virtual:icons/', 'virtual/icons/']
 const iconPathRE = new RegExp(`${URL_PREFIXES.map(v => `^${v}`).join('|')}`)
+const RE_EXTENSION = /\.\w+$/
 
 export interface ResolvedIconPath {
   collection: string
@@ -42,7 +43,7 @@ export function resolveIconsPath(path: string): ResolvedIconPath | null {
   }
 
   // remove extension
-  path = path.replace(/\.\w+$/, '')
+  path = path.replace(RE_EXTENSION, '')
 
   const [collection, icon] = path.split('/')
 

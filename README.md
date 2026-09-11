@@ -4,7 +4,7 @@
 
 Access thousands of icons as components **on-demand** universally.
 
-### Features
+## Features
 
 - 🌏 Universal
   - 🤹 **Any** icon sets - ~150 popular sets with over 200,000 icons, logos, emojis, etc. Powered by [Iconify](https://github.com/iconify/iconify).
@@ -1274,8 +1274,6 @@ export default {
 
 Then you can use any icons with the prefix `Icon` as you want without explicit importing. Type declarations will be generated on the fly.
 
-<!-- eslint-disable react/jsx-no-undef -->
-
 ```js
 export function Component() {
   return (
@@ -1358,7 +1356,7 @@ This project is part of my <a href='https://github.com/antfu-sponsors'>Sponsor P
 
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
+    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg' alt='Sponsors'/>
   </a>
 </p>
 

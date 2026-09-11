@@ -1,6 +1,8 @@
 import * as fsPromises from 'node:fs/promises'
 import { defineConfig } from 'tsdown'
 
+const RE_DTS_EXTENSION = /\.d\.ts$/
+
 export default defineConfig({
   entry: ['src/*.ts'],
   dts: true,
@@ -27,7 +29,7 @@ async function* getDtsTypesFiles(): AsyncGenerator<[
   const files = await fsPromises.readdir('./types/')
   for (const file of files) {
     if (file.endsWith('.d.ts') && file !== 'index.d.ts') {
-      yield [`./types/${file.replace(/\.d\.ts$/, '')}`, `./types/${file}`] as const
+      yield [`./types/${file.replace(RE_DTS_EXTENSION, '')}`, `./types/${file}`] as const
     }
   }
 }

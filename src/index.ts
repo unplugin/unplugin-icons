@@ -3,6 +3,9 @@ import { createUnplugin } from 'unplugin'
 import { generateComponentFromPath, isIconPath, normalizeIconPath, resolveIconsPath } from './core/loader'
 import { resolveOptions } from './core/options'
 
+const RE_EXTENSION = /\.\w+$/
+const RE_LEADING_SLASH = /^\//
+
 const unplugin = createUnplugin<Options | undefined>((options = {}) => {
   const resolved = resolveOptions(options)
 
@@ -15,8 +18,8 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
         // fix issue 322
         const queryIndex = normalizedId.indexOf('?')
         const res = `${(queryIndex > -1 ? normalizedId.slice(0, queryIndex) : normalizedId)
-          .replace(/\.\w+$/, '')
-          .replace(/^\//, '')}${queryIndex > -1 ? `?${normalizedId.slice(queryIndex + 1)}` : ''}`
+          .replace(RE_EXTENSION, '')
+          .replace(RE_LEADING_SLASH, '')}${queryIndex > -1 ? `?${normalizedId.slice(queryIndex + 1)}` : ''}`
         const resolved = resolveIconsPath(res)
         // accept raw compiler from query params
         const compiler = resolved?.query?.raw === 'true' ? 'raw' : options.compiler

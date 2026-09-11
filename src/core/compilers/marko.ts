@@ -1,5 +1,7 @@
 import type { Compiler } from './types'
 
+const RE_ESCAPE_TEMPLATE_LITERAL = /\\.|[$`]/g
+
 export const MarkoCompiler = ((svg: string) => {
   const openTagEnd = svg.indexOf('>', svg.indexOf('<svg '))
   const closeTagStart = svg.lastIndexOf('</svg')
@@ -10,7 +12,7 @@ export const MarkoCompiler = ((svg: string) => {
 }) as Compiler
 
 export function escapeTemplateLiteral(str: string): string {
-  return str.replace(/\\.|[$`]/g, (m) => {
+  return str.replace(RE_ESCAPE_TEMPLATE_LITERAL, (m) => {
     switch (m) {
       case '$': return '&#36'
       case '`': return '&#96;'
