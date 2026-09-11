@@ -1,7 +1,7 @@
 import type { ToJsComponentOptions } from '@svgx/core'
 import type { Compiler } from './types'
 import { camelize } from '@iconify/utils/lib/misc/strings'
-import { importModule } from 'local-pkg'
+import { importPeerModule } from './peer'
 
 export const QwikCompiler = (async (
   svg,
@@ -15,7 +15,7 @@ export const QwikCompiler = (async (
     componentName: camelize(`${collection}-${icon}`),
   }
   const mergedOptions = Object.assign({}, defaultOptions, options)
-  const svgx = await importModule('@svgx/core')
+  const svgx = await importPeerModule('@svgx/core')
   const toJsxComponent = svgx.toJsxComponent
   const res = toJsxComponent(svg, {
     ...mergedOptions,

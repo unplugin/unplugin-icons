@@ -1,6 +1,6 @@
 import type { Compiler } from './types'
 import { camelize } from '@iconify/utils/lib/misc/strings'
-import { importModule } from 'local-pkg'
+import { importPeerModule } from './peer'
 
 export const JSXCompiler = (async (
   svg,
@@ -8,7 +8,7 @@ export const JSXCompiler = (async (
   icon,
   options,
 ) => {
-  const svgrCore = await importModule('@svgr/core')
+  const svgrCore = await importPeerModule('@svgr/core')
   // check for v6/v7 transform (v7 on CJS it is in default), v5 default and previous versions
   const svgr = svgrCore.transform // v6 or v7 ESM
     || (svgrCore.default ? (svgrCore.default.transform /* v7 CJS */ ?? svgrCore.default) : svgrCore.default)
