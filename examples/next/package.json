@@ -8,17 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "13.4.19",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "next": "catalog:next",
+    "react": "catalog:next",
+    "react-dom": "catalog:next"
   },
   "devDependencies": {
-    "@iconify/json": "2.2.110",
-    "@svgr/core": "8.1.0",
-    "@svgr/plugin-jsx": "^8.1.0",
-    "@types/node": "20.5.9",
-    "@types/react": "18.2.21",
-    "typescript": "5.2.2",
+    "@iconify/json": "catalog:next",
+    "@svgr/core": "catalog:next",
+    "@svgr/plugin-jsx": "catalog:react",
+    "@types/node": "catalog:next",
+    "@types/react": "catalog:next",
+    "typescript": "catalog:next",
     "unplugin-icons": "workspace:*"
   },
   "stackblitz": {

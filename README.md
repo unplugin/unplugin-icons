@@ -1182,23 +1182,23 @@ Configure default styling and behavior for all icons:
 ```ts
 Icons({
   // Icon sizing
-  scale: 1.2,              // Scale factor relative to 1em (default: 1.2)
-  
+  scale: 1.2, // Scale factor relative to 1em (default: 1.2)
+
   // Default styling
-  defaultStyle: '',        // CSS styles applied to all icons
-  defaultClass: '',       // CSS classes applied to all icons
-  
+  defaultStyle: '', // CSS styles applied to all icons
+  defaultClass: '', // CSS classes applied to all icons
+
   // Compiler configuration
-  compiler: null,         // Framework compiler: 'vue3', 'vue-vapor', 'jsx', 'svelte', 'solid', etc.
-  jsx: 'react',           // JSX framework: 'react' or 'preact' (when compiler: 'jsx')
-  
+  compiler: null, // Framework compiler: 'vue3', 'vue-vapor', 'jsx', 'svelte', 'solid', etc.
+  jsx: 'react', // JSX framework: 'react' or 'preact' (when compiler: 'jsx')
+
   // Custom collections
-  customCollections: {},  // See [Custom Icons](#custom-icons)
-  
+  customCollections: {}, // See [Custom Icons](#custom-icons)
+
   // Advanced
   iconCustomizer: () => {}, // See [Icon Customization](#icon-customization)
-  transform: undefined,   // See [Global Icon Transformation](#global-icon-transformation)
-  autoInstall: false,    // Auto-install icon sets on import
+  transform: undefined, // See [Global Icon Transformation](#global-icon-transformation)
+  autoInstall: false, // Auto-install icon sets on import
 })
 ```
 
@@ -1337,8 +1337,8 @@ Create shorter aliases for long collection names:
 ```ts
 IconsResolver({
   alias: {
-    park: 'icon-park',  // Use <icon-park-* /> instead of <icon-icon-park-* />
-    fas: 'fa-solid',    // Use <icon-fas-* /> instead of <icon-fa-solid-* />
+    park: 'icon-park', // Use <icon-park-* /> instead of <icon-icon-park-* />
+    fas: 'fa-solid', // Use <icon-fas-* /> instead of <icon-fa-solid-* />
   }
 })
 ```

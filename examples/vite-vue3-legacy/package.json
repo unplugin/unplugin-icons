@@ -7,15 +7,15 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.5.26"
+    "vue": "catalog:vue"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.427",
-    "@vitejs/plugin-vue": "^6.0.3",
-    "typescript": "^5.9.3",
+    "@iconify/json": "catalog:iconify",
+    "@vitejs/plugin-vue": "catalog:vue",
+    "typescript": "catalog:build",
     "unplugin-icons": "workspace:*",
-    "unplugin-vue-components": "^30.0.0",
-    "vite": "^7.3.1"
+    "unplugin-vue-components": "catalog:vue",
+    "vite": "catalog:build"
   },
   "stackblitz": {
     "installDependencies": false,

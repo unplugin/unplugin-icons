@@ -2,7 +2,7 @@
   "name": "unplugin-icons",
   "type": "module",
   "version": "23.0.1",
-  "packageManager": "pnpm@10.28.0",
+  "packageManager": "pnpm@12.3.4",
   "description": "Access thousands of icons as components on-demand universally",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
@@ -94,11 +94,11 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@svgr/core": ">=7.0.0",
-    "@svgx/core": "^1.0.1",
-    "@vue/compiler-sfc": "^3.0.2",
-    "@vue/compiler-vapor": "^3.6.0-rc.5",
-    "svelte": "^3.0.0 || ^4.0.0 || ^5.0.0"
+    "@svgr/core": "catalog:peers",
+    "@svgx/core": "catalog:peers",
+    "@vue/compiler-sfc": "catalog:peers",
+    "@vue/compiler-vapor": "catalog:peers",
+    "svelte": "catalog:peers"
   },
   "peerDependenciesMeta": {
     "@svgr/core": {
@@ -118,31 +118,31 @@
     }
   },
   "dependencies": {
-    "@antfu/install-pkg": "^1.1.0",
-    "@iconify/utils": "^3.1.7",
-    "local-pkg": "^1.1.2",
-    "obug": "^2.1.1",
-    "unplugin": "^3.3.0"
+    "@antfu/install-pkg": "catalog:build",
+    "@iconify/utils": "catalog:iconify",
+    "local-pkg": "catalog:build",
+    "obug": "catalog:build",
+    "unplugin": "catalog:build"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^7.0.0",
-    "@antfu/utils": "^9.3.0",
-    "@iconify/json": "^2.2.427",
-    "@iconify/types": "^2.0.0",
-    "@svgr/core": "^8.1.0",
-    "@svgr/plugin-jsx": "^8.1.0",
-    "@svgx/core": "^1.0.1",
-    "@types/node": "^25.0.8",
-    "@vue/compiler-sfc": "^3.5.26",
-    "@vue/compiler-vapor": "^3.6.0-rc.5",
-    "bumpp": "^10.4.0",
-    "eslint": "^9.39.2",
-    "publint": "^0.3.16",
-    "rollup": "^4.55.1",
-    "tsdown": "^0.20.0-beta.2",
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1",
-    "vitest": "^4.0.17"
+    "@antfu/eslint-config": "catalog:build",
+    "@antfu/utils": "catalog:build",
+    "@iconify/json": "catalog:iconify",
+    "@iconify/types": "catalog:iconify",
+    "@svgr/core": "catalog:react",
+    "@svgr/plugin-jsx": "catalog:react",
+    "@svgx/core": "catalog:build",
+    "@types/node": "catalog:build",
+    "@vue/compiler-sfc": "catalog:vue",
+    "@vue/compiler-vapor": "catalog:vue",
+    "bumpp": "catalog:build",
+    "eslint": "catalog:build",
+    "publint": "catalog:build",
+    "rollup": "catalog:build",
+    "tsdown": "catalog:build",
+    "tsx": "catalog:build",
+    "typescript": "catalog:build",
+    "vite": "catalog:build",
+    "vitest": "catalog:build"
   }
 }

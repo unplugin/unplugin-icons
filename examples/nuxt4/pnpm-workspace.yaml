@@ -1,0 +1,6 @@
+catalog:
+  '@iconify-json/logos': ^1.2.5
+  '@iconify-json/mdi': ^1.2.3
+  nuxt: ^4.0.1
+  unplugin-vue-components: ^28.8.0
+  vue-tsc: ^3.0.4

@@ -7,14 +7,14 @@
     "build": "NODE_ENV=production rspack build"
   },
   "dependencies": {
-    "vue": "^3.5.26"
+    "vue": "catalog:vue"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.427",
-    "@rspack/cli": "^1.7.2",
-    "@rspack/core": "^1.7.2",
+    "@iconify/json": "catalog:iconify",
+    "@rspack/cli": "catalog:rspack",
+    "@rspack/core": "catalog:rspack",
     "unplugin-icons": "workspace:*",
-    "vue-loader": "^17.4.2"
+    "vue-loader": "catalog:vue"
   },
   "stackblitz": {
     "installDependencies": false,

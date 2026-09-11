@@ -11,12 +11,12 @@
     "typecheck": "nuxt typecheck"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.2.5",
-    "@iconify-json/mdi": "^1.2.3",
-    "nuxt": "^4.0.1",
+    "@iconify-json/logos": "catalog:",
+    "@iconify-json/mdi": "catalog:",
+    "nuxt": "catalog:",
     "unplugin-icons": "link:../..",
-    "unplugin-vue-components": "^28.8.0",
-    "vue-tsc": "^3.0.4"
+    "unplugin-vue-components": "catalog:",
+    "vue-tsc": "catalog:"
   },
   "stackblitz": {
     "installDependencies": false,

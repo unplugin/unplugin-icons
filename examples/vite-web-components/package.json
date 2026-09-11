@@ -8,10 +8,10 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "@iconify-json/ion": "^1.2.6",
-    "@iconify-json/mono-icons": "^1.2.0",
+    "@iconify-json/ion": "catalog:iconify",
+    "@iconify-json/mono-icons": "catalog:iconify",
     "unplugin-icons": "workspace:*",
-    "vite": "^7.3.1"
+    "vite": "catalog:build"
   },
   "stackblitz": {
     "installDependencies": false,
