@@ -5,7 +5,7 @@ import { loadNodeIcon } from '@iconify/utils/lib/loader/node-loader'
 import { compilers } from './compilers'
 
 const URL_PREFIXES = ['/~icons/', '~icons/', 'virtual:icons/', 'virtual/icons/']
-const iconPathRE = new RegExp(`${URL_PREFIXES.map(v => `^${v}`).join('|')}`)
+export const iconPathRE = new RegExp(`${URL_PREFIXES.map(v => `^${v}`).join('|')}`)
 const RE_EXTENSION = /\.\w+$/
 
 export interface ResolvedIconPath {
