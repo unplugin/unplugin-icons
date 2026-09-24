@@ -1,6 +1,6 @@
 import type { Options } from './types'
 import { createUnplugin } from 'unplugin'
-import { generateComponentFromPath, isIconPath, normalizeIconPath, resolveIconsPath } from './core/loader'
+import { generateComponentFromPath, iconPathRE, isIconPath, normalizeIconPath, resolveIconsPath } from './core/loader'
 import { resolveOptions } from './core/options'
 
 const RE_EXTENSION = /\.\w+$/
@@ -12,8 +12,13 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
   return {
     name: 'unplugin-icons',
     enforce: 'pre',
-    resolveId(id) {
-      if (isIconPath(id)) {
+    resolveId: {
+      filter: {
+        id: iconPathRE,
+      },
+      handler(id) {
+        if (!isIconPath(id))
+          return null
         const normalizedId = normalizeIconPath(id)
         // fix issue 322
         const queryIndex = normalizedId.indexOf('?')
@@ -45,37 +50,40 @@ const unplugin = createUnplugin<Options | undefined>((options = {}) => {
           }
         }
         return res
-      }
-      return null
+      },
     },
-    loadInclude(id) {
-      return isIconPath(id)
-    },
-    async load(id) {
-      const {
-        config,
-        resolveVirtualIconPath,
-      } = await resolved.then(({
-        config,
-        resolveVirtualIconPath,
-      }) => ({
-        config,
-        resolveVirtualIconPath,
-      }))
-      const result = await generateComponentFromPath(id, config)
-      if (result) {
-        const path = resolveVirtualIconPath(
-          result.resolved.collection,
-          result.resolved.icon,
-        )
-        if (path) {
-          this.addWatchFile(path)
+    load: {
+      filter: {
+        id: iconPathRE,
+      },
+      async handler(id) {
+        if (!isIconPath(id))
+          return null
+        const {
+          config,
+          resolveVirtualIconPath,
+        } = await resolved.then(({
+          config,
+          resolveVirtualIconPath,
+        }) => ({
+          config,
+          resolveVirtualIconPath,
+        }))
+        const result = await generateComponentFromPath(id, config)
+        if (result) {
+          const path = resolveVirtualIconPath(
+            result.resolved.collection,
+            result.resolved.icon,
+          )
+          if (path) {
+            this.addWatchFile(path)
+          }
+          return {
+            code: result.code,
+            map: { version: 3, mappings: '', sources: [] } as any,
+          }
         }
-        return {
-          code: result.code,
-          map: { version: 3, mappings: '', sources: [] } as any,
-        }
-      }
+      },
     },
     rollup: {
       api: {
