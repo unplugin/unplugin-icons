@@ -605,6 +605,8 @@ Add to your `tsconfig.json`:
 }
 ```
 
+**For Solid 2**, use `unplugin-icons/types/solid2` instead.
+
 See [the Solid example](examples/vite-solid) for a complete setup.
 
 <br></details>
